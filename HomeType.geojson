@@ -1,0 +1,137 @@
+{
+	ad = (
+		{
+			img = "http://mapi.159cai.com/uploads/170405/2-1F40514420JF.png";
+			url = "http://m.159cai.com/news/new170405.html";
+		},
+		{
+			img = "http://mapi.159cai.com/uploads/170405/2-1F405144013b3.jpg";
+			url = "http://m.159cai.com/news/new1704051.html";
+		},
+		{
+			img = "http://mapi.159cai.com/uploads/170406/2-1F406093J2L2.png";
+			url = "";
+		},
+	);
+	content = (
+		{
+			cid = 2;
+			href = "http://www.wm007.com/plugin.php?id=nba_score";
+			icon = "";
+			id = 6;
+			img = "nav/2016-11-21/5832bb6c98787.jpg";
+			label = "\U5f00\U5956\U8bb0\U5f55";
+			listorder = 0;
+			parentid = 0;
+			path = "0-6";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = aaaa;
+			id = 4;
+			img = "";
+			label = "\U516d\U5408\U8d44\U6599";
+			listorder = 0;
+			parentid = 0;
+			path = "0-4";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = bbbbbbbbb;
+			id = 5;
+			img = "";
+			label = "\U4e09\U671f\U5185\U5fc5\U51fa";
+			listorder = 0;
+			parentid = 0;
+			path = "0-5";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "http://m.pc80888.com";
+			icon = "";
+			id = 7;
+			img = "";
+			label = "pc\U86cb\U86cb";
+			listorder = 0;
+			parentid = 0;
+			path = "0-7";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 8;
+			img = "";
+			label = "\U7279\U522b\U53f7\U5206\U6790";
+			listorder = 0;
+			parentid = 0;
+			path = "0-8";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 9;
+			img = "";
+			label = "\U89c6\U9891\U5f00\U5956";
+			listorder = 0;
+			parentid = 0;
+			path = "0-9";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 10;
+			img = "";
+			label = "\U5f69\U7968\U4e13\U533a";
+			listorder = 0;
+			parentid = 0;
+			path = "0-10";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 11;
+			img = "";
+			label = "\U4f53\U80b2\U6bd4\U5206";
+			listorder = 0;
+			parentid = 1;
+			path = "0-11\n\n                   \n";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "http://www.wm007.com/plugin.php?id=nba_score";
+			icon = "";
+			id = 6;
+			img = "\U5f69\U7968\U8d44\U8baf";
+			label = "\U5f69\U7968\U8d44\U8baf";
+			listorder = 0;
+			parentid = 0;
+			path = "0-6";
+			status = 1;
+			target = "";
+		},
+	);
+	info = "\U64cd\U4f5c\U6210\U529f!";
+	status = 1;
+}

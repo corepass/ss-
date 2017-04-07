@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FXLotteryDistrInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEc-fq-g2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <state key="normal" title="8"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fEc-fq-g2Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="44Q-pu-hwJ"/>
+                <constraint firstItem="fEc-fq-g2Y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="THB-Dp-LpO"/>
+                <constraint firstAttribute="trailing" secondItem="fEc-fq-g2Y" secondAttribute="trailing" id="pyI-V4-k5k"/>
+                <constraint firstAttribute="bottom" secondItem="fEc-fq-g2Y" secondAttribute="bottom" id="qga-r0-19a"/>
+            </constraints>
+            <size key="customSize" width="67" height="59"/>
+            <connections>
+                <outlet property="lotteryBtn" destination="fEc-fq-g2Y" id="pLZ-hw-MKm"/>
+            </connections>
+            <point key="canvasLocation" x="-208" y="4"/>
+        </collectionViewCell>
+    </objects>
+</document>

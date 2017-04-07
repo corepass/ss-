@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TieBieViewController">
+            <connections>
+                <outlet property="collectionView" destination="pnT-lQ-LEr" id="0Oi-4J-GQQ"/>
+                <outlet property="gifImageView" destination="nZ2-f1-NTI" id="7IJ-ZI-pVl"/>
+                <outlet property="qiLabel" destination="6lq-0b-xM0" id="9dV-07-Y3a"/>
+                <outlet property="startBtn" destination="zpU-x0-FEk" id="hd8-tH-pil"/>
+                <outlet property="topTitleLabel" destination="6lq-0b-xM0" id="2Of-fK-HqK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_Picture_1" translatesAutoresizingMaskIntoConstraints="NO" id="oH4-KI-xCg">
+                    <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="mFS-3l-gn4"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saima.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nZ2-f1-NTI">
+                    <rect key="frame" x="0.0" y="124" width="375" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="XG7-hS-OMT"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpU-x0-FEk">
+                    <rect key="frame" x="143" y="264" width="90" height="33"/>
+                    <color key="backgroundColor" red="0.1764705882352941" green="0.4392156862745098" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="ceY-ha-s51"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="开始分析">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="TWo-g0-aah"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-pi-C0K">
+                    <rect key="frame" x="20" y="307" width="335" height="130"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-lQ-LEr">
+                            <rect key="frame" x="20" y="37" width="295" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="H3b-By-kTM"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UCj-iw-LOx">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Lr9-mV-l2A"/>
+                            </connections>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lq-0b-xM0">
+                            <rect key="frame" x="135.5" y="10" width="65" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="6lq-0b-xM0" firstAttribute="top" secondItem="t2K-pi-C0K" secondAttribute="top" constant="10" id="5rU-5b-y9A"/>
+                        <constraint firstItem="pnT-lQ-LEr" firstAttribute="top" secondItem="6lq-0b-xM0" secondAttribute="bottom" constant="10" id="QMS-ST-yez"/>
+                        <constraint firstItem="pnT-lQ-LEr" firstAttribute="leading" secondItem="t2K-pi-C0K" secondAttribute="leading" constant="20" id="TU5-42-i1i"/>
+                        <constraint firstAttribute="trailing" secondItem="pnT-lQ-LEr" secondAttribute="trailing" constant="20" id="Vef-aZ-yRM"/>
+                        <constraint firstItem="6lq-0b-xM0" firstAttribute="centerX" secondItem="t2K-pi-C0K" secondAttribute="centerX" id="qDm-Ir-Xi3"/>
+                        <constraint firstAttribute="height" constant="130" id="wBR-mj-pkf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oH4-KI-xCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="2fy-yc-uRz"/>
+                <constraint firstItem="zpU-x0-FEk" firstAttribute="top" secondItem="nZ2-f1-NTI" secondAttribute="bottom" constant="10" id="375-fq-sgf"/>
+                <constraint firstItem="nZ2-f1-NTI" firstAttribute="top" secondItem="oH4-KI-xCg" secondAttribute="bottom" id="OFi-L2-WIi"/>
+                <constraint firstAttribute="trailing" secondItem="t2K-pi-C0K" secondAttribute="trailing" constant="20" id="OWb-c0-HHU"/>
+                <constraint firstAttribute="trailing" secondItem="oH4-KI-xCg" secondAttribute="trailing" id="PX7-Sp-er1"/>
+                <constraint firstItem="nZ2-f1-NTI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvg-NI-rEu"/>
+                <constraint firstItem="t2K-pi-C0K" firstAttribute="top" secondItem="zpU-x0-FEk" secondAttribute="bottom" constant="10" id="W3Z-zf-XfL"/>
+                <constraint firstItem="zpU-x0-FEk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bJT-GK-C0v"/>
+                <constraint firstItem="oH4-KI-xCg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="da4-M4-D3J"/>
+                <constraint firstItem="t2K-pi-C0K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="wby-3j-rdX"/>
+                <constraint firstItem="t2K-pi-C0K" firstAttribute="centerX" secondItem="zpU-x0-FEk" secondAttribute="centerX" id="xTP-kv-jBX"/>
+                <constraint firstAttribute="trailing" secondItem="nZ2-f1-NTI" secondAttribute="trailing" id="yue-4v-f91"/>
+            </constraints>
+            <point key="canvasLocation" x="-180" y="34"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="banner_Picture_1" width="550" height="100"/>
+        <image name="saima.jpg" width="369" height="220"/>
+    </resources>
+</document>

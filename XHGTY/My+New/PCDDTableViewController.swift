@@ -25,9 +25,9 @@ class PCDDTableViewController: UITableViewController {
             self.loaddata()
             
         })
-        let right = UIBarButtonItem(title: "试玩", style: .done, target: self, action: #selector(rightClick))
-        right.tintColor = UIColor.white
-        self.navigationItem.rightBarButtonItem = right
+//        let right = UIBarButtonItem(title: "试玩", style: .done, target: self, action: #selector(rightClick))
+//        right.tintColor = UIColor.white
+//        self.navigationItem.rightBarButtonItem = right
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -55,7 +55,7 @@ class PCDDTableViewController: UITableViewController {
             }
         }else{
             
-        let vc = LoginViewController()
+        let vc = UIStoryboard(name: "Other", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
             vc.hidesBottomBarWhenPushed = true
          _  = self.navigationController?.pushViewController(vc, animated: true)
   

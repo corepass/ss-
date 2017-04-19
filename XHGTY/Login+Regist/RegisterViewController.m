@@ -18,6 +18,8 @@
 #import "SVProgressHUD.h"
 #import "NSString+isEmpty.h"
 #import "SVProgressHUD.h"
+#import "HttpTools.h"
+#import "MBProgressHUD+MJ.h"
 @interface RegisterViewController ()
 @property(strong,nonatomic) NSMutableArray * Array;
 @property(strong,nonatomic) ThirdLoginModel * Model;
@@ -56,27 +58,34 @@
     
     Regist.RegistBlock = ^(NSString * Account,NSString * Captcha,NSString * Invitationsystem,NSString * SetupPassWord,NSString * ConfirmPassWord)
     {
-        if([NSString isMobile:Account] && [SetupPassWord isEqualToString:ConfirmPassWord]){
-            [SVProgressHUD show];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [HttpTools postWithPath:@"Award/Api/register" parms:@{@"name":Account , @"password" : SetupPassWord,@"repassword":ConfirmPassWord} success:^(id JSON) {
+            if ([JSON[@"status"]intValue] == 2) {
+                
+                [MBProgressHUD showError:JSON[@"info"]];
+                return ;
+            }else{
                 [SVProgressHUD showWithStatus:@"注册成功"];
                 NSUserDefaults * defa = [NSUserDefaults standardUserDefaults];
                 [defa setValue:Account forKey:@"account"];
                 [defa setValue:SetupPassWord forKey:@"password"];
                 [defa synchronize];
                 [self.navigationController popToRootViewControllerAnimated:YES];
-                [SVProgressHUD dismiss];
-            });
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                     [SVProgressHUD dismiss];
+                });
+              
+            }
             
-      
-        }else{
+            
+        } :^(NSError *error) {
             [SVProgressHUD showErrorWithStatus:@"请输入正确的格式"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
             });
-        }
+        }];
+        
     };
-    
     Regist.CaptchaBlock = ^(NSString *Account,UIButton * sender){
         NSLog(@"点击了获取验证码按钮并有值返回Account:%@",Account);
   

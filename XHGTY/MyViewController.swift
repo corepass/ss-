@@ -19,12 +19,20 @@ class MyViewController: UIViewController , UITableViewDelegate, UITableViewDataS
         super.viewWillAppear(animated)
         heard.reload()
         self.tabView.reloadData()
+        let right = UIBarButtonItem(image: UIImage.init(named: "setting_normale"), style: .done, target: self, action: #selector(rightClick))
+        right.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = right
+    }
+    func rightClick(){
+       let vc =  UIStoryboard(name: "Other", bundle: nil).instantiateViewController(withIdentifier: "FXSettingViewController")
+        vc.hidesBottomBarWhenPushed = true;
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
         let islogin = Apploction.default.isLogin ? "退出登录" : "请登录"
-        dataArray = [["版本","当前版本","V \(version!)"],["消息","消息通知"],["投注记录","投注记录"],["清理","清理缓存"],["退出",islogin]]
+        dataArray = [["版本","当前版本","V \(version!)"],["消息","消息通知"],["投注记录","我的收藏"],["清理","清理缓存"],["退出",islogin]]
         
         self.view.backgroundColor = UIColor.white
         tabView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -41,8 +49,8 @@ class MyViewController: UIViewController , UITableViewDelegate, UITableViewDataS
                 vc.hidesBottomBarWhenPushed = true
                _ = self?.navigationController?.pushViewController(vc, animated: true)
                     }else{
-                let vc = LoginViewController()
-                 vc.hidesBottomBarWhenPushed = true
+                let vc = UIStoryboard(name: "Other", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController")
+                vc.hidesBottomBarWhenPushed = true
                 _ = self?.navigationController?.pushViewController(vc, animated: true)
             }
             
@@ -117,8 +125,11 @@ class MyViewController: UIViewController , UITableViewDelegate, UITableViewDataS
         
         self.tableViewClickBlock?(indexPath.row)
         if indexPath.section == 1{
-         UIApplication.shared.openURL(URL.init(string: "prefs:root=NOTIFICATIONS_ID")!)
-        }else if indexPath.section == 2 {
+            if UIApplication.shared.canOpenURL(URL.init(string: "prefs:root=Phone")!){
+         UIApplication.shared.openURL(URL.init(string: "prefs:root=Phone")!)
+        }
+        }
+        else if indexPath.section == 2 {
             if Apploction.default.isLogin {
                 let vc = TouzhuTableViewController()
                 _ = self.navigationController?.pushViewController(vc, animated: true)
@@ -128,8 +139,8 @@ class MyViewController: UIViewController , UITableViewDelegate, UITableViewDataS
                 _ = self.navigationController?.pushViewController(vc, animated: true)
             }
     
-        }
-        else if indexPath.section == 3 {
+
+        }else if indexPath.section == 3 {
             SDImageCache.shared().cleanDisk()
             SVProgressHUD.showSuccess(withStatus: "清理缓存成功")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { 

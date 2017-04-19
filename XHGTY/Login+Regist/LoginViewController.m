@@ -12,6 +12,8 @@
 #import "RegisterViewController.h"
 #import "NSString+isEmpty.h"
 #import "SVProgressHUD.h"
+#import "HttpTools.h"
+#import "MBProgressHUD+MJ.h"
 @interface LoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *UserBackVew;
 //账号
@@ -41,34 +43,92 @@
 //登录按钮事件
 - (IBAction)LoginButtonClick:(id)sender {
     NSUserDefaults  *defa = [NSUserDefaults standardUserDefaults];
-    if([NSString isMobile:self.PhoneTextFIeld.text] && [self.PhoneTextFIeld.text  isEqual: @"13166118659"] && [self.PassWordTextField.text isEqualToString:@"123456"]){
-        [SVProgressHUD show];
+    [HttpTools postWithPath:@"Award/Api/login" parms:@{@"name":self.PhoneTextFIeld.text,@"password":self.PassWordTextField.text} success:^(id JSON) {
+        if ([JSON[@"status"]intValue] == 2) {
+            [MBProgressHUD showError:JSON[@"info"]];
+            [self.view endEditing:YES];
+            return ;
+        }
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [SVProgressHUD dismiss];
             [Apploction default].isLogin = YES;
             [defa setValue:self.PhoneTextFIeld.text forKey:@"account"];
             [defa setValue:self.PassWordTextField.text forKey:@"password"];
+            
+            FXAccount *account = [[FXAccount alloc]init];
+            account.uid = JSON[@"id"];
+            account.userName = JSON[@"user_nicename"];
+            account.avatar = JSON[@"avatar"];
+            [[FXUserTool sharedFXUserTool]saveAccount:account];
+         //   [MBProgressHUD showSuccess:@"登录成功"];
+          //  kSendNotify(@"登录成功", nil);
+            
+            
             [self.navigationController popViewControllerAnimated:YES];
         });
-
-    }else if ([NSString isMobile:self.PhoneTextFIeld.text] && [self.PhoneTextFIeld.text  isEqual: [defa valueForKey:@"account"]] && [self.PassWordTextField.text isEqualToString:[defa valueForKey:@"password"]]){
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [SVProgressHUD dismiss];
-            [Apploction default].isLogin = YES;
-            [defa setValue:self.PhoneTextFIeld.text forKey:@"account"];
-            [defa setValue:self.PassWordTextField.text forKey:@"password"];
-            [self.navigationController popViewControllerAnimated:YES];
-        });
-
-    }
-    else{
-        [SVProgressHUD showErrorWithStatus:@"帐号或密码错误"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [SVProgressHUD dismiss];
-        });
- 
-    }
-    
+        
+        
+    } :^(NSError *error) {
+                [SVProgressHUD showErrorWithStatus:@"帐号或密码错误"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                });
+        
+    }];
+//    [[NetWorkTools sharedNetWorkTools]requestWithType:RequesTypePOST urlString:@"http://app.lh888888.com/Award/Api/login" parms:@{@"name":self.userNameTF.text,@"password":self.passwordTF.text} success:^(id JSON) {
+//        if ([JSON[@"status"]intValue] == 2) {
+//            [MBProgressHUD showError:JSON[@"info"]];
+//            [self.view endEditing:YES];
+//            return ;
+//        }
+//        
+//        
+//        FXAccount *account = [[FXAccount alloc]init];
+//        account.uid = JSON[@"id"];
+//        account.userName = JSON[@"user_nicename"];
+//        account.avatar = JSON[@"avatar"];
+//        [[FXUserTool sharedFXUserTool]saveAccount:account];
+//        [MBProgressHUD showSuccess:@"登录成功"];
+//        kSendNotify(@"登录成功", nil);
+//        
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    } :^(NSError *error) {
+//        [SVProgressHUD showErrorWithStatus:@"帐号或密码错误"];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//        });
+//    }];
+//    
+//
+//    NSUserDefaults  *defa = [NSUserDefaults standardUserDefaults];
+//    if([NSString isMobile:self.PhoneTextFIeld.text] && [self.PhoneTextFIeld.text  isEqual: @"13166118659"] && [self.PassWordTextField.text isEqualToString:@"123456"]){
+//        [SVProgressHUD show];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//            [Apploction default].isLogin = YES;
+//            [defa setValue:self.PhoneTextFIeld.text forKey:@"account"];
+//            [defa setValue:self.PassWordTextField.text forKey:@"password"];
+//            [self.navigationController popViewControllerAnimated:YES];
+//        });
+//
+//    }else if ([NSString isMobile:self.PhoneTextFIeld.text] && [self.PhoneTextFIeld.text  isEqual: [defa valueForKey:@"account"]] && [self.PassWordTextField.text isEqualToString:[defa valueForKey:@"password"]]){
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//            [Apploction default].isLogin = YES;
+//            [defa setValue:self.PhoneTextFIeld.text forKey:@"account"];
+//            [defa setValue:self.PassWordTextField.text forKey:@"password"];
+//            [self.navigationController popViewControllerAnimated:YES];
+//        });
+//
+//    }
+//    else{
+//        [SVProgressHUD showErrorWithStatus:@"帐号或密码错误"];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//        });
+// 
+//    }
+//    
 }
 //注册按钮事件
 - (IBAction)RegisterButtonClick:(id)sender {

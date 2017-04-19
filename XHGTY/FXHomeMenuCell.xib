@@ -1,41 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FXHomeMenuCell">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMD-LK-ske" customClass="FXVerticalBtn">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="Button">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-U3-tIN">
+                        <rect key="frame" x="8" y="5" width="43" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="oR4-gN-OTE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-Wa-8Ju">
+                        <rect key="frame" x="59" y="17" width="234" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Right_Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="8Jy-Pn-JLn">
+                        <rect key="frame" x="301" y="16" width="5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="spr-Ac-icQ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="rMD-LK-ske" secondAttribute="trailing" id="iNo-RG-aam"/>
-                <constraint firstItem="rMD-LK-ske" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lqs-lL-BU3"/>
-                <constraint firstAttribute="bottom" secondItem="rMD-LK-ske" secondAttribute="bottom" id="sxd-ru-o2n"/>
-                <constraint firstItem="rMD-LK-ske" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vzh-yA-89C"/>
+                <constraint firstItem="8Jy-Pn-JLn" firstAttribute="leading" secondItem="JZ7-Wa-8Ju" secondAttribute="trailing" constant="8" id="4gB-B7-wXg"/>
+                <constraint firstAttribute="bottom" secondItem="HfO-U3-tIN" secondAttribute="bottom" constant="5" id="4y8-zi-4og"/>
+                <constraint firstItem="JZ7-Wa-8Ju" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="Ffq-rX-R60"/>
+                <constraint firstAttribute="bottom" secondItem="JZ7-Wa-8Ju" secondAttribute="bottom" constant="16" id="G42-GH-8g8"/>
+                <constraint firstItem="HfO-U3-tIN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Pjq-d1-DIl"/>
+                <constraint firstItem="HfO-U3-tIN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Qdd-O4-Ebk"/>
+                <constraint firstAttribute="bottom" secondItem="8Jy-Pn-JLn" secondAttribute="bottom" constant="17" id="RTz-fR-QcF"/>
+                <constraint firstItem="JZ7-Wa-8Ju" firstAttribute="leading" secondItem="HfO-U3-tIN" secondAttribute="trailing" constant="8" id="Uk4-zr-rYm"/>
+                <constraint firstItem="JZ7-Wa-8Ju" firstAttribute="leading" secondItem="HfO-U3-tIN" secondAttribute="trailing" constant="8" id="c2e-ze-vj1"/>
+                <constraint firstItem="8Jy-Pn-JLn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="rz1-hg-Omi"/>
+                <constraint firstAttribute="trailing" secondItem="8Jy-Pn-JLn" secondAttribute="trailing" constant="14" id="vCD-hc-vZZ"/>
             </constraints>
             <connections>
-                <outlet property="lotteryBtn" destination="rMD-LK-ske" id="uzr-W6-OWe"/>
+                <outlet property="iconImage" destination="HfO-U3-tIN" id="eB5-mI-U1T"/>
+                <outlet property="titleLable" destination="JZ7-Wa-8Ju" id="8Yy-Fh-U4h"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Right_Arrow" width="8" height="12"/>
+    </resources>
 </document>

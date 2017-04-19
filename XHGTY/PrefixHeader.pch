@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  +
+//
+//  Created by shensu on 17/4/10.
+//  Copyright © 2017年 杨健. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "SDImageCache.h"
+#import "Masonry.h"
+#import "HttpTools.h"
+#import "MJRefresh.h"
+#import "NetWorkTools.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
+#import "SVProgressHUD.h"
+#import "FXTools.h"
+#import "FXUserTool.h"
+#import "MBProgressHUD+MJ.h"
+#import "UIView+Extension.h"
+//判断设备宽高
+#define kScreenW ([[UIScreen mainScreen] bounds].size.width)
+#define kScreenH ([[UIScreen mainScreen] bounds].size.height)
+//保存账户信息
+#define kAccountFile [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
+//获取窗口
+#define kAppWindow [UIApplication sharedApplication].keyWindow
+//获取帐户信息
+#define kAccount [FXUserTool sharedFXUserTool].account
+//设置字体
+#define kFont(F) [UIFont systemFontOfSize:(F)]
+
+// 消息通知
+#define kRegisterNotify(_name, _selector) [[NSNotificationCenter defaultCenter] addObserver:self selector:_selector name:_name object:nil];
+#define kRremoveNofify [[NSNotificationCenter defaultCenter] removeObserver:self];
+#define kSendNotify(_name, _object) [[NSNotificationCenter defaultCenter] postNotificationName:_name object:_object];
+
+// 设置颜色值
+#define kColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define kRandomColor kColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256),1)
+
+#define kGlobalColor kColor(242,242,242,1)
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

@@ -13,9 +13,15 @@ class FXTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1)
-
+        let right = UIBarButtonItem.init(title: "论坛", style: .done, target: self, action: #selector(rightClick))
+        right.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = right
     }
-
+    func rightClick(){
+           let vc = UIStoryboard(name: "Other", bundle: nil).instantiateViewController(withIdentifier: "ForumViewController")
+           vc.hidesBottomBarWhenPushed = true
+      _ = self.navigationController?.pushViewController(vc, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

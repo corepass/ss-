@@ -171,6 +171,23 @@
         failure(error);
     }];
 }
++(void)postCustonCAIPIAOWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:path parameters:parms progress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [SVProgressHUD dismiss];
+        if ([[responseObject allKeys] containsObject:@"Records"]){
+            success(responseObject[@"Records"]);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [SVProgressHUD dismiss];
+        failure(error);
+    }];
+}
+
 +(void)getWithPathsuccess:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     static BOOL isSuccess;

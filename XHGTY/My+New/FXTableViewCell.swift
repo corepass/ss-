@@ -9,24 +9,27 @@
 import UIKit
 
 class FXTableViewCell: UITableViewCell {
-    func setModel(model: Dictionary<String,String>){
-    title.text = model["title"]
-    subTitle.text = model["sub"]
-    titleImage.image = UIImage(named: model["image"]!)
-    
-    }
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var subTitle: UILabel!
-    @IBOutlet weak var titleImage: UIImageView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+	func setModel(model: Dictionary<String, String>) {
+		title.text = model["title"]
+		subTitle.text = model["sub"]
+		titleImage.image = UIImage(named: model["image"]!)
+		if model["title"] == "开奖记录" {
+			titleImage.image = UIImage(named: "彩票论坛")
+		}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+	}
+	@IBOutlet weak var title: UILabel!
+	@IBOutlet weak var subTitle: UILabel!
+	@IBOutlet weak var titleImage: UIImageView!
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		// Initialization code
+	}
 
-        // Configure the view for the selected state
-    }
-    
+	override func setSelected(_ selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+
+		// Configure the view for the selected state
+	}
+
 }

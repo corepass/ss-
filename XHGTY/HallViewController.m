@@ -17,7 +17,7 @@
 #import "XHGTY-swift.h"
 #import "LoginViewController.h"
 #import "AppDefine.h"
-
+#import "HallCollectionViewCell.h"
 #define kItemMargin 2
 
 @interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -35,8 +35,8 @@ static NSString *const cellID = @"cellID";
     // Do any additional setup after loading the view.
     self.collectionView.backgroundColor = kGlobalColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-          [self.collectionView registerNib:[UINib nibWithNibName:@"FXHomeMenuCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+  
+          [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewImtes)];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
@@ -48,9 +48,18 @@ static NSString *const cellID = @"cellID";
     layout.sectionInset = UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
     
     [self.collectionView.mj_header beginRefreshing];
+    
+//    
+//    UIBarButtonItem * barbutton = [[UIBarButtonItem alloc]initWithTitle:@"试玩" style:UIBarButtonItemStyleDone target:self action:@selector(shiwan)];
+//    barbutton.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem = barbutton;
 }
+-(void)shiwan{
+    GoucaiViewController * goucai = [[GoucaiViewController alloc]init];
+    goucai.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:goucai animated:YES];
 
-
+}
 
 - (void)loadNewImtes {
 
@@ -69,7 +78,7 @@ static NSString *const cellID = @"cellID";
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    FXHomeMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     cell.kind = self.totalArr[indexPath.row];
     return cell;
 }
@@ -87,17 +96,17 @@ static NSString *const cellID = @"cellID";
         
     }else{
         
-        if ( [Apploction default].isLogin){
+//        if ( [Apploction default].isLogin){
 
             PCDDTableViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
-        }else{
-            LoginViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-        
+//        }else{
+//            LoginViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+//            vc.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//        
  
     }
 

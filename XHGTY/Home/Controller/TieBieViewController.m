@@ -16,7 +16,7 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "AppDefine.h"
-
+#import "JXModel.h"
 @interface TieBieViewController ()<UICollectionViewDataSource>
 @property (strong, nonatomic) YFRollingLabel *totalPersonsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;
@@ -43,6 +43,7 @@ static NSString *const TieBieViewCellID = @"TieBieViewCell";
     //self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithName:@"分享" target:self andSEL:@selector(btnclick)];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    layout.itemSize = CGSizeMake(50, 50);
     layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 0);
     self.layout = layout;
     
@@ -62,19 +63,24 @@ static NSString *const TieBieViewCellID = @"TieBieViewCell";
         
         self.qiLabel.text = dict[@"title"];
         
-        NSString *num = dict[@"post_content"];
-        
-        NSArray *arr = [num componentsSeparatedByString:@","];
+//        NSString *num = dict[@"post_content"];
+        JXModel * jx = [[JXModel alloc] init];
+        jx.cpCount = 3;
+        NSArray *arr = [jx getarc4random];
         
         self.numbers = (NSMutableArray *)arr;
         
-        self.layout.itemSize = CGSizeMake(((kScreenW - 80) - (arr.count +1)*10) / arr.count, 50);
+     //   self.layout.itemSize = CGSizeMake(((kScreenW - 80) - (arr.count +1)*10) / arr.count, 50);
         
         
         
     } :^(NSError *error) {
         //
     }];
+    
+    
+    
+    
 }
 
 

@@ -38,9 +38,10 @@
     _xiazhu.backgroundColor = [UIColor whiteColor];
     NSInteger count = _dataArray.count;
     NSInteger price = [_number integerValue];
-    _xiazhu.label.text = [NSString stringWithFormat:@"%ld注%ld元",count,count*price];
+    _xiazhu.label.text = [NSString stringWithFormat:@"%ld注%d",(long)count,count*price];
     __weak __typeof (self) weak = self;
     _xiazhu.xiazhuBtnClickBlcok = ^(){
+        
         NSMutableArray * savaArray = [[NSMutableArray alloc] init];
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
         NSString * file = [NSString stringWithFormat:@"%@/userAccount.data",path];

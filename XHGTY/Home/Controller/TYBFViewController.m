@@ -18,6 +18,7 @@
 #import "MJRefresh.h"
 #import "AppDefine.h"
 #define kItemMargin 2
+#import "HallCollectionViewCell.h"
 
 @interface TYBFViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -54,7 +55,7 @@ static NSString *const cellID = @"cellID";
     }
     
     
-    [self.collectionView registerNib:[UINib nibWithNibName:@"FXHomeMenuCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     CGFloat itemW = (kScreenW - 4 * kItemMargin) / 3;
@@ -70,7 +71,7 @@ static NSString *const cellID = @"cellID";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    FXHomeMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     cell.lotteryName = self.totalArrs[indexPath.row].label;
     return cell;
 }

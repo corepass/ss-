@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FDWeatherCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43Z-HZ-QWN">
+                        <rect key="frame" x="40.5" y="5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3J8-GL-YTo">
+                        <rect key="frame" x="40.5" y="5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12～7C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMo-3x-nC8">
+                        <rect key="frame" x="20" y="45" width="41" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多云" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Na-UW-uMA">
+                        <rect key="frame" x="28" y="63" width="25" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南风" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1b-eK-W5G">
+                        <rect key="frame" x="28" y="81" width="25" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="多云" translatesAutoresizingMaskIntoConstraints="NO" id="FyN-aw-zJc">
+                        <rect key="frame" x="20" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="N1U-7F-Cvx"/>
+                            <constraint firstAttribute="width" constant="40" id="UHc-5h-fM2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="RMo-3x-nC8" firstAttribute="centerX" secondItem="FyN-aw-zJc" secondAttribute="centerX" id="5pj-0i-VtI"/>
+                <constraint firstItem="k1b-eK-W5G" firstAttribute="top" secondItem="8Na-UW-uMA" secondAttribute="bottom" constant="3" id="CN6-6z-HGa"/>
+                <constraint firstItem="8Na-UW-uMA" firstAttribute="centerX" secondItem="RMo-3x-nC8" secondAttribute="centerX" id="LZs-a8-Met"/>
+                <constraint firstItem="FyN-aw-zJc" firstAttribute="centerX" secondItem="3J8-GL-YTo" secondAttribute="centerX" id="S2r-vG-3AG"/>
+                <constraint firstItem="FyN-aw-zJc" firstAttribute="top" secondItem="3J8-GL-YTo" secondAttribute="bottom" id="TpP-3a-BqM"/>
+                <constraint firstItem="8Na-UW-uMA" firstAttribute="top" secondItem="RMo-3x-nC8" secondAttribute="bottom" constant="3" id="ZuR-z6-X8n"/>
+                <constraint firstItem="RMo-3x-nC8" firstAttribute="top" secondItem="FyN-aw-zJc" secondAttribute="bottom" id="inT-YK-qfA"/>
+                <constraint firstItem="3J8-GL-YTo" firstAttribute="top" secondItem="43Z-HZ-QWN" secondAttribute="bottom" id="kjf-fT-xKd"/>
+                <constraint firstItem="k1b-eK-W5G" firstAttribute="centerX" secondItem="8Na-UW-uMA" secondAttribute="centerX" id="l02-3a-jrV"/>
+                <constraint firstItem="43Z-HZ-QWN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mfb-h2-J39"/>
+                <constraint firstItem="3J8-GL-YTo" firstAttribute="centerX" secondItem="43Z-HZ-QWN" secondAttribute="centerX" id="sw3-2e-XnE"/>
+                <constraint firstItem="43Z-HZ-QWN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="xyI-Vt-HR9"/>
+            </constraints>
+            <size key="customSize" width="88" height="139"/>
+            <connections>
+                <outlet property="dateLabel" destination="3J8-GL-YTo" id="KPz-rK-YIG"/>
+                <outlet property="fengLabel" destination="k1b-eK-W5G" id="Ibg-Ya-CgD"/>
+                <outlet property="img" destination="FyN-aw-zJc" id="yQ2-W3-Hp1"/>
+                <outlet property="tempLabel" destination="RMo-3x-nC8" id="Ybi-wm-ZXL"/>
+                <outlet property="weatherLabel" destination="8Na-UW-uMA" id="wLT-iG-w9f"/>
+                <outlet property="weekDayLabel" destination="43Z-HZ-QWN" id="MBP-vZ-HsA"/>
+            </connections>
+            <point key="canvasLocation" x="-72" y="92"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="多云" width="20" height="20"/>
+    </resources>
+</document>

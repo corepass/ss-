@@ -9,7 +9,7 @@
 #import "MytabBarViewController.h"
 #import "LoginViewController.h"
 #import "XHGTY-swift.h"
-@interface MytabBarViewController ()<UITabBarControllerDelegate>
+@interface MytabBarViewController ()<UITabBarControllerDelegate >
 
 @end
 

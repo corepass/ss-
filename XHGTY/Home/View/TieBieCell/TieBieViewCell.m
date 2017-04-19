@@ -17,6 +17,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.boardBtn.layer.cornerRadius = self.boardBtn.width/2;
     // Initialization code
 }
 

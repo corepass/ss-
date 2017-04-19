@@ -27,9 +27,21 @@ static NSString * cellindetifi = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getdata];
-
-    self.title = self.titlename;
+    self.title = @"体验中心";
+    [self getqishudata];
+    
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"这只是一种模拟购彩的一种行为，我们不会收取您的任何费用，并不是真是的购买彩票！请各位用户注意！！！" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * defa  = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction * cancel  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:defa];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+  //  self.title = self.titlename;
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 10;
     layout.minimumLineSpacing = 10;
@@ -73,9 +85,52 @@ static NSString * cellindetifi = @"cell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willhide:) name:UIKeyboardWillHideNotification object:nil];
     // Do any additional setup after loading the view.
 }
--(void)getdata{
-    [SVProgressHUD show];
+-(void)getqishudata{
+//    func loaddata(){
+//        HttpTools.getCustonWithPath(self.url, parms: nil, success: { (resport) in
+//            if (resport != nil) {
+//                self.modelArray.removeAll()
+//                self.modelArray = resport as! Array<Dictionary<String, String>>
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                    self.tableView.mj_header.endRefreshing()
+//                }
+//                
+//            }
+//        }) { (error) in
+//            SVProgressHUD.showError(withStatus: "数据加载出错，请稍候再试")
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+//                SVProgressHUD.dismiss()
+//            })
+//        }
+//        
+//    }
+   [HttpTools getCustonWithPath:@"http://api.dabai28.com/api28.php?name=pc28&type=json" parms:nil success:^(id JSON) {
+       if ([JSON isKindOfClass:[NSArray class]]){
+           self.qishu = JSON[0][@"issue"];
+           [self getdata];
+       }else{
+           
+               [SVProgressHUD showErrorWithStatus:@"正在获取期数失败,稍后再试！"];
+               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                   [SVProgressHUD dismiss];
+               });
+         
+       }
+       
+   } :^(NSError *error) {
+       [SVProgressHUD showErrorWithStatus:@"获取期数失败"];
+       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           [SVProgressHUD dismiss];
+       });
+   }];
     
+    
+
+}
+-(void)getdata{
+
+    self.titlename = @"幸运28";
            NSArray * array = @[@{@"type":@"大",@"peilv":@"赔率：1.98",@"isSelected":@"0",@"qishu":self.qishu,@"name":self.titlename},
                                @{@"type":@"单",@"peilv":@"赔率：1.98",@"isSelected":@"0",@"qishu":self.qishu,@"name":self.titlename},
                                @{@"type":@"大单",@"peilv":@"赔率：3",@"isSelected":@"0",@"qishu":self.qishu,@"name":self.titlename},
@@ -88,10 +143,11 @@ static NSString * cellindetifi = @"cell";
                                @{@"type":@"极小",@"peilv":@"赔率：10",@"isSelected":@"0",@"qishu":self.qishu,@"name":self.titlename}];
            
            _dataArray = [GouCaiModel mj_objectArrayWithKeyValuesArray:array];
-           [self.collection reloadData];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD dismiss];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collection reloadData];
     });
+    
+  
 }
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {

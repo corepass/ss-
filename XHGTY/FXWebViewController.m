@@ -11,8 +11,9 @@
 #import "YHWebViewProgressView.h"
 #import "UIBarButtonItem+Exstion.h"
 #import "Masonry.h"
+#import "SVProgressHUD.h"
 #define kColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-@interface FXWebViewController ()<UIWebViewDelegate>
+@interface FXWebViewController ()<UIWebViewDelegate,WKNavigationDelegate>
 @property (strong, nonatomic) YHWebViewProgress *progressProxy;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -36,7 +37,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
   
     self.webView.scalesPageToFit = YES;
-   
+    self.webView.delegate = self;
+    
    
     // 创建进度条代理，用于处理进度控制
     _progressProxy = [[YHWebViewProgress alloc] init];
@@ -67,7 +69,19 @@
     //self.webView.scrollView.showsVerticalScrollIndicator = NO;
     self.webView.scrollView.showsHorizontalScrollIndicator = NO;
 }
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [SVProgressHUD show];
 
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [SVProgressHUD dismiss];
+}
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+
+    [SVProgressHUD dismiss];
+}
 - (void)close{
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -100,13 +114,6 @@
 }
 
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-
-}
 
 
 @end

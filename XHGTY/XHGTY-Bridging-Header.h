@@ -12,3 +12,6 @@
 #import "FXWebViewController.h"
 #import "NotificationViewController.h"
 #import "MyProfileViewController.h"
+#import "ForumViewController.h"
+#import "FXSettingViewController.h"
+#import "WebViewController.h"

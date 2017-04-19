@@ -10,35 +10,63 @@
 #import <WebKit/WebKit.h>
 #import "Masonry.h"
 #import "WebViewXib.h"
-@interface WebViewController ()
+#import "MBProgressHUD+MJ.h"
+#import "SVProgressHUD.h"
+@interface WebViewController ()<WKUIDelegate,WKNavigationDelegate>
 
 @property(nonatomic,strong) WKWebView * webView;
 @property(nonatomic,strong) UILabel * lable;
 @property(nonatomic,strong) WebViewXib * footview;
+@property(nonatomic,assign) BOOL isAddFoot;
 @end
 
 @implementation WebViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.webView.navigationDelegate = self;
+    self.lable.hidden = YES;
+    
+}
+-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+{
+    [SVProgressHUD show];
+}
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    [SVProgressHUD dismiss];
+}
+-(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
+{
+   [SVProgressHUD dismiss];
+}
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+    // 接口的作用是打开新窗口委托
+    WKFrameInfo *frameInfo = navigationAction.targetFrame;
+    if (![frameInfo isMainFrame]) {
+        [webView loadRequest:navigationAction.request];
+    }
+    return nil;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarHidden = NO;
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    _webView = [[WKWebView alloc]init];
-    [_webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    self.webView = [[WKWebView alloc]init];
+    self.webView.UIDelegate = self;
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     [self useProgressView];
-    [self.view addSubview:_webView];
-    [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.webView];
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 40, 0));
     }];
 
 
-    _lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
-    _lable.center = self.view.center;
-    _lable.font  = [UIFont systemFontOfSize:14];
-    _lable.textAlignment = NSTextAlignmentCenter;
-    _lable.textColor = [UIColor grayColor];
-    _lable.text = @"正在初始化配置信息";
-    [self.view addSubview: _lable];
+    self.lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
+    self.lable.center = self.view.center;
+    self.lable.font  = [UIFont systemFontOfSize:14];
+    self.lable.textAlignment = NSTextAlignmentCenter;
+    self.lable.textColor = [UIColor grayColor];
+    self.lable.text = @"正在初始化配置信息";
+    [self.view addSubview: self.lable];
 
     
     _footview = [[WebViewXib alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40)];
@@ -66,6 +94,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 -(void)useProgressView
 {
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
@@ -78,7 +107,7 @@
         double leng = [[change objectForKey:NSKeyValueChangeNewKey] doubleValue];
         NSString * str = [NSString stringWithFormat:@"%.2f",leng*100];
        str = [str stringByAppendingString:@"%"];
-        _lable.text = [NSString stringWithFormat:@"正在初始化配置信息%@",str];
+        self.lable.text = [NSString stringWithFormat:@"正在初始化配置信息%@",str];
         if ([[change objectForKey:NSKeyValueChangeNewKey] doubleValue] == 1) {
             [UIView animateWithDuration:1 animations:^{
                 [self.lable setAlpha:0];
@@ -87,6 +116,7 @@
         }
     }
 }
+
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction * defa = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

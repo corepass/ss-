@@ -10,8 +10,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import "ThirdSDKDefine.h"
-#import <CoreLocation/CoreLocation.h>
-#import <AMapLocationKit/AMapLocationKit.h>
+
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
@@ -20,11 +19,17 @@
 #import "HttpTools.h"
 #import "UMessage.h"
 #import "SVProgressHUD.h"
+#import <JSPatchPlatform/JSPatch.h>
+
 // 引入JPush功能所需头文件
 #import "AppModel.h"
 #import "JPUSHService.h"
 #import "XHLaunchAd.h"
 #import "LaunchAdModel.h"
+#import "DHGuidePageHUD.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
+#import <AMapSearchKit/AMapSearchKit.h>
 // iOS10注册APNs所需头文件
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
@@ -35,31 +40,41 @@ static NSString *appKey = @"dcd205f49eadbac179b60c1e";
 static NSString *channel = @"App Store";
 
 
-@interface AppDelegate ()<JPUSHRegisterDelegate,AMapLocationManagerDelegate,UNUserNotificationCenterDelegate>
+@interface AppDelegate ()<JPUSHRegisterDelegate,UNUserNotificationCenterDelegate>
 
 @property (nonatomic,strong)UIStoryboard *story;
-@property (nonatomic,strong)AMapLocationManager *locationManager;
+
 @end
 
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+   [AMapServices sharedServices].apiKey = @"e8010c6bcb2137cfc3973a7d8f944a85";
+    
+    
+    
+    [JSPatch startWithAppKey:@"c547ee0af5889107"];
+    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFdJzeIDB+0y8lb5OzYBJcW3Nn\nF90KGrEJVWbrBeAZtGM8fmjkH1Z/nMs13XTRv6iOSjhtCpA+tm8itwT4Ekd067ln\nd3DizrTIuSRiLYpLUlKePy2TPmZmyUSl7eA4m9iFDx0jEYFdAtzwRHT1YrqvQJTp\nirbngh42uNzPtHyIWQIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch sync];
+    
+
+
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1]];
     [self shareSDKInterGration];
-
+ 
     application.statusBarHidden = NO;
     
 
     [[UITabBar appearance]setTintColor:[UIColor redColor]];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
-    if ([AppModel setJinShaVc]){
-    [self viewAddView];
-    }
+ 
     
-    [self setXh];
     
-    [UMessage startWithAppkey:@"58e1f28c734be464900013e2" launchOptions:launchOptions httpsEnable:YES ];
+ //   [self setXh];
+    
+    [UMessage startWithAppkey:@"58db85aaaed1794ef2001954" launchOptions:launchOptions httpsEnable:YES ];
     [UMessage openDebugMode:YES];
 
     //注册通知
@@ -89,19 +104,35 @@ static NSString *channel = @"App Store";
     // Optional添加初始化JPush代码
     [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:NO];
     [self savadata];
+
     return  YES;
 }
+//-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+//    self.window.frame = [UIScreen mainScreen].bounds ;
+//    WebViewController * web = [[WebViewController alloc]init];
+//    web.url = [NSURL URLWithString:@"http://5880111.com/wap/index#/event/home"];
+//    self.window.rootViewController = web;
+//    [self.window makeKeyAndVisible];
+//    
+//    if (NSFoundationVersionNumber_iOS_8_0) { //iOS8以上包含iOS8
+//        if ([[UIApplication sharedApplication] currentUserNotificationSettings].types  == UIRemoteNotificationTypeNone) {
+//        }
+//    }else{ // ios7 一下
+//        if ([[UIApplication sharedApplication] enabledRemoteNotificationTypes]  == UIRemoteNotificationTypeNone) {
+//        }
+//    }
+//    
+//    return YES;
+//}
 -(void)savadata{
-  //  let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory,
-   //                                                FileManager.SearchPathDomainMask.userDomainMask,true).first!
-  //  let userAccountPath = "\(path)/userAccount.data"
+
+    
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
-    NSString * file = [NSString stringWithFormat:@"%@/userAccount.data",path];
-    
-    NSArray * array = @[@{@"type":@"新加坡28",@"qishu":@"2698094",@"price":@"20",@"status":@"未中奖"},@{@"type":@"新加坡28",@"qishu":@"2698092",@"price":@"10",@"status":@"未中奖"},@{@"type":@"新加坡28",@"qishu":@"2698091",@"price":@"16",@"status":@"已中奖"},@{@"type":@"新加坡28",@"qishu":@"2698089",@"price":@"22",@"status":@"未中奖"},@{@"type":@"新加坡28",@"qishu":@"2698088",@"price":@"30",@"status":@"已中奖"},@{@"type":@"新加坡28",@"qishu":@"2698030",@"price":@"50",@"status":@"已中奖"}];
+    NSString * file = [NSString stringWithFormat:@"%@/userAccount.shouchang",path];
     if(![NSArray arrayWithContentsOfFile:file]){
-      [array writeToFile:file atomically:YES];
+    NSArray * arrary = @[@{@"time":@"2017-04-05",@"haoma":@[@"03",@"04",@"10",@"15",@"21",@"31",@"07"],@"qishu":@"2017041",@"kjtime":@"04-02 21:30"}];
+      [arrary writeToFile:file atomically:YES];
     }
   
 
@@ -167,27 +198,9 @@ static NSString *channel = @"App Store";
     VC.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",openURLString]];
     [self.window.rootViewController presentViewController:VC animated:YES completion:nil];
   */
-    
-}
--(void)viewAddView{
-  
-  
-        [HttpTools getWithPathsuccess:^(id JSON) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                WebViewController * web = [[WebViewController alloc]init];
-                web.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",JSON]];
-                if(![self.window.rootViewController isKindOfClass:[WebViewController class]]){
-                    self.window.rootViewController = web;
-                    [self.window makeKeyAndVisible];
-                }
-          
-//                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",JSON]]];
-            });
-        } :^(NSError *error) {
-            
-        }];
 
 }
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
     return YES;
@@ -206,6 +219,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //Optional
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
 }
+
 
 #pragma mark- JPUSHRegisterDelegate
 
@@ -242,6 +256,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{
+    [JSPatch sync];
     [application setApplicationIconBadgeNumber:0];
 }
 

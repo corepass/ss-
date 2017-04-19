@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "UIImageView+WebCache.h"
-
+#import "AFNetworkReachabilityManager.h"
 #import "HttpTools.h"
 #import "AppURLdefine.h"
 #import "MJExtension.h"
@@ -171,6 +171,46 @@
         failure(error);
     }];
 }
++ (void)GETWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [SVProgressHUD show];
+    NSURL * url = [NSURL URLWithString:path];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    NSURLSession * session = [NSURLSession sharedSession];
+    NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data){
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [SVProgressHUD dismiss];
+            NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            success(str);
+        }else{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [SVProgressHUD dismiss];
+            failure(error);
+        }
+        
+    }];
+    [dataTask resume];
+
+
+}
++(void)POSTWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:path parameters:parms progress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [SVProgressHUD dismiss];
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [SVProgressHUD dismiss];
+        failure(error);
+    }];
+
+
+}
 +(void)postCustonCAIPIAOWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:path parameters:parms progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -178,8 +218,8 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         [SVProgressHUD dismiss];
-        if ([[responseObject allKeys] containsObject:@"Records"]){
-            success(responseObject[@"Records"]);
+        if ([[responseObject allKeys] containsObject:@"data"]){
+            success(responseObject[@"data"]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

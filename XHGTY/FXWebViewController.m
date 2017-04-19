@@ -64,7 +64,10 @@
     // 添加到视图
     [self.view addSubview:progressView];
     
+  
     [self loadNewItems];
+
+  
     
     //self.webView.scrollView.showsVerticalScrollIndicator = NO;
     self.webView.scrollView.showsHorizontalScrollIndicator = NO;
@@ -104,10 +107,27 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.accessUrl]];
     [self.webView loadRequest:request];
 }
+-(void)loadHTMl{
+    [HttpTools GETWithPath:self.accessUrl parms:nil success:^(id JSON) {
+        
+        NSString *htmlData = JSON;
+        [self.webView loadHTMLString:htmlData baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle]  bundlePath]]];
+        
+    } :^(NSError *error) {
+        //
+    }];
 
+}
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSString *url = request.URL.absoluteString;
-    
+//    if(![url isEqualToString:self.accessUrl]){
+//        FXWebViewController * web = [[FXWebViewController alloc] init];
+//        web.titleName = @"详情";
+//        web.accessUrl = url;
+//        [self.navigationController pushViewController:web animated:YES];
+//        return NO;
+//    
+//    }
     NSLog(@"url = %@",url);
     
     return YES;

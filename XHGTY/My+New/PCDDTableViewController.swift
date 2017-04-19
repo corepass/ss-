@@ -15,7 +15,7 @@ class PCDDTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         segumented = UISegmentedControl(items: ["幸运28","新加坡28"])
-        segumented.frame = CGRect(x:0, y: 0, width: 300, height: 40)
+        segumented.frame = CGRect(x:0, y: 0, width: 250, height: 40)
         segumented.addTarget(self, action: #selector(segumentedClick), for: .valueChanged)
         segumented.tintColor = UIColor.white
         segumented.selectedSegmentIndex = 0

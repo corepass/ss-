@@ -39,13 +39,13 @@ class UserView: UIView {
       let defa = UserDefaults.standard
         account = UILabel()
         account.text = defa.value(forKey: "account") as? String ?? "未登录"
-        account.textColor = UIColor.gray
+        account.textColor = UIColor.white
         account.font = UIFont.systemFont(ofSize: 14)
         self.addSubview(account)
         
         nickName = UILabel()
         nickName.text = defa.value(forKey: "password") as? String ?? "未登录"
-        nickName.textColor = UIColor.gray
+        nickName.textColor = UIColor.white
         nickName.font = UIFont.systemFont(ofSize: 12)
       
         self.addSubview(nickName)

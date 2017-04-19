@@ -19,7 +19,7 @@
 #import "AppDefine.h"
 #define kItemMargin 2
 #import "HallCollectionViewCell.h"
-
+#import "BallTableViewController.h"
 @interface TYBFViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -77,12 +77,22 @@ static NSString *const cellID = @"cellID";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    FXWebViewController *webVC = [[FXWebViewController alloc]init];
-    webVC.accessUrl = self.totalArrs[indexPath.row].href;
-    webVC.titleName = self.totalArrs[indexPath.row].label;
-    webVC.isneed = YES;
-    [self.navigationController pushViewController:webVC animated:YES];
 
+    NSDictionary * dic;
+    switch (indexPath.row) {
+        case 0:
+            dic = @{@"open":@"http://api.datacenter.woying.com/soccer/score?lType=1&statType=2&issue=2017-04-19&sv2=1",@"unopen":@"http://api.datacenter.woying.com/soccer/score?lType=1&statType=1&issue=&sv2=1",@"title":@"足球"};
+            break;
+            
+        default:
+            dic = @{@"open":@"http://api.datacenter.woying.com/Basketball/score?lType=2&statType=2&issue=2017-04-19&sv2=1",@"unopen":@"http://api.datacenter.woying.com/Basketball/score?lType=2&statType=1&issue=&sv2=1",@"title":@"篮球"};
+            break;
+    }
+    
+    BallTableViewController * ball = [[BallTableViewController alloc]init];
+    ball.hidesBottomBarWhenPushed = YES;
+    ball.dic = dic;
+    [self.navigationController pushViewController:ball animated:YES];
 }
 
 

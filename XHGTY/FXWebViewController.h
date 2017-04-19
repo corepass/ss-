@@ -16,4 +16,6 @@
 @property (nonatomic,copy)NSString *titleName;
 
 @property (nonatomic, assign) BOOL  isneed;
+
+@property(nonatomic ,assign) BOOL isHTML;
 @end

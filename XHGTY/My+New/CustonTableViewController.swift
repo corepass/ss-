@@ -105,12 +105,12 @@ class CustonTableViewController: UITableViewController {
         }else{
             if modelArray.count > indexPath.section - 1{
                 let model = modelArray[indexPath.section - 1]
-                cell?.qishu.text = "第\(model["wareIssue"]!)期"
-                let str = "\(model["PrizeTime"]!)"
+                cell?.qishu.text = "第\(model["expect"]!)期"
+                let str = "\(model["opentime"]!)"
                 let index = str.index(str.startIndex, offsetBy: 5)
                 let suffix = str.substring(from: index)
                 cell?.time.text = suffix
-                cell?.jieguo.text = model["wareResult"]! as? String
+                cell?.jieguo.text = model["opencode"]! as? String
                 cell?.qishu.backgroundColor = UIColor.init(red: 245.0/255.0, green: 225.0/255.0, blue: 210.0/255.0, alpha: 1)
                 cell?.time.backgroundColor = UIColor.init(red: 245.0/255.0, green: 225.0/255.0, blue: 210.0/255.0, alpha: 1)
                 cell?.jieguo.backgroundColor = UIColor.init(red: 245.0/255.0, green: 225.0/255.0, blue: 210.0/255.0, alpha: 1)

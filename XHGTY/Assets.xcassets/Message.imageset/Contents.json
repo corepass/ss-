@@ -6,12 +6,11 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "Message@2x.png",
+      "filename" : "预测.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Message@3x.png",
       "scale" : "3x"
     }
   ],

@@ -35,6 +35,13 @@
 #define kItemMargin 2
 #import "CpMapViewController.h"
 #import "HallCollectionViewCell.h"
+#import "LoginViewController.h"
+#import "DHGuidePageHUD.h"
+#import "WebViewController.h"
+#import "JXModel.h"
+#import "AppModel.h"
+#import "FXNLViewController.h"
+#import "FXViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -62,6 +69,46 @@ static NSString *const cellID = @"cellID";
         _Ads = [NSMutableArray array];
     }
     return _Ads;
+}
+-(void)addyindaoyue{
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]) {
+        
+        
+        [self setStaticGuidePage];
+        
+    }
+}
+-(void)viewAddView{
+    
+    
+    
+    [HttpTools getWithPathsuccess:^(id JSON) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"有活动的时候开启");
+            
+            WebViewController * web = [[NSClassFromString(@"WebViewController") alloc] init];
+            web.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",JSON]];
+            [self presentViewController:web animated:NO completion:nil];
+            
+        });
+    } :^(NSError *error) {
+        
+    }];
+    
+}
+#pragma mark - 设置APP静态图片引导页
+- (void)setStaticGuidePage {
+    NSArray *imageNameArray = @[@"bei-1",@"bei-2",@"bei-3"];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    DHGuidePageHUD *guidePage = [[DHGuidePageHUD alloc] dh_initWithFrame:[UIScreen mainScreen].bounds imageNameArray:imageNameArray buttonIsHidden:YES];
+    guidePage.slideInto = YES;
+    __weak __typeof (self) weak = self;
+    guidePage.removeFromeSuperViewBlock = ^(){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
+        [weak viewAddView];
+    };
+    [window addSubview:guidePage];
 }
 
 
@@ -92,20 +139,45 @@ static NSString *const cellID = @"cellID";
     self.navigationItem.rightBarButtonItem = right;
 }
 -(void)leftClick{
-    PCDDTableViewController * goucai = [[PCDDTableViewController alloc]init];
-    goucai.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:goucai animated:YES];
+//    PCDDTableViewController * goucai = [[PCDDTableViewController alloc]init];
+//    goucai.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:goucai animated:YES];
+    NSUserDefaults * defa = [NSUserDefaults standardUserDefaults];
+    if ([defa valueForKey:@"account"]){
+        [SVProgressHUD showWithStatus:@"您已经登录了！"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }else{
+        LoginViewController * login = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        login.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:login animated:YES];
+    
+    }
+    
+    
+
     
 }
 -(void)rightClick{
-    NotificationViewController * noti = [[NotificationViewController alloc] init];
+  
+    FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
     noti.hidesBottomBarWhenPushed = true;
     [self.navigationController pushViewController:noti animated:YES];
     
 }
+-(void)addsomething{
+    if([AppModel setJinShaVc] && [[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]){
+        [self viewAddView];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self addyindaoyue];
+    [self performSelector:@selector(addsomething)];
+    [self setBannar];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"大厅";
@@ -130,10 +202,7 @@ static NSString *const cellID = @"cellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
-    //    if (self.totalLotters.count > indexPath.row){
-    //        cell.iconImage.image = [UIImage imageNamed:self.totalLotters[indexPath.row].label];
-    //        cell.titleLable.text = self.totalLotters[indexPath.row].label;
-    //    }
+  
     cell.lotteryName = self.totalLotters[indexPath.row].label;
     return cell;
 }
@@ -142,7 +211,36 @@ static NSString *const cellID = @"cellID";
     [self.nonetWorkView removeFromSuperview];
     [self loadNewItems];
 }
+-(void)setBannar{
 
+    [HttpTools POSTWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
+                if ([JSON isKindOfClass:[NSArray class]]){
+                 NSArray * array = JSON;
+                    for (NSDictionary * dic  in array) {
+                        FXAd * model = [[FXAd alloc] init];
+                        model.img = dic[@"ImgUrl"];
+                        model.url = dic[@"AritleUrl"];
+                        [self.Ads addObject:model];
+                    }
+             
+               _cycleView.totalAds =self.Ads;
+                }else{
+                    NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+                    NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+                    self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+                    _cycleView.totalAds =self.Ads;
+                }
+                
+                
+    } :^(NSError *error) {
+        NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+        NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+        self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+        _cycleView.totalAds =self.Ads;
+    }];
+ 
+
+}
 - (void)loadNewItems{
     
     NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
@@ -155,14 +253,14 @@ static NSString *const cellID = @"cellID";
     
     [self.collectionView reloadData];
     
-    self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+   
     
     
-    FXHomeMenuCycleView *cycleView = [FXHomeMenuCycleView homeMenuCycleView];
-    cycleView.delegate = self;
-    cycleView.totalAds =self.Ads;
+    _cycleView = [FXHomeMenuCycleView homeMenuCycleView];
+    _cycleView.delegate = self;
+  //  _cycleView.totalAds =self.Ads;
     
-    self.cycleView = cycleView;
+    self.cycleView = _cycleView;
     
     [self.collectionView addSubview:self.cycleView];
     self.collectionView.contentInset = UIEdgeInsetsMake(kScreenW * 3/8 , 0, 0, 0);
@@ -211,7 +309,7 @@ static NSString *const cellID = @"cellID";
         goucai.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:goucai animated:YES];
         return;
-    }else if ([destStr isEqualToString:@"开奖记录"]){
+    }else if ([destStr isEqualToString:@"彩票论坛"]){
         
         //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
         //        webVC.accessUrl = @"http://app.lhst6.com/ziliao/shuju.php";
@@ -257,10 +355,15 @@ static NSString *const cellID = @"cellID";
         cp.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:cp animated:YES];
     }else if ([destStr isEqualToString:@"彩票资讯"]){
-        NewTableViewController * news = [[NewTableViewController alloc]init];
-        news.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:news animated:true];
+//        NewTableViewController * news = [[NewTableViewController alloc]init];
+//        news.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:news animated:true];
         
+        FXWebViewController * web = [[FXWebViewController alloc] init];
+        web.titleName = @"彩票资讯";
+        web.accessUrl = @"http://news.soa.woying.com/";
+        web.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:web animated:YES];
     }
     
 }

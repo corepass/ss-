@@ -110,7 +110,7 @@
     lable.backgroundColor = [UIColor whiteColor];
     lable.size = CGSizeMake(self.view.width, 30);
     lable.center = self.tableView.center;
-    lable.text = @"定位失败，请稍候再试！";
+    lable.text = @"定位失败，请稍候再试哦！";
     [lable setTextAlignment:NSTextAlignmentCenter];
     lable.font = [UIFont systemFontOfSize:14];
     [self.tableView addSubview:lable];

@@ -15,7 +15,6 @@
     self.distance.textColor = [[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1];
     self.cpImage.layer.cornerRadius = 4;
     self.cpImage.layer.masksToBounds = YES;
-    // Initialization code
 }
 -(void)setPoi:(AMapPOI *)poi{
     _poi = poi;

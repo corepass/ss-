@@ -128,6 +128,29 @@ class MyViewController: UIViewController , UITableViewDelegate, UITableViewDataS
             if UIApplication.shared.canOpenURL(URL.init(string: "prefs:root=Phone")!){
          UIApplication.shared.openURL(URL.init(string: "prefs:root=Phone")!)
         }
+            
+            
+//            #define SYSTEM_VERSION_GREATER_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+//            
+//            if (SYSTEM_VERSION_GREATER_THAN(@"8.0")) {
+//                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+//                    [[UIApplication sharedApplication] openURL:url];
+//                }
+//            } else {
+//                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=NOTIFICATIONS_ID"]];
+//            }
+//        
+          
+            if let version:Float = Float(UIDevice.current.systemVersion) , version > 8.0 {
+            let url = URL(string: UIApplicationOpenSettingsURLString)
+                if UIApplication.shared.canOpenURL(url!){
+                UIApplication.shared.openURL(url!)
+                }
+            }else{
+            UIApplication.shared.openURL(URL.init(string: "prefs:root=Phone")!)
+            }
+            
         }
         else if indexPath.section == 2 {
             if Apploction.default.isLogin {

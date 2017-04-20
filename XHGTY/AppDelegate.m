@@ -51,11 +51,11 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-   [AMapServices sharedServices].apiKey = @"eb9927a93fbe6408f06ff80effaa4986";
+   [AMapServices sharedServices].apiKey = @"70ef20d53472526eb7f0b307f4f33e16";
     
     
     
-    [JSPatch startWithAppKey:@"0fe03255df816e27"];
+    [JSPatch startWithAppKey:@"d828962e3a31e19f"];
     [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFdJzeIDB+0y8lb5OzYBJcW3Nn\nF90KGrEJVWbrBeAZtGM8fmjkH1Z/nMs13XTRv6iOSjhtCpA+tm8itwT4Ekd067ln\nd3DizrTIuSRiLYpLUlKePy2TPmZmyUSl7eA4m9iFDx0jEYFdAtzwRHT1YrqvQJTp\nirbngh42uNzPtHyIWQIDAQAB\n-----END PUBLIC KEY-----"];
     [JSPatch sync];
     
@@ -69,12 +69,12 @@ static NSString *channel = @"App Store";
 
     [[UITabBar appearance]setTintColor:[UIColor redColor]];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
- 
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSForegroundColorAttributeName:[UIFont systemFontOfSize:32]}];
     
     
  //   [self setXh];
     
-    [UMessage startWithAppkey:@"58f49c42c62dca4d1f000586" launchOptions:launchOptions httpsEnable:YES ];
+    [UMessage startWithAppkey:@"58f04844f43e4813f2001569" launchOptions:launchOptions httpsEnable:YES ];
     [UMessage openDebugMode:YES];
 
     //注册通知

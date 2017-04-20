@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PC蛋蛋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1r-tK-BAq">
-                                <rect key="frame" x="0.0" y="562" width="375" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="北京赛车-彩票服务中心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1r-tK-BAq">
+                                <rect key="frame" x="0.0" y="588" width="375" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="CYG-Fm-hRt"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="All Rights reserved by 96976111.com 1.0for iPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-qI-0Yd">
-                                <rect key="frame" x="0.0" y="607" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="633" width="375" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="E6p-0D-jvq"/>
                                 </constraints>
@@ -39,19 +39,29 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-lu-B95">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="580"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g1r-tK-BAq" firstAttribute="top" secondItem="cHO-lu-B95" secondAttribute="bottom" constant="8" id="ILP-97-Qrm"/>
                             <constraint firstItem="lVs-qI-0Yd" firstAttribute="top" secondItem="g1r-tK-BAq" secondAttribute="bottom" constant="8" id="Uwl-ii-luK"/>
+                            <constraint firstAttribute="trailing" secondItem="cHO-lu-B95" secondAttribute="trailing" id="a3k-tk-Hsc"/>
                             <constraint firstItem="g1r-tK-BAq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="l4U-Hk-yyO"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lVs-qI-0Yd" secondAttribute="bottom" constant="28" id="sE8-LN-cJM"/>
+                            <constraint firstItem="cHO-lu-B95" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ogh-a8-3Nb"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lVs-qI-0Yd" secondAttribute="bottom" constant="2" id="sE8-LN-cJM"/>
                             <constraint firstItem="lVs-qI-0Yd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uyb-Up-Icv"/>
+                            <constraint firstItem="cHO-lu-B95" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wW9-F0-F5f"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch" width="750" height="1134"/>
+    </resources>
 </document>

@@ -10,5 +10,5 @@
 
 @interface AppModel : NSObject
 + (BOOL)setJinShaVc;
-+ ( NSString *)pinJieStr;
++ (NSString *)pinJieStr;
 @end

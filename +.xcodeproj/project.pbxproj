@@ -177,6 +177,13 @@
 		6D0E7D941E8CCB7D0029E809 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D8E1E8CCB7D0029E809 /* RegisterView.m */; };
 		6D0E7D9D1E8CDC2D0029E809 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D9C1E8CDC2D0029E809 /* MyViewController.swift */; };
 		6D0E7DA21E8CEF730029E809 /* MytabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7DA11E8CEF730029E809 /* MytabBarViewController.m */; };
+		6D1292F71EA8559A006824C6 /* KJTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1292F61EA8559A006824C6 /* KJTableViewController.swift */; };
+		6D1292FA1EA855B8006824C6 /* KJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1292F81EA855B8006824C6 /* KJTableViewCell.swift */; };
+		6D1292FB1EA855B8006824C6 /* KJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1292F91EA855B8006824C6 /* KJTableViewCell.xib */; };
+		6D1293031EA86B24006824C6 /* HomegpcCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293011EA86B24006824C6 /* HomegpcCollectionViewCell.m */; };
+		6D1293041EA86B24006824C6 /* HomegpcCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1293021EA86B24006824C6 /* HomegpcCollectionViewCell.xib */; };
+		6D1293071EA86D3A006824C6 /* gpcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293061EA86D3A006824C6 /* gpcModel.m */; };
+		6D1293091EA8878E006824C6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1293081EA8878E006824C6 /* Social.framework */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9A18CC1E94A204004D4E07 /* FXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */; };
@@ -675,6 +682,15 @@
 		6D0E7D9C1E8CDC2D0029E809 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyViewController.swift; path = ../MyViewController.swift; sourceTree = "<group>"; };
 		6D0E7DA01E8CEF730029E809 /* MytabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MytabBarViewController.h; sourceTree = "<group>"; };
 		6D0E7DA11E8CEF730029E809 /* MytabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MytabBarViewController.m; sourceTree = "<group>"; };
+		6D1292F61EA8559A006824C6 /* KJTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJTableViewController.swift; sourceTree = "<group>"; };
+		6D1292F81EA855B8006824C6 /* KJTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJTableViewCell.swift; sourceTree = "<group>"; };
+		6D1292F91EA855B8006824C6 /* KJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KJTableViewCell.xib; sourceTree = "<group>"; };
+		6D1293001EA86B24006824C6 /* HomegpcCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomegpcCollectionViewCell.h; sourceTree = "<group>"; };
+		6D1293011EA86B24006824C6 /* HomegpcCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomegpcCollectionViewCell.m; sourceTree = "<group>"; };
+		6D1293021EA86B24006824C6 /* HomegpcCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomegpcCollectionViewCell.xib; sourceTree = "<group>"; };
+		6D1293051EA86D3A006824C6 /* gpcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpcModel.h; sourceTree = "<group>"; };
+		6D1293061EA86D3A006824C6 /* gpcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gpcModel.m; sourceTree = "<group>"; };
+		6D1293081EA8878E006824C6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewController.swift; sourceTree = "<group>"; };
@@ -1022,6 +1038,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1293091EA8878E006824C6 /* Social.framework in Frameworks */,
 				6D082F241EA6129E0076F6D3 /* MapKit.framework in Frameworks */,
 				C78D25FC1DDB031800EE34E0 /* libz.tbd in Frameworks */,
 				C78D26001DDB032700EE34E0 /* JavaScriptCore.framework in Frameworks */,
@@ -1581,6 +1598,16 @@
 			path = "Login+Regist";
 			sourceTree = "<group>";
 		};
+		6D1292F51EA8557B006824C6 /* KJ */ = {
+			isa = PBXGroup;
+			children = (
+				6D1292F61EA8559A006824C6 /* KJTableViewController.swift */,
+				6D1292F81EA855B8006824C6 /* KJTableViewCell.swift */,
+				6D1292F91EA855B8006824C6 /* KJTableViewCell.xib */,
+			);
+			path = KJ;
+			sourceTree = "<group>";
+		};
 		6D9A18D11E94B582004D4E07 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -1841,6 +1868,8 @@
 				6D082EB91EA4C6680076F6D3 /* JXModel.m */,
 				6D082F2F1EA747B90076F6D3 /* BallModel.h */,
 				6D082F301EA747B90076F6D3 /* BallModel.m */,
+				6D1293051EA86D3A006824C6 /* gpcModel.h */,
+				6D1293061EA86D3A006824C6 /* gpcModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1875,6 +1904,9 @@
 				6D082F2A1EA744D40076F6D3 /* BallTableViewCell.h */,
 				6D082F2B1EA744D40076F6D3 /* BallTableViewCell.m */,
 				6D082F2C1EA744D40076F6D3 /* BallTableViewCell.xib */,
+				6D1293001EA86B24006824C6 /* HomegpcCollectionViewCell.h */,
+				6D1293011EA86B24006824C6 /* HomegpcCollectionViewCell.m */,
+				6D1293021EA86B24006824C6 /* HomegpcCollectionViewCell.xib */,
 			);
 			path = HomeCell;
 			sourceTree = "<group>";
@@ -2094,6 +2126,7 @@
 		C78D25B21DDAEE3700EE34E0 /* XHGTY */ = {
 			isa = PBXGroup;
 			children = (
+				6D1292F51EA8557B006824C6 /* KJ */,
 				6D082F101EA5C8730076F6D3 /* CPViewController */,
 				6D082ECF1EA5C4A50076F6D3 /* Map */,
 				C7ABDC151E01369A0040873A /* Lib */,
@@ -2225,6 +2258,7 @@
 		C78D25F81DDB030D00EE34E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D1293081EA8878E006824C6 /* Social.framework */,
 				6D082F231EA6129E0076F6D3 /* MapKit.framework */,
 				6D082F1E1EA605FD0076F6D3 /* GLKit.framework */,
 				C7B5C9941E4A0B7600E4D623 /* CoreLocation.framework */,
@@ -2381,7 +2415,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = XYDUV8N442;
+						DevelopmentTeam = BPJH6ZC6R4;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2439,6 +2473,8 @@
 				C78D25E81DDAFF5400EE34E0 /* ShareSDKConfigFile.bundle in Resources */,
 				6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */,
 				C749C96E1E72BB9B00241CFD /* RecordOneViewCell.xib in Resources */,
+				6D1292FB1EA855B8006824C6 /* KJTableViewCell.xib in Resources */,
+				6D1293041EA86B24006824C6 /* HomegpcCollectionViewCell.xib in Resources */,
 				C749C9701E72BB9B00241CFD /* RecordViewCell.xib in Resources */,
 				C722E35F1E166C5200A8E2E9 /* FXHomeMenuCell.xib in Resources */,
 				C749C9781E72BB9B00241CFD /* xindian@2x.gif in Resources */,
@@ -2526,6 +2562,7 @@
 				C749C9531E72BB9B00241CFD /* VideoDrawViewController.m in Sources */,
 				C790DA3C1E1B7B9C00E1A7E0 /* FXPeiLv.m in Sources */,
 				C749C9631E72BB9B00241CFD /* LHDQViewCell.m in Sources */,
+				6D1293031EA86B24006824C6 /* HomegpcCollectionViewCell.m in Sources */,
 				C790D9F11E1B477A00E1A7E0 /* LotteryKind.m in Sources */,
 				6D0E7CFB1E8A48340029E809 /* MASConstraintMaker.m in Sources */,
 				6D09E0AF1E9F272A00D9B51F /* FTZViewController.m in Sources */,
@@ -2662,6 +2699,7 @@
 				C790DA6A1E1B96EE00E1A7E0 /* SDWebImageManager.m in Sources */,
 				6D09DFCC1E9B203900D9B51F /* NetWorkTools.m in Sources */,
 				6D0E7D721E8CC92C0029E809 /* Node.swift in Sources */,
+				6D1292FA1EA855B8006824C6 /* KJTableViewCell.swift in Sources */,
 				C749C9431E72BB9B00241CFD /* HomeViewController.m in Sources */,
 				6D09DFC91E9B203900D9B51F /* NALLabelsMatrix.m in Sources */,
 				6D09DFD91E9B205300D9B51F /* FMDatabase.m in Sources */,
@@ -2674,10 +2712,12 @@
 				C749C9581E72BB9B00241CFD /* FXLotteryDistr.m in Sources */,
 				6D082F0B1EA5C6010076F6D3 /* UIButton+AFNetworking.m in Sources */,
 				6D0E7D491E8CB7280029E809 /* NewTableViewCell.swift in Sources */,
+				6D1293071EA86D3A006824C6 /* gpcModel.m in Sources */,
 				6D09DFB21E9B1FFA00D9B51F /* FDCalendarItem.m in Sources */,
 				C749C9841E72BD4600241CFD /* BaseObject.m in Sources */,
 				C790DA421E1B949F00E1A7E0 /* ZiXunTableViewCell.m in Sources */,
 				C790DA701E1B96EE00E1A7E0 /* UIImageView+WebCache.m in Sources */,
+				6D1292F71EA8559A006824C6 /* KJTableViewController.swift in Sources */,
 				6D0E7D8F1E8CCB7D0029E809 /* NSString+isEmpty.m in Sources */,
 				C76212CD1E23777C00707051 /* FXNewsViewCell.m in Sources */,
 				6D082F031EA5C6010076F6D3 /* AFURLResponseSerialization.m in Sources */,
@@ -2872,10 +2912,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna Wang (XYDUV8N442)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna Wang (XYDUV8N442)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XYDUV8N442;
+				DEVELOPMENT_TEAM = BPJH6ZC6R4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2900,10 +2940,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CHANGfa168.CHANGfa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mknnb766.mknnb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "853c4c45-c13b-4ca8-8d27-5d53154dcea1";
-				PROVISIONING_PROFILE_SPECIFIER = "CHANGfa168上架";
+				PROVISIONING_PROFILE = "f3098696-aca1-4017-9ccc-1ddf0a44427b";
+				PROVISIONING_PROFILE_SPECIFIER = "mknnb766上架";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2917,10 +2957,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna Wang (XYDUV8N442)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna Wang (XYDUV8N442)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XYDUV8N442;
+				DEVELOPMENT_TEAM = BPJH6ZC6R4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2945,10 +2985,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CHANGfa168.CHANGfa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mknnb766.mknnb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "853c4c45-c13b-4ca8-8d27-5d53154dcea1";
-				PROVISIONING_PROFILE_SPECIFIER = "CHANGfa168上架";
+				PROVISIONING_PROFILE = "f3098696-aca1-4017-9ccc-1ddf0a44427b";
+				PROVISIONING_PROFILE_SPECIFIER = "mknnb766上架";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -31,8 +31,40 @@
     }
 
 }
+-(void)rightClick{
+    // 设置分享内容
+    NSString *text = @"分享内容";
+    //UIImage *image = [UIImage imageNamed:@"1.png"];
+    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/us/app/id1218691138"];
+    NSArray *activityItems = @[text,url];
+    
+    // 服务类型控制器
+    UIActivityViewController *activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewController.modalInPopover = true;
+    [self presentViewController:activityViewController animated:YES completion:nil];
+    
+    // 选中分享类型
+    [activityViewController setCompletionWithItemsHandler:^(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+        
+        // 显示选中的分享类型
+        NSLog(@"act type %@",activityType);
+        
+        if (completed) {
+            NSLog(@"ok");
+        }else {
+            NSLog(@"no ok");
+        }
+        
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    right.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = right;
+    
     
     self.view.backgroundColor = [UIColor whiteColor];
   

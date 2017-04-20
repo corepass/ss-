@@ -42,13 +42,15 @@
 #import "AppModel.h"
 #import "FXNLViewController.h"
 #import "FXViewController.h"
+#import "HomegpcCollectionViewCell.h"
+#import "gpcModel.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
  
  */
 
-@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,requestNetWorDelegate,FXHomeMenuSelectedDelegate,UIAlertViewDelegate>
+@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,requestNetWorDelegate,FXHomeMenuSelectedDelegate,UIAlertViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)FXHomeMenuCycleView *cycleView;
@@ -58,12 +60,14 @@
 @property (nonatomic,strong)NSMutableArray *Ads;
 /**网络链接失败*/
 @property (nonatomic,strong)FXNoNetWorkView *nonetWorkView;
+
+@property(nonatomic,strong) NSMutableArray<gpcModel *> * gpcArray;
 @end
 
 @implementation HomeViewController
 
 static NSString *const cellID = @"cellID";
-
+static NSString *const gpcID = @"gpcID";
 -(NSMutableArray *)Ads{
     if (_Ads == nil) {
         _Ads = [NSMutableArray array];
@@ -79,14 +83,13 @@ static NSString *const cellID = @"cellID";
         
     }
 }
--(void)viewAddView{
+-(void)addActionView{
     
     
     
     [HttpTools getWithPathsuccess:^(id JSON) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"有活动的时候开启");
-            
             WebViewController * web = [[NSClassFromString(@"WebViewController") alloc] init];
             web.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",JSON]];
             [self presentViewController:web animated:NO completion:nil];
@@ -106,7 +109,7 @@ static NSString *const cellID = @"cellID";
     __weak __typeof (self) weak = self;
     guidePage.removeFromeSuperViewBlock = ^(){
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
-        [weak viewAddView];
+        [weak addActionView];
     };
     [window addSubview:guidePage];
 }
@@ -130,7 +133,8 @@ static NSString *const cellID = @"cellID";
     if(self.totalLotters.count){
         kSendNotify(@"首页出现", nil);
     }
-    
+    _gpcArray = [[NSMutableArray alloc] init];
+    [self getgpcData];
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
     left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
@@ -139,9 +143,7 @@ static NSString *const cellID = @"cellID";
     self.navigationItem.rightBarButtonItem = right;
 }
 -(void)leftClick{
-//    PCDDTableViewController * goucai = [[PCDDTableViewController alloc]init];
-//    goucai.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:goucai animated:YES];
+
     NSUserDefaults * defa = [NSUserDefaults standardUserDefaults];
     if ([defa valueForKey:@"account"]){
         [SVProgressHUD showWithStatus:@"您已经登录了！"];
@@ -154,10 +156,7 @@ static NSString *const cellID = @"cellID";
         [self.navigationController pushViewController:login animated:YES];
     
     }
-    
-    
 
-    
 }
 -(void)rightClick{
   
@@ -168,7 +167,7 @@ static NSString *const cellID = @"cellID";
 }
 -(void)addsomething{
     if([AppModel setJinShaVc] && [[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]){
-        [self viewAddView];
+        [self addActionView];
     }
 }
 - (void)viewDidLoad {
@@ -183,28 +182,109 @@ static NSString *const cellID = @"cellID";
     self.navigationItem.title = @"大厅";
     self.nonetWorkView.delegate = self;
     
+    [self.collectionView registerNib:[UINib nibWithNibName:@"HomegpcCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:gpcID];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
     [self.collectionView registerClass:[XYHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"heard"];
-    
+    self.collectionView.showsVerticalScrollIndicator = NO;
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    CGFloat itemW = (kScreenW - 4 * kItemMargin) / 3;
-    CGFloat itemH = itemW+5;
-    layout.itemSize = CGSizeMake(itemW, itemH);
+  
     layout.minimumLineSpacing = kItemMargin;
-    layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 80);
+ //   layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 80);
     layout.minimumInteritemSpacing = kItemMargin;
     layout.sectionInset = UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
     
     [self loadNewItems];
     
 }
+-(void)getgpcData{
+   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
+       if (JSON != nil){
+           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
+           dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.collectionView reloadData];
+           });
+         
+       }
+   } :^(NSError *error) {
+       
+   }];
 
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case 0:
+        {
+            CGFloat itemW = (kScreenW - 4 * kItemMargin) / 3;
+            CGFloat itemH = itemW+5;
+      
+            return CGSizeMake(itemW, itemH);
+        }
+            break;
+            
+        default:
+            return CGSizeMake(self.view.width, 100);
+            break;
+    }
+
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return CGSizeMake(self.view.frame.size.width, 80);
+            break;
+            
+        default:
+            return CGSizeZero;
+            break;
+    }
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    if (_gpcArray.count == 0){
+        return 1;
+    }
+    return  2;
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return self.totalLotters.count;
+            break;
+            
+        default:
+            return _gpcArray.count;
+            break;
+    }
+
+}
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
-  
-    cell.lotteryName = self.totalLotters[indexPath.row].label;
-    return cell;
+    switch (indexPath.section) {
+        case 0:
+        {
+            HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+            
+            cell.lotteryName = self.totalLotters[indexPath.row].label;
+            return cell;
+        }
+            break;
+            
+        default:
+        {
+            HomegpcCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:gpcID forIndexPath:indexPath];
+            if(_gpcArray.count > indexPath.row){
+                cell.model = _gpcArray[indexPath.row];
+            }
+      //      cell = self.totalLotters[indexPath.row].label;
+            return cell;
+        }
+            break;
+    }
+    
+
 }
 
 - (void)requestNetWorkAgain{
@@ -279,91 +359,108 @@ static NSString *const cellID = @"cellID";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.totalLotters.count;
-}
+
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     XYHeardView * view;
-    if (kind == UICollectionElementKindSectionHeader){
+    if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0){
         view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"heard" forIndexPath:indexPath];
-        
         
     }
     return view;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    FXLottery *lottery = self.totalLotters[indexPath.item];
-    
-    NSString *destStr = lottery.label;
-    
-    if ([destStr isEqualToString:@"体验中心"]) {
-        //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
-        //        webVC.accessUrl = @"http://app.lhst6.com/shipinkaijiang/";
-        //        webVC.titleName = @"视频开奖";
-        //        webVC.hidesBottomBarWhenPushed = YES;
-        ////        VideoDrawViewController *videoVC = [[VideoDrawViewController alloc]init];
-        //        [self.navigationController pushViewController:webVC animated:YES];
-        GoucaiViewController * goucai = [[GoucaiViewController alloc] init];
-        goucai.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:goucai animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"彩票论坛"]){
+    switch (indexPath.section) {
+        case 0:
+        {
+            FXLottery *lottery = self.totalLotters[indexPath.item];
+            
+            NSString *destStr = lottery.label;
+            
+            if ([destStr isEqualToString:@"体验中心"]) {
+                //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
+                //        webVC.accessUrl = @"http://app.lhst6.com/shipinkaijiang/";
+                //        webVC.titleName = @"视频开奖";
+                //        webVC.hidesBottomBarWhenPushed = YES;
+                ////        VideoDrawViewController *videoVC = [[VideoDrawViewController alloc]init];
+                //        [self.navigationController pushViewController:webVC animated:YES];
+                GoucaiViewController * goucai = [[GoucaiViewController alloc] init];
+                goucai.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:goucai animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"彩票论坛"]){
+                
+                //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
+                //        webVC.accessUrl = @"http://app.lhst6.com/ziliao/shuju.php";
+                //        webVC.titleName = @"开奖记录";
+                //        webVC.hidesBottomBarWhenPushed = YES;
+                ////        RecordViewController *recordVC = [[RecordViewController alloc]init];
+                //        [self.navigationController pushViewController:webVC animated:YES];
+                //        self.tabBarController.selectedIndex = 1;
+                ForumViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"ForumViewController"];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+                
+                return;
+            }else if ([destStr isEqualToString:@"彩票专区"]){
+                LotteryDistrViewController *lotteryVC = [[LotteryDistrViewController alloc]init];
+                lotteryVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:lotteryVC animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"六合资料"]){
+                LHDQViewController *lhVC = [[LHDQViewController alloc]init];
+                lhVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:lhVC animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"三期内必出"]){
+                ThreeViewController *threeVC = [[ThreeViewController alloc]init];
+                threeVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:threeVC animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"特别号分析"]){
+                TieBieViewController *tieBIEVC = [[TieBieViewController alloc]init];
+                tieBIEVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:tieBIEVC animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"体育比分"]){
+                TYBFViewController *tieBIEVC = [[TYBFViewController alloc]init];
+                tieBIEVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:tieBIEVC animated:YES];
+                return;
+            }else if ([destStr isEqualToString:@"投注站"]){
+                //        PCDDTableViewController  *pcdd = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
+                //        [self.navigationController pushViewController:pcdd animated:true];
+                CpMapViewController * cp =  [[CpMapViewController alloc] init];
+                cp.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:cp animated:YES];
+            }else if ([destStr isEqualToString:@"彩票资讯"]){
+                //        NewTableViewController * news = [[NewTableViewController alloc]init];
+                //        news.hidesBottomBarWhenPushed = YES;
+                //        [self.navigationController pushViewController:news animated:true];
+                
+                FXWebViewController * web = [[FXWebViewController alloc] init];
+           
+                web.titleName = @"彩票资讯";
+                web.accessUrl = @"http://news.soa.woying.com/";
+                web.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:web animated:YES];
+            }
+        }
+            break;
+            
+        default:
+        {
+            gpcModel * model = _gpcArray[indexPath.row];
+            FXWebViewController * web =[[FXWebViewController alloc]init];
+            web.titleName = model.title;
+            web.accessUrl = model.contentUrl;
+            web.hidesBottomBarWhenPushed = YES;
+            web.isneed = YES;
+            [self.navigationController pushViewController:web animated:YES];
         
-        //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
-        //        webVC.accessUrl = @"http://app.lhst6.com/ziliao/shuju.php";
-        //        webVC.titleName = @"开奖记录";
-        //        webVC.hidesBottomBarWhenPushed = YES;
-        ////        RecordViewController *recordVC = [[RecordViewController alloc]init];
-        //        [self.navigationController pushViewController:webVC animated:YES];
-        //        self.tabBarController.selectedIndex = 1;
-        ForumViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"ForumViewController"];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-        
-        return;
-    }else if ([destStr isEqualToString:@"彩票专区"]){
-        LotteryDistrViewController *lotteryVC = [[LotteryDistrViewController alloc]init];
-        lotteryVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:lotteryVC animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"六合资料"]){
-        LHDQViewController *lhVC = [[LHDQViewController alloc]init];
-        lhVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:lhVC animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"三期内必出"]){
-        ThreeViewController *threeVC = [[ThreeViewController alloc]init];
-        threeVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:threeVC animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"特别号分析"]){
-        TieBieViewController *tieBIEVC = [[TieBieViewController alloc]init];
-        tieBIEVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:tieBIEVC animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"体育比分"]){
-        TYBFViewController *tieBIEVC = [[TYBFViewController alloc]init];
-        tieBIEVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:tieBIEVC animated:YES];
-        return;
-    }else if ([destStr isEqualToString:@"投注站"]){
-//        PCDDTableViewController  *pcdd = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
-//        [self.navigationController pushViewController:pcdd animated:true];
-        CpMapViewController * cp =  [[CpMapViewController alloc] init];
-        cp.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:cp animated:YES];
-    }else if ([destStr isEqualToString:@"彩票资讯"]){
-//        NewTableViewController * news = [[NewTableViewController alloc]init];
-//        news.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:news animated:true];
-        
-        FXWebViewController * web = [[FXWebViewController alloc] init];
-        web.titleName = @"彩票资讯";
-        web.accessUrl = @"http://news.soa.woying.com/";
-        web.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:web animated:YES];
+        }
+            break;
     }
     
 }

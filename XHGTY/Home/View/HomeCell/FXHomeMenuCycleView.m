@@ -103,8 +103,10 @@ static NSString *const FXHomeMenuCycleCellID = @"FXHomeMenuCycleCell";
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+    if (self.totalAds){
      self.pageContrl.currentPage =  (NSInteger)(scrollView.contentOffset.x / kScreenW) % self.totalAds.count ;
+    }
+    
     
 }
 

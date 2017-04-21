@@ -18,21 +18,54 @@
 #import "LoginViewController.h"
 #import "AppDefine.h"
 #import "HallCollectionViewCell.h"
+#import "MNXHViewController.h"
 #define kItemMargin 2
+
+typedef NS_ENUM(NSInteger, HallType){
+    HallTypeXh        = 0,
+    HallTypeKj     = 1,
+    
+};
 
 @interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *totalArr;
+@property (nonatomic,strong) UISegmentedControl * segumented;
+@property(nonatomic,assign) HallType tyoe;
 @end
 
 @implementation HallViewController
 
 static NSString *const cellID = @"cellID";
-
+-(void)setsegument{
+    NSArray * titleArray = @[@"选号",@"开奖"];
+    self.segumented = [[UISegmentedControl alloc]initWithItems:titleArray];
+    self.segumented.frame = CGRectMake(0, 0, 250, 40);
+    self.segumented.tintColor = [UIColor whiteColor];
+    self.segumented.selectedSegmentIndex = 0;
+    [self.segumented addTarget:self action:@selector(segumentedClick:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = self.segumented;
+    
+    
+    
+    
+}
+-(void)segumentedClick:(UISegmentedControl *)segemert{
+    switch (segemert.selectedSegmentIndex) {
+        case 0:
+            self.tyoe = HallTypeXh;
+            break;
+            
+        default:
+            self.tyoe = HallTypeKj;
+            break;
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setsegument];
     self.collectionView.backgroundColor = kGlobalColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
   
@@ -85,31 +118,69 @@ static NSString *const cellID = @"cellID";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
    LotteryKind *kind = self.totalArr[indexPath.row];
-    if (indexPath.row >0){
-        CustonTableViewController *detailVC = [[CustonTableViewController alloc]init];
-        detailVC.url = kind.url;
-        detailVC.title = kind.name;
-        detailVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:detailVC animated:YES];
-        
-        
-        
-    }else{
-        
-//        if ( [Apploction default].isLogin){
 
-            PCDDTableViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
+    if (self.tyoe == HallTypeXh){
+        if (indexPath.row >0){
+            NSDictionary * dic ;
+            switch (indexPath.row) {
+                case 0:
+                    dic = @{@"dataArray":@[@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc"};
+                    break;
+                case 1: case 2: case 4: case 5:
+                    dic = @{@"dataArray":@[@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"}],@"nBlue":@"4",@"type":@"pc",@"rule":@"任选5个号码，选中号与开奖开奖号码一致即中奖"};
+                    break;
+                case 3:
+                    dic = @{@"dataArray":@[@{@"number":@"49",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc",@"rule":@"任选1个号码，选中号与开奖开奖号码一致即中奖"};
+                    break;
+                case 6:
+                    dic = @{@"dataArray":@[@{@"number":@"18",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc",@"rule":@"任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"};
+                    break;
+                case 7: case 8: case 9:
+                    dic = @{@"dataArray":@[@{@"number":@"11",@"count":@"1"},@{@"number":@"11",@"count":@"1"},@{@"number":@"11",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc",@"rule":@"至少选2个号码，选中号与开奖任意2位一致即中奖"};
+                    break;
+                case 10: case 11:
+                    dic = @{@"dataArray":@[@{@"number":@"21",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc",@"rule":@"任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"};
+                    break;
+                default:
+                    break;
+            }
+            
+            MNXHViewController * vc = [[MNXHViewController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
+            vc.dataDic = dic;
+            vc.title = kind.name;
+            vc.url = kind.url;
             [self.navigationController pushViewController:vc animated:YES];
-//        }else{
-//            LoginViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
-//            vc.hidesBottomBarWhenPushed = YES;
-//            [self.navigationController pushViewController:vc animated:YES];
-//        }
-//        
- 
-    }
 
+        
+        }else{
+            GoucaiViewController * goucai = [[GoucaiViewController alloc]init];
+            goucai.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:goucai animated:YES];
+        
+        }
+    }else{
+    
+            if (indexPath.row >0){
+                CustonTableViewController *detailVC = [[CustonTableViewController alloc]init];
+                detailVC.url = kind.url;
+                detailVC.title = kind.name;
+                detailVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:detailVC animated:YES];
+
+        
+            }else{
+  
+        
+                    PCDDTableViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+  
+         
+            }
+    }
+    
+    
 
 }
 

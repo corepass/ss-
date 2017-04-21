@@ -30,7 +30,7 @@
         
         UILabel * yunalabel = [[UILabel alloc] initWithFrame:CGRectMake(145, 0, 20, self.frame.size.height)];
         yunalabel.textColor = [UIColor grayColor];
-        yunalabel.text = @"元";
+        yunalabel.text = @"注";
         [yunalabel setTextAlignment:NSTextAlignmentRight];
         [self addSubview:yunalabel];
         

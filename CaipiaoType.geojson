@@ -9,7 +9,7 @@
 				7,
 				6,
 			);
-			url = "http://f.apiplus.cn/fc3d-20.json";
+			url = "http://api.dabai28.com/api28.php?name=pc28&type=json";
 			time = "2017-03-27 20:31";
 		},
 		{

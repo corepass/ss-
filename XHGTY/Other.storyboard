@@ -30,11 +30,11 @@
             </objects>
             <point key="canvasLocation" x="-1628" y="-185"/>
         </scene>
-        <!--开奖-->
+        <!--彩票大厅-->
         <scene sceneID="RAf-5E-u7s">
             <objects>
                 <navigationController id="kOG-KO-IS8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="开奖" image="pei_normal" selectedImage="pei_selected" id="Or1-zk-kMB"/>
+                    <tabBarItem key="tabBarItem" title="彩票大厅" image="pei_normal" selectedImage="pei_selected" id="Or1-zk-kMB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A3l-PN-J4b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,6 +76,24 @@
             </objects>
             <point key="canvasLocation" x="1906" y="-1548"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="TU3-Yr-IXH">
+            <objects>
+                <viewController id="BRp-as-2Su" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kkh-UN-X3y"/>
+                        <viewControllerLayoutGuide type="bottom" id="eek-t8-et5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g2i-5K-GnK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yY5-pA-8Hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="-2209"/>
+        </scene>
         <!--Cp Map View Controller-->
         <scene sceneID="zTO-yW-Gny">
             <objects>
@@ -95,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="143" y="-1721"/>
         </scene>
-        <!--开奖-->
+        <!--大厅-->
         <scene sceneID="t3r-cD-6JE">
             <objects>
                 <viewController id="j5Q-Ys-cai" customClass="HallViewController" sceneMemberID="viewController">
@@ -140,7 +158,7 @@
                             <constraint firstItem="i7F-e7-dTl" firstAttribute="top" secondItem="jZp-fB-vN1" secondAttribute="bottom" id="zmt-EF-9VY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="开奖" id="Uc9-U2-zxr"/>
+                    <navigationItem key="navigationItem" title="大厅" id="Uc9-U2-zxr"/>
                     <connections>
                         <outlet property="collectionView" destination="jZp-fB-vN1" id="7BM-Vp-Zju"/>
                     </connections>

@@ -12,4 +12,5 @@
 @property(assign,nonatomic) int cpCount;
 @property(assign,nonatomic) BOOL isblue;
 -(NSArray *)getarc4random;
+-(NSArray *)getarc4randoArcount:(int)sumCount classCount:(int)count frome:(int)from tonumber:(int)tofrom;
 @end

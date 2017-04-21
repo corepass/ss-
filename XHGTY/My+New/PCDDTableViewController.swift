@@ -25,27 +25,27 @@ class PCDDTableViewController: UITableViewController {
 			self.loaddata()
 
 		})
-		let right = UIBarButtonItem(title: "试一试", style: .done, target: self, action: #selector(rightClick))
-		right.tintColor = UIColor.white
-		self.navigationItem.rightBarButtonItem = right
+//		let right = UIBarButtonItem(title: "试一试", style: .done, target: self, action: #selector(rightClick))
+//		right.tintColor = UIColor.white
+//		self.navigationItem.rightBarButtonItem = right
 		// Uncomment the following line to preserve selection between presentations
 		// self.clearsSelectionOnViewWillAppear = false
 
 		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 	}
-	func rightClick() {
-		let alert = UIAlertController(title: "下注", message: "是否进去到Safari浏览器中进行下注", preferredStyle: .alert)
-		let defa = UIAlertAction(title: "确实", style: .default) { (action) in
-          UIApplication.shared.openURL(URL.init(string: "http://www.c16000.com/bet/twpk10.html")!)
-		}
-		let cancel = UIAlertAction(title: "取消", style: .cancel) { (action) in
-
-		}
-		alert.addAction(defa)
-		alert.addAction(cancel)
-		_ = self.present(alert, animated: true, completion: nil)
-	}
+//	func rightClick() {
+//		let alert = UIAlertController(title: "下注", message: "是否进去到Safari浏览器中进行下注", preferredStyle: .alert)
+//		let defa = UIAlertAction(title: "确实", style: .default) { (action) in
+//          UIApplication.shared.openURL(URL.init(string: "http://www.c16000.com/bet/twpk10.html")!)
+//		}
+//		let cancel = UIAlertAction(title: "取消", style: .cancel) { (action) in
+//
+//		}
+//		alert.addAction(defa)
+//		alert.addAction(cancel)
+//		_ = self.present(alert, animated: true, completion: nil)
+//	}
 	func loaddata() {
 		HttpTools.getCustonWithPath(self.url, parms: nil, success: { (resport) in
 			if (resport != nil) {

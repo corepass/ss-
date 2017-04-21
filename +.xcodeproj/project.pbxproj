@@ -184,6 +184,13 @@
 		6D1293041EA86B24006824C6 /* HomegpcCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1293021EA86B24006824C6 /* HomegpcCollectionViewCell.xib */; };
 		6D1293071EA86D3A006824C6 /* gpcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293061EA86D3A006824C6 /* gpcModel.m */; };
 		6D1293091EA8878E006824C6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1293081EA8878E006824C6 /* Social.framework */; };
+		6D12930D1EA8BC74006824C6 /* MNXHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12930C1EA8BC74006824C6 /* MNXHViewController.m */; };
+		6D1293121EA8BF39006824C6 /* MNXHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293101EA8BF39006824C6 /* MNXHCollectionViewCell.m */; };
+		6D1293131EA8BF39006824C6 /* MNXHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1293111EA8BF39006824C6 /* MNXHCollectionViewCell.xib */; };
+		6D1293161EA8C1A6006824C6 /* MNheadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293151EA8C1A6006824C6 /* MNheadCollectionReusableView.m */; };
+		6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293181EA8C630006824C6 /* MNXHModel.m */; };
+		6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */; };
+		6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931E1EA9F088006824C6 /* MNXHHeardView.m */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9A18CC1E94A204004D4E07 /* FXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */; };
@@ -691,6 +698,19 @@
 		6D1293051EA86D3A006824C6 /* gpcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpcModel.h; sourceTree = "<group>"; };
 		6D1293061EA86D3A006824C6 /* gpcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gpcModel.m; sourceTree = "<group>"; };
 		6D1293081EA8878E006824C6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6D12930B1EA8BC74006824C6 /* MNXHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHViewController.h; sourceTree = "<group>"; };
+		6D12930C1EA8BC74006824C6 /* MNXHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHViewController.m; sourceTree = "<group>"; };
+		6D12930F1EA8BF39006824C6 /* MNXHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHCollectionViewCell.h; sourceTree = "<group>"; };
+		6D1293101EA8BF39006824C6 /* MNXHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHCollectionViewCell.m; sourceTree = "<group>"; };
+		6D1293111EA8BF39006824C6 /* MNXHCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNXHCollectionViewCell.xib; sourceTree = "<group>"; };
+		6D1293141EA8C1A6006824C6 /* MNheadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNheadCollectionReusableView.h; sourceTree = "<group>"; };
+		6D1293151EA8C1A6006824C6 /* MNheadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNheadCollectionReusableView.m; sourceTree = "<group>"; };
+		6D1293171EA8C630006824C6 /* MNXHModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHModel.h; sourceTree = "<group>"; };
+		6D1293181EA8C630006824C6 /* MNXHModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHModel.m; sourceTree = "<group>"; };
+		6D12931A1EA9A7CC006824C6 /* MNXHFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHFootView.h; sourceTree = "<group>"; };
+		6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHFootView.m; sourceTree = "<group>"; };
+		6D12931D1EA9F088006824C6 /* MNXHHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHHeardView.h; sourceTree = "<group>"; };
+		6D12931E1EA9F088006824C6 /* MNXHHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHHeardView.m; sourceTree = "<group>"; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewController.swift; sourceTree = "<group>"; };
@@ -1608,6 +1628,26 @@
 			path = KJ;
 			sourceTree = "<group>";
 		};
+		6D12930A1EA8BC57006824C6 /* MNTZ(模拟选号) */ = {
+			isa = PBXGroup;
+			children = (
+				6D12930B1EA8BC74006824C6 /* MNXHViewController.h */,
+				6D12930C1EA8BC74006824C6 /* MNXHViewController.m */,
+				6D12930F1EA8BF39006824C6 /* MNXHCollectionViewCell.h */,
+				6D1293101EA8BF39006824C6 /* MNXHCollectionViewCell.m */,
+				6D1293111EA8BF39006824C6 /* MNXHCollectionViewCell.xib */,
+				6D1293141EA8C1A6006824C6 /* MNheadCollectionReusableView.h */,
+				6D1293151EA8C1A6006824C6 /* MNheadCollectionReusableView.m */,
+				6D1293171EA8C630006824C6 /* MNXHModel.h */,
+				6D1293181EA8C630006824C6 /* MNXHModel.m */,
+				6D12931A1EA9A7CC006824C6 /* MNXHFootView.h */,
+				6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */,
+				6D12931D1EA9F088006824C6 /* MNXHHeardView.h */,
+				6D12931E1EA9F088006824C6 /* MNXHHeardView.m */,
+			);
+			path = "MNTZ(模拟选号)";
+			sourceTree = "<group>";
+		};
 		6D9A18D11E94B582004D4E07 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -2126,6 +2166,7 @@
 		C78D25B21DDAEE3700EE34E0 /* XHGTY */ = {
 			isa = PBXGroup;
 			children = (
+				6D12930A1EA8BC57006824C6 /* MNTZ(模拟选号) */,
 				6D1292F51EA8557B006824C6 /* KJ */,
 				6D082F101EA5C8730076F6D3 /* CPViewController */,
 				6D082ECF1EA5C4A50076F6D3 /* Map */,
@@ -2415,7 +2456,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = BPJH6ZC6R4;
+						DevelopmentTeam = 3P2D38MX5P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2500,6 +2541,7 @@
 				C749C9771E72BB9B00241CFD /* WebViewCell.xib in Resources */,
 				C749C9601E72BB9B00241CFD /* FXHomeMenuCycleCell.xib in Resources */,
 				C78D25C01DDAEE3700EE34E0 /* Assets.xcassets in Resources */,
+				6D1293131EA8BF39006824C6 /* MNXHCollectionViewCell.xib in Resources */,
 				6D9C82AB1E95DFB50043FAD8 /* UserInfo.geojson in Resources */,
 				6D09DFB81E9B1FFA00D9B51F /* FDNewWeatherCell.xib in Resources */,
 				C749C9621E72BB9B00241CFD /* FXHomeMenuCycleView.xib in Resources */,
@@ -2561,6 +2603,7 @@
 				6D0E7CF91E8A48340029E809 /* MASCompositeConstraint.m in Sources */,
 				C749C9531E72BB9B00241CFD /* VideoDrawViewController.m in Sources */,
 				C790DA3C1E1B7B9C00E1A7E0 /* FXPeiLv.m in Sources */,
+				6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */,
 				C749C9631E72BB9B00241CFD /* LHDQViewCell.m in Sources */,
 				6D1293031EA86B24006824C6 /* HomegpcCollectionViewCell.m in Sources */,
 				C790D9F11E1B477A00E1A7E0 /* LotteryKind.m in Sources */,
@@ -2657,6 +2700,7 @@
 				6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */,
 				6D0E7D511E8CC88D0029E809 /* UserView.swift in Sources */,
 				C790DA1F1E1B496700E1A7E0 /* SVProgressHUD.m in Sources */,
+				6D1293121EA8BF39006824C6 /* MNXHCollectionViewCell.m in Sources */,
 				C74C3E911E135DE2005874AC /* UIView+MJExtension.m in Sources */,
 				C790DA111E1B47B000E1A7E0 /* NSString+MJExtension.m in Sources */,
 				6D0E7D791E8CC92C0029E809 /* ReferenceAttribute.swift in Sources */,
@@ -2694,6 +2738,7 @@
 				C790DA6B1E1B96EE00E1A7E0 /* SDWebImagePrefetcher.m in Sources */,
 				C790DA1D1E1B496700E1A7E0 /* SVProgressAnimatedView.m in Sources */,
 				6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */,
+				6D12930D1EA8BC74006824C6 /* MNXHViewController.m in Sources */,
 				C749C9591E72BB9B00241CFD /* FXLotteryDIstrInfo.m in Sources */,
 				6D0E7D911E8CCB7D0029E809 /* RegisterModel.m in Sources */,
 				C790DA6A1E1B96EE00E1A7E0 /* SDWebImageManager.m in Sources */,
@@ -2709,6 +2754,7 @@
 				6D09E0B61E9F27C100D9B51F /* FXTools.m in Sources */,
 				C77CC1111E24787100CF6B29 /* YHWebViewProgressView.m in Sources */,
 				C749C9471E72BB9B00241CFD /* LotteryDistrViewController.m in Sources */,
+				6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */,
 				C749C9581E72BB9B00241CFD /* FXLotteryDistr.m in Sources */,
 				6D082F0B1EA5C6010076F6D3 /* UIButton+AFNetworking.m in Sources */,
 				6D0E7D491E8CB7280029E809 /* NewTableViewCell.swift in Sources */,
@@ -2759,6 +2805,7 @@
 				C790DA671E1B96EE00E1A7E0 /* SDWebImageDecoder.m in Sources */,
 				C78D25B51DDAEE3700EE34E0 /* main.m in Sources */,
 				C749C94F1E72BB9B00241CFD /* TieBieViewController.m in Sources */,
+				6D1293161EA8C1A6006824C6 /* MNheadCollectionReusableView.m in Sources */,
 				6D0E7CFA1E8A48340029E809 /* MASConstraint.m in Sources */,
 				C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */,
 				6D09DFBD1E9B1FFA00D9B51F /* XZTableViewCell.m in Sources */,
@@ -2767,6 +2814,7 @@
 				6D9C82901E95D9430043FAD8 /* MyProfileViewController.m in Sources */,
 				6D09E0011E9B305500D9B51F /* MBProgressHUD+MJ.m in Sources */,
 				6D0E7D9D1E8CDC2D0029E809 /* MyViewController.swift in Sources */,
+				6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */,
 				C74C3E8D1E135DE2005874AC /* MJRefreshConst.m in Sources */,
 				6D09E0A61E9F271E00D9B51F /* FXforumViewCell.m in Sources */,
 				6DE973471E8E3F81003D5DBD /* XiaZhuView.m in Sources */,
@@ -2912,10 +2960,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BPJH6ZC6R4;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2940,10 +2988,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mknnb766.mknnb;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3098696-aca1-4017-9ccc-1ddf0a44427b";
-				PROVISIONING_PROFILE_SPECIFIER = "mknnb766上架";
+				PROVISIONING_PROFILE = "64faf382-e5a1-4eee-b2b6-61b032e63030";
+				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2957,10 +3005,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Make Huang (BPJH6ZC6R4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BPJH6ZC6R4;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2985,10 +3033,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mknnb766.mknnb;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3098696-aca1-4017-9ccc-1ddf0a44427b";
-				PROVISIONING_PROFILE_SPECIFIER = "mknnb766上架";
+				PROVISIONING_PROFILE = "64faf382-e5a1-4eee-b2b6-61b032e63030";
+				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

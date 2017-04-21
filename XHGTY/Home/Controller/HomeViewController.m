@@ -44,6 +44,7 @@
 #import "FXViewController.h"
 #import "HomegpcCollectionViewCell.h"
 #import "gpcModel.h"
+#import "MNXHViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -458,7 +459,8 @@ static NSString *const gpcID = @"gpcID";
             web.hidesBottomBarWhenPushed = YES;
             web.isneed = YES;
             [self.navigationController pushViewController:web animated:YES];
-        
+            
+
         }
             break;
     }

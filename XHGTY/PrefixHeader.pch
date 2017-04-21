@@ -21,6 +21,8 @@
 #import "FXUserTool.h"
 #import "MBProgressHUD+MJ.h"
 #import "UIView+Extension.h"
+#import "UIView+Frame.h"
+#import "UIColor+Conversional.h"
 //判断设备宽高
 #define kScreenW ([[UIScreen mainScreen] bounds].size.width)
 #define kScreenH ([[UIScreen mainScreen] bounds].size.height)

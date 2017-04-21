@@ -201,8 +201,10 @@
     cell.RegisterTextFiled.delegate = self;
     if (indexPath.section == 0){
       cell.RegisterTextFiled.tag = indexPath.row;
+        cell.RegisterTextFiled.keyboardType = UIKeyboardTypeNumberPad;
     }else{
       cell.RegisterTextFiled.tag = indexPath.row+1;
+        cell.RegisterTextFiled.keyboardType = UIKeyboardTypeDefault;
     }
     [cell.RegisterTextFiled addTarget:self action:@selector(TextFiledChang:) forControlEvents:UIControlEventEditingChanged];
     if(indexPath.row==1)

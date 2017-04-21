@@ -198,6 +198,7 @@
     
     self.PhoneTextFIeld.delegate=self;
     self.PassWordTextField.delegate=self;
+    self.PhoneTextFIeld.keyboardType = UIKeyboardTypeNumberPad;
     [self.PhoneTextFIeld addTarget:self action:@selector(textchang:) forControlEvents:UIControlEventEditingChanged];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillshow:) name:UIKeyboardWillShowNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillhide:) name:UIKeyboardWillHideNotification object:nil];

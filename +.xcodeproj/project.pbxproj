@@ -221,6 +221,15 @@
 		6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */; };
 		6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */; };
 		6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */; };
+		A9A893371EAA1554008C4F07 /* ChossMianView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8932C1EAA1554008C4F07 /* ChossMianView.m */; };
+		A9A893381EAA1554008C4F07 /* ChossTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8932E1EAA1554008C4F07 /* ChossTableViewCell.m */; };
+		A9A893391EAA1554008C4F07 /* ChossTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893301EAA1554008C4F07 /* ChossTableView.m */; };
+		A9A8933A1EAA1554008C4F07 /* ChossView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893321EAA1554008C4F07 /* ChossView.m */; };
+		A9A8933B1EAA1554008C4F07 /* FootView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893341EAA1554008C4F07 /* FootView.m */; };
+		A9A8933C1EAA1554008C4F07 /* TableViewFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893361EAA1554008C4F07 /* TableViewFootView.m */; };
+		A9A893421EAA1655008C4F07 /* UIColor+Conversional.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8933F1EAA1655008C4F07 /* UIColor+Conversional.m */; };
+		A9A893431EAA1655008C4F07 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893411EAA1655008C4F07 /* UIView+Frame.m */; };
+		A9A893461EAA1692008C4F07 /* ChossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A893451EAA1692008C4F07 /* ChossViewController.m */; };
 		C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C722E3501E1658CB00A8E2E9 /* Other.storyboard */; };
 		C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3531E165AFE00A8E2E9 /* HallViewController.m */; };
 		C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3561E165B4500A8E2E9 /* PeiViewController.m */; };
@@ -755,6 +764,24 @@
 		6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCDDTableViewController.swift; sourceTree = "<group>"; };
 		6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCddTableViewCell.swift; sourceTree = "<group>"; };
 		6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCddTableViewCell.xib; sourceTree = "<group>"; };
+		A9A8932B1EAA1554008C4F07 /* ChossMianView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChossMianView.h; sourceTree = "<group>"; };
+		A9A8932C1EAA1554008C4F07 /* ChossMianView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossMianView.m; sourceTree = "<group>"; };
+		A9A8932D1EAA1554008C4F07 /* ChossTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChossTableViewCell.h; sourceTree = "<group>"; };
+		A9A8932E1EAA1554008C4F07 /* ChossTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossTableViewCell.m; sourceTree = "<group>"; };
+		A9A8932F1EAA1554008C4F07 /* ChossTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChossTableView.h; sourceTree = "<group>"; };
+		A9A893301EAA1554008C4F07 /* ChossTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossTableView.m; sourceTree = "<group>"; };
+		A9A893311EAA1554008C4F07 /* ChossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChossView.h; sourceTree = "<group>"; };
+		A9A893321EAA1554008C4F07 /* ChossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossView.m; sourceTree = "<group>"; };
+		A9A893331EAA1554008C4F07 /* FootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootView.h; sourceTree = "<group>"; };
+		A9A893341EAA1554008C4F07 /* FootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootView.m; sourceTree = "<group>"; };
+		A9A893351EAA1554008C4F07 /* TableViewFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewFootView.h; sourceTree = "<group>"; };
+		A9A893361EAA1554008C4F07 /* TableViewFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewFootView.m; sourceTree = "<group>"; };
+		A9A8933E1EAA1655008C4F07 /* UIColor+Conversional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Conversional.h"; sourceTree = "<group>"; };
+		A9A8933F1EAA1655008C4F07 /* UIColor+Conversional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Conversional.m"; sourceTree = "<group>"; };
+		A9A893401EAA1655008C4F07 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		A9A893411EAA1655008C4F07 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		A9A893441EAA1692008C4F07 /* ChossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChossViewController.h; sourceTree = "<group>"; };
+		A9A893451EAA1692008C4F07 /* ChossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossViewController.m; sourceTree = "<group>"; };
 		C722E3501E1658CB00A8E2E9 /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		C722E3521E165AFE00A8E2E9 /* HallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HallViewController.h; path = ../../HallViewController.h; sourceTree = "<group>"; };
 		C722E3531E165AFE00A8E2E9 /* HallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HallViewController.m; path = ../../HallViewController.m; sourceTree = "<group>"; };
@@ -1823,6 +1850,55 @@
 			path = Goumai;
 			sourceTree = "<group>";
 		};
+		A9A893281EAA14E3008C4F07 /* Choss */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8933D1EAA1648008C4F07 /* Tool */,
+				A9A8932A1EAA1508008C4F07 /* VC */,
+				A9A893291EAA14FB008C4F07 /* View */,
+			);
+			name = Choss;
+			sourceTree = "<group>";
+		};
+		A9A893291EAA14FB008C4F07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8932B1EAA1554008C4F07 /* ChossMianView.h */,
+				A9A8932C1EAA1554008C4F07 /* ChossMianView.m */,
+				A9A8932D1EAA1554008C4F07 /* ChossTableViewCell.h */,
+				A9A8932E1EAA1554008C4F07 /* ChossTableViewCell.m */,
+				A9A8932F1EAA1554008C4F07 /* ChossTableView.h */,
+				A9A893301EAA1554008C4F07 /* ChossTableView.m */,
+				A9A893311EAA1554008C4F07 /* ChossView.h */,
+				A9A893321EAA1554008C4F07 /* ChossView.m */,
+				A9A893331EAA1554008C4F07 /* FootView.h */,
+				A9A893341EAA1554008C4F07 /* FootView.m */,
+				A9A893351EAA1554008C4F07 /* TableViewFootView.h */,
+				A9A893361EAA1554008C4F07 /* TableViewFootView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A9A8932A1EAA1508008C4F07 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A9A893441EAA1692008C4F07 /* ChossViewController.h */,
+				A9A893451EAA1692008C4F07 /* ChossViewController.m */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		A9A8933D1EAA1648008C4F07 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8933E1EAA1655008C4F07 /* UIColor+Conversional.h */,
+				A9A8933F1EAA1655008C4F07 /* UIColor+Conversional.m */,
+				A9A893401EAA1655008C4F07 /* UIView+Frame.h */,
+				A9A893411EAA1655008C4F07 /* UIView+Frame.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		C749C8DA1E72BB9A00241CFD /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -2611,6 +2687,7 @@
 				6D09E0AF1E9F272A00D9B51F /* FTZViewController.m in Sources */,
 				6D0E7D781E8CC92C0029E809 /* Priority.swift in Sources */,
 				6D9C82A91E95DC740043FAD8 /* MyProfileModel.m in Sources */,
+				A9A893431EAA1655008C4F07 /* UIView+Frame.m in Sources */,
 				6DE973431E8E2CEC003D5DBD /* GoucaiTableViewCell.m in Sources */,
 				6D082F011EA5C6010076F6D3 /* AFSecurityPolicy.m in Sources */,
 				6D0E7CFC1E8A48340029E809 /* MASLayoutConstraint.m in Sources */,
@@ -2630,6 +2707,7 @@
 				6D0E7D921E8CCB7D0029E809 /* ThirdLoginModel.m in Sources */,
 				6D0E7D771E8CC92C0029E809 /* PositionAttribute.swift in Sources */,
 				6D0E7DA21E8CEF730029E809 /* MytabBarViewController.m in Sources */,
+				A9A893371EAA1554008C4F07 /* ChossMianView.m in Sources */,
 				6D0E7D811E8CCB6E0029E809 /* LoginViewController.m in Sources */,
 				6D0E7D691E8CC92C0029E809 /* CompoundAttribute.swift in Sources */,
 				6D0E7D761E8CC92C0029E809 /* PositionAttribute+UIKit.swift in Sources */,
@@ -2647,6 +2725,7 @@
 				C790DA6F1E1B96EE00E1A7E0 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C790DA2A1E1B4BE500E1A7E0 /* LotteryDetailViewCell.m in Sources */,
 				6D082F071EA5C6010076F6D3 /* AFAutoPurgingImageCache.m in Sources */,
+				A9A8933B1EAA1554008C4F07 /* FootView.m in Sources */,
 				6D0E7D6F1E8CC92C0029E809 /* Item+AppKit.swift in Sources */,
 				6D082EBA1EA4C6680076F6D3 /* JXModel.m in Sources */,
 				C790DA641E1B96EE00E1A7E0 /* NSData+ImageContentType.m in Sources */,
@@ -2668,6 +2747,7 @@
 				6D0E7D021E8A48340029E809 /* ViewController+MASAdditions.m in Sources */,
 				6D0E7D331E8B8A1A0029E809 /* XHLaunchAdConfiguration.m in Sources */,
 				6D0E7D741E8CC92C0029E809 /* NSView+Easy.swift in Sources */,
+				A9A893381EAA1554008C4F07 /* ChossTableViewCell.m in Sources */,
 				C749C95B1E72BB9B00241CFD /* LHArticle.m in Sources */,
 				6D9A18CF1E94A9FC004D4E07 /* FXTableViewCell.swift in Sources */,
 				6D0E7D341E8B8A1A0029E809 /* XHLaunchAdDownload.m in Sources */,
@@ -2698,6 +2778,7 @@
 				6DE9734C1E8E494B003D5DBD /* TouzhuTableViewController.swift in Sources */,
 				6D0E7D6D1E8CC92C0029E809 /* DimensionAttribute+UIKit.swift in Sources */,
 				6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */,
+				A9A8933A1EAA1554008C4F07 /* ChossView.m in Sources */,
 				6D0E7D511E8CC88D0029E809 /* UserView.swift in Sources */,
 				C790DA1F1E1B496700E1A7E0 /* SVProgressHUD.m in Sources */,
 				6D1293121EA8BF39006824C6 /* MNXHCollectionViewCell.m in Sources */,
@@ -2763,6 +2844,7 @@
 				C749C9841E72BD4600241CFD /* BaseObject.m in Sources */,
 				C790DA421E1B949F00E1A7E0 /* ZiXunTableViewCell.m in Sources */,
 				C790DA701E1B96EE00E1A7E0 /* UIImageView+WebCache.m in Sources */,
+				A9A893421EAA1655008C4F07 /* UIColor+Conversional.m in Sources */,
 				6D1292F71EA8559A006824C6 /* KJTableViewController.swift in Sources */,
 				6D0E7D8F1E8CCB7D0029E809 /* NSString+isEmpty.m in Sources */,
 				C76212CD1E23777C00707051 /* FXNewsViewCell.m in Sources */,
@@ -2785,6 +2867,7 @@
 				6D09DFB51E9B1FFA00D9B51F /* FDNewCalendarCell.m in Sources */,
 				6D0E7D481E8CB7280029E809 /* NewDataViewController.swift in Sources */,
 				6D9A18DF1E94B583004D4E07 /* NotificationModel.m in Sources */,
+				A9A893391EAA1554008C4F07 /* ChossTableView.m in Sources */,
 				6D0E7CFD1E8A48340029E809 /* MASViewAttribute.m in Sources */,
 				C77CC1101E24787100CF6B29 /* YHWebViewProgress.m in Sources */,
 				6D09DFB11E9B1FFA00D9B51F /* FDCalendar.m in Sources */,
@@ -2795,6 +2878,7 @@
 				6DE973321E8DFA25003D5DBD /* GouCaiModel.m in Sources */,
 				C790DA0B1E1B47B000E1A7E0 /* MJPropertyKey.m in Sources */,
 				C74C3E851E135DE2005874AC /* MJRefreshAutoStateFooter.m in Sources */,
+				A9A8933C1EAA1554008C4F07 /* TableViewFootView.m in Sources */,
 				6D0E7D6B1E8CC92C0029E809 /* Context.swift in Sources */,
 				6D09DFB31E9B1FFA00D9B51F /* FDChuanYiCollectioCell.m in Sources */,
 				6D082F291EA7449B0076F6D3 /* BallTableViewController.m in Sources */,
@@ -2837,6 +2921,7 @@
 				C790DA201E1B496700E1A7E0 /* SVRadialGradientLayer.m in Sources */,
 				6D0E7D821E8CCB6E0029E809 /* RegisterViewController.m in Sources */,
 				C74C3E8B1E135DE2005874AC /* MJRefreshStateHeader.m in Sources */,
+				A9A893461EAA1692008C4F07 /* ChossViewController.m in Sources */,
 				6D082F191EA5E8D40076F6D3 /* CpTableViewCell.m in Sources */,
 				C790DA451E1B950A00E1A7E0 /* FXZixun.m in Sources */,
 				C749C9671E72BB9B00241CFD /* FXLotteryDistrInfoCell.m in Sources */,

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ChossTableViewCell : UITableViewCell
-
+@property (nonatomic ,strong ) UIImageView *iconImageView;
 @property (nonatomic ,strong ) UILabel *upLable;
 @property (nonatomic ,strong ) UILabel *downLable;
 @property (nonatomic, strong) UIView *lineView;

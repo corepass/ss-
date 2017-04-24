@@ -16,3 +16,5 @@
 #import "FXSettingViewController.h"
 #import "WebViewController.h"
 #import "MJExtension.h"
+#import "CpMapViewController.h"
+#import "MNXHViewController.h"

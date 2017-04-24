@@ -24,6 +24,7 @@ static   NSString * cellidentifi = @"cell";
 @property(strong,nonatomic) JXModel * jxmodel;
 @property(strong,nonatomic) MNXHHeardView * heard;
 @property(strong,nonatomic) NSDictionary * hearddic;
+@property(strong,nonatomic) NSString * qishu;
 @end
 
 @implementation MNXHViewController
@@ -31,6 +32,7 @@ static   NSString * cellidentifi = @"cell";
    [HttpTools getCustonCAIPIAOWithPath:self.url parms:nil success:^(id JSON) {
        if ([JSON isKindOfClass:[NSArray class]]){
            _hearddic = [NSDictionary dictionaryWithDictionary:[JSON firstObject]];
+           _qishu = [NSString stringWithFormat:@"%d",[_hearddic[@"expect"] intValue] + 1];
            _heard.qishu.text = [NSString stringWithFormat:@"第%d期",[_hearddic[@"expect"] intValue] + 1];
            _heard.openNumber.text = [NSString stringWithFormat:@"上期开奖结果:%@",_hearddic[@"opencode"]];
        }
@@ -79,6 +81,7 @@ static   NSString * cellidentifi = @"cell";
     _footView.mnxhBtnBlcok = ^(){
         ChossViewController  * choss = [[ChossViewController alloc] init];
         choss.dataArray = [NSArray arrayWithArray: weak.selArray];
+        choss.qishu = _qishu;
         [weak.navigationController pushViewController:choss animated:YES];
         
     };
@@ -138,6 +141,7 @@ static   NSString * cellidentifi = @"cell";
         for (int i = 0; i<count; i++) {
             MNXHModel * model = [[MNXHModel alloc]init];
             model.isSelected = false;
+            model.typeName = self.title;
             model.number = [NSString stringWithFormat:@"%02d",i+1];
             if (j >= dataArray.count - _nBlue ){
                 model.titleClor = [UIColor blueColor];

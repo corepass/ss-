@@ -33,15 +33,19 @@
     return self;
 }
 - (void)deterButtonClick:(UIButton *)sender{
-    
+    int leftNumber = [self.footView.chossleftView.numberLable.text intValue];
+    int rightNumber = [self.footView.chossrightView.numberLable.text intValue];
+    int moneyNumber = leftNumber*2*rightNumber;
     NSLog(@"确认购买按钮");
+    if (self.deterButtonClickBlock){
+        self.deterButtonClickBlock(_chossTableView.cpNumber,[NSString stringWithFormat:@"%d",moneyNumber]);
+    }
     
 }
 - (void)leftButtonClick:(UIButton *)sender{
     
     int leftNumber = [self.footView.chossleftView.numberLable.text intValue];
     int rightNumber = [self.footView.chossrightView.numberLable.text intValue];
-    
     
     if (sender ==self.footView.chossleftView.reduceButton) {
         
@@ -78,7 +82,7 @@
     
     
     
-    self.footView.moneyLable.text = [NSString stringWithFormat:@"投注金额: %d 元",moneyNumber];
+    self.footView.moneyLable.text = [NSString stringWithFormat:@"投注金额: %d 注",moneyNumber];
     
     NSString *str = self.footView.moneyLable.text;
     NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc]initWithString:str];
@@ -87,10 +91,7 @@
     [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor yellowColor] range:range];
      self.footView.moneyLable.attributedText = attributedStr;
     
-    
-
-    
-    
+  
 }
 - (void)rightButtonClick:(UIButton *)sender{
     

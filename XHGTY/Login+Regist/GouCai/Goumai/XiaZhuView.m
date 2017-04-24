@@ -15,7 +15,7 @@
         self.backgroundColor = [UIColor whiteColor];
         _label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 150, self.frame.size.height)];
         _label.textColor = [[UIColor alloc]initWithRed:255/255.0 green:42.0/255.0 blue:26.0/255 alpha:1];
-        [_label setTextAlignment:NSTextAlignmentLeft];
+        [_label setTextAlignment:NSTextAlignmentCenter];
         [self addSubview:_label];
         
         _xiazhuBtn = [UIButton buttonWithType:UIButtonTypeSystem];

@@ -107,23 +107,7 @@ static NSString *channel = @"App Store";
 
     return  YES;
 }
-//-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-//    self.window.frame = [UIScreen mainScreen].bounds ;
-//    WebViewController * web = [[WebViewController alloc]init];
-//    web.url = [NSURL URLWithString:@"http://5880111.com/wap/index#/event/home"];
-//    self.window.rootViewController = web;
-//    [self.window makeKeyAndVisible];
-//    
-//    if (NSFoundationVersionNumber_iOS_8_0) { //iOS8以上包含iOS8
-//        if ([[UIApplication sharedApplication] currentUserNotificationSettings].types  == UIRemoteNotificationTypeNone) {
-//        }
-//    }else{ // ios7 一下
-//        if ([[UIApplication sharedApplication] enabledRemoteNotificationTypes]  == UIRemoteNotificationTypeNone) {
-//        }
-//    }
-//    
-//    return YES;
-//}
+
 -(void)savadata{
 
     
@@ -193,11 +177,6 @@ static NSString *channel = @"App Store";
 - (void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenURLString:(NSString *)openURLString;
 {
     
- /*   NSLog(@"广告点击");
-    WebViewController *VC = [[WebViewController alloc] init];
-    VC.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",openURLString]];
-    [self.window.rootViewController presentViewController:VC animated:YES completion:nil];
-  */
 
 }
 

@@ -15,6 +15,8 @@
 {
     self = [super initWithFrame:frame style:style];
     if (self) {
+  
+        
         self.backgroundColor = [UIColor whiteColor];
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.dataSource = self;
@@ -26,6 +28,16 @@
 
     }
     return self;
+}
+-(void)setDataArray:(NSArray<MNXHModel *> *)dataArray
+{
+    _dataArray = dataArray;
+    for (NSArray * array  in _dataArray) {
+        MNXHModel * model =   array[0];
+        self.titleImage = model.typeName;
+        break;
+    }
+
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -55,6 +67,7 @@
     else{
         cell.lineView.hidden = NO;
     }
+    
     NSString * cpNumber = @"";
     for (NSArray * class in self.dataArray) {
         for (MNXHModel * model in class) {
@@ -63,7 +76,8 @@
         }
     
     }
-   
+    self.cpNumber = cpNumber;
+    cell.iconImageView.image = [UIImage imageNamed:self.titleImage];
     cell.upLable.text = [cpNumber substringWithRange:NSMakeRange(0, cpNumber.length -1)];
     cell.downLable.text = @"一注 2 元";
     return cell;

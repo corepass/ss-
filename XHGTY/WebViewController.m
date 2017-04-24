@@ -52,7 +52,7 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     self.webView = [[WKWebView alloc]init];
     self.webView.UIDelegate = self;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
     [self useProgressView];
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {

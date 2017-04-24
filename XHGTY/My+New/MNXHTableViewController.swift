@@ -1,61 +1,51 @@
 //
-//  KJTableViewController.swift
+//  MNXHTableViewController.swift
 //  +
 //
-//  Created by shensu on 17/4/20.
+//  Created by shensu on 17/4/24.
 //  Copyright © 2017年 杨健. All rights reserved.
 //
 
 import UIKit
 
-class KJTableViewController: UITableViewController {
-	var dataArray = Array<Any>()
+class MNXHTableViewController: UITableViewController {
+	var dataArray = Array<Dictionary<String, String>> ()
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		self.title = "选号记录"
 		self.tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 0.01))
-		self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.showsVerticalScrollIndicator = false
+		let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory,
+				.userDomainMask, true).first!
+		let userAccountPath = "\(path)/Caches/caipiao.data"
+		if NSArray(contentsOfFile: userAccountPath) != nil {
+			if let array = NSArray(contentsOfFile: userAccountPath) as? Array<Dictionary<String, String>> {
+				dataArray = array
+			}
+		} else {
 
-		getData()
-		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-			self.getData()
-		})
-	}
-	func getData() {
-		HttpTools.get(withPath: "http://m.zhuoyicp.com/kaijang/kjhall?getData=1", parms: nil, success: { [weak self](data) in
-			self?.tableView.mj_header.endRefreshing()
-
-		}) { (error) in
-			SVProgressHUD.showError(withStatus: "网络出错，请稍后再试")
-			DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+			SVProgressHUD.show(withStatus: "暂无收藏数据")
+			DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
 				SVProgressHUD.dismiss()
 			})
-			self.tableView.mj_header.endRefreshing()
-		}
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-			let path = Bundle.main.path(forResource: "CaipiaoType", ofType: "geojson")
-			let pathdic = NSDictionary.init(contentsOfFile: path!)
-			self.dataArray = NSArray(array: KJModel.mj_objectArray(withKeyValuesArray: pathdic?["data"])) as! Array<Any>
-			self.tableView.reloadData()
-			SVProgressHUD.dismiss()
-		}
 
-	}
+		}
+        let right = UIBarButtonItem(title: "投注站", style: .done, target: self, action: #selector(rightClick))
+        right.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = right
+    }
+    func rightClick() {
+        let vc = CpMapViewController()
+        vc.hidesBottomBarWhenPushed = true;
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
 
 	// MARK: - Table view data source
-	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return UITableViewAutomaticDimension
-	}
-	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 100
-	}
-	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		return 1
-	}
+
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		// #warning Incomplete implementation, return the number of sections
 		return dataArray.count
@@ -65,31 +55,30 @@ class KJTableViewController: UITableViewController {
 		// #warning Incomplete implementation, return the number of rows
 		return 1
 	}
-
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableViewAutomaticDimension
+	}
+	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 54
+	}
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 5;
+	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cellidentifi = "cell"
-		var cell = tableView.dequeueReusableCell(withIdentifier: cellidentifi) as? KJTableViewCell
+		var cell: MNXHTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "cell") as? MNXHTableViewCell
 		if cell == nil {
-			cell = Bundle.main.loadNibNamed("KJTableViewCell", owner: self, options: nil)?.last as! KJTableViewCell?
+
+			cell = Bundle.main.loadNibNamed("MNXHTableViewCell", owner: self, options: nil)?.first as? MNXHTableViewCell
 		}
 		if dataArray.count > indexPath.section {
-			cell?.setModel(model: dataArray[indexPath.section] as! KJModel)
+
+			cell?.setModel(model: dataArray[indexPath.section])
+
 		}
+
+		// Configure the cell...
+
 		return cell!
-	}
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let model: KJModel = dataArray[indexPath.section] as! KJModel
-		if indexPath.section == 0 {
-			let vc = PCDDTableViewController()
-			vc.hidesBottomBarWhenPushed = true
-			_ = self.navigationController?.pushViewController(vc, animated: true)
-		} else {
-			let vc = CustonTableViewController()
-			vc.hidesBottomBarWhenPushed = true
-			vc.url = model.url
-			vc.title = model.name
-			_ = self.navigationController?.pushViewController(vc, animated: true)
-		}
 	}
 
 	/*

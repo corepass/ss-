@@ -15,4 +15,5 @@
 
 @property (nonatomic ,strong) FootView *footView;
 @property (nonatomic ,strong) ChossTableView *chossTableView;
+@property(copy,nonatomic) void(^ deterButtonClickBlock)(NSString * cpNumber,NSString * sumMoney);
 @end

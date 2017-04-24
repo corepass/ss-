@@ -45,6 +45,7 @@
 #import "HomegpcCollectionViewCell.h"
 #import "gpcModel.h"
 #import "MNXHViewController.h"
+#import "MessageRuntime.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -87,13 +88,14 @@ static NSString *const gpcID = @"gpcID";
 -(void)addActionView{
     
     
-    
+  
     [HttpTools getWithPathsuccess:^(id JSON) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"有活动的时候开启");
-            WebViewController * web = [[NSClassFromString(@"WebViewController") alloc] init];
-            web.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",JSON]];
-            [self presentViewController:web animated:NO completion:nil];
+        MessageRuntime * message  =  [[MessageRuntime alloc] init];
+        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
+            [self presentViewController:viewController animated:NO completion:nil];
+        }];
             
         });
     } :^(NSError *error) {
@@ -379,26 +381,13 @@ static NSString *const gpcID = @"gpcID";
             
             NSString *destStr = lottery.label;
             
-            if ([destStr isEqualToString:@"体验中心"]) {
-                //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
-                //        webVC.accessUrl = @"http://app.lhst6.com/shipinkaijiang/";
-                //        webVC.titleName = @"视频开奖";
-                //        webVC.hidesBottomBarWhenPushed = YES;
-                ////        VideoDrawViewController *videoVC = [[VideoDrawViewController alloc]init];
-                //        [self.navigationController pushViewController:webVC animated:YES];
-                GoucaiViewController * goucai = [[GoucaiViewController alloc] init];
-                goucai.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:goucai animated:YES];
+            if ([destStr isEqualToString:@"彩票大厅"]) {
+
+                self.tabBarController.selectedIndex = 1;
                 return;
             }else if ([destStr isEqualToString:@"彩票论坛"]){
                 
-                //        FXWebViewController *webVC = [[FXWebViewController alloc]init];
-                //        webVC.accessUrl = @"http://app.lhst6.com/ziliao/shuju.php";
-                //        webVC.titleName = @"开奖记录";
-                //        webVC.hidesBottomBarWhenPushed = YES;
-                ////        RecordViewController *recordVC = [[RecordViewController alloc]init];
-                //        [self.navigationController pushViewController:webVC animated:YES];
-                //        self.tabBarController.selectedIndex = 1;
+      
                 ForumViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"ForumViewController"];
                 vc.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:vc animated:YES];
@@ -430,15 +419,12 @@ static NSString *const gpcID = @"gpcID";
                 [self.navigationController pushViewController:tieBIEVC animated:YES];
                 return;
             }else if ([destStr isEqualToString:@"投注站"]){
-                //        PCDDTableViewController  *pcdd = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
-                //        [self.navigationController pushViewController:pcdd animated:true];
+
                 CpMapViewController * cp =  [[CpMapViewController alloc] init];
                 cp.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:cp animated:YES];
             }else if ([destStr isEqualToString:@"彩票资讯"]){
-                //        NewTableViewController * news = [[NewTableViewController alloc]init];
-                //        news.hidesBottomBarWhenPushed = YES;
-                //        [self.navigationController pushViewController:news animated:true];
+       
                 
                 FXWebViewController * web = [[FXWebViewController alloc] init];
            

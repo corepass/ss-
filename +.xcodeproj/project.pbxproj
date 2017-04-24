@@ -219,6 +219,11 @@
 		6DA81D211EADBA330031F862 /* KJLSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D201EADBA330031F862 /* KJLSTableViewController.swift */; };
 		6DA81D241EADBA9A0031F862 /* KJLSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D221EADBA9A0031F862 /* KJLSTableViewCell.swift */; };
 		6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D231EADBA9A0031F862 /* KJLSTableViewCell.xib */; };
+		6DA81D291EADCF960031F862 /* ChoossFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D271EADCF960031F862 /* ChoossFinishViewController.m */; };
+		6DA81D2A1EADCF960031F862 /* ChoossFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D281EADCF960031F862 /* ChoossFinishViewController.xib */; };
+		6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */; };
+		6DA81D2F1EADDFA60031F862 /* MNXHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */; };
+		6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */; };
 		6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */; };
 		6DE9732A1E8DEF04003D5DBD /* GoucaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */; };
 		6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9732C1E8DF049003D5DBD /* CollectionViewCell.m */; };
@@ -771,6 +776,12 @@
 		6DA81D201EADBA330031F862 /* KJLSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJLSTableViewController.swift; sourceTree = "<group>"; };
 		6DA81D221EADBA9A0031F862 /* KJLSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJLSTableViewCell.swift; sourceTree = "<group>"; };
 		6DA81D231EADBA9A0031F862 /* KJLSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KJLSTableViewCell.xib; sourceTree = "<group>"; };
+		6DA81D261EADCF960031F862 /* ChoossFinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoossFinishViewController.h; sourceTree = "<group>"; };
+		6DA81D271EADCF960031F862 /* ChoossFinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoossFinishViewController.m; sourceTree = "<group>"; };
+		6DA81D281EADCF960031F862 /* ChoossFinishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoossFinishViewController.xib; sourceTree = "<group>"; };
+		6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewController.swift; sourceTree = "<group>"; };
+		6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewCell.swift; sourceTree = "<group>"; };
+		6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNXHTableViewCell.xib; sourceTree = "<group>"; };
 		6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		6DE973281E8DEF04003D5DBD /* GoucaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoucaiViewController.h; sourceTree = "<group>"; };
 		6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoucaiViewController.m; sourceTree = "<group>"; };
@@ -1785,6 +1796,9 @@
 				6DA81D0E1EAA22F70031F862 /* TableViewFootView.m */,
 				6DA81D101EAA23C30031F862 /* FootView.h */,
 				6DA81D131EAA23DE0031F862 /* FootView.m */,
+				6DA81D261EADCF960031F862 /* ChoossFinishViewController.h */,
+				6DA81D271EADCF960031F862 /* ChoossFinishViewController.m */,
+				6DA81D281EADCF960031F862 /* ChoossFinishViewController.xib */,
 				6DA81CF71EAA22400031F862 /* VC */,
 			);
 			path = Choss;
@@ -1821,6 +1835,9 @@
 				6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */,
 				6D9A18CD1E94A9FC004D4E07 /* FXTableViewCell.swift */,
 				6D9A18CE1E94A9FC004D4E07 /* FXTableViewCell.xib */,
+				6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */,
+				6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */,
+				6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */,
 			);
 			path = "My+New";
 			sourceTree = "<group>";
@@ -2586,6 +2603,7 @@
 				C749C9721E72BB9B00241CFD /* TieBieViewCell.xib in Resources */,
 				6D082EB71EA4B9FE0076F6D3 /* HallCollectionViewCell.xib in Resources */,
 				6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */,
+				6DA81D2A1EADCF960031F862 /* ChoossFinishViewController.xib in Resources */,
 				6D082F051EA5C6010076F6D3 /* LICENSE in Resources */,
 				6D09DFB41E9B1FFA00D9B51F /* FDChuanYiCollectioCell.xib in Resources */,
 				C78D25F01DDAFF5400EE34E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -2616,6 +2634,7 @@
 				C749C94E1E72BB9B00241CFD /* ThreeViewController.xib in Resources */,
 				6D082EB21EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.xib in Resources */,
 				6D082F2E1EA744D40076F6D3 /* BallTableViewCell.xib in Resources */,
+				6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */,
 				C77CC1091E24783700CF6B29 /* FXWebViewController.xib in Resources */,
 				6D09DFBA1E9B1FFA00D9B51F /* FDWeatherCollectionCell.xib in Resources */,
 				6DE973441E8E2CEC003D5DBD /* GoucaiTableViewCell.xib in Resources */,
@@ -2823,6 +2842,7 @@
 				6D09E0D01E9F51BA00D9B51F /* DHGuidePageHUD.m in Sources */,
 				C790DA661E1B96EE00E1A7E0 /* SDWebImageCompat.m in Sources */,
 				C749C9811E72BD1F00241CFD /* BaseTableViewCell.m in Sources */,
+				6DA81D2F1EADDFA60031F862 /* MNXHTableViewCell.swift in Sources */,
 				C749C9651E72BB9B00241CFD /* FXLotteryDistrCell.m in Sources */,
 				6D09E0CF1E9F51BA00D9B51F /* DHGifImageOperation.m in Sources */,
 				C790DA0F1E1B47B000E1A7E0 /* NSObject+MJKeyValue.m in Sources */,
@@ -2835,6 +2855,7 @@
 				6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */,
 				6D12930D1EA8BC74006824C6 /* MNXHViewController.m in Sources */,
 				C749C9591E72BB9B00241CFD /* FXLotteryDIstrInfo.m in Sources */,
+				6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */,
 				6D0E7D911E8CCB7D0029E809 /* RegisterModel.m in Sources */,
 				C790DA6A1E1B96EE00E1A7E0 /* SDWebImageManager.m in Sources */,
 				6D09DFCC1E9B203900D9B51F /* NetWorkTools.m in Sources */,
@@ -2899,6 +2920,7 @@
 				C74C3E7F1E135DE2005874AC /* MJRefreshBackFooter.m in Sources */,
 				6D09DFBB1E9B1FFA00D9B51F /* FXShiChenViewCell.m in Sources */,
 				C790DA671E1B96EE00E1A7E0 /* SDWebImageDecoder.m in Sources */,
+				6DA81D291EADCF960031F862 /* ChoossFinishViewController.m in Sources */,
 				C78D25B51DDAEE3700EE34E0 /* main.m in Sources */,
 				C749C94F1E72BB9B00241CFD /* TieBieViewController.m in Sources */,
 				6D1293161EA8C1A6006824C6 /* MNheadCollectionReusableView.m in Sources */,

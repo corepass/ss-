@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MNXHModel : NSObject
+@property(copy,nonatomic) NSString * typeName;
 @property(copy,nonatomic) NSString * number;
 @property(assign,nonatomic) BOOL isSelected ;
 @property(copy,nonatomic) UIColor * titleClor;

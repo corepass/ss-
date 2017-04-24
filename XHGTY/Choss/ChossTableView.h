@@ -13,4 +13,7 @@
 @property (nonatomic , strong) NSArray<MNXHModel *> *dataArray;
 
 @property (nonatomic , strong) TableViewFootView *views;
+
+@property(strong,nonatomic) NSString * titleImage;
+@property(strong,nonatomic) NSString * cpNumber;
 @end

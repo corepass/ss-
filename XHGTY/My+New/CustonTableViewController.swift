@@ -18,27 +18,39 @@ class CustonTableViewController: UITableViewController {
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
 			self.loaddata()
 		})
-//		let right = UIBarButtonItem(title: "试一试", style: .done, target: self, action: #selector(rightClick))
-//		right.tintColor = UIColor.white
-//		self.navigationItem.rightBarButtonItem = right
-		// Uncomment the following line to preserve selection between presentations
-		// self.clearsSelectionOnViewWillAppear = false
 
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		let right = UIBarButtonItem(title: "选号", style: .done, target: self, action: #selector(btnClick))
+		right.tintColor = UIColor.white
+		self.navigationItem.rightBarButtonItem = right
+
 	}
-//	func rightClick() {
-//		let alert = UIAlertController(title: "下注", message: "是否进去到Safari浏览器中进行下注", preferredStyle: .alert)
-//		let defa = UIAlertAction(title: "确实", style: .default) { (action) in
-//			UIApplication.shared.openURL(URL.init(string: "http://www.c16000.com/bet/twpk10.html")!)
-//		}
-//		let cancel = UIAlertAction(title: "取消", style: .cancel) { (action) in
-//
-//		}
-//		alert.addAction(defa)
-//		alert.addAction(cancel)
-//		_ = self.present(alert, animated: true, completion: nil)
-//	}
+	func btnClick() {
+		var dic = Dictionary<String, Any>()
+		let vc = MNXHViewController()
+
+		if self.title == "重庆时时彩" {
+			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "0", "type": "pc"]
+		} else if self.title == "北京PK10" || self.title == "天津时时彩" || self.title == "新疆时时彩" {
+
+			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "4", "type": "pc", "rule": "任选5个号码，选中号与开奖开奖号码一致即中奖"]
+		} else if self.title == "香港六合彩" {
+			dic = ["dataArray": [["number": "49", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码一致即中奖"];
+		} else if self.title == "江苏快3" {
+			dic = ["dataArray": [["number": "18", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
+		} else if self.title == "广东11选5" || self.title == "山东11选5" || self.title == "江西11选5" {
+			dic = ["dataArray": [["number": "11", "count": "1"], ["number": "11", "count": "1"], ["number": "11", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "至少选2个号码，选中号与开奖任意2位一致即中奖"]
+		} else if self.title == "广东快乐10" || self.title == "天津快乐10" {
+			dic = ["dataArray": [["number": "21", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
+		}
+
+		vc.hidesBottomBarWhenPushed = true;
+		vc.title = self.title;
+		vc.dataDic = dic;
+		vc.url = self.url as NSString!;
+		_ = self.navigationController?.pushViewController(vc, animated: true)
+
+	}
+
 	func loaddata() {
 
 		HttpTools.postCustonCAIPIAO(withPath: self.url, parms: nil, success: { (resport) in
@@ -64,7 +76,7 @@ class CustonTableViewController: UITableViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
-	// MARK: - Table view data source
+// MARK: - Table view data source
 
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		// #warning Incomplete implementation, return the number of sections

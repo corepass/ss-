@@ -15,7 +15,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+               [self.contentView addSubview:self.iconImageView];
         [self.contentView addSubview:self.upLable];
         [self.contentView addSubview:self.downLable];
         [self.contentView addSubview:self.lineView];
@@ -24,13 +24,21 @@
     }
     return self;
 }
-
+- (UIImageView *)iconImageView
+{
+    if (!_iconImageView) {
+        _iconImageView = [[UIImageView alloc]init];
+//        _iconImageView.image = [UIImage imageNamed:@".png"];
+//        _iconImageView.backgroundColor = [UIColor redColor];
+    }
+    return _iconImageView;
+}
 - (UILabel *)upLable
 {
     if (!_upLable) {
         _upLable = [[UILabel alloc]init];
         _upLable.text = @"中商百货中商广场店";
-        _upLable.textAlignment = NSTextAlignmentCenter;
+        _upLable.textAlignment = NSTextAlignmentLeft;
         _upLable.textColor = [UIColor blackColor];
         _upLable.font = [UIFont systemFontOfSize:15];
     }
@@ -41,7 +49,7 @@
     if (!_downLable) {
         _downLable = [[UILabel alloc]init];
         _downLable.text = @"中商百货中商广场店";
-        _downLable.textAlignment = NSTextAlignmentCenter;
+           _downLable.textAlignment = NSTextAlignmentLeft;
         _downLable.textColor = [UIColor blackColor];
         _downLable.font = [UIFont systemFontOfSize:15];
     }
@@ -61,13 +69,12 @@
     [super layoutSubviews];
     
 
+    self.iconImageView.frame = CGRectMake(15, 0, 44, 44);
+    self.iconImageView.centerY = self.contentView.centerY;
     
-    self.upLable.frame = CGRectMake(0, 20, 250, 20);
-    self.upLable.centerX = self.centerX;
-    
-    self.downLable.frame = CGRectOffset(self.upLable.frame, 0, self.upLable.height + 5);
-    self.lineView.frame = CGRectMake(0, self.height - 1, self.width, 1);
-    
+    self.upLable.frame = CGRectMake(CGRectGetMaxX(self.iconImageView.frame)+30, 20, 100, 20);
+    self.downLable.frame = CGRectMake(self.upLable.x, CGRectGetMaxY(self.upLable.frame)+5, 100, 20);
+    self.lineView.frame = CGRectMake(25, self.height - 1, self.width, 1);
     
 }
 

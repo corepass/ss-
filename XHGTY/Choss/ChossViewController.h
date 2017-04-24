@@ -10,4 +10,5 @@
 @class MNXHModel;
 @interface ChossViewController : UIViewController
 @property (nonatomic , strong) NSArray<MNXHModel *> *dataArray;
+@property(nonatomic,copy) NSString * qishu;
 @end

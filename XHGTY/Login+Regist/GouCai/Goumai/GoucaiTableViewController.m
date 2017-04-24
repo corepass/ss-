@@ -12,6 +12,7 @@
 #import "XiaZhuView.h"
 #import "AppDefine.h"
 #import "XHGTY-swift.h"
+#import "ChoossFinishViewController.h"
 @interface GoucaiTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic) UITableView * tableView;
 @property(strong,nonatomic)  UIBarButtonItem * right;
@@ -37,21 +38,27 @@
     _xiazhu = [[XiaZhuView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
     _xiazhu.backgroundColor = [UIColor whiteColor];
     NSInteger count = _dataArray.count;
-    NSInteger price = [_number integerValue];
-    _xiazhu.label.text = [NSString stringWithFormat:@"%ld注%d",(long)count,count*price];
+
+    _xiazhu.label.text = [NSString stringWithFormat:@"%ld注",(long)count];
     __weak __typeof (self) weak = self;
     _xiazhu.xiazhuBtnClickBlcok = ^(){
         
         NSMutableArray * savaArray = [[NSMutableArray alloc] init];
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
-        NSString * file = [NSString stringWithFormat:@"%@/userAccount.data",path];
-        
+        NSString * file = [NSString stringWithFormat:@"%@/caipiao.data",path];
+      
         for (GouCaiModel * model in weak.dataArray) {
             NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
-            dic[@"type"] = model.name;
+            dic[@"name"] = @"PC蛋蛋";
             dic[@"qishu"] = model.qishu;
-            dic[@"price"] = weak.number;
+            dic[@"sumMoney"] = weak.number;
             dic[@"status"] = @"待开奖";
+            NSString * str = @"";
+            for ( GouCaiModel * model in weak.dataArray) {
+               str = [str stringByAppendingString:[NSString stringWithFormat:@"%@|", model.type]];
+            }
+            str = [str substringWithRange:NSMakeRange(0, str.length -1)];
+            dic[@"number"] = str;
             [savaArray addObject:dic];
         }
 
@@ -59,7 +66,7 @@
             [savaArray addObjectsFromArray:[NSArray arrayWithContentsOfFile:file]];
         }
         [savaArray writeToFile:file atomically:YES];
-        TouzhuTableViewController * touzhu = [[TouzhuTableViewController alloc]init];
+        ChoossFinishViewController * touzhu = [[ChoossFinishViewController alloc]init];
         [weak.navigationController pushViewController:touzhu animated:YES];
         
     };

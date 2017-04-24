@@ -14,38 +14,24 @@ class PCDDTableViewController: UITableViewController {
 	var modelArray = Array<Dictionary<String, String>>()
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		segumented = UISegmentedControl(items: ["幸运28", "新加坡28"])
-		segumented.frame = CGRect(x: 0, y: 0, width: 250, height: 40)
-		segumented.addTarget(self, action: #selector(segumentedClick), for: .valueChanged)
-		segumented.tintColor = UIColor.white
-		segumented.selectedSegmentIndex = 0
-		self.navigationItem.titleView = segumented
+        self.title = "PC蛋蛋"
+
 		loaddata()
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
 			self.loaddata()
 
 		})
-//		let right = UIBarButtonItem(title: "试一试", style: .done, target: self, action: #selector(rightClick))
-//		right.tintColor = UIColor.white
-//		self.navigationItem.rightBarButtonItem = right
-		// Uncomment the following line to preserve selection between presentations
-		// self.clearsSelectionOnViewWillAppear = false
 
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		let right = UIBarButtonItem(title: "选号", style: .done, target: self, action: #selector(btnClick))
+		right.tintColor = UIColor.white
+		self.navigationItem.rightBarButtonItem = right
+
 	}
-//	func rightClick() {
-//		let alert = UIAlertController(title: "下注", message: "是否进去到Safari浏览器中进行下注", preferredStyle: .alert)
-//		let defa = UIAlertAction(title: "确实", style: .default) { (action) in
-//          UIApplication.shared.openURL(URL.init(string: "http://www.c16000.com/bet/twpk10.html")!)
-//		}
-//		let cancel = UIAlertAction(title: "取消", style: .cancel) { (action) in
-//
-//		}
-//		alert.addAction(defa)
-//		alert.addAction(cancel)
-//		_ = self.present(alert, animated: true, completion: nil)
-//	}
+	func btnClick() {
+		let vc = GoucaiViewController()
+		vc.hidesBottomBarWhenPushed = true
+		_ = self.navigationController?.pushViewController(vc, animated: true)
+	}
 	func loaddata() {
 		HttpTools.getCustonWithPath(self.url, parms: nil, success: { (resport) in
 			if (resport != nil) {

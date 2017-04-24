@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewFootView.h"
 @class MNXHModel;
 @interface ChossTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic , strong) NSArray<MNXHModel *> *dataArray;
+
+@property (nonatomic , strong) TableViewFootView *views;
 @end

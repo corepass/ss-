@@ -231,6 +231,7 @@
 		6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */; };
 		6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */; };
 		6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */; };
+		A903A47C1EADA68000605943 /* E62180D2-764F-4947-8499-98050869950F.png in Resources */ = {isa = PBXBuildFile; fileRef = A903A47B1EADA67F00605943 /* E62180D2-764F-4947-8499-98050869950F.png */; };
 		C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C722E3501E1658CB00A8E2E9 /* Other.storyboard */; };
 		C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3531E165AFE00A8E2E9 /* HallViewController.m */; };
 		C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3561E165B4500A8E2E9 /* PeiViewController.m */; };
@@ -785,6 +786,7 @@
 		6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCDDTableViewController.swift; sourceTree = "<group>"; };
 		6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCddTableViewCell.swift; sourceTree = "<group>"; };
 		6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCddTableViewCell.xib; sourceTree = "<group>"; };
+		A903A47B1EADA67F00605943 /* E62180D2-764F-4947-8499-98050869950F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "E62180D2-764F-4947-8499-98050869950F.png"; sourceTree = "<group>"; };
 		C722E3501E1658CB00A8E2E9 /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		C722E3521E165AFE00A8E2E9 /* HallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HallViewController.h; path = ../../HallViewController.h; sourceTree = "<group>"; };
 		C722E3531E165AFE00A8E2E9 /* HallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HallViewController.m; path = ../../HallViewController.m; sourceTree = "<group>"; };
@@ -2263,6 +2265,7 @@
 				C76212D01E23801000707051 /* UIBarButtonItem+Exstion.h */,
 				C76212D11E23801000707051 /* UIBarButtonItem+Exstion.m */,
 				C78D25BF1DDAEE3700EE34E0 /* Assets.xcassets */,
+				A903A47B1EADA67F00605943 /* E62180D2-764F-4947-8499-98050869950F.png */,
 				C78D25C41DDAEE3700EE34E0 /* Info.plist */,
 				C78D25B31DDAEE3700EE34E0 /* Supporting Files */,
 				6D0E7D421E8CB7260029E809 /* XHGTY-Bridging-Header.h */,
@@ -2576,6 +2579,7 @@
 				6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */,
 				6D09E0AB1E9F271E00D9B51F /* FXReplyViewCell.xib in Resources */,
 				C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */,
+				A903A47C1EADA68000605943 /* E62180D2-764F-4947-8499-98050869950F.png in Resources */,
 				C76212CE1E23777C00707051 /* FXNewsViewCell.xib in Resources */,
 				C78D25E81DDAFF5400EE34E0 /* ShareSDKConfigFile.bundle in Resources */,
 				6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */,

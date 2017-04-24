@@ -16,12 +16,101 @@
     if (self) {
         [self addSubview:self.footView];
         [self addSubview:self.chossTableView];
+        [self.footView.chossleftView.addButton addTarget:self action:@selector(rightButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.footView.chossleftView.reduceButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.footView.chossrightView.addButton addTarget:self action:@selector(rightButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.footView.chossrightView.reduceButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.footView.determineButton addTarget:self action:@selector(deterButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
+        if (self.chossTableView.views.determineButton.selected) {
+            self.footView.determineButton.userInteractionEnabled = NO;
+        }
+        else{
+            self.footView.determineButton.userInteractionEnabled = YES;
+        }
         
     }
     return self;
 }
+- (void)deterButtonClick:(UIButton *)sender{
+    
+    NSLog(@"确认购买按钮");
+    
+}
+- (void)leftButtonClick:(UIButton *)sender{
+    
+    int leftNumber = [self.footView.chossleftView.numberLable.text intValue];
+    int rightNumber = [self.footView.chossrightView.numberLable.text intValue];
+    
+    
+    if (sender ==self.footView.chossleftView.reduceButton) {
+        
+        if (leftNumber ==1) {
+            self.footView.chossleftView.numberLable.text = [NSString stringWithFormat:@"%d",1];
+ 
+        }
+        else{
+            leftNumber--;
+        self.footView.chossleftView.numberLable.text = [NSString stringWithFormat:@"%d",leftNumber];
+          
+        }
+    }
+    if (sender ==self.footView.chossrightView.reduceButton) {
+        
+        if (rightNumber ==1) {
+            self.footView.chossrightView.numberLable.text = [NSString stringWithFormat:@"%d",1];
+        }
+        else{
+            rightNumber--;
+            self.footView.chossrightView.numberLable.text = [NSString stringWithFormat:@"%d",rightNumber];
+        }
+    }
+    
+    [self setUpMoney];
+    
+}
+- (void)setUpMoney{
+    
+    int leftNumber = [self.footView.chossleftView.numberLable.text intValue];
+    int rightNumber = [self.footView.chossrightView.numberLable.text intValue];
+    
+    int moneyNumber = leftNumber*2*rightNumber;
+    
+    
+    
+    self.footView.moneyLable.text = [NSString stringWithFormat:@"投注金额: %d 元",moneyNumber];
+    
+    NSString *str = self.footView.moneyLable.text;
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc]initWithString:str];
+    NSRange range = NSMakeRange(5, self.footView.moneyLable.text.length - 6);
+    [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0] range:range];
+    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor yellowColor] range:range];
+     self.footView.moneyLable.attributedText = attributedStr;
+    
+    
 
+    
+    
+}
+- (void)rightButtonClick:(UIButton *)sender{
+    
+    int leftNumber = [self.footView.chossleftView.numberLable.text intValue];
+    int rightNumber = [self.footView.chossrightView.numberLable.text intValue];
+    
+    if (sender ==self.footView.chossleftView.addButton) {
+        
+        leftNumber++;
+        self.footView.chossleftView.numberLable.text = [NSString stringWithFormat:@"%d",leftNumber];
+
+    }
+    if (sender ==self.footView.chossrightView.addButton) {
+        
+        rightNumber++;
+        self.footView.chossrightView.numberLable.text = [NSString stringWithFormat:@"%d",rightNumber];
+        
+    }
+  [self setUpMoney];
+}
 - (FootView *)footView{
     
     if (!_footView) {

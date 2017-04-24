@@ -19,7 +19,7 @@
      
         [self addSubview:self.determineButton];
         [self addSubview:self.showTextLable];
-        [self addSubview:self.lineView];
+        //[self addSubview:self.lineView];
         
     }
     
@@ -31,14 +31,23 @@
     
     if (!_determineButton) {
         
-        _determineButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_determineButton setTitle:@"确认" forState:UIControlStateNormal];
-        _determineButton.backgroundColor = [UIColor redColor];
-        [_determineButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _determineButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _determineButton.backgroundColor = [UIColor whiteColor];
+        _determineButton.layer.borderColor = [UIColor grayColor].CGColor;
+        _determineButton.layer.borderWidth = 1;
+        _determineButton.layer.masksToBounds = YES;
+        _determineButton.layer.cornerRadius =3;
+        [_determineButton setImage:[UIImage imageNamed:@"determines"] forState:UIControlStateNormal];
+        [_determineButton setImage:[UIImage imageNamed:@"E62180D2-764F-4947-8499-98050869950F.png"] forState:UIControlStateSelected];
+        [_determineButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _determineButton;
 }
-
+- (void)buttonClick:(UIButton *)button{
+    
+    button.selected = !button.selected;
+    NSLog(@"%d",button.selected);
+}
 - (UILabel *)showTextLable{
     
     if (!_showTextLable) {
@@ -51,25 +60,25 @@
     }
     return _showTextLable;
 }
-- (UIView *)lineView
-{
-    if (!_lineView) {
-        _lineView = [[UIView alloc]initWithFrame:CGRectZero];
-        _lineView.backgroundColor = [UIColor colorWithHexString:@"#dddddd"];
-        
-    }
-    return _lineView;
-}
+//- (UIView *)lineView
+//{
+//    if (!_lineView) {
+//        _lineView = [[UIView alloc]initWithFrame:CGRectZero];
+//        _lineView.backgroundColor = [UIColor colorWithHexString:@"#dddddd"];
+//        
+//    }
+//    return _lineView;
+//}
 - (void)layoutSubviews{
     
     [super layoutSubviews];
 
     CGFloat LableWidth = [self withWidth:self.showTextLable.text withFont:[UIFont systemFontOfSize:15.0]];
-    self.determineButton.frame = CGRectMake((self.width - LableWidth - 35)/2.0, 0, 35, 35);
+    self.determineButton.frame = CGRectMake((self.width - LableWidth - 35)/2.0, 0, 20, 20);
     self.determineButton.centerY = self.height/2.0;
     self.showTextLable.frame = CGRectMake(CGRectGetMaxX(self.determineButton.frame), 0, LableWidth, self.height);
     
-    self.lineView.frame = CGRectMake(0, 0, self.width, 1);
+    //self.lineView.frame = CGRectMake(0, 0, self.width, 1);
 
     
     

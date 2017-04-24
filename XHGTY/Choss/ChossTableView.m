@@ -8,7 +8,6 @@
 
 #import "ChossTableView.h"
 #import "ChossTableViewCell.h"
-#import "TableViewFootView.h"
 #import "MNXHModel.h"
 @implementation ChossTableView
 
@@ -21,8 +20,8 @@
         self.dataSource = self;
         self.delegate = self;
         
-        TableViewFootView *views = [[TableViewFootView alloc]initWithFrame:CGRectMake(0, 0, self.width, 60)];
-        self.tableFooterView = views;
+        self.views = [[TableViewFootView alloc]initWithFrame:CGRectMake(0, 0, self.width, 60)];
+        self.tableFooterView = self.views;
         
 
     }

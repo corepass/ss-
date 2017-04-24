@@ -19,6 +19,7 @@
     self.title = @"注单";
     ChossMianView *chossMianView = [[ChossMianView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     chossMianView.chossTableView.dataArray = self.dataArray;
+   
     [self.view addSubview:chossMianView];
 }
 

@@ -86,7 +86,7 @@
         _moneyLable.text = @"投注金额: 2 元";
         
         _moneyLable.textColor = [UIColor whiteColor];
-        _moneyLable.textAlignment = NSTextAlignmentCenter;
+        _moneyLable.textAlignment = NSTextAlignmentLeft;
         
         
         NSString *str = _moneyLable.text;
@@ -111,7 +111,7 @@
     self.chossrightView.centerY = self.upView.height/2.0;
     
     self.DownView.frame = CGRectMake(0, CGRectGetMaxY(self.upView.frame), self.frame.size.width, self.frame.size.height - 35);
-    self.moneyLable.frame = CGRectMake(30, 0, 130, self.DownView.frame.size.height);
+    self.moneyLable.frame = CGRectMake(30, 0, self.width - 30 -120, self.DownView.frame.size.height);
     self.determineButton.frame = CGRectMake(self.frame.size.width - 110, 0, 100, 35);
     self.determineButton.centerY = self.DownView.height/2.0;
     

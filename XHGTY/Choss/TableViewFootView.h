@@ -11,5 +11,5 @@
 @interface TableViewFootView : UIView
 @property (nonatomic ,strong) UILabel *showTextLable;
 @property (nonatomic ,strong) UIButton *determineButton;
-@property (nonatomic, strong) UIView *lineView;
+//@property (nonatomic, strong) UIView *lineView;
 @end

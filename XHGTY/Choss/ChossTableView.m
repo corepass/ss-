@@ -9,6 +9,7 @@
 #import "ChossTableView.h"
 #import "ChossTableViewCell.h"
 #import "TableViewFootView.h"
+#import "MNXHModel.h"
 @implementation ChossTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
@@ -29,7 +30,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.dataArray.count;
+    return 1;
 }
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -55,7 +56,16 @@
     else{
         cell.lineView.hidden = NO;
     }
-    cell.upLable.text = self.dataArray[indexPath.row];
+    NSString * cpNumber = @"";
+    for (NSArray * class in self.dataArray) {
+        for (MNXHModel * model in class) {
+            NSString * appedStr = [NSString stringWithFormat:@"%@|",model.number];
+            cpNumber = [cpNumber stringByAppendingString: appedStr];
+        }
+    
+    }
+   
+    cell.upLable.text = [cpNumber substringWithRange:NSMakeRange(0, cpNumber.length -1)];
     cell.downLable.text = @"一注 2 元";
     return cell;
     

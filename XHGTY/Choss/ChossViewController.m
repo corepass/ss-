@@ -9,28 +9,20 @@
 #import "ChossViewController.h"
 #import "ChossMianView.h"
 @interface ChossViewController ()
-@property (nonatomic , strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation ChossViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"注单";
     ChossMianView *chossMianView = [[ChossMianView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     chossMianView.chossTableView.dataArray = self.dataArray;
     [self.view addSubview:chossMianView];
 }
 
-- (NSMutableArray *)dataArray{
-    
-    if (!_dataArray) {
-        _dataArray =[NSMutableArray array];
-        [_dataArray addObject:@"1"];
-        [_dataArray addObject:@"2"];
-        [_dataArray addObject:@"3"];
-    }
-    return _dataArray;
-}
+
 
 
 @end

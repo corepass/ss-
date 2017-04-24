@@ -85,7 +85,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>是否允许此App使用你的相机？</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>是否允许此App使用获取地理位置？</string>
+	<string>是否允许此App使用获取您当前的地理位置，用于获取周边相关信息？</string>
 	<key>NSLocationWhenInUseDescription</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>

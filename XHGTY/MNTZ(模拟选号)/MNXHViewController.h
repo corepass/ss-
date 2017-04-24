@@ -13,4 +13,5 @@
 @property(copy,nonatomic) NSArray * dataArray;
 @property(assign,nonatomic) int nBlue;
 @property(assign,nonatomic) NSString * url;
+
 @end

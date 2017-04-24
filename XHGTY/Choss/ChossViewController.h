@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MNXHModel;
 @interface ChossViewController : UIViewController
-
+@property (nonatomic , strong) NSArray<MNXHModel *> *dataArray;
 @end

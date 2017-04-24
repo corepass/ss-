@@ -72,7 +72,7 @@
     self.iconImageView.frame = CGRectMake(25, 0, 25, 25);
     self.iconImageView.centerY = self.contentView.centerY;
     
-    self.upLable.frame = CGRectMake(CGRectGetMaxX(self.iconImageView.frame)+30, 20, 100, 20);
+    self.upLable.frame = CGRectMake(CGRectGetMaxX(self.iconImageView.frame)+30, 20, 250, 20);
     self.downLable.frame = CGRectMake(self.upLable.x, CGRectGetMaxY(self.upLable.frame)+5, 100, 20);
     self.lineView.frame = CGRectMake(25, self.height - 1, self.width, 1);
     

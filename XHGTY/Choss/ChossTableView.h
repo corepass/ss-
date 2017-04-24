@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MNXHModel;
 @interface ChossTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic , strong) NSMutableArray *dataArray;
+@property (nonatomic , strong) NSArray<MNXHModel *> *dataArray;
 @end

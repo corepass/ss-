@@ -13,7 +13,9 @@
 #import "MNXHFootView.h"
 #import "JXModel.h"
 #import "MNXHHeardView.h"
- #import <AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import "ChossViewController.h"
+
 static   NSString * cellidentifi = @"cell";
 @interface MNXHViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(strong,nonatomic) UICollectionView * collectionView;
@@ -73,7 +75,15 @@ static   NSString * cellidentifi = @"cell";
     [self.view addSubview:self.collectionView];
     
     _footView = [[MNXHFootView alloc] initWithFrame:CGRectMake(0, self.view.height - 44, self.view.width, 44)];
+    __weak __typeof (self) weak = self;
     _footView.mnxhBtnBlcok = ^(){
+        ChossViewController  * choss = [[ChossViewController alloc] init];
+        choss.dataArray = [NSArray arrayWithArray: weak.selArray];
+        [weak.navigationController pushViewController:choss animated:YES];
+        
+        
+        
+        
     };
     [self.view addSubview:_footView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -131,7 +141,7 @@ static   NSString * cellidentifi = @"cell";
         for (int i = 0; i<count; i++) {
             MNXHModel * model = [[MNXHModel alloc]init];
             model.isSelected = false;
-            model.number = [NSString stringWithFormat:@"%02d",count+1];
+            model.number = [NSString stringWithFormat:@"%02d",i+1];
             if (j >= dataArray.count - _nBlue ){
                 model.titleClor = [UIColor blueColor];
             }else{

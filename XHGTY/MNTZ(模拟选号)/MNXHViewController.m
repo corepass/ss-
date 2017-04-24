@@ -81,9 +81,6 @@ static   NSString * cellidentifi = @"cell";
         choss.dataArray = [NSArray arrayWithArray: weak.selArray];
         [weak.navigationController pushViewController:choss animated:YES];
         
-        
-        
-        
     };
     [self.view addSubview:_footView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {

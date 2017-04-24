@@ -184,17 +184,17 @@
             </objects>
             <point key="canvasLocation" x="-466" y="-388"/>
         </scene>
-        <!--发现-->
+        <!--开奖-->
         <scene sceneID="AhI-pG-XX2">
             <objects>
                 <navigationController id="K29-y3-uG0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" image="zixun_noraml" selectedImage="zixun_selected" id="VXu-cg-MT8"/>
+                    <tabBarItem key="tabBarItem" title="开奖" image="zixun_noraml" selectedImage="zixun_selected" id="VXu-cg-MT8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bWK-gt-TfP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nqp-cW-avJ" kind="relationship" relationship="rootViewController" id="cWr-eu-c4H"/>
+                        <segue destination="APw-0O-uMc" kind="relationship" relationship="rootViewController" id="qtl-nc-Xhq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtr-XZ-856" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,6 +236,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8K3-jq-Rcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="1002.5487256371815"/>
+        </scene>
+        <!--开奖-->
+        <scene sceneID="IBl-Gl-sdW">
+            <objects>
+                <tableViewController title="开奖" id="APw-0O-uMc" customClass="KJTableViewController" customModule="XHGTY" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Paa-Ta-GIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MdQ-5R-BIq" customClass="KJTa">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MdQ-5R-BIq" id="0p2-Go-Tjx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="APw-0O-uMc" id="3pC-ws-lWJ"/>
+                            <outlet property="delegate" destination="APw-0O-uMc" id="HCU-EO-z8x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="开奖" id="Ily-x9-HV1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bx0-tR-JaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="1690"/>
         </scene>
         <!--发现-->
         <scene sceneID="k8F-y1-7eR">

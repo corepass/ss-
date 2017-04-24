@@ -15,3 +15,4 @@
 #import "ForumViewController.h"
 #import "FXSettingViewController.h"
 #import "WebViewController.h"
+#import "MJExtension.h"

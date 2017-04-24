@@ -13,24 +13,49 @@ class KJTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Uncomment the following line to preserve selection between presentations
-		// self.clearsSelectionOnViewWillAppear = false
 
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		self.tableView.showsVerticalScrollIndicator = false
+
+		getData()
+		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+			self.getData()
+		})
 	}
-    func getData(){
-    
-    
-    
-    }
+	func getData() {
+		HttpTools.get(withPath: "http://m.zhuoyicp.com/kaijang/kjhall?getData=1", parms: nil, success: { [weak self](data) in
+			self?.tableView.mj_header.endRefreshing()
+            let path = Bundle.main.path(forResource: "CaipiaoType", ofType: "geojson")
+            let pathdic = NSDictionary.init(contentsOfFile: path!)
+            self?.dataArray = NSArray(array: KJModel.mj_objectArray(withKeyValuesArray: pathdic?["data"])) as! Array<Any>
+            DispatchQueue.main.sync(execute: { 
+                self?.tableView.reloadData()
+            })
+            
+
+		}) { (error) in
+			SVProgressHUD.showError(withStatus: "网络出错，请稍后再试")
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+				SVProgressHUD.dismiss()
+			})
+			self.tableView.mj_header.endRefreshing()
+		}
+
+	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
 
 	// MARK: - Table view data source
-
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableViewAutomaticDimension
+	}
+	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 100
+	}
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 1
+	}
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		// #warning Incomplete implementation, return the number of sections
 		return dataArray.count
@@ -47,8 +72,24 @@ class KJTableViewController: UITableViewController {
 		if cell == nil {
 			cell = Bundle.main.loadNibNamed("KJTableViewCell", owner: self, options: nil)?.last as! KJTableViewCell?
 		}
-      
+		if dataArray.count > indexPath.section {
+			cell?.setModel(model: dataArray[indexPath.section] as! KJModel)
+		}
 		return cell!
+	}
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let model: KJModel = dataArray[indexPath.section] as! KJModel
+		if indexPath.section == 0 {
+			let vc = PCDDTableViewController()
+			vc.hidesBottomBarWhenPushed = true
+			_ = self.navigationController?.pushViewController(vc, animated: true)
+		} else {
+			let vc = CustonTableViewController()
+			vc.hidesBottomBarWhenPushed = true
+			vc.url = model.url
+            vc.title = model.name
+            _ = self.navigationController?.pushViewController(vc, animated: true)
+		}
 	}
 
 	/*

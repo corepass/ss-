@@ -215,6 +215,10 @@
 		6DA81D161EAA24190031F862 /* ChossTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D151EAA24190031F862 /* ChossTableView.m */; };
 		6DA81D171EAA244B0031F862 /* FootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D131EAA23DE0031F862 /* FootView.m */; };
 		6DA81D1A1EAC4CB40031F862 /* MessageRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D191EAC4CB40031F862 /* MessageRuntime.m */; };
+		6DA81D1F1EADA0090031F862 /* KJModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D1E1EADA0090031F862 /* KJModel.swift */; };
+		6DA81D211EADBA330031F862 /* KJLSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D201EADBA330031F862 /* KJLSTableViewController.swift */; };
+		6DA81D241EADBA9A0031F862 /* KJLSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D221EADBA9A0031F862 /* KJLSTableViewCell.swift */; };
+		6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D231EADBA9A0031F862 /* KJLSTableViewCell.xib */; };
 		6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */; };
 		6DE9732A1E8DEF04003D5DBD /* GoucaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */; };
 		6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9732C1E8DF049003D5DBD /* CollectionViewCell.m */; };
@@ -762,6 +766,10 @@
 		6DA81D151EAA24190031F862 /* ChossTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChossTableView.m; sourceTree = "<group>"; };
 		6DA81D181EAC4CB40031F862 /* MessageRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRuntime.h; sourceTree = "<group>"; };
 		6DA81D191EAC4CB40031F862 /* MessageRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRuntime.m; sourceTree = "<group>"; };
+		6DA81D1E1EADA0090031F862 /* KJModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJModel.swift; sourceTree = "<group>"; };
+		6DA81D201EADBA330031F862 /* KJLSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJLSTableViewController.swift; sourceTree = "<group>"; };
+		6DA81D221EADBA9A0031F862 /* KJLSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJLSTableViewCell.swift; sourceTree = "<group>"; };
+		6DA81D231EADBA9A0031F862 /* KJLSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KJLSTableViewCell.xib; sourceTree = "<group>"; };
 		6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		6DE973281E8DEF04003D5DBD /* GoucaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoucaiViewController.h; sourceTree = "<group>"; };
 		6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoucaiViewController.m; sourceTree = "<group>"; };
@@ -1654,6 +1662,10 @@
 				6D1292F61EA8559A006824C6 /* KJTableViewController.swift */,
 				6D1292F81EA855B8006824C6 /* KJTableViewCell.swift */,
 				6D1292F91EA855B8006824C6 /* KJTableViewCell.xib */,
+				6DA81D1E1EADA0090031F862 /* KJModel.swift */,
+				6DA81D201EADBA330031F862 /* KJLSTableViewController.swift */,
+				6DA81D221EADBA9A0031F862 /* KJLSTableViewCell.swift */,
+				6DA81D231EADBA9A0031F862 /* KJLSTableViewCell.xib */,
 			);
 			path = KJ;
 			sourceTree = "<group>";
@@ -2570,6 +2582,7 @@
 				C749CA0C1E72BFAC00241CFD /* FXNoNetWorkView.xib in Resources */,
 				C749C9721E72BB9B00241CFD /* TieBieViewCell.xib in Resources */,
 				6D082EB71EA4B9FE0076F6D3 /* HallCollectionViewCell.xib in Resources */,
+				6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */,
 				6D082F051EA5C6010076F6D3 /* LICENSE in Resources */,
 				6D09DFB41E9B1FFA00D9B51F /* FDChuanYiCollectioCell.xib in Resources */,
 				C78D25F01DDAFF5400EE34E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -2692,6 +2705,7 @@
 				C74C3E841E135DE2005874AC /* MJRefreshAutoNormalFooter.m in Sources */,
 				6D09DFB91E9B1FFA00D9B51F /* FDWeatherCollectionCell.m in Sources */,
 				6D0E7D7A1E8CC92C0029E809 /* UILayoutGuide+Easy.swift in Sources */,
+				6DA81D241EADBA9A0031F862 /* KJLSTableViewCell.swift in Sources */,
 				C749C97E1E72BCF100241CFD /* BaseViewController.m in Sources */,
 				C790DA341E1B5DA800E1A7E0 /* PeiLvTableViewCell.m in Sources */,
 				C749C94D1E72BB9B00241CFD /* ThreeViewController.m in Sources */,
@@ -2724,6 +2738,7 @@
 				6D0E7D6F1E8CC92C0029E809 /* Item+AppKit.swift in Sources */,
 				6D082EBA1EA4C6680076F6D3 /* JXModel.m in Sources */,
 				C790DA641E1B96EE00E1A7E0 /* NSData+ImageContentType.m in Sources */,
+				6DA81D1F1EADA0090031F862 /* KJModel.swift in Sources */,
 				C790DA0C1E1B47B000E1A7E0 /* MJPropertyType.m in Sources */,
 				6D082F1D1EA5FAFE0076F6D3 /* CpDetaMapViewController.m in Sources */,
 				C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */,
@@ -2732,6 +2747,7 @@
 				6D0E7D381E8B8A1A0029E809 /* XHLaunchImageView.m in Sources */,
 				6D0E7D931E8CCB7D0029E809 /* RegisterTableViewCell.m in Sources */,
 				6D0E7CDE1E8A481E0029E809 /* WebViewXib.m in Sources */,
+				6DA81D211EADBA330031F862 /* KJLSTableViewController.swift in Sources */,
 				C74C3E801E135DE2005874AC /* MJRefreshComponent.m in Sources */,
 				C749C9761E72BB9B00241CFD /* WebViewCell.m in Sources */,
 				C790DA0E1E1B47B000E1A7E0 /* NSObject+MJCoding.m in Sources */,

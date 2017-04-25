@@ -22,15 +22,26 @@
         [self.footView.chossrightView.reduceButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.footView.determineButton addTarget:self action:@selector(deterButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
-        if (self.chossTableView.views.determineButton.selected) {
-            self.footView.determineButton.userInteractionEnabled = NO;
-        }
-        else{
-            self.footView.determineButton.userInteractionEnabled = YES;
-        }
+        
+        [self.chossTableView.views.determineButton addTarget:self action:@selector(deterClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+
         
     }
     return self;
+}
+- (void)deterClick:(UIButton*)sender{
+    
+    if (self.chossTableView.views.determineButton.selected) {
+        self.footView.determineButton.userInteractionEnabled = NO;
+        self.footView.determineButton.backgroundColor = [UIColor grayColor];
+    }
+    else{
+        self.footView.determineButton.userInteractionEnabled = YES;
+        self.footView.determineButton.backgroundColor = [UIColor redColor];
+    }
+    
 }
 - (void)deterButtonClick:(UIButton *)sender{
     int leftNumber = [self.footView.chossleftView.numberLable.text intValue];

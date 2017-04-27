@@ -54,7 +54,7 @@
     if (!_determineButton) {
         
         _determineButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_determineButton setTitle:@"确认购买" forState:UIControlStateNormal];
+        [_determineButton setTitle:@"确认选号" forState:UIControlStateNormal];
         _determineButton.backgroundColor = [UIColor redColor];
         [_determineButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }

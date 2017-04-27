@@ -31,8 +31,19 @@
     [self setUI];
     self.seacher = [[AMapSearchAPI alloc] init];
     self.seacher.delegate = self;
-
+//    UIBarButtonItem * back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backClick)];
+//    back.tintColor = [UIColor whiteColor];
+//    self.navigationItem.backBarButtonItem = back;
     
+}
+-(void)backClick{
+    if (self.navigationController.viewControllers.count > 1){
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+    
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+
 }
 -(void)starSeacher:(CLLocation *) loc{
     CLLocationCoordinate2D  location = loc.coordinate;

@@ -35,7 +35,7 @@ static   NSString * cellidentifi = @"cell";
            _hearddic = [NSDictionary dictionaryWithDictionary:[JSON firstObject]];
            _qishu = [NSString stringWithFormat:@"%d",[_hearddic[@"expect"] intValue] + 1];
            _heard.qishu.text = [NSString stringWithFormat:@"第%d期",[_hearddic[@"expect"] intValue] + 1];
-           _heard.openNumber.text = [NSString stringWithFormat:@"上期开奖结果:%@",_hearddic[@"opencode"]];
+           _heard.openNumber.text = [NSString stringWithFormat:@"上期结果:%@",_hearddic[@"opencode"]];
        }
    } :^(NSError *error) {
        _heard.qishu.text = @"期数获取异常";

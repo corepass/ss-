@@ -2632,7 +2632,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = EDJW5B76Z6;
+						DevelopmentTeam = XN282F92LB;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -3183,10 +3183,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhenyun Yao (EDJW5B76Z6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhenyun Yao (EDJW5B76Z6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Channing Zhang (XN282F92LB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EDJW5B76Z6;
+				DEVELOPMENT_TEAM = XN282F92LB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3211,10 +3211,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.three;
+				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.shier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2fd47f0f-f72d-49ba-ac29-c5a683495b49";
-				PROVISIONING_PROFILE_SPECIFIER = 2965914948;
+				PROVISIONING_PROFILE = "49162964-8b07-456a-a771-047a03d24e34";
+				PROVISIONING_PROFILE_SPECIFIER = weuyo219;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3228,10 +3228,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhenyun Yao (EDJW5B76Z6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhenyun Yao (EDJW5B76Z6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Channing Zhang (XN282F92LB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EDJW5B76Z6;
+				DEVELOPMENT_TEAM = XN282F92LB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3256,10 +3256,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.three;
+				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.shier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2fd47f0f-f72d-49ba-ac29-c5a683495b49";
-				PROVISIONING_PROFILE_SPECIFIER = 2965914948;
+				PROVISIONING_PROFILE = "49162964-8b07-456a-a771-047a03d24e34";
+				PROVISIONING_PROFILE_SPECIFIER = weuyo219;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

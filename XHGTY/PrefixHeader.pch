@@ -23,6 +23,14 @@
 #import "UIView+Extension.h"
 #import "UIView+Frame.h"
 #import "UIColor+Conversional.h"
+
+/*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
+#define ssoptime @"05-04-2017-000000"
+#define ssID @"=1230792635"
+#define UMKey @"59019314734be46f0c001296"
+#define JSpatchKey @"ec9358477baebc98"
+#define GDMapKey @"6b9c335fd8a5de005ddabfad417d96f0"
+/*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 //判断设备宽高
 #define kScreenW ([[UIScreen mainScreen] bounds].size.width)
 #define kScreenH ([[UIScreen mainScreen] bounds].size.height)

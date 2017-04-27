@@ -27,7 +27,7 @@ class CustonTableViewController: UITableViewController {
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
 			self.loaddata()
 		})
-		
+
 		let right = UIBarButtonItem(title: "选号", style: .done, target: self, action: #selector(btnClick))
 		right.tintColor = UIColor.white
 		self.navigationItem.rightBarButtonItem = right
@@ -37,7 +37,7 @@ class CustonTableViewController: UITableViewController {
 		heard?.zstBtnClickBlock = {
 			let vc = UIStoryboard(name: "Other", bundle: Bundle.main).instantiateViewController(withIdentifier: "StylesViewController") as? StylesViewController
 			vc?.title = "北京赛车走势图"
-            vc?.hidesBottomBarWhenPushed = true
+			vc?.hidesBottomBarWhenPushed = true
 			_ = self.navigationController?.pushViewController(vc!, animated: true)
 		}
 	}
@@ -50,7 +50,7 @@ class CustonTableViewController: UITableViewController {
 //			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "0", "type": "pc"]
 //		} else if self.title == "北京赛车" || self.title == "天津时时彩" || self.title == "新疆时时彩" {
 
-			dic = ["dataArray": [["number": "10", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖号码第一致即中奖"]
+		dic = ["dataArray": [["number": "10", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖号码第一致即中奖"]
 //		} else if self.title == "香港六合彩" {
 //			dic = ["dataArray": [["number": "49", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码一致即中奖"];
 //		} else if self.title == "江苏快3" {
@@ -62,7 +62,7 @@ class CustonTableViewController: UITableViewController {
 //		}
 
 		vc.hidesBottomBarWhenPushed = true;
-		vc.title = self.title;
+		vc.title = "北京赛车";
 		vc.dataDic = dic;
 		vc.url = self.url as NSString!;
 		_ = self.navigationController?.pushViewController(vc, animated: true)
@@ -100,7 +100,11 @@ class CustonTableViewController: UITableViewController {
 		// #warning Incomplete implementation, return the number of sections
 		return self.modelArray.count + 1
 	}
-
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if indexPath.section > 0 {
+			btnClick()
+		}
+	}
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// #warning Incomplete implementation, return the number of rows
 		return 1

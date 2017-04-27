@@ -58,6 +58,15 @@
                         <action selector="goBtnClick:" destination="-1" eventType="touchUpInside" id="X9Q-he-aEH"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请前往彩票店进行支付购买，谢谢！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88W-Oc-NK3">
+                    <rect key="frame" x="16" y="511" width="343" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="VWl-xT-ldO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -65,11 +74,14 @@
                 <constraint firstAttribute="trailing" secondItem="MNv-vz-PdS" secondAttribute="trailing" constant="16" id="6T6-jb-eIW"/>
                 <constraint firstItem="1QL-F6-pr6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6WV-4g-3C2"/>
                 <constraint firstItem="MNv-vz-PdS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="J9B-jS-dN5"/>
+                <constraint firstAttribute="trailing" secondItem="88W-Oc-NK3" secondAttribute="trailing" constant="16" id="LdS-Dm-Hxo"/>
                 <constraint firstItem="ZtG-Ei-0hr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NKm-HZ-cn6"/>
                 <constraint firstItem="MNv-vz-PdS" firstAttribute="top" secondItem="1QL-F6-pr6" secondAttribute="bottom" constant="18" id="Nt5-19-7mL"/>
                 <constraint firstItem="1QL-F6-pr6" firstAttribute="top" secondItem="5j9-k4-zZz" secondAttribute="bottom" constant="58" id="Rfp-w2-LE7"/>
                 <constraint firstAttribute="trailing" secondItem="1QL-F6-pr6" secondAttribute="trailing" constant="16" id="TDg-qR-Exn"/>
                 <constraint firstItem="5j9-k4-zZz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wxj-80-zcI"/>
+                <constraint firstItem="88W-Oc-NK3" firstAttribute="top" secondItem="MNv-vz-PdS" secondAttribute="bottom" constant="16" id="Wy2-Db-WnT"/>
+                <constraint firstItem="88W-Oc-NK3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Z28-jr-6yQ"/>
                 <constraint firstItem="1QL-F6-pr6" firstAttribute="top" secondItem="5j9-k4-zZz" secondAttribute="bottom" constant="58" id="fRp-ta-V8r"/>
                 <constraint firstItem="5j9-k4-zZz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="154" id="leB-bz-WFB"/>
                 <constraint firstItem="MNv-vz-PdS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pQr-7u-2qZ"/>

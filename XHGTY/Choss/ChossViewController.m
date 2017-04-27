@@ -64,9 +64,18 @@
         [SVProgressHUD show];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
-            ChoossFinishViewController * vc = [[ChoossFinishViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];        });
-    //    [SVProgressHUD showWithStatus:@"保存成功"];
+//            ChoossFinishViewController * vc = [[ChoossFinishViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+        });
+        
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]]){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]];
+        }else{
+                        ChoossFinishViewController * vc = [[ChoossFinishViewController alloc] init];
+                        [self.navigationController pushViewController:vc animated:YES];
+        }
+        
+        [SVProgressHUD showWithStatus:@"保存成功"];
   
     }else{
       [SVProgressHUD showWithStatus:@"保存失败,请稍后再试！"];

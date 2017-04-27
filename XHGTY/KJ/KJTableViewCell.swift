@@ -23,7 +23,7 @@ class KJTableViewCell: UITableViewCell {
 
 	}
 	func setModel(model: KJModel) {
-		
+		qishu.alpha = 0
 		qishu.text = "\(model.qiShu)"
 		kjType.text = model.name
         kjImage.image = UIImage(named: model.name)

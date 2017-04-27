@@ -2568,7 +2568,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2AM7QPXKSD;
+						DevelopmentTeam = YTDU758824;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -3109,10 +3109,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Demi Wu (2AM7QPXKSD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Demi Wu (2AM7QPXKSD)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WeiYuan Su (YTDU758824)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WeiYuan Su (YTDU758824)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2AM7QPXKSD;
+				DEVELOPMENT_TEAM = YTDU758824;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3137,10 +3137,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pwadg200.pwadg;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.four;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0a523356-2b74-45e3-b8a0-d88877248faa";
-				PROVISIONING_PROFILE_SPECIFIER = "pwadg上架";
+				PROVISIONING_PROFILE = "92845533-11d6-4bc7-8c03-68b9e0c0b1c9";
+				PROVISIONING_PROFILE_SPECIFIER = 2403683505;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3154,10 +3154,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Demi Wu (2AM7QPXKSD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Demi Wu (2AM7QPXKSD)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WeiYuan Su (YTDU758824)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WeiYuan Su (YTDU758824)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2AM7QPXKSD;
+				DEVELOPMENT_TEAM = YTDU758824;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3182,10 +3182,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pwadg200.pwadg;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.four;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0a523356-2b74-45e3-b8a0-d88877248faa";
-				PROVISIONING_PROFILE_SPECIFIER = "pwadg上架";
+				PROVISIONING_PROFILE = "92845533-11d6-4bc7-8c03-68b9e0c0b1c9";
+				PROVISIONING_PROFILE_SPECIFIER = 2403683505;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

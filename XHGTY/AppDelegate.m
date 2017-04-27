@@ -51,11 +51,11 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-   [AMapServices sharedServices].apiKey = @"9a1539d55bc705874d4e6afc8928fbc2";
+   [AMapServices sharedServices].apiKey = GDMapKey;
     
     
     
-    [JSPatch startWithAppKey:@"8760929841672e3e"];
+    [JSPatch startWithAppKey:JSpatchKey];
     [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFdJzeIDB+0y8lb5OzYBJcW3Nn\nF90KGrEJVWbrBeAZtGM8fmjkH1Z/nMs13XTRv6iOSjhtCpA+tm8itwT4Ekd067ln\nd3DizrTIuSRiLYpLUlKePy2TPmZmyUSl7eA4m9iFDx0jEYFdAtzwRHT1YrqvQJTp\nirbngh42uNzPtHyIWQIDAQAB\n-----END PUBLIC KEY-----"];
     [JSPatch sync];
     
@@ -74,7 +74,7 @@ static NSString *channel = @"App Store";
     
  //   [self setXh];
     
-    [UMessage startWithAppkey:@"58e99f04310c937abf002538" launchOptions:launchOptions httpsEnable:YES ];
+    [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
     [UMessage openDebugMode:YES];
 
     //注册通知

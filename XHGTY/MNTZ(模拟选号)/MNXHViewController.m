@@ -28,8 +28,9 @@ static   NSString * cellidentifi = @"cell";
 @end
 
 @implementation MNXHViewController
+
 -(void)getData{
-   [HttpTools getCustonCAIPIAOWithPath:self.url parms:nil success:^(id JSON) {
+   [HttpTools getCustonCAIPIAOWithPath:@"http://f.apiplus.cn/bjpk10-20.json" parms:nil success:^(id JSON) {
        if ([JSON isKindOfClass:[NSArray class]]){
            _hearddic = [NSDictionary dictionaryWithDictionary:[JSON firstObject]];
            _qishu = [NSString stringWithFormat:@"%d",[_hearddic[@"expect"] intValue] + 1];
@@ -44,7 +45,10 @@ static   NSString * cellidentifi = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+//    self.dataDic = @{@"dataArray":@[@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"},@{@"number":@"9",@"count":@"1"}],@"nBlue":@"4",@"type":@"pc",@"rule":@"任选5个号码，选中号与开奖开奖号码一致即中奖"};
+    self.title = @"北京赛车";
+//    self.url = @"http://f.apiplus.cn/bjpk10-20.xml";
     [self getData];
     [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
     // 并让自己成为第一响应者
@@ -81,7 +85,7 @@ static   NSString * cellidentifi = @"cell";
     _footView.mnxhBtnBlcok = ^(){
         ChossViewController  * choss = [[ChossViewController alloc] init];
         choss.dataArray = [NSArray arrayWithArray: weak.selArray];
-        choss.qishu = _qishu;
+        choss.qishu = weak.qishu;
         [weak.navigationController pushViewController:choss animated:YES];
         
     };

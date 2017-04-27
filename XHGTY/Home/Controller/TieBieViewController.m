@@ -65,12 +65,12 @@ static NSString *const TieBieViewCellID = @"TieBieViewCell";
         
 //        NSString *num = dict[@"post_content"];
         JXModel * jx = [[JXModel alloc] init];
-        jx.cpCount = 3;
+        jx.cpCount = 10;
         NSArray *arr = [jx getarc4random];
         
         self.numbers = (NSMutableArray *)arr;
         
-     //   self.layout.itemSize = CGSizeMake(((kScreenW - 80) - (arr.count +1)*10) / arr.count, 50);
+        self.layout.itemSize = CGSizeMake(30, 30);
         
         
         

@@ -10,38 +10,56 @@ import UIKit
 
 class CustonTableViewController: UITableViewController {
 	var segumented: UISegmentedControl!
-	var url = ""
-	var modelArray = Array<Dictionary<String, Any>>()
+	var url = "http://f.apiplus.cn/bjpk10-20.json"
+	var modelArray = Array<Dictionary<String, Any>>() {
+		didSet {
+			if modelArray.count > 0 {
+				heard?.setModel(dic: modelArray.first)
+			}
+
+		}
+	}
+
+	var heard: CPheardView?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loaddata()
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
 			self.loaddata()
 		})
-
+		
 		let right = UIBarButtonItem(title: "选号", style: .done, target: self, action: #selector(btnClick))
 		right.tintColor = UIColor.white
 		self.navigationItem.rightBarButtonItem = right
-
+		heard = CPheardView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 117))
+		heard?.backgroundColor = UIColor.white
+		self.tableView.tableHeaderView = heard
+		heard?.zstBtnClickBlock = {
+			let vc = UIStoryboard(name: "Other", bundle: Bundle.main).instantiateViewController(withIdentifier: "StylesViewController") as? StylesViewController
+			vc?.title = "北京赛车走势图"
+            vc?.hidesBottomBarWhenPushed = true
+			_ = self.navigationController?.pushViewController(vc!, animated: true)
+		}
 	}
+
 	func btnClick() {
 		var dic = Dictionary<String, Any>()
 		let vc = MNXHViewController()
 
-		if self.title == "重庆时时彩" {
-			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "0", "type": "pc"]
-		} else if self.title == "北京PK10" || self.title == "天津时时彩" || self.title == "新疆时时彩" {
+//		if self.title == "PC蛋蛋" {
+//			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "0", "type": "pc"]
+//		} else if self.title == "北京赛车" || self.title == "天津时时彩" || self.title == "新疆时时彩" {
 
-			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "4", "type": "pc", "rule": "任选5个号码，选中号与开奖开奖号码一致即中奖"]
-		} else if self.title == "香港六合彩" {
-			dic = ["dataArray": [["number": "49", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码一致即中奖"];
-		} else if self.title == "江苏快3" {
-			dic = ["dataArray": [["number": "18", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
-		} else if self.title == "广东11选5" || self.title == "山东11选5" || self.title == "江西11选5" {
-			dic = ["dataArray": [["number": "11", "count": "1"], ["number": "11", "count": "1"], ["number": "11", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "至少选2个号码，选中号与开奖任意2位一致即中奖"]
-		} else if self.title == "广东快乐10" || self.title == "天津快乐10" {
-			dic = ["dataArray": [["number": "21", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
-		}
+			dic = ["dataArray": [["number": "10", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖号码第一致即中奖"]
+//		} else if self.title == "香港六合彩" {
+//			dic = ["dataArray": [["number": "49", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码一致即中奖"];
+//		} else if self.title == "江苏快3" {
+//			dic = ["dataArray": [["number": "18", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
+//		} else if self.title == "广东11选5" || self.title == "山东11选5" || self.title == "江西11选5" {
+//			dic = ["dataArray": [["number": "11", "count": "1"], ["number": "11", "count": "1"], ["number": "11", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "至少选2个号码，选中号与开奖任意2位一致即中奖"]
+//		} else if self.title == "广东快乐10" || self.title == "天津快乐10" {
+//			dic = ["dataArray": [["number": "21", "count": "1"]], "nBlue": "0", "type": "pc", "rule": "任选1个号码，选中号与开奖开奖号码最后一位一致即中奖"]
+//		}
 
 		vc.hidesBottomBarWhenPushed = true;
 		vc.title = self.title;

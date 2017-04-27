@@ -46,6 +46,7 @@
 #import "gpcModel.h"
 #import "MNXHViewController.h"
 #import "MessageRuntime.h"
+#import "MNXHViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -199,6 +200,12 @@ static NSString *const gpcID = @"gpcID";
     
     [self loadNewItems];
     
+    
+    self.collectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        [self getgpcData];
+        [self setBannar];
+    }];
+    
 }
 -(void)getgpcData{
    [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
@@ -209,6 +216,7 @@ static NSString *const gpcID = @"gpcID";
            });
          
        }
+       [self.collectionView.mj_header endRefreshing];
    } :^(NSError *error) {
        
    }];
@@ -298,6 +306,7 @@ static NSString *const gpcID = @"gpcID";
 
     [HttpTools POSTWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
                 if ([JSON isKindOfClass:[NSArray class]]){
+                [self.Ads removeAllObjects];
                  NSArray * array = JSON;
                     for (NSDictionary * dic  in array) {
                         FXAd * model = [[FXAd alloc] init];
@@ -313,9 +322,10 @@ static NSString *const gpcID = @"gpcID";
                     self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
                     _cycleView.totalAds =self.Ads;
                 }
-                
+      [self.collectionView.mj_header endRefreshing];
                 
     } :^(NSError *error) {
+         [self.collectionView.mj_header endRefreshing];
         NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
         NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
         self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
@@ -419,10 +429,23 @@ static NSString *const gpcID = @"gpcID";
                 [self.navigationController pushViewController:tieBIEVC animated:YES];
                 return;
             }else if ([destStr isEqualToString:@"投注站"]){
-
-                CpMapViewController * cp =  [[CpMapViewController alloc] init];
-                cp.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:cp animated:YES];
+//
+//                CpMapViewController * cp =  [[CpMapViewController alloc] init];
+//                cp.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:cp animated:YES];
+                NSDictionary * dic ;
+        
+                        dic = @{@"dataArray":@[@{@"number":@"9",@"count":@"1"}],@"nBlue":@"0",@"type":@"pc",@"rule":@"任选1个号码，选中号与开奖开奖号码第一位致即中奖"};
+               
+                MNXHViewController * vc = [[MNXHViewController alloc] init];
+                vc.hidesBottomBarWhenPushed = YES;
+                vc.title = @"北京赛车";
+                vc.dataDic = dic;
+                vc.hidesBottomBarWhenPushed = YES;
+                vc.url = @"http://f.apiplus.cn/bjpk10-20.xml";
+                [self.navigationController pushViewController:vc animated:YES];
+                
+                
             }else if ([destStr isEqualToString:@"彩票资讯"]){
        
                 

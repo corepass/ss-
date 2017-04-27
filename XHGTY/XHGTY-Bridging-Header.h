@@ -18,3 +18,4 @@
 #import "MJExtension.h"
 #import "CpMapViewController.h"
 #import "MNXHViewController.h"
+#import "StylesViewController.h"

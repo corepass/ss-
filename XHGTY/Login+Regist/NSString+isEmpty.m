@@ -116,6 +116,14 @@
     NSString *strTime=[formatter stringFromDate:date];
     return strTime;
 }
++(NSString *)tranfromTimeyyyyMMddHHmm:(long long)ts andType:(NSString *)format
+{
+    NSDate *date=[[NSDate alloc]initWithTimeIntervalSince1970:ts];
+    NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+    [formatter setDateFormat:format];
+    NSString *strTime=[formatter stringFromDate:date];
+    return strTime;
+}
 +(NSString *)tranfromTimeMMdd:(long long)ts
 {
     NSDate *date=[[NSDate alloc]initWithTimeIntervalSince1970:ts/1000];

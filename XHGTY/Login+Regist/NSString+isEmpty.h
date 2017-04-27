@@ -54,4 +54,6 @@
  *  @return
  */
 +(NSString *)tranfromTime:(NSString *)dateFormatter time:(long long)times;
+
++(NSString *)tranfromTimeyyyyMMddHHmm:(long long)ts andType:(NSString *)format;
 @end

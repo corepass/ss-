@@ -20,8 +20,8 @@ typedef enum : NSUInteger {
 
 @interface NetWorkTools : AFHTTPSessionManager
 single_interface(NetWorkTools)
-
 -(void)requestWithType:(RequesType)type urlString:(NSString *)urlStr parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 -(void)getCustonWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
+
 
 @end

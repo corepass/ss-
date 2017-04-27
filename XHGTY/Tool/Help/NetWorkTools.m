@@ -55,7 +55,7 @@ single_implementation(NetWorkTools)
     NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data){
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-           
+            
             NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSArray * array = [self qudiaohtml: str];
             success(array);

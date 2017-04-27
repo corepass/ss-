@@ -36,8 +36,8 @@
     });
 }
 + (void)getCustonWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
-
-
+    
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [SVProgressHUD show];
     NSURL * url = [NSURL URLWithString:path];
@@ -49,7 +49,7 @@
             [SVProgressHUD dismiss];
             NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSArray * array = [[HttpTools alloc] qudiaohtml: str];
-           success(array);
+            success(array);
         }else{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             [SVProgressHUD dismiss];
@@ -59,8 +59,8 @@
     }];
     [dataTask resume];
     
- 
-
+    
+    
 }
 -(NSMutableArray *)qudiaohtml:(NSString *)content{
     NSScanner * scanner = [NSScanner scannerWithString:content];
@@ -81,8 +81,8 @@
     content = [NSString stringWithFormat:@"[%@]",content];
     NSData * data = [content dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableArray * array = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-         
+    
+    
     
     return  array;
     
@@ -91,12 +91,12 @@
 
 + (void)getWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     
-
+    
     
     if ([path containsString:UPDATE_URL] || [path containsString:@"f.api"] || [path containsString:@"http://www.wns4688.com/"] || [path containsString:@"http://v.juhe.cn/toutiao"]) {
         
     }else{
-         path = [NSString stringWithFormat:@"%@%@",kHostURL,path];
+        path = [NSString stringWithFormat:@"%@%@",kHostURL,path];
     }
     
     
@@ -131,19 +131,19 @@
 
 + (void)postWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     path = [NSString stringWithFormat:@"%@%@",kHostURL,path];
-   FxLog(@"path = %@ , parms = %@",path,parms);
+    FxLog(@"path = %@ , parms = %@",path,parms);
     [SVProgressHUD show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-   
+    
     [manager POST:path parameters:parms progress:^(NSProgress * _Nonnull uploadProgress) {
         //
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         if ([responseObject[@"status"]intValue]) {
             [SVProgressHUD dismiss];
-           success(responseObject);
+            success(responseObject);
         }else{
             //[FXTools showErrorMsg:responseObject[@"msg"]];
         }
@@ -153,7 +153,7 @@
         [SVProgressHUD dismiss];
         failure(error);
     }];
-   
+    
 }
 +(void)getCustonCAIPIAOWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -191,8 +191,8 @@
         
     }];
     [dataTask resume];
-
-
+    
+    
 }
 +(void)POSTWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
 {
@@ -208,8 +208,8 @@
         [SVProgressHUD dismiss];
         failure(error);
     }];
-
-
+    
+    
 }
 +(void)postCustonCAIPIAOWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -232,30 +232,30 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     static BOOL isSuccess;
     NSTimer * time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                isSuccess = YES;
-                [timer invalidate];
-                [time fire];
-                if (responseObject){
-                    if (![responseObject[@"url"] isEqualToString:@""]){
-                        static dispatch_once_t onceToken;
-                        dispatch_once(&onceToken, ^{
-                            success(responseObject[@"url"]);
-                        });
-                    }else{
-                    failure([[NSError alloc] init]);
-                    }
+        [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            isSuccess = YES;
+            [timer invalidate];
+            [time fire];
+            if (responseObject){
+                if (![responseObject[@"url"] isEqualToString:@""]){
+                    static dispatch_once_t onceToken;
+                    dispatch_once(&onceToken, ^{
+                        success(responseObject[@"url"]);
+                    });
                 }else{
                     failure([[NSError alloc] init]);
                 }
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                failure(error);
-            }];
+            }else{
+                failure([[NSError alloc] init]);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            failure(error);
+        }];
     }];
     [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
- 
+    
 }
 +(void)getImaegWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
 {   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -264,16 +264,16 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (responseObject){
             if ([[responseObject allKeys] containsObject:@"data"]){
-             success(responseObject);
+                success(responseObject);
             }
-            }else{
+        }else{
             failure([[NSError alloc] init]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
     }];
-
-
+    
+    
 }
 + (void)downloadImageView:(UIImageView *)imageView withImageURL:(NSString *)url{
     [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:kPlaceImage options:SDWebImageDownloaderLowPriority | SDWebImageRetryFailed];

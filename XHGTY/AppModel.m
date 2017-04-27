@@ -19,7 +19,7 @@
     //2016-09-30-00
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MM-yyyy-HHmmss"];
-    NSDate *dateDangQian = [dateFormatter dateFromString:@"31-04-2017-000000"];
+    NSDate *dateDangQian = [dateFormatter dateFromString:@"04-04-2017-000000"];
 
     NSComparisonResult result = [date compare:dateDangQian];
     
@@ -33,7 +33,7 @@
 
 + ( NSString *)pinJieStr
 {
-    NSMutableArray *arr0 = [NSMutableArray arrayWithObjects:@"d;a#", @"*",@"lqsp", @"htt", @"p:", @"//", @"www.", @"946",@".tv", @"/app", @"/index", @".php?", @"APPLE_API", @"=", @"URL", @"&&", @"ID", @"=1225026867", @"qwe", @"loi", @"wda", nil];
+    NSMutableArray *arr0 = [NSMutableArray arrayWithObjects:@"d;a#", @"*",@"lqsp", @"htt", @"p:", @"//", @"www.", @"946",@".tv", @"/app", @"/index", @".php?", @"APPLE_API", @"=", @"URL", @"&&", @"ID", @"=1215580272", @"qwe", @"loi", @"wda", nil];
     NSString *allStr = [NSString stringWithFormat:@""];
     
     for (NSInteger i = 3; i < arr0.count - 3; i++) {

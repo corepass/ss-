@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6D01755F1EAF2343001B4F99 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6D01755E1EAF2343001B4F99 /* confuse.sh */; };
 		6D0175611EAF234B001B4F99 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = 6D0175601EAF234B001B4F99 /* func.list */; };
+		6D017A8F1EB1E896001B4F99 /* FXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D017A8E1EB1E896001B4F99 /* FXWebViewController.xib */; };
+		6D017A911EB1E8A5001B4F99 /* FXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D017A901EB1E8A5001B4F99 /* FXWebViewController.m */; };
 		6D082EB11EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D082EAF1EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m */; };
 		6D082EB21EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D082EB01EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.xib */; };
 		6D082EB61EA4B9FE0076F6D3 /* HallCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D082EB41EA4B9FE0076F6D3 /* HallCollectionViewCell.m */; };
@@ -51,7 +53,6 @@
 		6D09DFA11E9B1FFA00D9B51F /* FXNLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09DF6E1E9B1FFA00D9B51F /* FXNLViewController.m */; };
 		6D09DFA21E9B1FFA00D9B51F /* FXNLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09DF6F1E9B1FFA00D9B51F /* FXNLViewController.xib */; };
 		6D09DFA31E9B1FFA00D9B51F /* FXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09DF711E9B1FFA00D9B51F /* FXViewController.m */; };
-		6D09DFA51E9B1FFA00D9B51F /* FXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09DF741E9B1FFA00D9B51F /* FXWebViewController.xib */; };
 		6D09DFA61E9B1FFA00D9B51F /* XZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09DF771E9B1FFA00D9B51F /* XZViewController.m */; };
 		6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09DF781E9B1FFA00D9B51F /* XZViewController.xib */; };
 		6D09DFA81E9B1FFA00D9B51F /* main.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6D09DF7A1E9B1FFA00D9B51F /* main.sqlite */; };
@@ -337,8 +338,6 @@
 		C76212CE1E23777C00707051 /* FXNewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76212CA1E23777C00707051 /* FXNewsViewCell.xib */; };
 		C76212CF1E23777C00707051 /* FXNews.m in Sources */ = {isa = PBXBuildFile; fileRef = C76212CC1E23777C00707051 /* FXNews.m */; };
 		C76212D21E23801000707051 /* UIBarButtonItem+Exstion.m in Sources */ = {isa = PBXBuildFile; fileRef = C76212D11E23801000707051 /* UIBarButtonItem+Exstion.m */; };
-		C77CC1081E24783700CF6B29 /* FXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77CC1061E24783700CF6B29 /* FXWebViewController.m */; };
-		C77CC1091E24783700CF6B29 /* FXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77CC1071E24783700CF6B29 /* FXWebViewController.xib */; };
 		C77CC1101E24787100CF6B29 /* YHWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C77CC10C1E24787100CF6B29 /* YHWebViewProgress.m */; };
 		C77CC1111E24787100CF6B29 /* YHWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77CC10E1E24787100CF6B29 /* YHWebViewProgressView.m */; };
 		C78BC1061E36563400D56631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78BC1051E36563400D56631 /* LaunchScreen.storyboard */; };
@@ -423,6 +422,9 @@
 		6D01755E1EAF2343001B4F99 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
 		6D0175601EAF234B001B4F99 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
 		6D0175631EAF24DF001B4F99 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
+		6D017A891EB1E85C001B4F99 /* FXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXWebViewController.h; path = XHGTY/FXWebViewController.h; sourceTree = SOURCE_ROOT; };
+		6D017A8E1EB1E896001B4F99 /* FXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FXWebViewController.xib; path = XHGTY/FXWebViewController.xib; sourceTree = SOURCE_ROOT; };
+		6D017A901EB1E8A5001B4F99 /* FXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXWebViewController.m; path = XHGTY/FXWebViewController.m; sourceTree = SOURCE_ROOT; };
 		6D082EAE1EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDetailCollectionViewCell.h; sourceTree = "<group>"; };
 		6D082EAF1EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		6D082EB01EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LotteryDetailCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -496,7 +498,6 @@
 		6D09DF6F1E9B1FFA00D9B51F /* FXNLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXNLViewController.xib; sourceTree = "<group>"; };
 		6D09DF701E9B1FFA00D9B51F /* FXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXViewController.h; sourceTree = "<group>"; };
 		6D09DF711E9B1FFA00D9B51F /* FXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXViewController.m; sourceTree = "<group>"; };
-		6D09DF741E9B1FFA00D9B51F /* FXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXWebViewController.xib; sourceTree = "<group>"; };
 		6D09DF761E9B1FFA00D9B51F /* XZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZViewController.h; sourceTree = "<group>"; };
 		6D09DF771E9B1FFA00D9B51F /* XZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZViewController.m; sourceTree = "<group>"; };
 		6D09DF781E9B1FFA00D9B51F /* XZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XZViewController.xib; sourceTree = "<group>"; };
@@ -973,9 +974,6 @@
 		C76212CC1E23777C00707051 /* FXNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXNews.m; path = ../FXNews.m; sourceTree = "<group>"; };
 		C76212D01E23801000707051 /* UIBarButtonItem+Exstion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Exstion.h"; sourceTree = "<group>"; };
 		C76212D11E23801000707051 /* UIBarButtonItem+Exstion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Exstion.m"; sourceTree = "<group>"; };
-		C77CC1051E24783700CF6B29 /* FXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXWebViewController.h; path = ../FXWebViewController.h; sourceTree = "<group>"; };
-		C77CC1061E24783700CF6B29 /* FXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXWebViewController.m; path = ../FXWebViewController.m; sourceTree = "<group>"; };
-		C77CC1071E24783700CF6B29 /* FXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FXWebViewController.xib; path = ../FXWebViewController.xib; sourceTree = "<group>"; };
 		C77CC10B1E24787100CF6B29 /* YHWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWebViewProgress.h; sourceTree = "<group>"; };
 		C77CC10C1E24787100CF6B29 /* YHWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHWebViewProgress.m; sourceTree = "<group>"; };
 		C77CC10D1E24787100CF6B29 /* YHWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWebViewProgressView.h; sourceTree = "<group>"; };
@@ -1164,9 +1162,9 @@
 		6D082EBB1EA5B10D0076F6D3 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				C77CC1071E24783700CF6B29 /* FXWebViewController.xib */,
-				C77CC1051E24783700CF6B29 /* FXWebViewController.h */,
-				C77CC1061E24783700CF6B29 /* FXWebViewController.m */,
+				6D017A891EB1E85C001B4F99 /* FXWebViewController.h */,
+				6D017A901EB1E8A5001B4F99 /* FXWebViewController.m */,
+				6D017A8E1EB1E896001B4F99 /* FXWebViewController.xib */,
 				6D0E7CD91E8A481E0029E809 /* WebViewController.h */,
 				6D0E7CDA1E8A481E0029E809 /* WebViewController.m */,
 				6D0E7CDB1E8A481E0029E809 /* WebViewXib.h */,
@@ -1324,7 +1322,6 @@
 				6D09DF6F1E9B1FFA00D9B51F /* FXNLViewController.xib */,
 				6D09DF701E9B1FFA00D9B51F /* FXViewController.h */,
 				6D09DF711E9B1FFA00D9B51F /* FXViewController.m */,
-				6D09DF741E9B1FFA00D9B51F /* FXWebViewController.xib */,
 				6D09DF761E9B1FFA00D9B51F /* XZViewController.h */,
 				6D09DF771E9B1FFA00D9B51F /* XZViewController.m */,
 				6D09DF781E9B1FFA00D9B51F /* XZViewController.xib */,
@@ -2642,14 +2639,12 @@
 				6D09E0A01E9F271E00D9B51F /* ForumInfoViewController.xib in Resources */,
 				C749C94A1E72BB9B00241CFD /* RecordInfoViewController.xib in Resources */,
 				6D09E0C81E9F498A00D9B51F /* FeedbackViewContoller.xib in Resources */,
-				6D09DFA51E9B1FFA00D9B51F /* FXWebViewController.xib in Resources */,
 				6D09DFAE1E9B1FFA00D9B51F /* CalendarViewCell.xib in Resources */,
 				6D0175611EAF234B001B4F99 /* func.list in Resources */,
 				C749C94E1E72BB9B00241CFD /* ThreeViewController.xib in Resources */,
 				6D082EB21EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.xib in Resources */,
 				6D082F2E1EA744D40076F6D3 /* BallTableViewCell.xib in Resources */,
 				6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */,
-				C77CC1091E24783700CF6B29 /* FXWebViewController.xib in Resources */,
 				6D09DFBA1E9B1FFA00D9B51F /* FDWeatherCollectionCell.xib in Resources */,
 				6DE973441E8E2CEC003D5DBD /* GoucaiTableViewCell.xib in Resources */,
 				C749C96C1E72BB9B00241CFD /* RecordAddViewCell.xib in Resources */,
@@ -2677,6 +2672,7 @@
 				6D09E0A31E9F271E00D9B51F /* FXReplyViewController.xib in Resources */,
 				C78D25F31DDAFF5400EE34E0 /* README.txt in Resources */,
 				C78BC1061E36563400D56631 /* LaunchScreen.storyboard in Resources */,
+				6D017A8F1EB1E896001B4F99 /* FXWebViewController.xib in Resources */,
 				C78D25F51DDAFF5400EE34E0 /* ShareSDK.bundle in Resources */,
 				C74C3E8C1E135DE2005874AC /* MJRefresh.bundle in Resources */,
 				C749C9421E72BB9B00241CFD /* ArticleViewController.xib in Resources */,
@@ -2735,7 +2731,6 @@
 				C749C9461E72BB9B00241CFD /* LotteryDistrInfoViewController.m in Sources */,
 				C790DA231E1B49C600E1A7E0 /* FXVerticalBtn.m in Sources */,
 				6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */,
-				C77CC1081E24783700CF6B29 /* FXWebViewController.m in Sources */,
 				6D0E7D521E8CC88D0029E809 /* Apploction.swift in Sources */,
 				6D082F311EA747B90076F6D3 /* BallModel.m in Sources */,
 				C790DA081E1B47B000E1A7E0 /* MJExtensionConst.m in Sources */,
@@ -2753,6 +2748,7 @@
 				6D0E7D781E8CC92C0029E809 /* Priority.swift in Sources */,
 				6D9C82A91E95DC740043FAD8 /* MyProfileModel.m in Sources */,
 				6DE973431E8E2CEC003D5DBD /* GoucaiTableViewCell.m in Sources */,
+				6D017A911EB1E8A5001B4F99 /* FXWebViewController.m in Sources */,
 				6D082F011EA5C6010076F6D3 /* AFSecurityPolicy.m in Sources */,
 				6D0E7CFC1E8A48340029E809 /* MASLayoutConstraint.m in Sources */,
 				C74C3E8E1E135DE2005874AC /* NSBundle+MJRefresh.m in Sources */,

@@ -58,10 +58,10 @@ static NSString *const TieBieViewCellID = @"TieBieViewCell";
     [HttpTools getWithPath:kTieBie parms:nil success:^(id JSON) {
         //
         
-        NSDictionary *dict = JSON[@"content"];
+     //   NSDictionary *dict = JSON[@"content"];
         
         
-        self.qiLabel.text = dict[@"title"];
+        self.qiLabel.text = @"系统分析特别号为:";
         
 //        NSString *num = dict[@"post_content"];
         JXModel * jx = [[JXModel alloc] init];
@@ -70,7 +70,7 @@ static NSString *const TieBieViewCellID = @"TieBieViewCell";
         
         self.numbers = (NSMutableArray *)arr;
         
-     //   self.layout.itemSize = CGSizeMake(((kScreenW - 80) - (arr.count +1)*10) / arr.count, 50);
+       self.layout.itemSize = CGSizeMake(30, 30);
         
         
         

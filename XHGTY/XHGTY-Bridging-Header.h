@@ -10,7 +10,7 @@
 #import "HttpTools.h"
 #import "GoucaiViewController.h"
 #import "FXWebViewController.h"
-#import "NotificationViewController.h"
+
 #import "MyProfileViewController.h"
 #import "ForumViewController.h"
 #import "FXSettingViewController.h"

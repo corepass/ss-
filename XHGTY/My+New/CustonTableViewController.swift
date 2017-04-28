@@ -24,6 +24,11 @@ class CustonTableViewController: UITableViewController {
 		self.navigationItem.rightBarButtonItem = right
 
 	}
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section > 0 {
+            btnClick()
+        }
+    }
 	func btnClick() {
 		var dic = Dictionary<String, Any>()
 		let vc = MNXHViewController()

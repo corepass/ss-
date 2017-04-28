@@ -21,7 +21,7 @@
 #import "FXAd.h"
 #import "FXWebViewController.h"
 #import "TYBFViewController.h"
-#import "NotificationViewController.h"
+
 #import "HttpTools.h"
 #import "AppURLdefine.h"
 #import "MJExtension.h"
@@ -88,20 +88,20 @@ static NSString *const gpcID = @"gpcID";
 -(void)addActionView{
     
     
-  
-    [HttpTools getWithPathsuccess:^(id JSON) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"有活动的时候开启");
-        MessageRuntime * message  =  [[MessageRuntime alloc] init];
-        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
-            [self presentViewController:viewController animated:NO completion:nil];
-        }];
-            
-        });
-    } :^(NSError *error) {
-        
-    }];
-    
+//  
+//    [HttpTools getWithPathsuccess:^(id JSON) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"有活动的时候开启");
+//        MessageRuntime * message  =  [[MessageRuntime alloc] init];
+//        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
+//            [self presentViewController:viewController animated:NO completion:nil];
+//        }];
+//            
+//        });
+//    } :^(NSError *error) {
+//        
+//    }];
+//    
 }
 #pragma mark - 设置APP静态图片引导页
 - (void)setStaticGuidePage {

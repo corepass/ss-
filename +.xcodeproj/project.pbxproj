@@ -130,19 +130,6 @@
 		6D0E7D021E8A48340029E809 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7CF81E8A48340029E809 /* ViewController+MASAdditions.m */; };
 		6D0E7D051E8A4B660029E809 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D041E8A4B660029E809 /* AppModel.m */; };
 		6D0E7D0B1E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0E7D091E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a */; };
-		6D0E7D2D1E8B8A1A0029E809 /* NSString+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D161E8B8A1A0029E809 /* NSString+XHLaunchAd.m */; };
-		6D0E7D2E1E8B8A1A0029E809 /* UIImage+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D181E8B8A1A0029E809 /* UIImage+XHLaunchAd.m */; };
-		6D0E7D2F1E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D1A1E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.m */; };
-		6D0E7D301E8B8A1A0029E809 /* XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D1C1E8B8A1A0029E809 /* XHLaunchAd.m */; };
-		6D0E7D311E8B8A1A0029E809 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D1E1E8B8A1A0029E809 /* XHLaunchAdButton.m */; };
-		6D0E7D321E8B8A1A0029E809 /* XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D201E8B8A1A0029E809 /* XHLaunchAdCache.m */; };
-		6D0E7D331E8B8A1A0029E809 /* XHLaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D221E8B8A1A0029E809 /* XHLaunchAdConfiguration.m */; };
-		6D0E7D341E8B8A1A0029E809 /* XHLaunchAdDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D241E8B8A1A0029E809 /* XHLaunchAdDownload.m */; };
-		6D0E7D351E8B8A1A0029E809 /* XHLaunchAdDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D261E8B8A1A0029E809 /* XHLaunchAdDownloader.m */; };
-		6D0E7D361E8B8A1A0029E809 /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D281E8B8A1A0029E809 /* XHLaunchAdImageManager.m */; };
-		6D0E7D371E8B8A1A0029E809 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D2A1E8B8A1A0029E809 /* XHLaunchAdView.m */; };
-		6D0E7D381E8B8A1A0029E809 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D2C1E8B8A1A0029E809 /* XHLaunchImageView.m */; };
-		6D0E7D3B1E8B8CA40029E809 /* LaunchAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D3A1E8B8CA40029E809 /* LaunchAdModel.m */; };
 		6D0E7D411E8C9B8D0029E809 /* CaipiaoType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D0E7D401E8C9B8D0029E809 /* CaipiaoType.geojson */; };
 		6D0E7D471E8CB7280029E809 /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D431E8CB7280029E809 /* NewTableViewController.swift */; };
 		6D0E7D481E8CB7280029E809 /* NewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7D441E8CB7280029E809 /* NewDataViewController.swift */; };
@@ -196,14 +183,6 @@
 		6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931E1EA9F088006824C6 /* MNXHHeardView.m */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
-		6D9A18CC1E94A204004D4E07 /* FXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */; };
-		6D9A18CF1E94A9FC004D4E07 /* FXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18CD1E94A9FC004D4E07 /* FXTableViewCell.swift */; };
-		6D9A18D01E94A9FC004D4E07 /* FXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18CE1E94A9FC004D4E07 /* FXTableViewCell.xib */; };
-		6D9A18DE1E94B582004D4E07 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18D41E94B582004D4E07 /* NotificationViewController.m */; };
-		6D9A18DF1E94B583004D4E07 /* NotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18D71E94B582004D4E07 /* NotificationModel.m */; };
-		6D9A18E01E94B583004D4E07 /* NotiMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18D81E94B582004D4E07 /* NotiMsg.plist */; };
-		6D9A18E11E94B583004D4E07 /* OCwebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18DA1E94B582004D4E07 /* OCwebViewController.m */; };
-		6D9A18E21E94B583004D4E07 /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18DD1E94B582004D4E07 /* NotificationTableViewCell.m */; };
 		6D9C82901E95D9430043FAD8 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C827A1E95D9430043FAD8 /* MyProfileViewController.m */; };
 		6D9C82941E95D9430043FAD8 /* MyProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C82831E95D9430043FAD8 /* MyProfileTableViewCell.m */; };
 		6D9C82A91E95DC740043FAD8 /* MyProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C82A81E95DC740043FAD8 /* MyProfileModel.m */; };
@@ -641,32 +620,6 @@
 		6D0E7D041E8A4B660029E809 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		6D0E7D091E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		6D0E7D0A1E8A6E2B0029E809 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
-		6D0E7D151E8B8A1A0029E809 /* NSString+XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHLaunchAd.h"; sourceTree = "<group>"; };
-		6D0E7D161E8B8A1A0029E809 /* NSString+XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHLaunchAd.m"; sourceTree = "<group>"; };
-		6D0E7D171E8B8A1A0029E809 /* UIImage+XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHLaunchAd.h"; sourceTree = "<group>"; };
-		6D0E7D181E8B8A1A0029E809 /* UIImage+XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHLaunchAd.m"; sourceTree = "<group>"; };
-		6D0E7D191E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XHLaunchAdCache.h"; sourceTree = "<group>"; };
-		6D0E7D1A1E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XHLaunchAdCache.m"; sourceTree = "<group>"; };
-		6D0E7D1B1E8B8A1A0029E809 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
-		6D0E7D1C1E8B8A1A0029E809 /* XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAd.m; sourceTree = "<group>"; };
-		6D0E7D1D1E8B8A1A0029E809 /* XHLaunchAdButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdButton.h; sourceTree = "<group>"; };
-		6D0E7D1E1E8B8A1A0029E809 /* XHLaunchAdButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdButton.m; sourceTree = "<group>"; };
-		6D0E7D1F1E8B8A1A0029E809 /* XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdCache.h; sourceTree = "<group>"; };
-		6D0E7D201E8B8A1A0029E809 /* XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdCache.m; sourceTree = "<group>"; };
-		6D0E7D211E8B8A1A0029E809 /* XHLaunchAdConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConfiguration.h; sourceTree = "<group>"; };
-		6D0E7D221E8B8A1A0029E809 /* XHLaunchAdConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConfiguration.m; sourceTree = "<group>"; };
-		6D0E7D231E8B8A1A0029E809 /* XHLaunchAdDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownload.h; sourceTree = "<group>"; };
-		6D0E7D241E8B8A1A0029E809 /* XHLaunchAdDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownload.m; sourceTree = "<group>"; };
-		6D0E7D251E8B8A1A0029E809 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
-		6D0E7D261E8B8A1A0029E809 /* XHLaunchAdDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownloader.m; sourceTree = "<group>"; };
-		6D0E7D271E8B8A1A0029E809 /* XHLaunchAdImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdImageManager.h; sourceTree = "<group>"; };
-		6D0E7D281E8B8A1A0029E809 /* XHLaunchAdImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdImageManager.m; sourceTree = "<group>"; };
-		6D0E7D291E8B8A1A0029E809 /* XHLaunchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdView.h; sourceTree = "<group>"; };
-		6D0E7D2A1E8B8A1A0029E809 /* XHLaunchAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdView.m; sourceTree = "<group>"; };
-		6D0E7D2B1E8B8A1A0029E809 /* XHLaunchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchImageView.h; sourceTree = "<group>"; };
-		6D0E7D2C1E8B8A1A0029E809 /* XHLaunchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchImageView.m; sourceTree = "<group>"; };
-		6D0E7D391E8B8CA40029E809 /* LaunchAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAdModel.h; sourceTree = "<group>"; };
-		6D0E7D3A1E8B8CA40029E809 /* LaunchAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAdModel.m; sourceTree = "<group>"; };
 		6D0E7D401E8C9B8D0029E809 /* CaipiaoType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CaipiaoType.geojson; sourceTree = "<group>"; };
 		6D0E7D421E8CB7260029E809 /* XHGTY-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XHGTY-Bridging-Header.h"; sourceTree = "<group>"; };
 		6D0E7D431E8CB7280029E809 /* NewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTableViewController.swift; path = ../NewTableViewController.swift; sourceTree = "<group>"; };
@@ -738,18 +691,6 @@
 		6D12931E1EA9F088006824C6 /* MNXHHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHHeardView.m; sourceTree = "<group>"; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
-		6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewController.swift; sourceTree = "<group>"; };
-		6D9A18CD1E94A9FC004D4E07 /* FXTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewCell.swift; sourceTree = "<group>"; };
-		6D9A18CE1E94A9FC004D4E07 /* FXTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXTableViewCell.xib; sourceTree = "<group>"; };
-		6D9A18D31E94B582004D4E07 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
-		6D9A18D41E94B582004D4E07 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
-		6D9A18D61E94B582004D4E07 /* NotificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationModel.h; sourceTree = "<group>"; };
-		6D9A18D71E94B582004D4E07 /* NotificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationModel.m; sourceTree = "<group>"; };
-		6D9A18D81E94B582004D4E07 /* NotiMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NotiMsg.plist; sourceTree = "<group>"; };
-		6D9A18D91E94B582004D4E07 /* OCwebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCwebViewController.h; sourceTree = "<group>"; };
-		6D9A18DA1E94B582004D4E07 /* OCwebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCwebViewController.m; sourceTree = "<group>"; };
-		6D9A18DC1E94B582004D4E07 /* NotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewCell.h; sourceTree = "<group>"; };
-		6D9A18DD1E94B582004D4E07 /* NotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
 		6D9C82791E95D9430043FAD8 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		6D9C827A1E95D9430043FAD8 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		6D9C82821E95D9430043FAD8 /* MyProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewCell.h; sourceTree = "<group>"; };
@@ -1592,40 +1533,6 @@
 			path = ../UMessage_Sdk_1.5.0a;
 			sourceTree = "<group>";
 		};
-		6D0E7D141E8B8A1A0029E809 /* XHLaunchAd */ = {
-			isa = PBXGroup;
-			children = (
-				6D0E7D391E8B8CA40029E809 /* LaunchAdModel.h */,
-				6D0E7D3A1E8B8CA40029E809 /* LaunchAdModel.m */,
-				6D0E7D151E8B8A1A0029E809 /* NSString+XHLaunchAd.h */,
-				6D0E7D161E8B8A1A0029E809 /* NSString+XHLaunchAd.m */,
-				6D0E7D171E8B8A1A0029E809 /* UIImage+XHLaunchAd.h */,
-				6D0E7D181E8B8A1A0029E809 /* UIImage+XHLaunchAd.m */,
-				6D0E7D191E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.h */,
-				6D0E7D1A1E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.m */,
-				6D0E7D1B1E8B8A1A0029E809 /* XHLaunchAd.h */,
-				6D0E7D1C1E8B8A1A0029E809 /* XHLaunchAd.m */,
-				6D0E7D1D1E8B8A1A0029E809 /* XHLaunchAdButton.h */,
-				6D0E7D1E1E8B8A1A0029E809 /* XHLaunchAdButton.m */,
-				6D0E7D1F1E8B8A1A0029E809 /* XHLaunchAdCache.h */,
-				6D0E7D201E8B8A1A0029E809 /* XHLaunchAdCache.m */,
-				6D0E7D211E8B8A1A0029E809 /* XHLaunchAdConfiguration.h */,
-				6D0E7D221E8B8A1A0029E809 /* XHLaunchAdConfiguration.m */,
-				6D0E7D231E8B8A1A0029E809 /* XHLaunchAdDownload.h */,
-				6D0E7D241E8B8A1A0029E809 /* XHLaunchAdDownload.m */,
-				6D0E7D251E8B8A1A0029E809 /* XHLaunchAdDownloader.h */,
-				6D0E7D261E8B8A1A0029E809 /* XHLaunchAdDownloader.m */,
-				6D0E7D271E8B8A1A0029E809 /* XHLaunchAdImageManager.h */,
-				6D0E7D281E8B8A1A0029E809 /* XHLaunchAdImageManager.m */,
-				6D0E7D291E8B8A1A0029E809 /* XHLaunchAdView.h */,
-				6D0E7D2A1E8B8A1A0029E809 /* XHLaunchAdView.m */,
-				6D0E7D2B1E8B8A1A0029E809 /* XHLaunchImageView.h */,
-				6D0E7D2C1E8B8A1A0029E809 /* XHLaunchImageView.m */,
-			);
-			name = XHLaunchAd;
-			path = ../XHLaunchAd;
-			sourceTree = "<group>";
-		};
 		6D0E7D531E8CC92B0029E809 /* EasyPeasy */ = {
 			isa = PBXGroup;
 			children = (
@@ -1709,46 +1616,6 @@
 				6D12931E1EA9F088006824C6 /* MNXHHeardView.m */,
 			);
 			path = "MNTZ(模拟选号)";
-			sourceTree = "<group>";
-		};
-		6D9A18D11E94B582004D4E07 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				6D9A18D21E94B582004D4E07 /* Controller */,
-				6D9A18D51E94B582004D4E07 /* Model */,
-				6D9A18D81E94B582004D4E07 /* NotiMsg.plist */,
-				6D9A18D91E94B582004D4E07 /* OCwebViewController.h */,
-				6D9A18DA1E94B582004D4E07 /* OCwebViewController.m */,
-				6D9A18DB1E94B582004D4E07 /* View */,
-			);
-			path = Notification;
-			sourceTree = "<group>";
-		};
-		6D9A18D21E94B582004D4E07 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6D9A18D31E94B582004D4E07 /* NotificationViewController.h */,
-				6D9A18D41E94B582004D4E07 /* NotificationViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		6D9A18D51E94B582004D4E07 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6D9A18D61E94B582004D4E07 /* NotificationModel.h */,
-				6D9A18D71E94B582004D4E07 /* NotificationModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6D9A18DB1E94B582004D4E07 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6D9A18DC1E94B582004D4E07 /* NotificationTableViewCell.h */,
-				6D9A18DD1E94B582004D4E07 /* NotificationTableViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		6D9C82731E95D9430043FAD8 /* MyProfile */ = {
@@ -1840,9 +1707,6 @@
 				6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */,
 				6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */,
 				6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */,
-				6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */,
-				6D9A18CD1E94A9FC004D4E07 /* FXTableViewCell.swift */,
-				6D9A18CE1E94A9FC004D4E07 /* FXTableViewCell.xib */,
 				6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */,
 				6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */,
 				6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */,
@@ -1866,7 +1730,6 @@
 				6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */,
 				C78D25CC1DDAFF5400EE34E0 /* ShareSDK */,
 				6D0E7D531E8CC92B0029E809 /* EasyPeasy */,
-				6D0E7D141E8B8A1A0029E809 /* XHLaunchAd */,
 				6D0E7D081E8A6E2B0029E809 /* UMessage_Sdk_1.5.0a */,
 				6D0E7CDF1E8A48340029E809 /* Masonry */,
 				C77CC10A1E24787100CF6B29 /* WebProgressView */,
@@ -2285,7 +2148,6 @@
 				6D09DF6B1E9B1FFA00D9B51F /* TestController */,
 				6D9C829A1E95DA5B0043FAD8 /* Shared */,
 				6D9C82731E95D9430043FAD8 /* MyProfile */,
-				6D9A18D11E94B582004D4E07 /* Notification */,
 				C749C8DA1E72BB9A00241CFD /* Home */,
 				6DE973241E8DEDC4003D5DBD /* My+New */,
 				C7ABDC2B1E0137440040873A /* XHGTY.entitlements */,
@@ -2665,7 +2527,6 @@
 				6D082F211EA611DA0076F6D3 /* AMap.bundle in Resources */,
 				6D09E0A71E9F271E00D9B51F /* FXforumViewCell.xib in Resources */,
 				6D09E0B01E9F272A00D9B51F /* FTZViewController.xib in Resources */,
-				6D9A18D01E94A9FC004D4E07 /* FXTableViewCell.xib in Resources */,
 				6D09E0021E9B305500D9B51F /* MBProgressHUD.bundle in Resources */,
 				C790DA351E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib in Resources */,
 				C749C9681E72BB9B00241CFD /* FXLotteryDistrInfoCell.xib in Resources */,
@@ -2687,7 +2548,6 @@
 				C790DA2B1E1B4BE500E1A7E0 /* LotteryDetailViewCell.xib in Resources */,
 				6D082F1A1EA5E8D40076F6D3 /* CpTableViewCell.xib in Resources */,
 				6DE9732F1E8DF049003D5DBD /* CollectionViewCell.xib in Resources */,
-				6D9A18E01E94B583004D4E07 /* NotiMsg.plist in Resources */,
 				6D09E0D11E9F51BA00D9B51F /* GuideImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2760,7 +2620,6 @@
 				C790DA341E1B5DA800E1A7E0 /* PeiLvTableViewCell.m in Sources */,
 				C749C94D1E72BB9B00241CFD /* ThreeViewController.m in Sources */,
 				6D082F0D1EA5C6010076F6D3 /* UIProgressView+AFNetworking.m in Sources */,
-				6D9A18CC1E94A204004D4E07 /* FXTableViewController.swift in Sources */,
 				C749C95A1E72BB9B00241CFD /* FXRecord.m in Sources */,
 				6D0E7CFE1E8A48340029E809 /* MASViewConstraint.m in Sources */,
 				C74C3E831E135DE2005874AC /* MJRefreshAutoGifFooter.m in Sources */,
@@ -2775,7 +2634,6 @@
 				6D09E0031E9B305500D9B51F /* MBProgressHUD.m in Sources */,
 				C790DA6C1E1B96EE00E1A7E0 /* UIButton+WebCache.m in Sources */,
 				C749C9411E72BB9B00241CFD /* ArticleViewController.m in Sources */,
-				6D0E7D2E1E8B8A1A0029E809 /* UIImage+XHLaunchAd.m in Sources */,
 				6D09DFFA1E9B246500D9B51F /* FXNavigationController.m in Sources */,
 				6D0E7D6C1E8CC92C0029E809 /* DimensionAttribute+AppKit.swift in Sources */,
 				C749CA101E72C05D00241CFD /* YFRollingLabel.m in Sources */,
@@ -2792,9 +2650,7 @@
 				C790DA0C1E1B47B000E1A7E0 /* MJPropertyType.m in Sources */,
 				6D082F1D1EA5FAFE0076F6D3 /* CpDetaMapViewController.m in Sources */,
 				C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */,
-				6D9A18DE1E94B582004D4E07 /* NotificationViewController.m in Sources */,
 				6D09E0081E9CE8AD00D9B51F /* XYHeardView.m in Sources */,
-				6D0E7D381E8B8A1A0029E809 /* XHLaunchImageView.m in Sources */,
 				6D0E7D931E8CCB7D0029E809 /* RegisterTableViewCell.m in Sources */,
 				6D0E7CDE1E8A481E0029E809 /* WebViewXib.m in Sources */,
 				6DA81D211EADBA330031F862 /* KJLSTableViewController.swift in Sources */,
@@ -2806,11 +2662,8 @@
 				6D09DFAA1E9B1FFA00D9B51F /* FXStart.m in Sources */,
 				C749C9611E72BB9B00241CFD /* FXHomeMenuCycleView.m in Sources */,
 				6D0E7D021E8A48340029E809 /* ViewController+MASAdditions.m in Sources */,
-				6D0E7D331E8B8A1A0029E809 /* XHLaunchAdConfiguration.m in Sources */,
 				6D0E7D741E8CC92C0029E809 /* NSView+Easy.swift in Sources */,
 				C749C95B1E72BB9B00241CFD /* LHArticle.m in Sources */,
-				6D9A18CF1E94A9FC004D4E07 /* FXTableViewCell.swift in Sources */,
-				6D0E7D341E8B8A1A0029E809 /* XHLaunchAdDownload.m in Sources */,
 				C790DA1C1E1B496700E1A7E0 /* SVIndefiniteAnimatedView.m in Sources */,
 				6D082EFF1EA5C6010076F6D3 /* AFHTTPSessionManager.m in Sources */,
 				6D09E0A21E9F271E00D9B51F /* FXReplyViewController.m in Sources */,
@@ -2825,7 +2678,6 @@
 				6D082F0F1EA5C6010076F6D3 /* UIWebView+AFNetworking.m in Sources */,
 				6D09E0B91E9F283E00D9B51F /* FXUserTool.m in Sources */,
 				6D09E0A11E9F271E00D9B51F /* ForumViewController.m in Sources */,
-				6D0E7D361E8B8A1A0029E809 /* XHLaunchAdImageManager.m in Sources */,
 				C790DA6E1E1B96EE00E1A7E0 /* UIImage+MultiFormat.m in Sources */,
 				6D09DFA31E9B1FFA00D9B51F /* FXViewController.m in Sources */,
 				6D0E7D001E8A48340029E809 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -2853,7 +2705,6 @@
 				C749C9741E72BB9B00241CFD /* SingleViewCell.m in Sources */,
 				6D0E7D6E1E8CC92C0029E809 /* DimensionAttribute.swift in Sources */,
 				C749C96D1E72BB9B00241CFD /* RecordOneViewCell.m in Sources */,
-				6D0E7D351E8B8A1A0029E809 /* XHLaunchAdDownloader.m in Sources */,
 				6DA81D1A1EAC4CB40031F862 /* MessageRuntime.m in Sources */,
 				6D082F131EA5C8870076F6D3 /* CpMapViewController.m in Sources */,
 				C749C95F1E72BB9B00241CFD /* FXHomeMenuCycleCell.m in Sources */,
@@ -2862,7 +2713,6 @@
 				6D09E0A41E9F271E00D9B51F /* FXforum.m in Sources */,
 				C74C3E881E135DE2005874AC /* MJRefreshBackStateFooter.m in Sources */,
 				C76212CF1E23777C00707051 /* FXNews.m in Sources */,
-				6D0E7D301E8B8A1A0029E809 /* XHLaunchAd.m in Sources */,
 				C790DA711E1B96EE00E1A7E0 /* UIView+WebCacheOperation.m in Sources */,
 				6DE9733A1E8E0040003D5DBD /* GouMaiView.m in Sources */,
 				C74C3E7E1E135DE2005874AC /* MJRefreshAutoFooter.m in Sources */,
@@ -2893,7 +2743,6 @@
 				6D09DFD91E9B205300D9B51F /* FMDatabase.m in Sources */,
 				6D0E7D051E8A4B660029E809 /* AppModel.m in Sources */,
 				6D082F091EA5C6010076F6D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				6D9A18E11E94B583004D4E07 /* OCwebViewController.m in Sources */,
 				6D09E0B61E9F27C100D9B51F /* FXTools.m in Sources */,
 				C77CC1111E24787100CF6B29 /* YHWebViewProgressView.m in Sources */,
 				C749C9471E72BB9B00241CFD /* LotteryDistrViewController.m in Sources */,
@@ -2915,11 +2764,9 @@
 				C749C9691E72BB9B00241CFD /* LotteryDistrViewCell.m in Sources */,
 				C749CA161E72C10300241CFD /* UIView+Extension.m in Sources */,
 				6D9C82941E95D9430043FAD8 /* MyProfileTableViewCell.m in Sources */,
-				6D0E7D371E8B8A1A0029E809 /* XHLaunchAdView.m in Sources */,
 				C749C96F1E72BB9B00241CFD /* RecordViewCell.m in Sources */,
 				C74C3E901E135DE2005874AC /* UIScrollView+MJRefresh.m in Sources */,
 				6D09DFDB1E9B205300D9B51F /* FMDatabasePool.m in Sources */,
-				6D0E7D2F1E8B8A1A0029E809 /* UIImageView+XHLaunchAdCache.m in Sources */,
 				6DA81D161EAA24190031F862 /* ChossTableView.m in Sources */,
 				6D09DFAD1E9B1FFA00D9B51F /* CalendarViewCell.m in Sources */,
 				6D09DFB71E9B1FFA00D9B51F /* FDNewWeatherCell.m in Sources */,
@@ -2928,7 +2775,6 @@
 				C74C3E861E135DE2005874AC /* MJRefreshBackGifFooter.m in Sources */,
 				6D09DFB51E9B1FFA00D9B51F /* FDNewCalendarCell.m in Sources */,
 				6D0E7D481E8CB7280029E809 /* NewDataViewController.swift in Sources */,
-				6D9A18DF1E94B583004D4E07 /* NotificationModel.m in Sources */,
 				6D0E7CFD1E8A48340029E809 /* MASViewAttribute.m in Sources */,
 				C77CC1101E24787100CF6B29 /* YHWebViewProgress.m in Sources */,
 				6D09DFB11E9B1FFA00D9B51F /* FDCalendar.m in Sources */,
@@ -2963,7 +2809,6 @@
 				C74C3E8D1E135DE2005874AC /* MJRefreshConst.m in Sources */,
 				6D09E0A61E9F271E00D9B51F /* FXforumViewCell.m in Sources */,
 				6DE973471E8E3F81003D5DBD /* XiaZhuView.m in Sources */,
-				6D9A18E21E94B583004D4E07 /* NotificationTableViewCell.m in Sources */,
 				C722E35E1E166C5200A8E2E9 /* FXHomeMenuCell.m in Sources */,
 				C790DA261E1B4BBF00E1A7E0 /* LotteryDetailViewController.m in Sources */,
 				6D09DFA61E9B1FFA00D9B51F /* XZViewController.m in Sources */,
@@ -2977,7 +2822,6 @@
 				C749C9561E72BB9B00241CFD /* FXBoard.m in Sources */,
 				C722E35A1E165B6B00A8E2E9 /* ZixunViewController.m in Sources */,
 				C749C94B1E72BB9B00241CFD /* RecordViewController.m in Sources */,
-				6D0E7D321E8B8A1A0029E809 /* XHLaunchAdCache.m in Sources */,
 				6D09DFF71E9B23BD00D9B51F /* LPLevelView.m in Sources */,
 				C790DA201E1B496700E1A7E0 /* SVRadialGradientLayer.m in Sources */,
 				6D0E7D821E8CCB6E0029E809 /* RegisterViewController.m in Sources */,
@@ -2996,13 +2840,10 @@
 				C74C3E811E135DE2005874AC /* MJRefreshFooter.m in Sources */,
 				6D0E7CDD1E8A481E0029E809 /* WebViewController.m in Sources */,
 				6D09DFAF1E9B1FFA00D9B51F /* DayTableViewCell.m in Sources */,
-				6D0E7D3B1E8B8CA40029E809 /* LaunchAdModel.m in Sources */,
 				C749C96B1E72BB9B00241CFD /* RecordAddViewCell.m in Sources */,
-				6D0E7D311E8B8A1A0029E809 /* XHLaunchAdButton.m in Sources */,
 				6D082F2D1EA744D40076F6D3 /* BallTableViewCell.m in Sources */,
 				6D09DFAC1E9B1FFA00D9B51F /* FXWeekWeather.m in Sources */,
 				6DE9733F1E8E2B43003D5DBD /* GoucaiTableViewController.m in Sources */,
-				6D0E7D2D1E8B8A1A0029E809 /* NSString+XHLaunchAd.m in Sources */,
 				C749C9551E72BB9B00241CFD /* FXAd.m in Sources */,
 				C790DA651E1B96EE00E1A7E0 /* SDImageCache.m in Sources */,
 			);

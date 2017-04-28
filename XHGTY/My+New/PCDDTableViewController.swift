@@ -14,7 +14,7 @@ class PCDDTableViewController: UITableViewController {
 	var modelArray = Array<Dictionary<String, String>>()
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.title = "PC蛋蛋"
+		self.title = "PC蛋蛋"
 
 		loaddata()
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
@@ -50,6 +50,11 @@ class PCDDTableViewController: UITableViewController {
 			})
 		}
 
+	}
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section > 0 {
+        	btnClick()
+        }
 	}
 	func segumentedClick(sender: UISegmentedControl) {
 		self.modelArray.removeAll()

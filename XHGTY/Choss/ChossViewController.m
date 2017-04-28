@@ -68,13 +68,13 @@
 //            [self.navigationController pushViewController:vc animated:YES];
         });
         
-        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]]){
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]];
-        }else{
+//        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]]){
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.c16000.com/bet/twpk10.html"]];
+//        }else{
                         ChoossFinishViewController * vc = [[ChoossFinishViewController alloc] init];
                         [self.navigationController pushViewController:vc animated:YES];
-        }
-        
+//        }
+//        
         [SVProgressHUD showWithStatus:@"保存成功"];
   
     }else{

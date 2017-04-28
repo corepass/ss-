@@ -137,7 +137,7 @@ static NSString *const gpcID = @"gpcID";
         kSendNotify(@"首页出现", nil);
     }
     _gpcArray = [[NSMutableArray alloc] init];
-    [self getgpcData];
+//    [self getgpcData];
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
     left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
@@ -179,12 +179,12 @@ static NSString *const gpcID = @"gpcID";
     
     [self addyindaoyue];
     [self performSelector:@selector(addsomething)];
-    [self setBannar];
+
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"大厅";
     self.nonetWorkView.delegate = self;
-    
+           [self setBannar];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomegpcCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:gpcID];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
     [self.collectionView registerClass:[XYHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"heard"];
@@ -196,24 +196,26 @@ static NSString *const gpcID = @"gpcID";
  //   layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 80);
     layout.minimumInteritemSpacing = kItemMargin;
     layout.sectionInset = UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
-    
+    self.collectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+           [self setBannar];
+    }];
     [self loadNewItems];
     
 }
--(void)getgpcData{
-   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
-       if (JSON != nil){
-           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
-           dispatch_async(dispatch_get_main_queue(), ^{
-                 [self.collectionView reloadData];
-           });
-         
-       }
-   } :^(NSError *error) {
-       
-   }];
-
-}
+//-(void)getgpcData{
+//   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
+//       if (JSON != nil){
+//           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
+//           dispatch_async(dispatch_get_main_queue(), ^{
+//                 [self.collectionView reloadData];
+//           });
+//         
+//       }
+//   } :^(NSError *error) {
+//       
+//   }];
+//
+//}
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
@@ -297,8 +299,10 @@ static NSString *const gpcID = @"gpcID";
 -(void)setBannar{
 
     [HttpTools POSTWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
+        [self.collectionView.mj_header endRefreshing];
                 if ([JSON isKindOfClass:[NSArray class]]){
                  NSArray * array = JSON;
+                    [self.Ads removeAllObjects];
                     for (NSDictionary * dic  in array) {
                         FXAd * model = [[FXAd alloc] init];
                         model.img = dic[@"ImgUrl"];
@@ -316,6 +320,7 @@ static NSString *const gpcID = @"gpcID";
                 
                 
     } :^(NSError *error) {
+          [self.collectionView.mj_header endRefreshing];
         NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
         NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
         self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
@@ -452,8 +457,6 @@ static NSString *const gpcID = @"gpcID";
     }
     
 }
-
-
 
 
 

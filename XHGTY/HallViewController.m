@@ -14,7 +14,7 @@
 #import "LotteryDetailViewController.h"
 #import "MJRefresh.h"
 #import "GoucaiViewController.h"
-#import "XHGTY-swift.h"
+#import "XHGTY-Swift.h"
 #import "LoginViewController.h"
 #import "AppDefine.h"
 #import "HallCollectionViewCell.h"

@@ -32,16 +32,19 @@
 -(void)setDataArray:(NSArray<MNXHModel *> *)dataArray
 {
     _dataArray = dataArray;
-    for (NSArray * array  in _dataArray) {
-        MNXHModel * model =   array[0];
-        self.titleImage = model.typeName;
-        break;
+    for (NSArray * countArray in _dataArray) {
+        for (NSArray * array  in countArray) {
+            MNXHModel * model =   array[0];
+            self.titleImage = model.typeName;
+            break;
+        }
     }
+  
 
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    return _dataArray.count;
 }
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -69,7 +72,8 @@
     }
     
     NSString * cpNumber = @"";
-    for (NSArray * class in self.dataArray) {
+    NSArray * aerray  = _dataArray[indexPath.row];
+    for (NSArray * class in aerray) {
         for (MNXHModel * model in class) {
             NSString * appedStr = [NSString stringWithFormat:@"%@|",model.number];
             cpNumber = [cpNumber stringByAppendingString: appedStr];

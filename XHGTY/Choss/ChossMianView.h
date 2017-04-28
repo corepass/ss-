@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FootView.h"
-
+#import "RootView.h"
 #import "ChossTableView.h"
 
 @interface ChossMianView : UIView
-
+@property (nonatomic , strong) RootView *rootViwe;
 @property (nonatomic ,strong) FootView *footView;
 @property (nonatomic ,strong) ChossTableView *chossTableView;
 @property(copy,nonatomic) void(^ deterButtonClickBlock)(NSString * cpNumber,NSString * sumMoney);

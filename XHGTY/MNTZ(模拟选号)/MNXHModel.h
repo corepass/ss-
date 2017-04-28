@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MNXHModel : NSObject
+@interface MNXHModel : NSObject<NSCopying>
 @property(copy,nonatomic) NSString * typeName;
 @property(copy,nonatomic) NSString * number;
 @property(assign,nonatomic) BOOL isSelected ;

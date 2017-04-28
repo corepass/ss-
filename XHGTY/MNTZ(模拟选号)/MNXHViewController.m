@@ -25,6 +25,7 @@ static   NSString * cellidentifi = @"cell";
 @property(strong,nonatomic) MNXHHeardView * heard;
 @property(strong,nonatomic) NSDictionary * hearddic;
 @property(strong,nonatomic) NSString * qishu;
+@property(strong,nonatomic) NSMutableArray * countArray;
 @end
 
 @implementation MNXHViewController
@@ -46,6 +47,7 @@ static   NSString * cellidentifi = @"cell";
     [super viewDidLoad];
 
     [self getData];
+    _countArray = [[NSMutableArray alloc] init];
     [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
     // 并让自己成为第一响应者
     [self becomeFirstResponder];
@@ -80,8 +82,26 @@ static   NSString * cellidentifi = @"cell";
     __weak __typeof (self) weak = self;
     _footView.mnxhBtnBlcok = ^(){
         ChossViewController  * choss = [[ChossViewController alloc] init];
-        choss.dataArray = [NSArray arrayWithArray: weak.selArray];
-        choss.qishu = _qishu;
+        NSMutableArray  * countarray = [[NSMutableArray alloc] init];
+        for (NSArray * array in weak.selArray) {
+            NSMutableArray * subarray = [[NSMutableArray alloc] init];
+            for (NSArray * model in array) {
+                MNXHModel * copyModel = [model copy];
+                [subarray addObject:copyModel];
+            }
+            [countarray addObject:subarray];
+        }
+       
+        if ([countarray[0] count] != 0){
+        [weak.countArray  addObject:countarray];
+        }
+        choss.titleName = weak.title;
+        choss.removesuperBlock = ^{
+            [weak.countArray removeAllObjects];
+        };
+        choss.dic = weak.dataDic;
+        choss.dataArray = [NSMutableArray arrayWithArray: weak.countArray];
+        choss.qishu = weak.qishu;
         [weak.navigationController pushViewController:choss animated:YES];
         
     };
@@ -91,6 +111,17 @@ static   NSString * cellidentifi = @"cell";
     }];
     
     // Do any additional setup after loading the view.
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    for (NSMutableArray * array in _selArray) {
+        for (MNXHModel * model in array) {
+            model.isSelected = NO;
+        }
+        [array removeAllObjects];
+    }
+    [self.collectionView reloadData];
+
 }
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.subtype == UIEventSubtypeMotionShake) { // 判断是否是摇动结束

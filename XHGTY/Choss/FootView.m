@@ -55,11 +55,29 @@
         
         _determineButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_determineButton setTitle:@"确认选号" forState:UIControlStateNormal];
-        _determineButton.backgroundColor = [UIColor redColor];
         [_determineButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_determineButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+        
+        
+        [_determineButton setBackgroundImage:[self createImageWithColor:[UIColor redColor]] forState:UIControlStateNormal];
+        [_determineButton setBackgroundImage:[self createImageWithColor:[UIColor grayColor]] forState:UIControlStateSelected];
     }
     return _determineButton;
 }
+- (UIImage*)createImageWithColor:(UIColor*)color{
+    
+    CGRect rect=CGRectMake(0.0f,0.0f,1.0f,1.0f);UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context=UIGraphicsGetCurrentContext();CGContextSetFillColorWithColor(context, [color CGColor]);
+    
+    CGContextFillRect(context, rect);
+    
+    UIImage*theImage=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+    
+}
+
 - (UIView *)upView{
     
     if (!_upView) {

@@ -14,6 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.rootViwe];
         [self addSubview:self.footView];
         [self addSubview:self.chossTableView];
         [self.footView.chossleftView.addButton addTarget:self action:@selector(rightButtonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -123,6 +124,15 @@
     }
   [self setUpMoney];
 }
+- (RootView *)rootViwe{
+    
+    if (!_rootViwe) {
+        
+        _rootViwe = [[RootView alloc]init];
+        
+    }
+    return _rootViwe;
+}
 - (FootView *)footView{
     
     if (!_footView) {
@@ -142,9 +152,9 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-
-    self.footView.frame = CGRectMake(0, self.height -80, self.width, 80);
-    self.chossTableView.frame = CGRectMake(0, 64,self.width, self.height - 64 - self.footView.height);
+      self.rootViwe.frame = CGRectMake(0, 64, self.width, 80);
+      self.footView.frame = CGRectMake(0, self.height -80, self.width, 80);
+      self.chossTableView.frame = CGRectMake(0,CGRectGetMaxY(self.rootViwe.frame),self.width, self.height - 64 - self.footView.height - self.rootViwe.height);
 
 }
 

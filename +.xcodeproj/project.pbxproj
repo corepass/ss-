@@ -243,6 +243,7 @@
 		6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */; };
 		6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */; };
 		6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */; };
+		A909FA301EB2F25900B801EB /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = A909FA2F1EB2F25800B801EB /* RootView.m */; };
 		C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C722E3501E1658CB00A8E2E9 /* Other.storyboard */; };
 		C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3531E165AFE00A8E2E9 /* HallViewController.m */; };
 		C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3561E165B4500A8E2E9 /* PeiViewController.m */; };
@@ -810,6 +811,8 @@
 		6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCDDTableViewController.swift; sourceTree = "<group>"; };
 		6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCddTableViewCell.swift; sourceTree = "<group>"; };
 		6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCddTableViewCell.xib; sourceTree = "<group>"; };
+		A909FA2E1EB2F25800B801EB /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		A909FA2F1EB2F25800B801EB /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
 		C722E3501E1658CB00A8E2E9 /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		C722E3521E165AFE00A8E2E9 /* HallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HallViewController.h; path = ../../HallViewController.h; sourceTree = "<group>"; };
 		C722E3531E165AFE00A8E2E9 /* HallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HallViewController.m; path = ../../HallViewController.m; sourceTree = "<group>"; };
@@ -1790,6 +1793,8 @@
 		6DA81CF61EAA21E80031F862 /* Choss */ = {
 			isa = PBXGroup;
 			children = (
+				A909FA2E1EB2F25800B801EB /* RootView.h */,
+				A909FA2F1EB2F25800B801EB /* RootView.m */,
 				6DA81CF81EAA225C0031F862 /* ChossMianView.h */,
 				6DA81CF91EAA225C0031F862 /* ChossMianView.m */,
 				6DA81CFA1EAA225C0031F862 /* ChossTableView.h */,
@@ -2565,7 +2570,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = YTDU758824;
+						DevelopmentTeam = 77W5JD3W46;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2878,6 +2883,7 @@
 				C749C9571E72BB9B00241CFD /* FXLottery.m in Sources */,
 				6D082F041EA5C6010076F6D3 /* AFURLSessionManager.m in Sources */,
 				C790DA6B1E1B96EE00E1A7E0 /* SDWebImagePrefetcher.m in Sources */,
+				A909FA301EB2F25900B801EB /* RootView.m in Sources */,
 				C790DA1D1E1B496700E1A7E0 /* SVProgressAnimatedView.m in Sources */,
 				6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */,
 				6D12930D1EA8BC74006824C6 /* MNXHViewController.m in Sources */,
@@ -3105,10 +3111,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WeiYuan Su (YTDU758824)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WeiYuan Su (YTDU758824)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YTDU758824;
+				DEVELOPMENT_TEAM = 77W5JD3W46;
+				"DEVELOPMENT_TEAM[sdk=*]" = 77W5JD3W46;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3133,10 +3140,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.four;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92845533-11d6-4bc7-8c03-68b9e0c0b1c9";
-				PROVISIONING_PROFILE_SPECIFIER = 2403683505;
+				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
+				PROVISIONING_PROFILE_SPECIFIER = 3360677793;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3150,10 +3157,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WeiYuan Su (YTDU758824)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WeiYuan Su (YTDU758824)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YTDU758824;
+				DEVELOPMENT_TEAM = 77W5JD3W46;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3178,10 +3185,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.four;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92845533-11d6-4bc7-8c03-68b9e0c0b1c9";
-				PROVISIONING_PROFILE_SPECIFIER = 2403683505;
+				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
+				PROVISIONING_PROFILE_SPECIFIER = 3360677793;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

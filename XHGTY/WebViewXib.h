@@ -12,5 +12,7 @@ typedef void(^ WebViewXibBlock)(NSInteger tag);
 @property(strong,nonatomic) UIButton * goback;
 @property(strong,nonatomic) UIButton * goforward;
 @property(strong,nonatomic) UIButton * goreloadData;
+@property(strong,nonatomic) UIButton * home;
+
 @property(copy,nonatomic)   WebViewXibBlock WebViewBlock;
 @end

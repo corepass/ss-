@@ -56,7 +56,7 @@
     [self useProgressView];
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 40, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 49, 0));
     }];
 
 
@@ -69,7 +69,7 @@
     [self.view addSubview: self.lable];
 
     
-    _footview = [[WebViewXib alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40)];
+    _footview = [[WebViewXib alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 49, self.view.frame.size.width, 49)];
     [self.view addSubview:_footview];
     
     __weak __typeof (self) weak = self;
@@ -84,10 +84,12 @@
                 [weak.webView reload];
                 
                 break;
-            default:
+            case 3 :
                 if ([weak.webView canGoForward]){
                     [weak.webView goForward];
                 }
+            default:
+                [weak.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:weak.url]]];
                 break;
         }
     };
@@ -142,7 +144,7 @@
 }
 -(void)dealloc
 {
-    [self removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

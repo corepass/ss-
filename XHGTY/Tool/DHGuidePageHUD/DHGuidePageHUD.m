@@ -11,8 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
-
-#define DDHidden_TIME   3.0
+#import "WebViewController.h"
+#define DDHidden_TIME   1.0
 #define DDScreenW   [UIScreen mainScreen].bounds.size.width
 #define DDScreenH   [UIScreen mainScreen].bounds.size.height
 
@@ -112,18 +112,48 @@
     [UIView animateWithDuration:DDHidden_TIME animations:^{
         self.alpha = 0;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DDHidden_TIME * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self performSelector:@selector(removeGuidePageHUD) withObject:nil afterDelay:1];
+            [self performSelector:@selector(removeGuidePageHUD) withObject:nil afterDelay:0];
         });
     }];
 }
+-(void)setVC{
 
+}
 - (void)removeGuidePageHUD {
     [self removeFromSuperview];
+    [self setVC];
     if(self.removeFromeSuperViewBlock){
         self.removeFromeSuperViewBlock();
     }
 }
-
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
+}
 /**< APP视频新特性页面(新增测试模块内容) */
 - (instancetype)dh_initWithFrame:(CGRect)frame videoURL:(NSURL *)videoURL {
     if ([super initWithFrame:frame]) {

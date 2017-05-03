@@ -113,6 +113,10 @@ static NSString *const gpcID = @"gpcID";
     guidePage.removeFromeSuperViewBlock = ^(){
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
         [weak addActionView];
+
+
+        
+        
     };
     [window addSubview:guidePage];
 }
@@ -202,6 +206,7 @@ static NSString *const gpcID = @"gpcID";
     [self loadNewItems];
     
 }
+
 //-(void)getgpcData{
 //   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
 //       if (JSON != nil){

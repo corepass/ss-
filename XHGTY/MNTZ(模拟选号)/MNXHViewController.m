@@ -81,7 +81,7 @@ static   NSString * cellidentifi = @"cell";
     _footView.mnxhBtnBlcok = ^(){
         ChossViewController  * choss = [[ChossViewController alloc] init];
         choss.dataArray = [NSArray arrayWithArray: weak.selArray];
-        choss.qishu = _qishu;
+        choss.qishu = weak.qishu;
         [weak.navigationController pushViewController:choss animated:YES];
         
     };

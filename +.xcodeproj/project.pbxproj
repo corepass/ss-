@@ -2570,7 +2570,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 77W5JD3W46;
+						DevelopmentTeam = JLSUU6W9N4;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -3111,11 +3111,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yanmu Gu (JLSUU6W9N4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yanmu Gu (JLSUU6W9N4)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 77W5JD3W46;
-				"DEVELOPMENT_TEAM[sdk=*]" = 77W5JD3W46;
+				DEVELOPMENT_TEAM = JLSUU6W9N4;
+				"DEVELOPMENT_TEAM[sdk=*]" = JLSUU6W9N4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3140,10 +3140,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.ba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
-				PROVISIONING_PROFILE_SPECIFIER = 3360677793;
+				PROVISIONING_PROFILE = "3974ecad-c53a-4ecc-95ed-2a2fd9128c18";
+				PROVISIONING_PROFILE_SPECIFIER = "-3356378820";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3157,10 +3157,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengfen Tian (77W5JD3W46)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yanmu Gu (JLSUU6W9N4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yanmu Gu (JLSUU6W9N4)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 77W5JD3W46;
+				DEVELOPMENT_TEAM = JLSUU6W9N4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3185,10 +3185,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.ba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
-				PROVISIONING_PROFILE_SPECIFIER = 3360677793;
+				PROVISIONING_PROFILE = "3974ecad-c53a-4ecc-95ed-2a2fd9128c18";
+				PROVISIONING_PROFILE_SPECIFIER = "-3356378820";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

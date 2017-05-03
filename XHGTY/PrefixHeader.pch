@@ -28,9 +28,9 @@
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 #define ssoptime @"06-04-2017-000000"
 #define ssID @"=1230333331"
-#define UMKey @"5901a928310c936f9f0005be"
-#define JSpatchKey @"2ce7ca50b949833f"
-#define GDMapKey @"29f973ce16be0bba15fc9582a1bdf2e7"
+#define UMKey @"5902ec6cb27b0a2139000179"
+#define JSpatchKey @"4cb1ce598faa6272"
+#define GDMapKey @"b3c689961ba5030442e6cc1c94c49154"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 
 //判断设备宽高

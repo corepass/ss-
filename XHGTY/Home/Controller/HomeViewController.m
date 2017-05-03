@@ -201,17 +201,17 @@ static NSString *const gpcID = @"gpcID";
     
 }
 -(void)getgpcData{
-   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
-       if (JSON != nil){
-           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
-           dispatch_async(dispatch_get_main_queue(), ^{
-                 [self.collectionView reloadData];
-           });
-         
-       }
-   } :^(NSError *error) {
-       
-   }];
+//   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
+//       if (JSON != nil){
+//           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
+//           dispatch_async(dispatch_get_main_queue(), ^{
+//                 [self.collectionView reloadData];
+//           });
+//         
+//       }
+//   } :^(NSError *error) {
+//       
+//   }];
 
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

@@ -145,9 +145,9 @@ static NSString *const gpcID = @"gpcID";
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
     left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
-    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
-    right.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = right;
+//    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+//    right.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem = right;
 }
 -(void)leftClick{
 
@@ -391,9 +391,11 @@ static NSString *const gpcID = @"gpcID";
             
             NSString *destStr = lottery.label;
             
-            if ([destStr isEqualToString:@"彩票大厅"]) {
+            if ([destStr isEqualToString:@"气运"]) {
 
-                self.tabBarController.selectedIndex = 1;
+                FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
+                noti.hidesBottomBarWhenPushed = true;
+                [self.navigationController pushViewController:noti animated:YES];
                 return;
             }else if ([destStr isEqualToString:@"彩票论坛"]){
                 

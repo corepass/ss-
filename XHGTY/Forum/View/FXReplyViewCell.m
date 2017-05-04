@@ -8,7 +8,7 @@
 
 #import "FXReplyViewCell.h"
 #import "FXReply.h"
-
+#import "NSString+isEmpty.h"
 @interface FXReplyViewCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *replyContentLabel;
@@ -33,8 +33,12 @@
 
 - (void)setReply:(FXReply *)reply{
     _reply = reply;
-    
-    [self.headIcon sd_setImageWithURL:[NSURL URLWithString:reply.avatar]];
+    if ([NSString stringisEmpty:reply.avatar]){
+   
+         [self.headIcon sd_setImageWithURL:[NSURL URLWithString:@" http://p.zhangkongshidai.cn/usericon_default.jpg"]];
+    }else{
+        [self.headIcon sd_setImageWithURL:[NSURL URLWithString:reply.avatar]];
+    }
     self.nameLabel.text = reply.user_nicename;
     self.timeLabel.text = reply.add_time;
     self.replyContentLabel.text = reply.content;

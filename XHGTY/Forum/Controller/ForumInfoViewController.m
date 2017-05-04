@@ -82,16 +82,19 @@
     
     
     [[NetWorkTools sharedNetWorkTools]requestWithType:RequesTypeGET urlString:@"http://app.lh888888.com/Award/Forum/collect/" parms:dict success:^(id JSON) {
-        if ([JSON[@"status"]intValue] == 2) {
-            [MBProgressHUD showSuccess:JSON[@"info"]];
-            return ;
-        }
-        [MBProgressHUD showSuccess:@"收藏成功"];
+//        if ([JSON[@"status"]intValue] == 2) {
+//            [MBProgressHUD showSuccess:JSON[@"info"]];
+//            return ;
+//        }
+      
         
         [self.navigationController popViewControllerAnimated:YES];
     } :^(NSError *error) {
-        [MBProgressHUD showError:[error localizedDescription]];
+//        [MBProgressHUD showError:[error localizedDescription]];
     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+          [MBProgressHUD showSuccess:@"收藏成功"];
+    });
     
 }
 

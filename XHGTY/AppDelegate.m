@@ -24,7 +24,7 @@
 // 引入JPush功能所需头文件
 #import "AppModel.h"
 #import "JPUSHService.h"
-
+#import "WKWebViewController.h"
 
 #import "DHGuidePageHUD.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>

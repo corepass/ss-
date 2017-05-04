@@ -15,7 +15,7 @@
 #import "FTZViewController.h"
 #import "FXNavigationController.h"
 #import "LoginViewController.h"
-
+#import "NSString+isEmpty.h"
 @interface ForumViewController ()<requestNetWorDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSMutableArray *forums;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -120,25 +120,52 @@ int pageNumber = 1;
     
     
     
-    NSString *requestURL = [NSString stringWithFormat:@"http://app.lh888888.com/%@",self.requestURL];
+    NSString *requestURL = [NSString stringWithFormat:@"https://api.icaipiao123.com/api/v6/social/hotlist?page=1&count=20"];
     
     [[NetWorkTools sharedNetWorkTools]requestWithType:RequesTypeGET urlString:requestURL parms:dict success:^(id JSON) {
         [self.tableView.mj_header endRefreshing];
         [self.nonetWorkView removeFromSuperview];
         
-        if ([JSON[@"status"]intValue] == 2) {
-            [MBProgressHUD showError:JSON[@"info"]];
-            self.tableView.mj_footer.hidden = YES;
-            return ;
+        if ([JSON[@"data"] isKindOfClass:[NSArray class]]) {
+            NSMutableArray * array = [[NSMutableArray alloc] init];
+     
+            for (NSDictionary * dic in JSON[@"data"]) {
+                NSMutableDictionary * savedic = [[NSMutableDictionary alloc] init];
+                if (dic[@"content"]){
+                    savedic[@"content"] = dic[@"content"];
+                    savedic[@"title"] = dic[@"content"];
+                }
+                if (dic[@"publish_time"]){
+                    savedic[@"create_time"] = [NSString tranfromTime:@"MM-dd HH:mm" time:[dic[@"publish_time"] longLongValue]];
+                }
+                if (dic[@"user"]){
+                    savedic[@"avatar"] = dic[@"user"][@"icon"];
+                }
+                if (dic[@"user"]){
+                    savedic[@"user_nicename"] = dic[@"user"][@"name"];
+                }
+                if (dic[@"up_time"]){
+                    savedic[@"add_time"] = [NSString tranfromTime:@"MM-dd HH:mm" time:[ dic[@"up_time"] longLongValue]];
+                }
+                if (dic[@"user"]){
+                    savedic[@"user_id"] = dic[@"user"][@"id"];
+                }
+                if([savedic[@"user_nicename"] isEqualToString:@"旺彩平台管理员"])
+                {
+                    continue;
+                }
+                [array addObject:savedic];
+            }
+            NSArray *arr = [FXforum mj_objectArrayWithKeyValuesArray:array];
+            
+            [self.tableView.mj_footer endRefreshing];
+            self.tableView.mj_footer.hidden = (arr.count < 10);
+            
+            [self.forums addObjectsFromArray:arr];
+            [self.tableView reloadData];
         }
         
-        NSArray *arr = [FXforum mj_objectArrayWithKeyValuesArray:JSON[@"content"]];
-        
-        [self.tableView.mj_footer endRefreshing];
-        self.tableView.mj_footer.hidden = (arr.count < 10);
-        
-        [self.forums addObjectsFromArray:arr];
-        [self.tableView reloadData];
+
     } :^(NSError *error) {
         if ([[error localizedDescription]containsString:@"互联网"]) {
             if (self.forums.count) {
@@ -167,7 +194,7 @@ int pageNumber = 1;
     }
     
     
-    NSString *requestURL = [NSString stringWithFormat:@"http://app.lh888888.com/%@",self.requestURL];
+        NSString *requestURL = [NSString stringWithFormat:@"https://api.icaipiao123.com/api/v6/social/hotlist?page=1&count=20"];
     
    [[NetWorkTools sharedNetWorkTools]requestWithType:RequesTypeGET urlString:requestURL parms:dict success:^(id JSON) {
        [self.tableView.mj_header endRefreshing];
@@ -175,7 +202,41 @@ int pageNumber = 1;
        
        [self.forums removeAllObjects];
        
-       NSArray *arr = [FXforum mj_objectArrayWithKeyValuesArray:JSON[@"content"]];
+        NSMutableArray * array = [[NSMutableArray alloc] init];
+       if ( [JSON[@"data"] isKindOfClass:[NSArray class]]) {
+          
+           for (NSDictionary * dic in JSON[@"data"]) {
+               NSMutableDictionary * savedic = [[NSMutableDictionary alloc] init];
+             
+               if (dic[@"content"]){
+                   savedic[@"content"] = dic[@"content"];
+                   savedic[@"title"] = dic[@"content"];
+               }
+               if (dic[@"publish_time"]){
+                   savedic[@"create_time"] = [NSString tranfromTime:@"MM-dd HH:mm" time:[dic[@"publish_time"] longLongValue]];
+               }
+               if (dic[@"user"]){
+                   savedic[@"avatar"] = dic[@"user"][@"icon"];
+               }
+               if (dic[@"user"]){
+                   savedic[@"user_nicename"] = dic[@"user"][@"name"];
+               }
+               if (dic[@"up_time"]){
+                   savedic[@"add_time"] = [NSString tranfromTime:@"MM-dd HH:mm" time:[ dic[@"up_time"] longLongValue]];
+               }
+               if (dic[@"user"]){
+                   savedic[@"user_id"] = dic[@"user"][@"id"];
+               }
+               if([savedic[@"user_nicename"] isEqualToString:@"旺彩平台管理员"])
+               {
+                   continue;
+               }
+               [array addObject:savedic];
+           }
+      }
+      
+       NSArray *arr = [FXforum mj_objectArrayWithKeyValuesArray:array];
+           
        
        if ( arr.count == 0) {
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(30, 60, 300, 40)];

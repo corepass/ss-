@@ -28,6 +28,10 @@
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(-44, 0, 0, 0));
     }];
+    }else{
+        [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+        }];
     }
 
 }

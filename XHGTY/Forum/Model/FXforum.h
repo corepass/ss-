@@ -7,7 +7,7 @@
 //
 
 #import "BaseObject.h"
-
+#import "uerModel.h"
 @interface FXforum : BaseObject
 @property (nonatomic,copy)NSString *title;
 @property (nonatomic,copy)NSString *content;
@@ -16,5 +16,6 @@
 @property (nonatomic,copy)NSString *user_nicename;
 @property (nonatomic,copy)NSString *add_time;
 @property (nonatomic,copy)NSString *user_id;
+@property(nonatomic,copy) uerModel * user;
 
 @end

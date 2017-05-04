@@ -181,6 +181,8 @@
 		6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293181EA8C630006824C6 /* MNXHModel.m */; };
 		6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */; };
 		6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931E1EA9F088006824C6 /* MNXHHeardView.m */; };
+		6D5535E01EBADCD900B0E8E8 /* uerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535DF1EBADCD900B0E8E8 /* uerModel.m */; };
+		6D5535E31EBAF5A300B0E8E8 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9C82901E95D9430043FAD8 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C827A1E95D9430043FAD8 /* MyProfileViewController.m */; };
@@ -689,6 +691,10 @@
 		6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHFootView.m; sourceTree = "<group>"; };
 		6D12931D1EA9F088006824C6 /* MNXHHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHHeardView.h; sourceTree = "<group>"; };
 		6D12931E1EA9F088006824C6 /* MNXHHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHHeardView.m; sourceTree = "<group>"; };
+		6D5535DE1EBADCD900B0E8E8 /* uerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uerModel.h; sourceTree = "<group>"; };
+		6D5535DF1EBADCD900B0E8E8 /* uerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uerModel.m; sourceTree = "<group>"; };
+		6D5535E11EBAF5A300B0E8E8 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKWebViewController.h; path = XHGTY/Forum/Model/WKWebViewController.h; sourceTree = SOURCE_ROOT; };
+		6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKWebViewController.m; path = XHGTY/Forum/Model/WKWebViewController.m; sourceTree = SOURCE_ROOT; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9C82791E95D9430043FAD8 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
@@ -1110,6 +1116,8 @@
 				6D0E7CDA1E8A481E0029E809 /* WebViewController.m */,
 				6D0E7CDB1E8A481E0029E809 /* WebViewXib.h */,
 				6D0E7CDC1E8A481E0029E809 /* WebViewXib.m */,
+				6D5535E11EBAF5A300B0E8E8 /* WKWebViewController.h */,
+				6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -1425,6 +1433,8 @@
 				6D09E0921E9F271E00D9B51F /* FXforum.m */,
 				6D09E0931E9F271E00D9B51F /* FXReply.h */,
 				6D09E0941E9F271E00D9B51F /* FXReply.m */,
+				6D5535DE1EBADCD900B0E8E8 /* uerModel.h */,
+				6D5535DF1EBADCD900B0E8E8 /* uerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2689,6 +2699,7 @@
 				C790DA0D1E1B47B000E1A7E0 /* NSObject+MJClass.m in Sources */,
 				6DE9734C1E8E494B003D5DBD /* TouzhuTableViewController.swift in Sources */,
 				6D0E7D6D1E8CC92C0029E809 /* DimensionAttribute+UIKit.swift in Sources */,
+				6D5535E01EBADCD900B0E8E8 /* uerModel.m in Sources */,
 				6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */,
 				6D0E7D511E8CC88D0029E809 /* UserView.swift in Sources */,
 				C790DA1F1E1B496700E1A7E0 /* SVProgressHUD.m in Sources */,
@@ -2696,6 +2707,7 @@
 				C74C3E911E135DE2005874AC /* UIView+MJExtension.m in Sources */,
 				C790DA111E1B47B000E1A7E0 /* NSString+MJExtension.m in Sources */,
 				6D0E7D791E8CC92C0029E809 /* ReferenceAttribute.swift in Sources */,
+				6D5535E31EBAF5A300B0E8E8 /* WKWebViewController.m in Sources */,
 				6D0E7D941E8CCB7D0029E809 /* RegisterView.m in Sources */,
 				6D09DFDC1E9B205300D9B51F /* FMDatabaseQueue.m in Sources */,
 				6D0E7D7B1E8CC92C0029E809 /* UIView+Easy.swift in Sources */,
@@ -2974,7 +2986,7 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.jiu;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
 				PROVISIONING_PROFILE_SPECIFIER = 3360677793;
@@ -3019,7 +3031,7 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.jiu;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.caipiao.five;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fb397e84-3c4b-4a61-b310-2748c4be8ea7";
 				PROVISIONING_PROFILE_SPECIFIER = 3360677793;

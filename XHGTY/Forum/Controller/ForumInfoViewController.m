@@ -10,7 +10,7 @@
 #import "FXforum.h"
 #import "LoginViewController.h"
 #import "FXNavigationController.h"
-
+#import "JubaoTableViewController.h"
 @interface ForumInfoViewController ()<UIScrollViewDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -43,15 +43,15 @@
         self.replayView.hidden = YES;
     }else if (!self.iscollection) {
      
-        
-        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithTitle:@"收藏"style:UIBarButtonItemStyleDone target:self action:@selector(saveItems)];
-        right.tintColor = [UIColor whiteColor];
-        self.navigationItem.rightBarButtonItem = right;
+//        
+//        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithTitle:@"收藏"style:UIBarButtonItemStyleDone target:self action:@selector(saveItems)];
+//        right.tintColor = [UIColor whiteColor];
+//        self.navigationItem.rightBarButtonItem = right;
     }
     
-    if (!kAccount.uid) {
-        self.navigationItem.rightBarButtonItem = nil;
-    }
+//    if (!kAccount.uid) {
+//        self.navigationItem.rightBarButtonItem = nil;
+//    }
 }
 
 - (void)viewDidLoad {
@@ -69,9 +69,15 @@
     self.time.text = self.forum.add_time;
     self.content.text = self.forum.content;
     self.titleLabel.text = [NSString stringWithFormat:@"  %@",self.forum.title];
-    
+    UIBarButtonItem * bar = [[UIBarButtonItem alloc] initWithTitle:@"举报" style:UIBarButtonItemStyleDone target:self action:@selector(jubao)];
+    bar.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = bar;
 }
+-(void)jubao{
+    JubaoTableViewController * jubao = [[JubaoTableViewController alloc] init];
+    [self.navigationController pushViewController:jubao animated:YES];
 
+}
 //收藏帖子
 - (void)saveItems{
     

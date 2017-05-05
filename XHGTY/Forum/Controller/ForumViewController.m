@@ -51,7 +51,7 @@ static NSString *const FXforumViewCellID = @"FXforumViewCell";
     self.nonetWorkView.delegate = self;
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.title = @"论坛";
-    
+
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
@@ -266,13 +266,22 @@ int pageNumber = 1;
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.forums.count;
+return  1;
 }
-
-
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+return self.forums.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return  0.01;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FXforumViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FXforumViewCellID];
-    cell.forum = self.forums[indexPath.row];
+    cell.forum = self.forums[indexPath.section];
     return cell;
 }
 
@@ -282,12 +291,12 @@ int pageNumber = 1;
     if (self.isSearchReply) {
         FXReplyViewController *replyVC = [[FXReplyViewController alloc]init];
         
-        FXforum *forum =  self.forums[indexPath.row];
+        FXforum *forum =  self.forums[indexPath.section];
         replyVC.forumID = forum.ID;
         [self.navigationController pushViewController:replyVC animated:YES];
     }else{
         ForumInfoViewController *infoVC = [[ForumInfoViewController alloc]init];
-        infoVC.forum = self.forums[indexPath.row];
+        infoVC.forum = self.forums[indexPath.section];
         if (self.isFromMy) {
             infoVC.iscollection = YES;
         }

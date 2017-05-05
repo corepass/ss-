@@ -7,15 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import <ShareSDK/ShareSDK.h>
-#import <ShareSDKConnector/ShareSDKConnector.h>
-#import "ThirdSDKDefine.h"
+
+
 
 #import <AMapFoundationKit/AMapFoundationKit.h>
-#import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/QQApiInterface.h>
+
+
 #import "WebViewController.h"
-#import "WXApi.h"
+
 #import "HttpTools.h"
 #import "UMessage.h"
 #import "SVProgressHUD.h"
@@ -23,7 +22,7 @@
 
 // 引入JPush功能所需头文件
 #import "AppModel.h"
-#import "JPUSHService.h"
+
 #import "WKWebViewController.h"
 
 #import "DHGuidePageHUD.h"
@@ -40,7 +39,7 @@ static NSString *appKey = @"dcd205f49eadbac179b60c1e";
 static NSString *channel = @"App Store";
 
 
-@interface AppDelegate ()<JPUSHRegisterDelegate,UNUserNotificationCenterDelegate>
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @property (nonatomic,strong)UIStoryboard *story;
 
@@ -64,7 +63,7 @@ static NSString *channel = @"App Store";
 
 
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1]];
-    [self shareSDKInterGration];
+
  
     application.statusBarHidden = NO;
     
@@ -95,16 +94,8 @@ static NSString *channel = @"App Store";
         }
     }];
     
-    //
-    //Required添加初始化APNs代码
-    //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [application setApplicationIconBadgeNumber:0];
-    
-    // Optional添加初始化JPush代码
-    [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:NO];
+   
+
     [self savadata];
 
     return  YES;
@@ -136,7 +127,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"token = %@",deviceToken);
     /// Required - 注册 DeviceToken
-    [JPUSHService registerDeviceToken:deviceToken];
+
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -150,9 +141,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 // iOS 10 Support
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
     // Required
-    NSDictionary * userInfo = notification.request.content.userInfo;
+//    NSDictionary * userInfo = notification.request.content.userInfo;
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
+
     }
     completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
 }
@@ -164,7 +155,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSLog(@"UserInfo = %@",userInfo);
     
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
+
     }
     completionHandler();  // 系统要求执行这个方法
 }
@@ -172,7 +163,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Required, iOS 7 Support
-    [JPUSHService handleRemoteNotification:userInfo];
+
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -187,34 +178,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 
 
-- (void)shareSDKInterGration{
-    
-    [ShareSDK registerApp:kMobAppKey activePlatforms:@[@(SSDKPlatformTypeWechat), @(SSDKPlatformTypeQQ)] onImport:^(SSDKPlatformType platformType) {
-        switch (platformType){
-          
-            case SSDKPlatformTypeWechat:
-                [ShareSDKConnector connectWeChat:[WXApi class]];
-                break;
-            case SSDKPlatformTypeQQ:
-                [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                break;
-            default:
-                break;
-        }
-    } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
-        switch (platformType)
-        {
-            case SSDKPlatformTypeWechat:
-                [appInfo SSDKSetupWeChatByAppId:kWeiXinAppID appSecret:kWeiXinAppSecret];
-                break;
-            case SSDKPlatformTypeQQ:
-                [appInfo SSDKSetupQQByAppId:kQQAppID appKey:kQQAppKey authType:SSDKAuthTypeSSO];
-                break;
-            default:
-                break;
-        }
-    }];
-}
 
 
 //NSDate -----> NSString

@@ -46,6 +46,7 @@
 #import "gpcModel.h"
 #import "MNXHViewController.h"
 #import "MessageRuntime.h"
+#import "StylesViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -145,9 +146,9 @@ static NSString *const gpcID = @"gpcID";
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
     left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
-//    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
-//    right.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem = right;
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    right.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = right;
 }
 -(void)leftClick{
 
@@ -391,11 +392,15 @@ static NSString *const gpcID = @"gpcID";
             
             NSString *destStr = lottery.label;
             
-            if ([destStr isEqualToString:@"气运"]) {
+            if ([destStr isEqualToString:@"走势图"]) {
 
-                FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
-                noti.hidesBottomBarWhenPushed = true;
-                [self.navigationController pushViewController:noti animated:YES];
+                StylesViewController * style = [[StylesViewController alloc] init];
+                style.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:style animated:YES];
+                
+//                FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
+//                noti.hidesBottomBarWhenPushed = true;
+//                [self.navigationController pushViewController:noti animated:YES];
                 return;
             }else if ([destStr isEqualToString:@"彩票论坛"]){
                 

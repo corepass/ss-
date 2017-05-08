@@ -184,6 +184,14 @@
 		6D5535E01EBADCD900B0E8E8 /* uerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535DF1EBADCD900B0E8E8 /* uerModel.m */; };
 		6D5535E31EBAF5A300B0E8E8 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */; };
 		6D5535EB1EBC195300B0E8E8 /* JubaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535EA1EBC195300B0E8E8 /* JubaoTableViewController.m */; };
+		6D5535F81EBC56C800B0E8E8 /* LMReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535EF1EBC56C800B0E8E8 /* LMReportView.m */; };
+		6D5535F91EBC56C800B0E8E8 /* LMRGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535F11EBC56C800B0E8E8 /* LMRGrid.m */; };
+		6D5535FA1EBC56C800B0E8E8 /* LMRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535F31EBC56C800B0E8E8 /* LMRLabel.m */; };
+		6D5535FB1EBC56C800B0E8E8 /* LMRStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535F51EBC56C800B0E8E8 /* LMRStyle.m */; };
+		6D5535FC1EBC56C800B0E8E8 /* NSIndexPath+LMReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535F71EBC56C800B0E8E8 /* NSIndexPath+LMReport.m */; };
+		6D5536041EBC56E900B0E8E8 /* FXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535FF1EBC56E900B0E8E8 /* FXModel.m */; };
+		6D5536051EBC56E900B0E8E8 /* LMRStyle+Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536011EBC56E900B0E8E8 /* LMRStyle+Demo.m */; };
+		6D5536061EBC56E900B0E8E8 /* StylesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536031EBC56E900B0E8E8 /* StylesViewController.m */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9C82901E95D9430043FAD8 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C827A1E95D9430043FAD8 /* MyProfileViewController.m */; };
@@ -681,6 +689,23 @@
 		6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKWebViewController.m; path = XHGTY/Forum/Model/WKWebViewController.m; sourceTree = SOURCE_ROOT; };
 		6D5535E91EBC195300B0E8E8 /* JubaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JubaoTableViewController.h; sourceTree = "<group>"; };
 		6D5535EA1EBC195300B0E8E8 /* JubaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JubaoTableViewController.m; sourceTree = "<group>"; };
+		6D5535ED1EBC56C800B0E8E8 /* LMReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMReport.h; sourceTree = "<group>"; };
+		6D5535EE1EBC56C800B0E8E8 /* LMReportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMReportView.h; sourceTree = "<group>"; };
+		6D5535EF1EBC56C800B0E8E8 /* LMReportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMReportView.m; sourceTree = "<group>"; };
+		6D5535F01EBC56C800B0E8E8 /* LMRGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRGrid.h; sourceTree = "<group>"; };
+		6D5535F11EBC56C800B0E8E8 /* LMRGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRGrid.m; sourceTree = "<group>"; };
+		6D5535F21EBC56C800B0E8E8 /* LMRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRLabel.h; sourceTree = "<group>"; };
+		6D5535F31EBC56C800B0E8E8 /* LMRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRLabel.m; sourceTree = "<group>"; };
+		6D5535F41EBC56C800B0E8E8 /* LMRStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRStyle.h; sourceTree = "<group>"; };
+		6D5535F51EBC56C800B0E8E8 /* LMRStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRStyle.m; sourceTree = "<group>"; };
+		6D5535F61EBC56C800B0E8E8 /* NSIndexPath+LMReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+LMReport.h"; sourceTree = "<group>"; };
+		6D5535F71EBC56C800B0E8E8 /* NSIndexPath+LMReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+LMReport.m"; sourceTree = "<group>"; };
+		6D5535FE1EBC56E900B0E8E8 /* FXModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXModel.h; sourceTree = "<group>"; };
+		6D5535FF1EBC56E900B0E8E8 /* FXModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXModel.m; sourceTree = "<group>"; };
+		6D5536001EBC56E900B0E8E8 /* LMRStyle+Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMRStyle+Demo.h"; sourceTree = "<group>"; };
+		6D5536011EBC56E900B0E8E8 /* LMRStyle+Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LMRStyle+Demo.m"; sourceTree = "<group>"; };
+		6D5536021EBC56E900B0E8E8 /* StylesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylesViewController.h; sourceTree = "<group>"; };
+		6D5536031EBC56E900B0E8E8 /* StylesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylesViewController.m; sourceTree = "<group>"; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9C82791E95D9430043FAD8 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
@@ -1584,6 +1609,37 @@
 			path = "MNTZ(模拟选号)";
 			sourceTree = "<group>";
 		};
+		6D5535EC1EBC56C800B0E8E8 /* LMReport */ = {
+			isa = PBXGroup;
+			children = (
+				6D5535ED1EBC56C800B0E8E8 /* LMReport.h */,
+				6D5535EE1EBC56C800B0E8E8 /* LMReportView.h */,
+				6D5535EF1EBC56C800B0E8E8 /* LMReportView.m */,
+				6D5535F01EBC56C800B0E8E8 /* LMRGrid.h */,
+				6D5535F11EBC56C800B0E8E8 /* LMRGrid.m */,
+				6D5535F21EBC56C800B0E8E8 /* LMRLabel.h */,
+				6D5535F31EBC56C800B0E8E8 /* LMRLabel.m */,
+				6D5535F41EBC56C800B0E8E8 /* LMRStyle.h */,
+				6D5535F51EBC56C800B0E8E8 /* LMRStyle.m */,
+				6D5535F61EBC56C800B0E8E8 /* NSIndexPath+LMReport.h */,
+				6D5535F71EBC56C800B0E8E8 /* NSIndexPath+LMReport.m */,
+			);
+			path = LMReport;
+			sourceTree = "<group>";
+		};
+		6D5535FD1EBC56E900B0E8E8 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				6D5535FE1EBC56E900B0E8E8 /* FXModel.h */,
+				6D5535FF1EBC56E900B0E8E8 /* FXModel.m */,
+				6D5536001EBC56E900B0E8E8 /* LMRStyle+Demo.h */,
+				6D5536011EBC56E900B0E8E8 /* LMRStyle+Demo.m */,
+				6D5536021EBC56E900B0E8E8 /* StylesViewController.h */,
+				6D5536031EBC56E900B0E8E8 /* StylesViewController.m */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
 		6D9C82731E95D9430043FAD8 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1683,6 +1739,7 @@
 		6DE973251E8DEDE2003D5DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6D5535EC1EBC56C800B0E8E8 /* LMReport */,
 				6DA81D181EAC4CB40031F862 /* MessageRuntime.h */,
 				6DA81D191EAC4CB40031F862 /* MessageRuntime.m */,
 				6D082ED91EA5C6010076F6D3 /* AFNetworking */,
@@ -2101,6 +2158,7 @@
 		C78D25B21DDAEE3700EE34E0 /* XHGTY */ = {
 			isa = PBXGroup;
 			children = (
+				6D5535FD1EBC56E900B0E8E8 /* ListView */,
 				6DA81CF61EAA21E80031F862 /* Choss */,
 				6D12930A1EA8BC57006824C6 /* MNTZ(模拟选号) */,
 				6D1292F51EA8557B006824C6 /* KJ */,
@@ -2474,6 +2532,7 @@
 				C749C9531E72BB9B00241CFD /* VideoDrawViewController.m in Sources */,
 				C790DA3C1E1B7B9C00E1A7E0 /* FXPeiLv.m in Sources */,
 				6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */,
+				6D5535F91EBC56C800B0E8E8 /* LMRGrid.m in Sources */,
 				C749C9631E72BB9B00241CFD /* LHDQViewCell.m in Sources */,
 				6D1293031EA86B24006824C6 /* HomegpcCollectionViewCell.m in Sources */,
 				C790D9F11E1B477A00E1A7E0 /* LotteryKind.m in Sources */,
@@ -2541,6 +2600,7 @@
 				C790DA1C1E1B496700E1A7E0 /* SVIndefiniteAnimatedView.m in Sources */,
 				6D082EFF1EA5C6010076F6D3 /* AFHTTPSessionManager.m in Sources */,
 				6D09E0A21E9F271E00D9B51F /* FXReplyViewController.m in Sources */,
+				6D5535F81EBC56C800B0E8E8 /* LMReportView.m in Sources */,
 				6D0E7D6A1E8CC92C0029E809 /* Constant.swift in Sources */,
 				6D0E7D011E8A48340029E809 /* View+MASAdditions.m in Sources */,
 				6D0E7D751E8CC92C0029E809 /* PositionAttribute+AppKit.swift in Sources */,
@@ -2563,12 +2623,14 @@
 				C790DA0D1E1B47B000E1A7E0 /* NSObject+MJClass.m in Sources */,
 				6DE9734C1E8E494B003D5DBD /* TouzhuTableViewController.swift in Sources */,
 				6D0E7D6D1E8CC92C0029E809 /* DimensionAttribute+UIKit.swift in Sources */,
+				6D5535FA1EBC56C800B0E8E8 /* LMRLabel.m in Sources */,
 				6D5535E01EBADCD900B0E8E8 /* uerModel.m in Sources */,
 				6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */,
 				6D0E7D511E8CC88D0029E809 /* UserView.swift in Sources */,
 				C790DA1F1E1B496700E1A7E0 /* SVProgressHUD.m in Sources */,
 				6D1293121EA8BF39006824C6 /* MNXHCollectionViewCell.m in Sources */,
 				C74C3E911E135DE2005874AC /* UIView+MJExtension.m in Sources */,
+				6D5535FC1EBC56C800B0E8E8 /* NSIndexPath+LMReport.m in Sources */,
 				C790DA111E1B47B000E1A7E0 /* NSString+MJExtension.m in Sources */,
 				6D0E7D791E8CC92C0029E809 /* ReferenceAttribute.swift in Sources */,
 				6D5535E31EBAF5A300B0E8E8 /* WKWebViewController.m in Sources */,
@@ -2579,11 +2641,13 @@
 				6D09E0C31E9F45F100D9B51F /* FXSettingViewController.m in Sources */,
 				C749C97D1E72BCF100241CFD /* BaseTableViewController.m in Sources */,
 				C749C9741E72BB9B00241CFD /* SingleViewCell.m in Sources */,
+				6D5536051EBC56E900B0E8E8 /* LMRStyle+Demo.m in Sources */,
 				6D0E7D6E1E8CC92C0029E809 /* DimensionAttribute.swift in Sources */,
 				C749C96D1E72BB9B00241CFD /* RecordOneViewCell.m in Sources */,
 				6DA81D1A1EAC4CB40031F862 /* MessageRuntime.m in Sources */,
 				6D082F131EA5C8870076F6D3 /* CpMapViewController.m in Sources */,
 				C749C95F1E72BB9B00241CFD /* FXHomeMenuCycleCell.m in Sources */,
+				6D5536041EBC56E900B0E8E8 /* FXModel.m in Sources */,
 				C749C9F81E72BE1D00241CFD /* Foundation+Log.m in Sources */,
 				6D082EB11EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m in Sources */,
 				6D09E0A41E9F271E00D9B51F /* FXforum.m in Sources */,
@@ -2599,6 +2663,7 @@
 				C749C9651E72BB9B00241CFD /* FXLotteryDistrCell.m in Sources */,
 				6D09E0CF1E9F51BA00D9B51F /* DHGifImageOperation.m in Sources */,
 				C790DA0F1E1B47B000E1A7E0 /* NSObject+MJKeyValue.m in Sources */,
+				6D5536061EBC56E900B0E8E8 /* StylesViewController.m in Sources */,
 				6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */,
 				C749C9401E72BB9B00241CFD /* ArticleListViewController.m in Sources */,
 				C749C9571E72BB9B00241CFD /* FXLottery.m in Sources */,
@@ -2693,6 +2758,7 @@
 				6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */,
 				6D09DFDA1E9B205300D9B51F /* FMDatabaseAdditions.m in Sources */,
 				C74C3E871E135DE2005874AC /* MJRefreshBackNormalFooter.m in Sources */,
+				6D5535FB1EBC56C800B0E8E8 /* LMRStyle.m in Sources */,
 				6D0E7D471E8CB7280029E809 /* NewTableViewController.swift in Sources */,
 				6D082F061EA5C6010076F6D3 /* README.md in Sources */,
 				6D082ECE1EA5BAD80076F6D3 /* FXZSTViewController.m in Sources */,

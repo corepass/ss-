@@ -19,6 +19,13 @@
 #import "AppDefine.h"
 #import "HallCollectionViewCell.h"
 #import "MNXHViewController.h"
+#import "FXHomeMenuCycleView.h"
+#import "FXAd.h"
+#import "FXWebViewController.h"
+#import "LoginViewController.h"
+#import "ForumViewController.h"
+#import "FXViewController.h"
+#import "XYHeardView.h"
 #define kItemMargin 2
 
 typedef NS_ENUM(NSInteger, HallType){
@@ -27,12 +34,13 @@ typedef NS_ENUM(NSInteger, HallType){
     
 };
 
-@interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
-
+@interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,FXHomeMenuSelectedDelegate>
+@property (nonatomic,strong)FXHomeMenuCycleView *cycleView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *totalArr;
 @property (nonatomic,strong) UISegmentedControl * segumented;
 @property(nonatomic,assign) HallType tyoe;
+@property (nonatomic,strong)NSMutableArray *Ads;
 @end
 
 @implementation HallViewController
@@ -51,6 +59,62 @@ static NSString *const cellID = @"cellID";
     
     
 }
+
+-(void)setBannar{
+    _cycleView = [FXHomeMenuCycleView homeMenuCycleView];
+    _cycleView.delegate = self;
+    //  _cycleView.totalAds =self.Ads;
+    
+    self.cycleView = _cycleView;
+    
+    [self.collectionView addSubview:self.cycleView];
+    self.collectionView.contentInset = UIEdgeInsetsMake(kScreenW * 3/8 , 0, 0, 0);
+
+
+}
+-(void)setBannarData{
+    
+    [HttpTools POSTWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
+        [self.collectionView.mj_header endRefreshing];
+        if ([JSON isKindOfClass:[NSArray class]]){
+            NSArray * array = JSON;
+            [self.Ads removeAllObjects];
+            for (NSDictionary * dic  in array) {
+                FXAd * model = [[FXAd alloc] init];
+                model.img = dic[@"ImgUrl"];
+                model.url = dic[@"AritleUrl"];
+                [self.Ads addObject:model];
+            }
+            
+            _cycleView.totalAds =self.Ads;
+        }else{
+            NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+            NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+            self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+            _cycleView.totalAds =self.Ads;
+        }
+        
+        
+    } :^(NSError *error) {
+        [self.collectionView.mj_header endRefreshing];
+        NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+        NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+        self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+        _cycleView.totalAds =self.Ads;
+    }];
+    
+    
+}
+- (void)fxHomeMenuSelected:(NSString *)url{
+    FXWebViewController *webVC = [[FXWebViewController alloc]init];
+    webVC.accessUrl = url;
+    if([url isEqualToString:@""]){
+        return;
+    }
+    webVC.hidesBottomBarWhenPushed = YES;
+    webVC.titleName = @"活动";
+    [self.navigationController pushViewController:webVC animated:YES];
+}
 -(void)segumentedClick:(UISegmentedControl *)segemert{
     switch (segemert.selectedSegmentIndex) {
         case 0:
@@ -64,12 +128,17 @@ static NSString *const cellID = @"cellID";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ 
+    [self setBannar];
     // Do any additional setup after loading the view.
     [self setsegument];
+    _Ads = [[NSMutableArray alloc] init];
     self.collectionView.backgroundColor = kGlobalColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
   
-          [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+        [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+     [self.collectionView registerClass:[XYHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"heard"];
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewImtes)];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
@@ -82,10 +151,35 @@ static NSString *const cellID = @"cellID";
     
     [self.collectionView.mj_header beginRefreshing];
     
-//    
-//    UIBarButtonItem * barbutton = [[UIBarButtonItem alloc]initWithTitle:@"试玩" style:UIBarButtonItemStyleDone target:self action:@selector(shiwan)];
-//    barbutton.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem = barbutton;
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
+    left.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = left;
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    right.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = right;
+}
+-(void)leftClick{
+    
+    NSUserDefaults * defa = [NSUserDefaults standardUserDefaults];
+    if ([defa valueForKey:@"account"]){
+        [SVProgressHUD showWithStatus:@"您已经登录了！"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }else{
+        LoginViewController * login = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        login.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:login animated:YES];
+        
+    }
+    
+}
+-(void)rightClick{
+    
+    FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
+    noti.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:noti animated:YES];
+    
 }
 -(void)shiwan{
     GoucaiViewController * goucai = [[GoucaiViewController alloc]init];
@@ -95,7 +189,7 @@ static NSString *const cellID = @"cellID";
 }
 
 - (void)loadNewImtes {
-
+    [self setBannarData];
     NSString * path = [[NSBundle mainBundle] pathForResource:@"CaipiaoType" ofType:@"geojson"];
     NSDictionary * dic = [NSDictionary dictionaryWithContentsOfFile:path];
     self.totalArr = [LotteryKind mj_objectArrayWithKeyValuesArray:dic[@"data"]];
@@ -104,6 +198,26 @@ static NSString *const cellID = @"cellID";
         [self.collectionView.mj_header endRefreshing];
     });
     
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return CGSizeMake(self.view.frame.size.width, 80);
+            break;
+            
+        default:
+            return CGSizeZero;
+            break;
+    }
+}
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    XYHeardView * view;
+    if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0){
+        view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"heard" forIndexPath:indexPath];
+        
+    }
+    return view;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -26,6 +26,7 @@
 
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
+#define appwindows self.window.rootViewController
 #define ssoptime @"06-04-2017-000000"
 #define ssID @"=1230332843"
 #define UMKey @"590990e6aed17916f0001737"

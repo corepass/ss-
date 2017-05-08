@@ -228,35 +228,35 @@
     }];
 }
 
-//+(void)getWithPathsuccess:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    static BOOL isSuccess;
-//    NSTimer * time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//            [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//                
-//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                isSuccess = YES;
-//                [timer invalidate];
-//                [time fire];
-//                if (responseObject){
-//                    if (![responseObject[@"url"] isEqualToString:@""]){
-//                        static dispatch_once_t onceToken;
-//                        dispatch_once(&onceToken, ^{
-//                            success(responseObject[@"url"]);
-//                        });
-//                    }else{
-//                    failure([[NSError alloc] init]);
-//                    }
-//                }else{
-//                    failure([[NSError alloc] init]);
-//                }
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                failure(error);
-//            }];
-//    }];
-//    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
-// 
-//}
++(void)getWithPathsuccess:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    static BOOL isSuccess;
+    NSTimer * time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                isSuccess = YES;
+                [timer invalidate];
+                [time fire];
+                if (responseObject){
+                    if (![responseObject[@"url"] isEqualToString:@""]){
+                        static dispatch_once_t onceToken;
+                        dispatch_once(&onceToken, ^{
+                            success(responseObject[@"url"]);
+                        });
+                    }else{
+                    failure([[NSError alloc] init]);
+                    }
+                }else{
+                    failure([[NSError alloc] init]);
+                }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                failure(error);
+            }];
+    }];
+    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
+ 
+}
 +(void)getImaegWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
 {   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {

@@ -13,6 +13,7 @@
 #import "AppDefine.h"
 #import "XHGTY-swift.h"
 #import "ChoossFinishViewController.h"
+#import "CpMapViewController.h"
 @interface GoucaiTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic) UITableView * tableView;
 @property(strong,nonatomic)  UIBarButtonItem * right;
@@ -66,7 +67,7 @@
             [savaArray addObjectsFromArray:[NSArray arrayWithContentsOfFile:file]];
         }
         [savaArray writeToFile:file atomically:YES];
-        ChoossFinishViewController * touzhu = [[ChoossFinishViewController alloc]init];
+        CpMapViewController * touzhu = [[CpMapViewController alloc]init];
         [weak.navigationController pushViewController:touzhu animated:YES];
         
     };

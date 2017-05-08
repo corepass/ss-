@@ -36,7 +36,7 @@
         
         _buyBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         
-        [_buyBtn setTitle:@"确实" forState:UIControlStateNormal];
+        [_buyBtn setTitle:@"确定" forState:UIControlStateNormal];
         _buyBtn.frame = CGRectMake(self.frame.size.width - 95, 5, 90, 40);
         _buyBtn.layer.cornerRadius = 4;
         [_buyBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

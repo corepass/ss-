@@ -192,6 +192,8 @@
 		6D5536041EBC56E900B0E8E8 /* FXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535FF1EBC56E900B0E8E8 /* FXModel.m */; };
 		6D5536051EBC56E900B0E8E8 /* LMRStyle+Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536011EBC56E900B0E8E8 /* LMRStyle+Demo.m */; };
 		6D5536061EBC56E900B0E8E8 /* StylesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536031EBC56E900B0E8E8 /* StylesViewController.m */; };
+		6D55360B1EC00D6F00B0E8E8 /* LHDQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536091EC00D6F00B0E8E8 /* LHDQViewController.m */; };
+		6D55360C1EC00D6F00B0E8E8 /* LHDQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D55360A1EC00D6F00B0E8E8 /* LHDQViewController.xib */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9C82901E95D9430043FAD8 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9C827A1E95D9430043FAD8 /* MyProfileViewController.m */; };
@@ -217,7 +219,6 @@
 		6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */; };
 		6DA81D2F1EADDFA60031F862 /* MNXHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */; };
 		6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */; };
-		6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */; };
 		6DE9732A1E8DEF04003D5DBD /* GoucaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */; };
 		6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9732C1E8DF049003D5DBD /* CollectionViewCell.m */; };
 		6DE9732F1E8DF049003D5DBD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9732D1E8DF049003D5DBD /* CollectionViewCell.xib */; };
@@ -243,8 +244,6 @@
 		C749C9411E72BB9B00241CFD /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8DF1E72BB9A00241CFD /* ArticleViewController.m */; };
 		C749C9421E72BB9B00241CFD /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C749C8E01E72BB9A00241CFD /* ArticleViewController.xib */; };
 		C749C9431E72BB9B00241CFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8E21E72BB9A00241CFD /* HomeViewController.m */; };
-		C749C9441E72BB9B00241CFD /* LHDQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8E41E72BB9A00241CFD /* LHDQViewController.m */; };
-		C749C9451E72BB9B00241CFD /* LHDQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C749C8E51E72BB9A00241CFD /* LHDQViewController.xib */; };
 		C749C9461E72BB9B00241CFD /* LotteryDistrInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8E71E72BB9A00241CFD /* LotteryDistrInfoViewController.m */; };
 		C749C9471E72BB9B00241CFD /* LotteryDistrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8E91E72BB9A00241CFD /* LotteryDistrViewController.m */; };
 		C749C9481E72BB9B00241CFD /* LotteryDistrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C749C8EA1E72BB9A00241CFD /* LotteryDistrViewController.xib */; };
@@ -706,6 +705,9 @@
 		6D5536011EBC56E900B0E8E8 /* LMRStyle+Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LMRStyle+Demo.m"; sourceTree = "<group>"; };
 		6D5536021EBC56E900B0E8E8 /* StylesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylesViewController.h; sourceTree = "<group>"; };
 		6D5536031EBC56E900B0E8E8 /* StylesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylesViewController.m; sourceTree = "<group>"; };
+		6D5536081EC00D6F00B0E8E8 /* LHDQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDQViewController.h; sourceTree = "<group>"; };
+		6D5536091EC00D6F00B0E8E8 /* LHDQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDQViewController.m; sourceTree = "<group>"; };
+		6D55360A1EC00D6F00B0E8E8 /* LHDQViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHDQViewController.xib; sourceTree = "<group>"; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9C82791E95D9430043FAD8 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
@@ -745,7 +747,6 @@
 		6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewController.swift; sourceTree = "<group>"; };
 		6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewCell.swift; sourceTree = "<group>"; };
 		6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNXHTableViewCell.xib; sourceTree = "<group>"; };
-		6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		6DE973281E8DEF04003D5DBD /* GoucaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoucaiViewController.h; sourceTree = "<group>"; };
 		6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoucaiViewController.m; sourceTree = "<group>"; };
 		6DE9732B1E8DF049003D5DBD /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -785,9 +786,6 @@
 		C749C8E01E72BB9A00241CFD /* ArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 		C749C8E11E72BB9A00241CFD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C749C8E21E72BB9A00241CFD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		C749C8E31E72BB9A00241CFD /* LHDQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDQViewController.h; sourceTree = "<group>"; };
-		C749C8E41E72BB9A00241CFD /* LHDQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDQViewController.m; sourceTree = "<group>"; };
-		C749C8E51E72BB9A00241CFD /* LHDQViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHDQViewController.xib; sourceTree = "<group>"; };
 		C749C8E61E72BB9A00241CFD /* LotteryDistrInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDistrInfoViewController.h; sourceTree = "<group>"; };
 		C749C8E71E72BB9A00241CFD /* LotteryDistrInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDistrInfoViewController.m; sourceTree = "<group>"; };
 		C749C8E81E72BB9A00241CFD /* LotteryDistrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDistrViewController.h; sourceTree = "<group>"; };
@@ -1065,7 +1063,6 @@
 				C78D25FE1DDB032200EE34E0 /* libstdc++.tbd in Frameworks */,
 				C78D25FA1DDB030D00EE34E0 /* libicucore.tbd in Frameworks */,
 				C7ABDC191E01369A0040873A /* jcore-ios-1.0.0.a in Frameworks */,
-				6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */,
 				6D082F151EA5CA380076F6D3 /* AMapLocationKit.framework in Frameworks */,
 				6D0E7D0B1E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				6D082ED11EA5C4AD0076F6D3 /* AMapFoundationKit.framework in Frameworks */,
@@ -1229,7 +1226,7 @@
 			path = CPViewController;
 			sourceTree = "<group>";
 		};
-		6D09DF6B1E9B1FFA00D9B51F /* TestController */ = {
+		6D09DF6B1E9B1FFA00D9B51F /* YQController */ = {
 			isa = PBXGroup;
 			children = (
 				6D09DF6C1E9B1FFA00D9B51F /* Controller */,
@@ -1237,6 +1234,7 @@
 				6D09DF7B1E9B1FFA00D9B51F /* Model */,
 				6D09DF841E9B1FFA00D9B51F /* View */,
 			);
+			name = YQController;
 			path = TestController;
 			sourceTree = "<group>";
 		};
@@ -1552,7 +1550,7 @@
 			path = ../EasyPeasy;
 			sourceTree = "<group>";
 		};
-		6D0E7D7C1E8CCB5D0029E809 /* Login+Regist */ = {
+		6D0E7D7C1E8CCB5D0029E809 /* LoginAndRegist */ = {
 			isa = PBXGroup;
 			children = (
 				6D0E7D831E8CCB7D0029E809 /* NSString+isEmpty.h */,
@@ -1572,6 +1570,7 @@
 				6D0E7D7F1E8CCB6E0029E809 /* RegisterViewController.h */,
 				6D0E7D801E8CCB6E0029E809 /* RegisterViewController.m */,
 			);
+			name = LoginAndRegist;
 			path = "Login+Regist";
 			sourceTree = "<group>";
 		};
@@ -1640,6 +1639,13 @@
 			path = ListView;
 			sourceTree = "<group>";
 		};
+		6D5536071EC00D6F00B0E8E8 /* LHDQCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LHDQCell;
+			sourceTree = "<group>";
+		};
 		6D9C82731E95D9430043FAD8 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1667,13 +1673,6 @@
 				6D9C82831E95D9430043FAD8 /* MyProfileTableViewCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		6D9C829A1E95DA5B0043FAD8 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		6DA81CF61EAA21E80031F862 /* Choss */ = {
@@ -1750,7 +1749,6 @@
 				6D09DFF21E9B23BD00D9B51F /* LPLevelView */,
 				6D09DFCD1E9B205300D9B51F /* FMDB */,
 				6D09DFBF1E9B203300D9B51F /* Help */,
-				6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */,
 				6D0E7D531E8CC92B0029E809 /* EasyPeasy */,
 				6D0E7D081E8A6E2B0029E809 /* UMessage_Sdk_1.5.0a */,
 				6D0E7CDF1E8A48340029E809 /* Masonry */,
@@ -1840,9 +1838,6 @@
 				C749C8E01E72BB9A00241CFD /* ArticleViewController.xib */,
 				C749C8E11E72BB9A00241CFD /* HomeViewController.h */,
 				C749C8E21E72BB9A00241CFD /* HomeViewController.m */,
-				C749C8E31E72BB9A00241CFD /* LHDQViewController.h */,
-				C749C8E41E72BB9A00241CFD /* LHDQViewController.m */,
-				C749C8E51E72BB9A00241CFD /* LHDQViewController.xib */,
 				C749C8E61E72BB9A00241CFD /* LotteryDistrInfoViewController.h */,
 				C749C8E71E72BB9A00241CFD /* LotteryDistrInfoViewController.m */,
 				C749C8E81E72BB9A00241CFD /* LotteryDistrViewController.h */,
@@ -1870,6 +1865,10 @@
 				6D082ECD1EA5BAD80076F6D3 /* FXZSTViewController.m */,
 				6D082F271EA7449B0076F6D3 /* BallTableViewController.h */,
 				6D082F281EA7449B0076F6D3 /* BallTableViewController.m */,
+				6D5536071EC00D6F00B0E8E8 /* LHDQCell */,
+				6D5536081EC00D6F00B0E8E8 /* LHDQViewController.h */,
+				6D5536091EC00D6F00B0E8E8 /* LHDQViewController.m */,
+				6D55360A1EC00D6F00B0E8E8 /* LHDQViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2168,13 +2167,12 @@
 				6DE973251E8DEDE2003D5DBD /* Tool */,
 				6D09E0BD1E9F45F100D9B51F /* Seeting */,
 				6D09E0861E9F271E00D9B51F /* Forum */,
-				6D09DF6B1E9B1FFA00D9B51F /* TestController */,
-				6D9C829A1E95DA5B0043FAD8 /* Shared */,
+				6D09DF6B1E9B1FFA00D9B51F /* YQController */,
 				6D9C82731E95D9430043FAD8 /* MyProfile */,
 				C749C8DA1E72BB9A00241CFD /* Home */,
 				6DE973241E8DEDC4003D5DBD /* My+New */,
 				C7ABDC2B1E0137440040873A /* XHGTY.entitlements */,
-				6D0E7D7C1E8CCB5D0029E809 /* Login+Regist */,
+				6D0E7D7C1E8CCB5D0029E809 /* LoginAndRegist */,
 				6DE973261E8DEE50003D5DBD /* GouCai */,
 				6D082EBE1EA5B39C0076F6D3 /* ZX */,
 				6D082EBF1EA5B3EF0076F6D3 /* PL */,
@@ -2432,6 +2430,7 @@
 				6D09DFA81E9B1FFA00D9B51F /* main.sqlite in Resources */,
 				C749C9731E72BB9B00241CFD /* saima.jpg in Resources */,
 				6D09DFBC1E9B1FFA00D9B51F /* FXShiChenViewCell.xib in Resources */,
+				6D55360C1EC00D6F00B0E8E8 /* LHDQViewController.xib in Resources */,
 				C749C96A1E72BB9B00241CFD /* LotteryDistrViewCell.xib in Resources */,
 				6D09E0A01E9F271E00D9B51F /* ForumInfoViewController.xib in Resources */,
 				C749C94A1E72BB9B00241CFD /* RecordInfoViewController.xib in Resources */,
@@ -2456,7 +2455,6 @@
 				C749C9621E72BB9B00241CFD /* FXHomeMenuCycleView.xib in Resources */,
 				C749C9541E72BB9B00241CFD /* VideoDrawViewController.xib in Resources */,
 				6DE973501E8E49BA003D5DBD /* TouzhuTableViewCell.xib in Resources */,
-				C749C9451E72BB9B00241CFD /* LHDQViewController.xib in Resources */,
 				6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */,
 				C790DA1E1E1B496700E1A7E0 /* SVProgressHUD.bundle in Resources */,
 				6D082F211EA611DA0076F6D3 /* AMap.bundle in Resources */,
@@ -2507,7 +2505,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C749C9441E72BB9B00241CFD /* LHDQViewController.m in Sources */,
 				6DA81D0C1EAA22C60031F862 /* UIColor+Conversional.m in Sources */,
 				6DA81D171EAA244B0031F862 /* FootView.m in Sources */,
 				6DA81D091EAA22B50031F862 /* UIView+Frame.m in Sources */,
@@ -2607,6 +2604,7 @@
 				6D09DFCB1E9B203900D9B51F /* TitleButton.m in Sources */,
 				C790DA3F1E1B7C1800E1A7E0 /* FXPeiLvDetail.m in Sources */,
 				6D09DFA11E9B1FFA00D9B51F /* FXNLViewController.m in Sources */,
+				6D55360B1EC00D6F00B0E8E8 /* LHDQViewController.m in Sources */,
 				C749C95C1E72BB9B00241CFD /* LHDQMenu.m in Sources */,
 				6D09DFAB1E9B1FFA00D9B51F /* FXWeather.m in Sources */,
 				6D082F0F1EA5C6010076F6D3 /* UIWebView+AFNetworking.m in Sources */,

@@ -25,13 +25,13 @@
     [super viewWillAppear:animated];
     self.webView.navigationDelegate = self;
     self.lable.hidden = YES;
-    self.footview.hidden = YES;
+
 
     
 }
--(void)viewDidLayoutSubviews{
-    self.webView.frame = CGRectMake(0, 20, self.view.width, self.view.height -20);
-}
+//-(void)viewDidLayoutSubviews{
+//    self.webView.frame = CGRectMake(0, 20, self.view.width, self.view.height -20);
+//}
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
     [SVProgressHUD show];

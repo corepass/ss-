@@ -20,7 +20,6 @@
 #import "SVProgressHUD.h"
 
 
-// 引入JPush功能所需头文件
 #import "AppModel.h"
 
 #import "WKWebViewController.h"
@@ -110,7 +109,6 @@ static NSString *channel = @"App Store";
 }
 -(void)savadata{
 
-    
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
     NSString * file = [NSString stringWithFormat:@"%@/userAccount.shouchang",path];

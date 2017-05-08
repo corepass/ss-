@@ -217,7 +217,6 @@
 		6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */; };
 		6DA81D2F1EADDFA60031F862 /* MNXHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */; };
 		6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */; };
-		6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */; };
 		6DE9732A1E8DEF04003D5DBD /* GoucaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */; };
 		6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9732C1E8DF049003D5DBD /* CollectionViewCell.m */; };
 		6DE9732F1E8DF049003D5DBD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9732D1E8DF049003D5DBD /* CollectionViewCell.xib */; };
@@ -745,7 +744,6 @@
 		6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewController.swift; sourceTree = "<group>"; };
 		6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewCell.swift; sourceTree = "<group>"; };
 		6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNXHTableViewCell.xib; sourceTree = "<group>"; };
-		6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		6DE973281E8DEF04003D5DBD /* GoucaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoucaiViewController.h; sourceTree = "<group>"; };
 		6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoucaiViewController.m; sourceTree = "<group>"; };
 		6DE9732B1E8DF049003D5DBD /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -1065,7 +1063,6 @@
 				C78D25FE1DDB032200EE34E0 /* libstdc++.tbd in Frameworks */,
 				C78D25FA1DDB030D00EE34E0 /* libicucore.tbd in Frameworks */,
 				C7ABDC191E01369A0040873A /* jcore-ios-1.0.0.a in Frameworks */,
-				6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */,
 				6D082F151EA5CA380076F6D3 /* AMapLocationKit.framework in Frameworks */,
 				6D0E7D0B1E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				6D082ED11EA5C4AD0076F6D3 /* AMapFoundationKit.framework in Frameworks */,
@@ -1750,7 +1747,6 @@
 				6D09DFF21E9B23BD00D9B51F /* LPLevelView */,
 				6D09DFCD1E9B205300D9B51F /* FMDB */,
 				6D09DFBF1E9B203300D9B51F /* Help */,
-				6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */,
 				6D0E7D531E8CC92B0029E809 /* EasyPeasy */,
 				6D0E7D081E8A6E2B0029E809 /* UMessage_Sdk_1.5.0a */,
 				6D0E7CDF1E8A48340029E809 /* Masonry */,
@@ -2365,7 +2361,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = PL6DPA274Z;
+						DevelopmentTeam = 63P8KTRZ94;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2889,10 +2885,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Qi Li (PL6DPA274Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Qi Li (PL6DPA274Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PL6DPA274Z;
+				DEVELOPMENT_TEAM = 63P8KTRZ94;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2917,10 +2913,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.shishicai.ten;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.shishicai.jiu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0040408f-ba4d-409d-acea-67cc3776bb58";
-				PROVISIONING_PROFILE_SPECIFIER = ShiShiCaiSDistribution;
+				PROVISIONING_PROFILE = "f7fd3795-cb1b-4612-ad70-7abbd51199e9";
+				PROVISIONING_PROFILE_SPECIFIER = ShiShiCaiDistribution;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2934,10 +2930,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Qi Li (PL6DPA274Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Qi Li (PL6DPA274Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PL6DPA274Z;
+				DEVELOPMENT_TEAM = 63P8KTRZ94;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2962,10 +2958,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shendu.shishicai.ten;
+				PRODUCT_BUNDLE_IDENTIFIER = shendu.shishicai.jiu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0040408f-ba4d-409d-acea-67cc3776bb58";
-				PROVISIONING_PROFILE_SPECIFIER = ShiShiCaiSDistribution;
+				PROVISIONING_PROFILE = "f7fd3795-cb1b-4612-ad70-7abbd51199e9";
+				PROVISIONING_PROFILE_SPECIFIER = ShiShiCaiDistribution;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

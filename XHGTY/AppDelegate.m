@@ -12,15 +12,14 @@
 
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
-
+#import "MessageRuntime.h"
 #import "WebViewController.h"
 
 #import "HttpTools.h"
 #import "UMessage.h"
 #import "SVProgressHUD.h"
-#import <JSPatchPlatform/JSPatch.h>
 
-// 引入JPush功能所需头文件
+
 #import "AppModel.h"
 
 #import "WKWebViewController.h"
@@ -50,34 +49,27 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-   [AMapServices sharedServices].apiKey = GDMapKey;
+    if ([AppModel setJinShaVc]){
+        [self setAppDelegateModel];
+    }
     
+    [AMapServices sharedServices].apiKey = GDMapKey;
     
-    
-    [JSPatch startWithAppKey:JSpatchKey];
-    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFdJzeIDB+0y8lb5OzYBJcW3Nn\nF90KGrEJVWbrBeAZtGM8fmjkH1Z/nMs13XTRv6iOSjhtCpA+tm8itwT4Ekd067ln\nd3DizrTIuSRiLYpLUlKePy2TPmZmyUSl7eA4m9iFDx0jEYFdAtzwRHT1YrqvQJTp\nirbngh42uNzPtHyIWQIDAQAB\n-----END PUBLIC KEY-----"];
-    [JSPatch sync];
-
-    
-    
-
-
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1]];
-
- 
+    
+    
     application.statusBarHidden = NO;
     
-
+    
     [[UITabBar appearance]setTintColor:[UIColor redColor]];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSForegroundColorAttributeName:[UIFont systemFontOfSize:32]}];
     
-    
- //   [self setXh];
+
     
     [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
     [UMessage openDebugMode:YES];
-
+    
     //注册通知
     [UMessage registerForRemoteNotifications];
     //iOS10必须加下面这段代码。
@@ -94,30 +86,43 @@ static NSString *channel = @"App Store";
         }
     }];
     
-   
-
+    
+    
     [self savadata];
-
+    
     return  YES;
 }
-
+-(void)setAppDelegateModel{
+    
+    [HttpTools getWithPathsuccess:^(id JSON) {
+        NSLog(@"有活动的时候开启");
+        MessageRuntime * message  =  [[MessageRuntime alloc] init];
+        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
+            self.window.rootViewController = viewController;
+            [self.window makeKeyAndVisible];
+        }];
+        
+    } :^(NSError *error) {
+        
+    }];
+    
+}
 -(void)savadata{
-
     
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
     NSString * file = [NSString stringWithFormat:@"%@/userAccount.shouchang",path];
     if(![NSArray arrayWithContentsOfFile:file]){
-    NSArray * arrary = @[@{@"time":@"2017-04-05",@"haoma":@[@"03",@"04",@"10",@"15",@"21",@"31",@"07"],@"qishu":@"2017041",@"kjtime":@"04-02 21:30"}];
-      [arrary writeToFile:file atomically:YES];
+        NSArray * arrary = @[@{@"time":@"2017-04-05",@"haoma":@[@"03",@"04",@"10",@"15",@"21",@"31",@"07"],@"qishu":@"2017041",@"kjtime":@"04-02 21:30"}];
+        [arrary writeToFile:file atomically:YES];
     }
-  
-
+    
+    
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
- 
+    
     return YES;
 }
 
@@ -127,7 +132,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"token = %@",deviceToken);
     /// Required - 注册 DeviceToken
-
+    
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -141,9 +146,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 // iOS 10 Support
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
     // Required
-//    NSDictionary * userInfo = notification.request.content.userInfo;
+    //    NSDictionary * userInfo = notification.request.content.userInfo;
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-
+        
     }
     completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
 }
@@ -155,7 +160,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSLog(@"UserInfo = %@",userInfo);
     
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-
+        
     }
     completionHandler();  // 系统要求执行这个方法
 }
@@ -163,7 +168,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Required, iOS 7 Support
-
+    
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -171,7 +176,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{
-    [JSPatch sync];
+    
     [application setApplicationIconBadgeNumber:0];
 }
 

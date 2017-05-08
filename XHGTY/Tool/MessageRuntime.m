@@ -14,7 +14,9 @@
     BOOL isNeed = NO;
 //    NSArray * array = @[@"MyredpacketsViewController",@"IndianReecordPageView",@"WinningrecordViewController",@"RechargeViewController",@"ZeroSnatchDetailViewController"];
  
-    
+    if (![userInfo isKindOfClass:[NSDictionary class] ]){
+        return;
+    }
     NSDictionary * params = [NSDictionary dictionaryWithDictionary:userInfo];
     //类名
    

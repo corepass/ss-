@@ -13,6 +13,7 @@
 #import "AppDefine.h"
 #import "XHGTY-swift.h"
 #import "ChoossFinishViewController.h"
+#import "CpMapViewController.h"
 @interface GoucaiTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic) UITableView * tableView;
 @property(strong,nonatomic)  UIBarButtonItem * right;
@@ -34,11 +35,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.backgroundColor = kGlobalColor;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 0)];
-  
+    
     _xiazhu = [[XiaZhuView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
     _xiazhu.backgroundColor = [UIColor whiteColor];
     NSInteger count = _dataArray.count;
-
+    
     _xiazhu.label.text = [NSString stringWithFormat:@"%ld注",(long)count];
     __weak __typeof (self) weak = self;
     _xiazhu.xiazhuBtnClickBlcok = ^(){
@@ -46,7 +47,7 @@
         NSMutableArray * savaArray = [[NSMutableArray alloc] init];
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
         NSString * file = [NSString stringWithFormat:@"%@/caipiao.data",path];
-      
+        
         for (GouCaiModel * model in weak.dataArray) {
             NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
             dic[@"name"] = @"PC蛋蛋";
@@ -55,18 +56,18 @@
             dic[@"status"] = @"待开奖";
             NSString * str = @"";
             for ( GouCaiModel * model in weak.dataArray) {
-               str = [str stringByAppendingString:[NSString stringWithFormat:@"%@|", model.type]];
+                str = [str stringByAppendingString:[NSString stringWithFormat:@"%@|", model.type]];
             }
             str = [str substringWithRange:NSMakeRange(0, str.length -1)];
             dic[@"number"] = str;
             [savaArray addObject:dic];
         }
-
+        
         if([NSArray arrayWithContentsOfFile:file]){
             [savaArray addObjectsFromArray:[NSArray arrayWithContentsOfFile:file]];
         }
         [savaArray writeToFile:file atomically:YES];
-        ChoossFinishViewController * touzhu = [[ChoossFinishViewController alloc]init];
+        CpMapViewController * touzhu = [[CpMapViewController alloc]init];
         [weak.navigationController pushViewController:touzhu animated:YES];
         
     };
@@ -77,7 +78,7 @@
         _xiazhu.xiazhuBtn.enabled = NO;
     }
     [self.view addSubview:_xiazhu];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,12 +89,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return _dataArray.count + 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -107,18 +108,18 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"GoucaiTableViewCell" owner:self options:nil] firstObject];
     }
     if (indexPath.row == 0){
-    cell.type.text = @"号码";
-    cell.beilv.text = @"赔率";
-    cell.price.text = @"金额";
-    cell.type.textColor = [UIColor grayColor];
-    cell.beilv.textColor = [UIColor grayColor];
-    cell.price.textColor = [UIColor grayColor];
+        cell.type.text = @"号码";
+        cell.beilv.text = @"赔率";
+        cell.price.text = @"金额";
+        cell.type.textColor = [UIColor grayColor];
+        cell.beilv.textColor = [UIColor grayColor];
+        cell.price.textColor = [UIColor grayColor];
     }else {
-    GouCaiModel * model = _dataArray[indexPath.row - 1];
-    cell.type.text = model.type;
-    cell.beilv.text = model.peilv;
-    cell.price.text = self.number;
-    cell.beilv.textColor = [UIColor grayColor];
+        GouCaiModel * model = _dataArray[indexPath.row - 1];
+        cell.type.text = model.type;
+        cell.beilv.text = model.peilv;
+        cell.price.text = self.number;
+        cell.beilv.textColor = [UIColor grayColor];
     }
     if (indexPath.row%2==0){
         cell.backgroundColor = [[UIColor alloc] initWithRed:245.0/255.0 green:225.0/255.0 blue:210.0/255.0 alpha:1];
@@ -144,17 +145,17 @@
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionBottom];
         }
-       
+        
     }else{
-    selected = NO;
-      
-    for (int i = 1; i <= self.dataArray.count; i++) {
+        selected = NO;
+        
+        for (int i = 1; i <= self.dataArray.count; i++) {
             
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i-1 inSection:0];
             [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
             //            cell.selected = NO;
         }
-       
+        
     }
 }
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -171,48 +172,48 @@
         return ;
     }else{
         [_xiazhu.xiazhuBtn setBackgroundColor:[UIColor lightGrayColor]];
-         _xiazhu.xiazhuBtn.enabled = NO;
+        _xiazhu.xiazhuBtn.enabled = NO;
     }
-
+    
 }
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return @"删除";
 }
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

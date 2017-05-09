@@ -25,7 +25,7 @@
 #import "UIColor+Conversional.h"
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
-#define ssoptime @"05-04-2017-000000"
+#define ssoptime @"15-05-2017-000000"
 #define ssID @"=1230792635"
 #define UMKey @"59019314734be46f0c001296"
 #define JSpatchKey @"ec9358477baebc98"

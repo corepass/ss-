@@ -236,7 +236,6 @@
 		6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */; };
 		6DA81D2F1EADDFA60031F862 /* MNXHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */; };
 		6DA81D301EADDFA60031F862 /* MNXHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */; };
-		6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */; };
 		6DE9732A1E8DEF04003D5DBD /* GoucaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */; };
 		6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9732C1E8DF049003D5DBD /* CollectionViewCell.m */; };
 		6DE9732F1E8DF049003D5DBD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9732D1E8DF049003D5DBD /* CollectionViewCell.xib */; };
@@ -815,7 +814,6 @@
 		6DA81D2B1EADDF740031F862 /* MNXHTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewController.swift; sourceTree = "<group>"; };
 		6DA81D2D1EADDFA60031F862 /* MNXHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNXHTableViewCell.swift; sourceTree = "<group>"; };
 		6DA81D2E1EADDFA60031F862 /* MNXHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNXHTableViewCell.xib; sourceTree = "<group>"; };
-		6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		6DE973281E8DEF04003D5DBD /* GoucaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoucaiViewController.h; sourceTree = "<group>"; };
 		6DE973291E8DEF04003D5DBD /* GoucaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoucaiViewController.m; sourceTree = "<group>"; };
 		6DE9732B1E8DF049003D5DBD /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -1163,7 +1161,6 @@
 				C78D25E71DDAFF5400EE34E0 /* ShareSDK.framework in Frameworks */,
 				C78D25E91DDAFF5400EE34E0 /* ShareSDKConfigFile.framework in Frameworks */,
 				C78D25F11DDAFF5400EE34E0 /* libWeChatSDK.a in Frameworks */,
-				6DB4FEDA1E9771FA00E694E0 /* JSPatchPlatform.framework in Frameworks */,
 				6D082F151EA5CA380076F6D3 /* AMapLocationKit.framework in Frameworks */,
 				6D0E7D0B1E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				6D082ED11EA5C4AD0076F6D3 /* AMapFoundationKit.framework in Frameworks */,
@@ -1929,7 +1926,6 @@
 				6D09DFF21E9B23BD00D9B51F /* LPLevelView */,
 				6D09DFCD1E9B205300D9B51F /* FMDB */,
 				6D09DFBF1E9B203300D9B51F /* Help */,
-				6DB4FED91E9771FA00E694E0 /* JSPatchPlatform.framework */,
 				C78D25CC1DDAFF5400EE34E0 /* ShareSDK */,
 				6D0E7D531E8CC92B0029E809 /* EasyPeasy */,
 				6D0E7D141E8B8A1A0029E809 /* XHLaunchAd */,
@@ -3187,6 +3183,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XN282F92LB;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3232,6 +3229,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XN282F92LB;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

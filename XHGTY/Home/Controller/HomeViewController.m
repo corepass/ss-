@@ -209,12 +209,15 @@ static NSString *const gpcID = @"gpcID";
 }
 -(void)getgpcData{
    [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
-       if (JSON != nil){
+       if (JSON != nil ){
            _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
+           if(_gpcArray.count > 3){
+               [_gpcArray removeObjectsInRange:NSMakeRange(3, _gpcArray.count - 3)];
+           }
+           
            dispatch_async(dispatch_get_main_queue(), ^{
                  [self.collectionView reloadData];
            });
-         
        }
        [self.collectionView.mj_header endRefreshing];
    } :^(NSError *error) {
@@ -475,8 +478,6 @@ static NSString *const gpcID = @"gpcID";
     }
     
 }
-
-
 
 
 

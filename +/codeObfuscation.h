@@ -1,17 +1,17 @@
 #ifndef Demo_codeObfuscation_h
 #define Demo_codeObfuscation_h
-//confuse string at Mon May  8 14:27:43 CST 2017
-#define addActionView ANgIiKneiDuYtOOO
-#define pinJieStr WiCKlWhlxYtBQoPX
-#define setJinShaVc KTwkvgLgfckITHdo
-#define savadata FVvXrbDqrOXnMwhI
-#define setStaticGuidePage YLyMPNkXlTSCDZAj
-#define addsomething FOvhPfAXoxboKqNB
-#define setBannar ZaKPZHwiOTLgtYhI
-#define loadNewItems BlxoNeqmuewTrznV
-#define shiwan FAwnHnkViWcMldzf
-#define getData gzMBgUcqNafJabeC
-#define getqishudata NivOlRMMdSdhigUE
-#define getdata GBlCcUqnzNrCIQlS
-#define setAppDelegateModel qKDhaaWHeUJrioSw
+//confuse string at Tue May  9 10:52:37 CST 2017
+#define addActionView tsQWMtvxCDzYgjBs
+#define pinJieStr pjwaCNEGLpbHHTLB
+#define setJinShaVc ZkWnoMzPcFwolxyq
+#define savadata bXNeRIneFVsQxPUs
+#define setStaticGuidePage BREekIutYjaFgdME
+#define addsomething CDhbGCxkJEEBEbbL
+#define setBannar btcacMwjeWlGkGAb
+#define loadNewItems qSFBCIwzMfphWHRA
+#define shiwan NUcaldvDBiyFJpmY
+#define getData hFJKwaXECZQfzGOn
+#define getqishudata IjQSPadXLPmEVqPC
+#define getdata eEqjeOLgqHolNjtF
+#define setAppDelegateModel TtuRZAYVNlVOyCdw
 #endif

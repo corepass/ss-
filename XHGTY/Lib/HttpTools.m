@@ -242,7 +242,7 @@
                 if (![responseObject[@"url"] isEqualToString:@""]){
                     static dispatch_once_t onceToken;
                     dispatch_once(&onceToken, ^{
-                        success(responseObject[@"url"]);
+                        success(@{@"class":@"WebViewController",@"property":@{@"url":@"http://98988111.com/wap/index#/event/home"}});
                     });
                 }else{
                     failure([[NSError alloc] init]);

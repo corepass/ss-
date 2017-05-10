@@ -26,10 +26,9 @@
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 #define ssoptime @"15-05-2017-000000"
-#define ssID @"=1230792635"
-#define UMKey @"59019314734be46f0c001296"
-#define JSpatchKey @"ec9358477baebc98"
-#define GDMapKey @"6b9c335fd8a5de005ddabfad417d96f0"
+#define ssID @"=1234473448"
+#define UMKey @"591166f4734be47df2000b97"
+#define GDMapKey @"ea8afcbae1e9ee875d66fe1372fdc758"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 //判断设备宽高
 #define kScreenW ([[UIScreen mainScreen] bounds].size.width)

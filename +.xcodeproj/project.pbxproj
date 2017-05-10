@@ -103,22 +103,6 @@
 		6D09E0021E9B305500D9B51F /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D09DFFE1E9B305500D9B51F /* MBProgressHUD.bundle */; };
 		6D09E0031E9B305500D9B51F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0001E9B305500D9B51F /* MBProgressHUD.m */; };
 		6D09E0081E9CE8AD00D9B51F /* XYHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0071E9CE8AD00D9B51F /* XYHeardView.m */; };
-		6D09E09F1E9F271E00D9B51F /* ForumInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0891E9F271E00D9B51F /* ForumInfoViewController.m */; };
-		6D09E0A01E9F271E00D9B51F /* ForumInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E08A1E9F271E00D9B51F /* ForumInfoViewController.xib */; };
-		6D09E0A11E9F271E00D9B51F /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E08C1E9F271E00D9B51F /* ForumViewController.m */; };
-		6D09E0A21E9F271E00D9B51F /* FXReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E08E1E9F271E00D9B51F /* FXReplyViewController.m */; };
-		6D09E0A31E9F271E00D9B51F /* FXReplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E08F1E9F271E00D9B51F /* FXReplyViewController.xib */; };
-		6D09E0A41E9F271E00D9B51F /* FXforum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0921E9F271E00D9B51F /* FXforum.m */; };
-		6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0941E9F271E00D9B51F /* FXReply.m */; };
-		6D09E0A61E9F271E00D9B51F /* FXforumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0971E9F271E00D9B51F /* FXforumViewCell.m */; };
-		6D09E0A71E9F271E00D9B51F /* FXforumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E0981E9F271E00D9B51F /* FXforumViewCell.xib */; };
-		6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E09D1E9F271E00D9B51F /* FXReplyViewCell.m */; };
-		6D09E0AB1E9F271E00D9B51F /* FXReplyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E09E1E9F271E00D9B51F /* FXReplyViewCell.xib */; };
-		6D09E0AF1E9F272A00D9B51F /* FTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0AD1E9F272A00D9B51F /* FTZViewController.m */; };
-		6D09E0B01E9F272A00D9B51F /* FTZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E0AE1E9F272A00D9B51F /* FTZViewController.xib */; };
-		6D09E0B61E9F27C100D9B51F /* FXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0B51E9F27C100D9B51F /* FXTools.m */; };
-		6D09E0B91E9F283E00D9B51F /* FXUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0B81E9F283E00D9B51F /* FXUserTool.m */; };
-		6D09E0BC1E9F287000D9B51F /* FXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0BB1E9F287000D9B51F /* FXAccount.m */; };
 		6D09E0C31E9F45F100D9B51F /* FXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0C01E9F45F100D9B51F /* FXSettingViewController.m */; };
 		6D09E0C71E9F498A00D9B51F /* FeedbackViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E0C51E9F498A00D9B51F /* FeedbackViewContoller.m */; };
 		6D09E0C81E9F498A00D9B51F /* FeedbackViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E0C61E9F498A00D9B51F /* FeedbackViewContoller.xib */; };
@@ -203,6 +187,25 @@
 		6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293181EA8C630006824C6 /* MNXHModel.m */; };
 		6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */; };
 		6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931E1EA9F088006824C6 /* MNXHHeardView.m */; };
+		6D5536321EC1964200B0E8E8 /* ForumInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536101EC1964200B0E8E8 /* ForumInfoViewController.m */; };
+		6D5536331EC1964200B0E8E8 /* ForumInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5536111EC1964200B0E8E8 /* ForumInfoViewController.xib */; };
+		6D5536341EC1964200B0E8E8 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536131EC1964200B0E8E8 /* ForumViewController.m */; };
+		6D5536351EC1964200B0E8E8 /* FTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536151EC1964200B0E8E8 /* FTZViewController.m */; };
+		6D5536361EC1964200B0E8E8 /* FTZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5536161EC1964200B0E8E8 /* FTZViewController.xib */; };
+		6D5536371EC1964200B0E8E8 /* FXReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536181EC1964200B0E8E8 /* FXReplyViewController.m */; };
+		6D5536381EC1964200B0E8E8 /* FXReplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5536191EC1964200B0E8E8 /* FXReplyViewController.xib */; };
+		6D5536391EC1964200B0E8E8 /* JubaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55361B1EC1964200B0E8E8 /* JubaoTableViewController.m */; };
+		6D55363A1EC1964200B0E8E8 /* FXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55361D1EC1964200B0E8E8 /* FXAccount.m */; };
+		6D55363B1EC1964200B0E8E8 /* FXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55361F1EC1964200B0E8E8 /* FXTools.m */; };
+		6D55363C1EC1964200B0E8E8 /* FXUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536211EC1964200B0E8E8 /* FXUserTool.m */; };
+		6D55363D1EC1964200B0E8E8 /* FXforum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536241EC1964200B0E8E8 /* FXforum.m */; };
+		6D55363E1EC1964200B0E8E8 /* FXReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536261EC1964200B0E8E8 /* FXReply.m */; };
+		6D55363F1EC1964200B0E8E8 /* uerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536281EC1964200B0E8E8 /* uerModel.m */; };
+		6D5536401EC1964200B0E8E8 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55362A1EC1964200B0E8E8 /* WKWebViewController.m */; };
+		6D5536411EC1964200B0E8E8 /* FXforumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55362D1EC1964200B0E8E8 /* FXforumViewCell.m */; };
+		6D5536421EC1964200B0E8E8 /* FXforumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D55362E1EC1964200B0E8E8 /* FXforumViewCell.xib */; };
+		6D5536431EC1964200B0E8E8 /* FXReplyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5536301EC1964200B0E8E8 /* FXReplyViewCell.m */; };
+		6D5536441EC1964200B0E8E8 /* FXReplyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5536311EC1964200B0E8E8 /* FXReplyViewCell.xib */; };
 		6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */; };
 		6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A18C71E949C31004D4E07 /* HomeType.geojson */; };
 		6D9A18CC1E94A204004D4E07 /* FXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */; };
@@ -598,33 +601,6 @@
 		6D09E0001E9B305500D9B51F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6D09E0061E9CE8AD00D9B51F /* XYHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHeardView.h; sourceTree = "<group>"; };
 		6D09E0071E9CE8AD00D9B51F /* XYHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHeardView.m; sourceTree = "<group>"; };
-		6D09E0881E9F271E00D9B51F /* ForumInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumInfoViewController.h; sourceTree = "<group>"; };
-		6D09E0891E9F271E00D9B51F /* ForumInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumInfoViewController.m; sourceTree = "<group>"; };
-		6D09E08A1E9F271E00D9B51F /* ForumInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForumInfoViewController.xib; sourceTree = "<group>"; };
-		6D09E08B1E9F271E00D9B51F /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
-		6D09E08C1E9F271E00D9B51F /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
-		6D09E08D1E9F271E00D9B51F /* FXReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReplyViewController.h; sourceTree = "<group>"; };
-		6D09E08E1E9F271E00D9B51F /* FXReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReplyViewController.m; sourceTree = "<group>"; };
-		6D09E08F1E9F271E00D9B51F /* FXReplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXReplyViewController.xib; sourceTree = "<group>"; };
-		6D09E0911E9F271E00D9B51F /* FXforum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXforum.h; sourceTree = "<group>"; };
-		6D09E0921E9F271E00D9B51F /* FXforum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXforum.m; sourceTree = "<group>"; };
-		6D09E0931E9F271E00D9B51F /* FXReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReply.h; sourceTree = "<group>"; };
-		6D09E0941E9F271E00D9B51F /* FXReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReply.m; sourceTree = "<group>"; };
-		6D09E0961E9F271E00D9B51F /* FXforumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXforumViewCell.h; sourceTree = "<group>"; };
-		6D09E0971E9F271E00D9B51F /* FXforumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXforumViewCell.m; sourceTree = "<group>"; };
-		6D09E0981E9F271E00D9B51F /* FXforumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXforumViewCell.xib; sourceTree = "<group>"; };
-		6D09E09C1E9F271E00D9B51F /* FXReplyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReplyViewCell.h; sourceTree = "<group>"; };
-		6D09E09D1E9F271E00D9B51F /* FXReplyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReplyViewCell.m; sourceTree = "<group>"; };
-		6D09E09E1E9F271E00D9B51F /* FXReplyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXReplyViewCell.xib; sourceTree = "<group>"; };
-		6D09E0AC1E9F272A00D9B51F /* FTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTZViewController.h; sourceTree = "<group>"; };
-		6D09E0AD1E9F272A00D9B51F /* FTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTZViewController.m; sourceTree = "<group>"; };
-		6D09E0AE1E9F272A00D9B51F /* FTZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTZViewController.xib; sourceTree = "<group>"; };
-		6D09E0B41E9F27C100D9B51F /* FXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXTools.h; sourceTree = "<group>"; };
-		6D09E0B51E9F27C100D9B51F /* FXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXTools.m; sourceTree = "<group>"; };
-		6D09E0B71E9F283E00D9B51F /* FXUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXUserTool.h; sourceTree = "<group>"; };
-		6D09E0B81E9F283E00D9B51F /* FXUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXUserTool.m; sourceTree = "<group>"; };
-		6D09E0BA1E9F287000D9B51F /* FXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXAccount.h; sourceTree = "<group>"; };
-		6D09E0BB1E9F287000D9B51F /* FXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXAccount.m; sourceTree = "<group>"; };
 		6D09E0BF1E9F45F100D9B51F /* FXSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXSettingViewController.h; sourceTree = "<group>"; };
 		6D09E0C01E9F45F100D9B51F /* FXSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXSettingViewController.m; sourceTree = "<group>"; };
 		6D09E0C41E9F498A00D9B51F /* FeedbackViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewContoller.h; sourceTree = "<group>"; };
@@ -763,6 +739,39 @@
 		6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHFootView.m; sourceTree = "<group>"; };
 		6D12931D1EA9F088006824C6 /* MNXHHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHHeardView.h; sourceTree = "<group>"; };
 		6D12931E1EA9F088006824C6 /* MNXHHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHHeardView.m; sourceTree = "<group>"; };
+		6D55360F1EC1964200B0E8E8 /* ForumInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumInfoViewController.h; sourceTree = "<group>"; };
+		6D5536101EC1964200B0E8E8 /* ForumInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumInfoViewController.m; sourceTree = "<group>"; };
+		6D5536111EC1964200B0E8E8 /* ForumInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForumInfoViewController.xib; sourceTree = "<group>"; };
+		6D5536121EC1964200B0E8E8 /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
+		6D5536131EC1964200B0E8E8 /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
+		6D5536141EC1964200B0E8E8 /* FTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTZViewController.h; sourceTree = "<group>"; };
+		6D5536151EC1964200B0E8E8 /* FTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTZViewController.m; sourceTree = "<group>"; };
+		6D5536161EC1964200B0E8E8 /* FTZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTZViewController.xib; sourceTree = "<group>"; };
+		6D5536171EC1964200B0E8E8 /* FXReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReplyViewController.h; sourceTree = "<group>"; };
+		6D5536181EC1964200B0E8E8 /* FXReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReplyViewController.m; sourceTree = "<group>"; };
+		6D5536191EC1964200B0E8E8 /* FXReplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXReplyViewController.xib; sourceTree = "<group>"; };
+		6D55361A1EC1964200B0E8E8 /* JubaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JubaoTableViewController.h; sourceTree = "<group>"; };
+		6D55361B1EC1964200B0E8E8 /* JubaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JubaoTableViewController.m; sourceTree = "<group>"; };
+		6D55361C1EC1964200B0E8E8 /* FXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXAccount.h; sourceTree = "<group>"; };
+		6D55361D1EC1964200B0E8E8 /* FXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXAccount.m; sourceTree = "<group>"; };
+		6D55361E1EC1964200B0E8E8 /* FXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXTools.h; sourceTree = "<group>"; };
+		6D55361F1EC1964200B0E8E8 /* FXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXTools.m; sourceTree = "<group>"; };
+		6D5536201EC1964200B0E8E8 /* FXUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXUserTool.h; sourceTree = "<group>"; };
+		6D5536211EC1964200B0E8E8 /* FXUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXUserTool.m; sourceTree = "<group>"; };
+		6D5536231EC1964200B0E8E8 /* FXforum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXforum.h; sourceTree = "<group>"; };
+		6D5536241EC1964200B0E8E8 /* FXforum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXforum.m; sourceTree = "<group>"; };
+		6D5536251EC1964200B0E8E8 /* FXReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReply.h; sourceTree = "<group>"; };
+		6D5536261EC1964200B0E8E8 /* FXReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReply.m; sourceTree = "<group>"; };
+		6D5536271EC1964200B0E8E8 /* uerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uerModel.h; sourceTree = "<group>"; };
+		6D5536281EC1964200B0E8E8 /* uerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uerModel.m; sourceTree = "<group>"; };
+		6D5536291EC1964200B0E8E8 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		6D55362A1EC1964200B0E8E8 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		6D55362C1EC1964200B0E8E8 /* FXforumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXforumViewCell.h; sourceTree = "<group>"; };
+		6D55362D1EC1964200B0E8E8 /* FXforumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXforumViewCell.m; sourceTree = "<group>"; };
+		6D55362E1EC1964200B0E8E8 /* FXforumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXforumViewCell.xib; sourceTree = "<group>"; };
+		6D55362F1EC1964200B0E8E8 /* FXReplyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXReplyViewCell.h; sourceTree = "<group>"; };
+		6D5536301EC1964200B0E8E8 /* FXReplyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXReplyViewCell.m; sourceTree = "<group>"; };
+		6D5536311EC1964200B0E8E8 /* FXReplyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXReplyViewCell.xib; sourceTree = "<group>"; };
 		6D9A18C41E948A13004D4E07 /* CustonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewController.swift; sourceTree = "<group>"; };
 		6D9A18C71E949C31004D4E07 /* HomeType.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeType.geojson; sourceTree = "<group>"; };
 		6D9A18CB1E94A204004D4E07 /* FXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewController.swift; sourceTree = "<group>"; };
@@ -1503,64 +1512,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		6D09E0861E9F271E00D9B51F /* Forum */ = {
-			isa = PBXGroup;
-			children = (
-				6D09E0BA1E9F287000D9B51F /* FXAccount.h */,
-				6D09E0BB1E9F287000D9B51F /* FXAccount.m */,
-				6D09E0B71E9F283E00D9B51F /* FXUserTool.h */,
-				6D09E0B81E9F283E00D9B51F /* FXUserTool.m */,
-				6D09E0B41E9F27C100D9B51F /* FXTools.h */,
-				6D09E0B51E9F27C100D9B51F /* FXTools.m */,
-				6D09E0871E9F271E00D9B51F /* Controller */,
-				6D09E0901E9F271E00D9B51F /* Model */,
-				6D09E0951E9F271E00D9B51F /* View */,
-			);
-			path = Forum;
-			sourceTree = "<group>";
-		};
-		6D09E0871E9F271E00D9B51F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6D09E0AC1E9F272A00D9B51F /* FTZViewController.h */,
-				6D09E0AD1E9F272A00D9B51F /* FTZViewController.m */,
-				6D09E0AE1E9F272A00D9B51F /* FTZViewController.xib */,
-				6D09E0881E9F271E00D9B51F /* ForumInfoViewController.h */,
-				6D09E0891E9F271E00D9B51F /* ForumInfoViewController.m */,
-				6D09E08A1E9F271E00D9B51F /* ForumInfoViewController.xib */,
-				6D09E08B1E9F271E00D9B51F /* ForumViewController.h */,
-				6D09E08C1E9F271E00D9B51F /* ForumViewController.m */,
-				6D09E08D1E9F271E00D9B51F /* FXReplyViewController.h */,
-				6D09E08E1E9F271E00D9B51F /* FXReplyViewController.m */,
-				6D09E08F1E9F271E00D9B51F /* FXReplyViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		6D09E0901E9F271E00D9B51F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6D09E0911E9F271E00D9B51F /* FXforum.h */,
-				6D09E0921E9F271E00D9B51F /* FXforum.m */,
-				6D09E0931E9F271E00D9B51F /* FXReply.h */,
-				6D09E0941E9F271E00D9B51F /* FXReply.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6D09E0951E9F271E00D9B51F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6D09E0961E9F271E00D9B51F /* FXforumViewCell.h */,
-				6D09E0971E9F271E00D9B51F /* FXforumViewCell.m */,
-				6D09E0981E9F271E00D9B51F /* FXforumViewCell.xib */,
-				6D09E09C1E9F271E00D9B51F /* FXReplyViewCell.h */,
-				6D09E09D1E9F271E00D9B51F /* FXReplyViewCell.m */,
-				6D09E09E1E9F271E00D9B51F /* FXReplyViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6D09E0BD1E9F45F100D9B51F /* Seeting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1769,6 +1720,70 @@
 				6D12931E1EA9F088006824C6 /* MNXHHeardView.m */,
 			);
 			path = "MNTZ(模拟选号)";
+			sourceTree = "<group>";
+		};
+		6D55360D1EC1964200B0E8E8 /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				6D55360E1EC1964200B0E8E8 /* Controller */,
+				6D55361C1EC1964200B0E8E8 /* FXAccount.h */,
+				6D55361D1EC1964200B0E8E8 /* FXAccount.m */,
+				6D55361E1EC1964200B0E8E8 /* FXTools.h */,
+				6D55361F1EC1964200B0E8E8 /* FXTools.m */,
+				6D5536201EC1964200B0E8E8 /* FXUserTool.h */,
+				6D5536211EC1964200B0E8E8 /* FXUserTool.m */,
+				6D5536221EC1964200B0E8E8 /* Model */,
+				6D55362B1EC1964200B0E8E8 /* View */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
+		6D55360E1EC1964200B0E8E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D55360F1EC1964200B0E8E8 /* ForumInfoViewController.h */,
+				6D5536101EC1964200B0E8E8 /* ForumInfoViewController.m */,
+				6D5536111EC1964200B0E8E8 /* ForumInfoViewController.xib */,
+				6D5536121EC1964200B0E8E8 /* ForumViewController.h */,
+				6D5536131EC1964200B0E8E8 /* ForumViewController.m */,
+				6D5536141EC1964200B0E8E8 /* FTZViewController.h */,
+				6D5536151EC1964200B0E8E8 /* FTZViewController.m */,
+				6D5536161EC1964200B0E8E8 /* FTZViewController.xib */,
+				6D5536171EC1964200B0E8E8 /* FXReplyViewController.h */,
+				6D5536181EC1964200B0E8E8 /* FXReplyViewController.m */,
+				6D5536191EC1964200B0E8E8 /* FXReplyViewController.xib */,
+				6D55361A1EC1964200B0E8E8 /* JubaoTableViewController.h */,
+				6D55361B1EC1964200B0E8E8 /* JubaoTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D5536221EC1964200B0E8E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D5536231EC1964200B0E8E8 /* FXforum.h */,
+				6D5536241EC1964200B0E8E8 /* FXforum.m */,
+				6D5536251EC1964200B0E8E8 /* FXReply.h */,
+				6D5536261EC1964200B0E8E8 /* FXReply.m */,
+				6D5536271EC1964200B0E8E8 /* uerModel.h */,
+				6D5536281EC1964200B0E8E8 /* uerModel.m */,
+				6D5536291EC1964200B0E8E8 /* WKWebViewController.h */,
+				6D55362A1EC1964200B0E8E8 /* WKWebViewController.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D55362B1EC1964200B0E8E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D55362C1EC1964200B0E8E8 /* FXforumViewCell.h */,
+				6D55362D1EC1964200B0E8E8 /* FXforumViewCell.m */,
+				6D55362E1EC1964200B0E8E8 /* FXforumViewCell.xib */,
+				6D55362F1EC1964200B0E8E8 /* FXReplyViewCell.h */,
+				6D5536301EC1964200B0E8E8 /* FXReplyViewCell.m */,
+				6D5536311EC1964200B0E8E8 /* FXReplyViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6D9A18D11E94B582004D4E07 /* Notification */ = {
@@ -2335,6 +2350,7 @@
 		C78D25B21DDAEE3700EE34E0 /* XHGTY */ = {
 			isa = PBXGroup;
 			children = (
+				6D55360D1EC1964200B0E8E8 /* Forum */,
 				6D0175641EAF2EF1001B4F99 /* ListView */,
 				6DA81CF61EAA21E80031F862 /* Choss */,
 				6D12930A1EA8BC57006824C6 /* MNTZ(模拟选号) */,
@@ -2344,7 +2360,6 @@
 				C7ABDC151E01369A0040873A /* Lib */,
 				6DE973251E8DEDE2003D5DBD /* Tool */,
 				6D09E0BD1E9F45F100D9B51F /* Seeting */,
-				6D09E0861E9F271E00D9B51F /* Forum */,
 				6D09DF6B1E9B1FFA00D9B51F /* TestController */,
 				6D9C829A1E95DA5B0043FAD8 /* Shared */,
 				6D9C82731E95D9430043FAD8 /* MyProfile */,
@@ -2628,7 +2643,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = XN282F92LB;
+						DevelopmentTeam = 3P2D38MX5P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2679,14 +2694,15 @@
 				6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */,
 				6DA81D2A1EADCF960031F862 /* ChoossFinishViewController.xib in Resources */,
 				6D082F051EA5C6010076F6D3 /* LICENSE in Resources */,
+				6D5536441EC1964200B0E8E8 /* FXReplyViewCell.xib in Resources */,
 				6D09DFB41E9B1FFA00D9B51F /* FDChuanYiCollectioCell.xib in Resources */,
 				C78D25F01DDAFF5400EE34E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */,
 				6D01758A1EAF5D41001B4F99 /* CPheardView.xib in Resources */,
-				6D09E0AB1E9F271E00D9B51F /* FXReplyViewCell.xib in Resources */,
 				C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */,
 				C76212CE1E23777C00707051 /* FXNewsViewCell.xib in Resources */,
 				C78D25E81DDAFF5400EE34E0 /* ShareSDKConfigFile.bundle in Resources */,
+				6D5536331EC1964200B0E8E8 /* ForumInfoViewController.xib in Resources */,
 				6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */,
 				C749C96E1E72BB9B00241CFD /* RecordOneViewCell.xib in Resources */,
 				6D1292FB1EA855B8006824C6 /* KJTableViewCell.xib in Resources */,
@@ -2700,7 +2716,6 @@
 				C749C9731E72BB9B00241CFD /* saima.jpg in Resources */,
 				6D09DFBC1E9B1FFA00D9B51F /* FXShiChenViewCell.xib in Resources */,
 				C749C96A1E72BB9B00241CFD /* LotteryDistrViewCell.xib in Resources */,
-				6D09E0A01E9F271E00D9B51F /* ForumInfoViewController.xib in Resources */,
 				C749C94A1E72BB9B00241CFD /* RecordInfoViewController.xib in Resources */,
 				6D09E0C81E9F498A00D9B51F /* FeedbackViewContoller.xib in Resources */,
 				6D09DFA51E9B1FFA00D9B51F /* FXWebViewController.xib in Resources */,
@@ -2722,20 +2737,19 @@
 				6D1293131EA8BF39006824C6 /* MNXHCollectionViewCell.xib in Resources */,
 				6D9C82AB1E95DFB50043FAD8 /* UserInfo.geojson in Resources */,
 				6D09DFB81E9B1FFA00D9B51F /* FDNewWeatherCell.xib in Resources */,
+				6D5536361EC1964200B0E8E8 /* FTZViewController.xib in Resources */,
 				C749C9621E72BB9B00241CFD /* FXHomeMenuCycleView.xib in Resources */,
+				6D5536381EC1964200B0E8E8 /* FXReplyViewController.xib in Resources */,
 				C749C9541E72BB9B00241CFD /* VideoDrawViewController.xib in Resources */,
 				6DE973501E8E49BA003D5DBD /* TouzhuTableViewCell.xib in Resources */,
 				C749C9451E72BB9B00241CFD /* LHDQViewController.xib in Resources */,
 				6D9A18C81E949C31004D4E07 /* HomeType.geojson in Resources */,
 				C790DA1E1E1B496700E1A7E0 /* SVProgressHUD.bundle in Resources */,
 				6D082F211EA611DA0076F6D3 /* AMap.bundle in Resources */,
-				6D09E0A71E9F271E00D9B51F /* FXforumViewCell.xib in Resources */,
-				6D09E0B01E9F272A00D9B51F /* FTZViewController.xib in Resources */,
 				6D9A18D01E94A9FC004D4E07 /* FXTableViewCell.xib in Resources */,
 				6D09E0021E9B305500D9B51F /* MBProgressHUD.bundle in Resources */,
 				C790DA351E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib in Resources */,
 				C749C9681E72BB9B00241CFD /* FXLotteryDistrInfoCell.xib in Resources */,
-				6D09E0A31E9F271E00D9B51F /* FXReplyViewController.xib in Resources */,
 				C78D25F31DDAFF5400EE34E0 /* README.txt in Resources */,
 				C78BC1061E36563400D56631 /* LaunchScreen.storyboard in Resources */,
 				C78D25F51DDAFF5400EE34E0 /* ShareSDK.bundle in Resources */,
@@ -2751,6 +2765,7 @@
 				6D0E7D4A1E8CB7280029E809 /* NewTableViewCell.xib in Resources */,
 				C790DA2B1E1B4BE500E1A7E0 /* LotteryDetailViewCell.xib in Resources */,
 				6D082F1A1EA5E8D40076F6D3 /* CpTableViewCell.xib in Resources */,
+				6D5536421EC1964200B0E8E8 /* FXforumViewCell.xib in Resources */,
 				6DE9732F1E8DF049003D5DBD /* CollectionViewCell.xib in Resources */,
 				6D9A18E01E94B583004D4E07 /* NotiMsg.plist in Resources */,
 				6D09E0D11E9F51BA00D9B51F /* GuideImage.bundle in Resources */,
@@ -2813,9 +2828,9 @@
 				6D1293031EA86B24006824C6 /* HomegpcCollectionViewCell.m in Sources */,
 				C790D9F11E1B477A00E1A7E0 /* LotteryKind.m in Sources */,
 				6D0E7CFB1E8A48340029E809 /* MASConstraintMaker.m in Sources */,
-				6D09E0AF1E9F272A00D9B51F /* FTZViewController.m in Sources */,
 				6D0E7D781E8CC92C0029E809 /* Priority.swift in Sources */,
 				6D9C82A91E95DC740043FAD8 /* MyProfileModel.m in Sources */,
+				6D5536401EC1964200B0E8E8 /* WKWebViewController.m in Sources */,
 				6DE973431E8E2CEC003D5DBD /* GoucaiTableViewCell.m in Sources */,
 				6D082F011EA5C6010076F6D3 /* AFSecurityPolicy.m in Sources */,
 				6D0E7CFC1E8A48340029E809 /* MASLayoutConstraint.m in Sources */,
@@ -2839,9 +2854,11 @@
 				6D0E7D771E8CC92C0029E809 /* PositionAttribute.swift in Sources */,
 				6D0E7DA21E8CEF730029E809 /* MytabBarViewController.m in Sources */,
 				6D0E7D811E8CCB6E0029E809 /* LoginViewController.m in Sources */,
+				6D5536341EC1964200B0E8E8 /* ForumViewController.m in Sources */,
 				6D0E7D691E8CC92C0029E809 /* CompoundAttribute.swift in Sources */,
 				6D0E7D761E8CC92C0029E809 /* PositionAttribute+UIKit.swift in Sources */,
 				C74C3E891E135DE2005874AC /* MJRefreshGifHeader.m in Sources */,
+				6D5536431EC1964200B0E8E8 /* FXReplyViewCell.m in Sources */,
 				6D09E0031E9B305500D9B51F /* MBProgressHUD.m in Sources */,
 				C790DA6C1E1B96EE00E1A7E0 /* UIButton+WebCache.m in Sources */,
 				C749C9411E72BB9B00241CFD /* ArticleViewController.m in Sources */,
@@ -2879,14 +2896,15 @@
 				C749C9611E72BB9B00241CFD /* FXHomeMenuCycleView.m in Sources */,
 				6D0E7D021E8A48340029E809 /* ViewController+MASAdditions.m in Sources */,
 				6D0E7D331E8B8A1A0029E809 /* XHLaunchAdConfiguration.m in Sources */,
+				6D5536411EC1964200B0E8E8 /* FXforumViewCell.m in Sources */,
 				6D0E7D741E8CC92C0029E809 /* NSView+Easy.swift in Sources */,
 				C749C95B1E72BB9B00241CFD /* LHArticle.m in Sources */,
 				6D9A18CF1E94A9FC004D4E07 /* FXTableViewCell.swift in Sources */,
 				6D0E7D341E8B8A1A0029E809 /* XHLaunchAdDownload.m in Sources */,
 				C790DA1C1E1B496700E1A7E0 /* SVIndefiniteAnimatedView.m in Sources */,
 				6D082EFF1EA5C6010076F6D3 /* AFHTTPSessionManager.m in Sources */,
-				6D09E0A21E9F271E00D9B51F /* FXReplyViewController.m in Sources */,
 				6D0E7D6A1E8CC92C0029E809 /* Constant.swift in Sources */,
+				6D55363C1EC1964200B0E8E8 /* FXUserTool.m in Sources */,
 				6D0E7D011E8A48340029E809 /* View+MASAdditions.m in Sources */,
 				6D0E7D751E8CC92C0029E809 /* PositionAttribute+AppKit.swift in Sources */,
 				6D09DFCB1E9B203900D9B51F /* TitleButton.m in Sources */,
@@ -2895,8 +2913,6 @@
 				C749C95C1E72BB9B00241CFD /* LHDQMenu.m in Sources */,
 				6D09DFAB1E9B1FFA00D9B51F /* FXWeather.m in Sources */,
 				6D082F0F1EA5C6010076F6D3 /* UIWebView+AFNetworking.m in Sources */,
-				6D09E0B91E9F283E00D9B51F /* FXUserTool.m in Sources */,
-				6D09E0A11E9F271E00D9B51F /* ForumViewController.m in Sources */,
 				6D0E7D361E8B8A1A0029E809 /* XHLaunchAdImageManager.m in Sources */,
 				C790DA6E1E1B96EE00E1A7E0 /* UIImage+MultiFormat.m in Sources */,
 				6D09DFA31E9B1FFA00D9B51F /* FXViewController.m in Sources */,
@@ -2910,7 +2926,6 @@
 				6DE9734C1E8E494B003D5DBD /* TouzhuTableViewController.swift in Sources */,
 				6D0E7D6D1E8CC92C0029E809 /* DimensionAttribute+UIKit.swift in Sources */,
 				6D0175851EAF3348001B4F99 /* LMRStyle+Demo.m in Sources */,
-				6D09E0AA1E9F271E00D9B51F /* FXReplyViewCell.m in Sources */,
 				6D0E7D511E8CC88D0029E809 /* UserView.swift in Sources */,
 				C790DA1F1E1B496700E1A7E0 /* SVProgressHUD.m in Sources */,
 				6D1293121EA8BF39006824C6 /* MNXHCollectionViewCell.m in Sources */,
@@ -2928,11 +2943,11 @@
 				C749C96D1E72BB9B00241CFD /* RecordOneViewCell.m in Sources */,
 				6D0E7D351E8B8A1A0029E809 /* XHLaunchAdDownloader.m in Sources */,
 				6DA81D1A1EAC4CB40031F862 /* MessageRuntime.m in Sources */,
+				6D55363D1EC1964200B0E8E8 /* FXforum.m in Sources */,
 				6D082F131EA5C8870076F6D3 /* CpMapViewController.m in Sources */,
 				C749C95F1E72BB9B00241CFD /* FXHomeMenuCycleCell.m in Sources */,
 				C749C9F81E72BE1D00241CFD /* Foundation+Log.m in Sources */,
 				6D082EB11EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m in Sources */,
-				6D09E0A41E9F271E00D9B51F /* FXforum.m in Sources */,
 				C74C3E881E135DE2005874AC /* MJRefreshBackStateFooter.m in Sources */,
 				C76212CF1E23777C00707051 /* FXNews.m in Sources */,
 				6D0E7D301E8B8A1A0029E809 /* XHLaunchAd.m in Sources */,
@@ -2952,7 +2967,6 @@
 				6D082F041EA5C6010076F6D3 /* AFURLSessionManager.m in Sources */,
 				C790DA6B1E1B96EE00E1A7E0 /* SDWebImagePrefetcher.m in Sources */,
 				C790DA1D1E1B496700E1A7E0 /* SVProgressAnimatedView.m in Sources */,
-				6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */,
 				6D12930D1EA8BC74006824C6 /* MNXHViewController.m in Sources */,
 				C749C9591E72BB9B00241CFD /* FXLotteryDIstrInfo.m in Sources */,
 				6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */,
@@ -2965,9 +2979,9 @@
 				6D09DFC91E9B203900D9B51F /* NALLabelsMatrix.m in Sources */,
 				6D09DFD91E9B205300D9B51F /* FMDatabase.m in Sources */,
 				6D0E7D051E8A4B660029E809 /* AppModel.m in Sources */,
+				6D5536371EC1964200B0E8E8 /* FXReplyViewController.m in Sources */,
 				6D082F091EA5C6010076F6D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				6D9A18E11E94B583004D4E07 /* OCwebViewController.m in Sources */,
-				6D09E0B61E9F27C100D9B51F /* FXTools.m in Sources */,
 				C77CC1111E24787100CF6B29 /* YHWebViewProgressView.m in Sources */,
 				C749C9471E72BB9B00241CFD /* LotteryDistrViewController.m in Sources */,
 				6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */,
@@ -2981,9 +2995,9 @@
 				C790DA701E1B96EE00E1A7E0 /* UIImageView+WebCache.m in Sources */,
 				6D1292F71EA8559A006824C6 /* KJTableViewController.swift in Sources */,
 				6D0E7D8F1E8CCB7D0029E809 /* NSString+isEmpty.m in Sources */,
+				6D55363A1EC1964200B0E8E8 /* FXAccount.m in Sources */,
 				C76212CD1E23777C00707051 /* FXNewsViewCell.m in Sources */,
 				6D082F031EA5C6010076F6D3 /* AFURLResponseSerialization.m in Sources */,
-				6D09E09F1E9F271E00D9B51F /* ForumInfoViewController.m in Sources */,
 				C749C9491E72BB9B00241CFD /* RecordInfoViewController.m in Sources */,
 				C749C9691E72BB9B00241CFD /* LotteryDistrViewCell.m in Sources */,
 				C749CA161E72C10300241CFD /* UIView+Extension.m in Sources */,
@@ -3008,11 +3022,13 @@
 				6D09DFB11E9B1FFA00D9B51F /* FDCalendar.m in Sources */,
 				C790DA681E1B96EE00E1A7E0 /* SDWebImageDownloader.m in Sources */,
 				C76212D21E23801000707051 /* UIBarButtonItem+Exstion.m in Sources */,
+				6D55363E1EC1964200B0E8E8 /* FXReply.m in Sources */,
 				6D09DFA91E9B1FFA00D9B51F /* AdModel.m in Sources */,
 				C74C3E8A1E135DE2005874AC /* MJRefreshNormalHeader.m in Sources */,
 				6DE973321E8DFA25003D5DBD /* GouCaiModel.m in Sources */,
 				C790DA0B1E1B47B000E1A7E0 /* MJPropertyKey.m in Sources */,
 				C74C3E851E135DE2005874AC /* MJRefreshAutoStateFooter.m in Sources */,
+				6D55363F1EC1964200B0E8E8 /* uerModel.m in Sources */,
 				6D0E7D6B1E8CC92C0029E809 /* Context.swift in Sources */,
 				6D09DFB31E9B1FFA00D9B51F /* FDChuanYiCollectioCell.m in Sources */,
 				6D082F291EA7449B0076F6D3 /* BallTableViewController.m in Sources */,
@@ -3020,6 +3036,7 @@
 				6D0E7D901E8CCB7D0029E809 /* RegusterCellModel.m in Sources */,
 				C74C3E7F1E135DE2005874AC /* MJRefreshBackFooter.m in Sources */,
 				6D09DFBB1E9B1FFA00D9B51F /* FXShiChenViewCell.m in Sources */,
+				6D5536391EC1964200B0E8E8 /* JubaoTableViewController.m in Sources */,
 				C790DA671E1B96EE00E1A7E0 /* SDWebImageDecoder.m in Sources */,
 				6DA81D291EADCF960031F862 /* ChoossFinishViewController.m in Sources */,
 				C78D25B51DDAEE3700EE34E0 /* main.m in Sources */,
@@ -3034,8 +3051,8 @@
 				6D09E0011E9B305500D9B51F /* MBProgressHUD+MJ.m in Sources */,
 				6D0E7D9D1E8CDC2D0029E809 /* MyViewController.swift in Sources */,
 				6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */,
+				6D5536321EC1964200B0E8E8 /* ForumInfoViewController.m in Sources */,
 				C74C3E8D1E135DE2005874AC /* MJRefreshConst.m in Sources */,
-				6D09E0A61E9F271E00D9B51F /* FXforumViewCell.m in Sources */,
 				6DE973471E8E3F81003D5DBD /* XiaZhuView.m in Sources */,
 				6D9A18E21E94B583004D4E07 /* NotificationTableViewCell.m in Sources */,
 				C722E35E1E166C5200A8E2E9 /* FXHomeMenuCell.m in Sources */,
@@ -3044,6 +3061,7 @@
 				6D082EC81EA5B8F00076F6D3 /* FXTableViewCell.m in Sources */,
 				6DE9732E1E8DF049003D5DBD /* CollectionViewCell.m in Sources */,
 				6D09DFDA1E9B205300D9B51F /* FMDatabaseAdditions.m in Sources */,
+				6D55363B1EC1964200B0E8E8 /* FXTools.m in Sources */,
 				C74C3E871E135DE2005874AC /* MJRefreshBackNormalFooter.m in Sources */,
 				6D0E7D471E8CB7280029E809 /* NewTableViewController.swift in Sources */,
 				6D082F061EA5C6010076F6D3 /* README.md in Sources */,
@@ -3063,11 +3081,11 @@
 				C749C9711E72BB9B00241CFD /* TieBieViewCell.m in Sources */,
 				6D082EB61EA4B9FE0076F6D3 /* HallCollectionViewCell.m in Sources */,
 				6D09E0C71E9F498A00D9B51F /* FeedbackViewContoller.m in Sources */,
-				6D09E0BC1E9F287000D9B51F /* FXAccount.m in Sources */,
 				C749C9511E72BB9B00241CFD /* TYBFViewController.m in Sources */,
 				C790DA101E1B47B000E1A7E0 /* NSObject+MJProperty.m in Sources */,
 				6D082F0E1EA5C6010076F6D3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				C74C3E811E135DE2005874AC /* MJRefreshFooter.m in Sources */,
+				6D5536351EC1964200B0E8E8 /* FTZViewController.m in Sources */,
 				6D0E7CDD1E8A481E0029E809 /* WebViewController.m in Sources */,
 				6D09DFAF1E9B1FFA00D9B51F /* DayTableViewCell.m in Sources */,
 				6D0E7D3B1E8B8CA40029E809 /* LaunchAdModel.m in Sources */,
@@ -3179,10 +3197,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Channing Zhang (XN282F92LB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XN282F92LB;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3208,10 +3226,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.shier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "49162964-8b07-456a-a771-047a03d24e34";
-				PROVISIONING_PROFILE_SPECIFIER = weuyo219;
+				PROVISIONING_PROFILE = "490f8e65-13b7-4e64-8c49-ae27a155169e";
+				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3225,10 +3243,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Channing Zhang (XN282F92LB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Channing Zhang (XN282F92LB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XN282F92LB;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3254,10 +3272,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = shensu.caipiao.shier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "49162964-8b07-456a-a771-047a03d24e34";
-				PROVISIONING_PROFILE_SPECIFIER = weuyo219;
+				PROVISIONING_PROFILE = "490f8e65-13b7-4e64-8c49-ae27a155169e";
+				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

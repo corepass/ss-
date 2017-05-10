@@ -55,7 +55,7 @@ static NSString *channel = @"App Store";
     
    [AMapServices sharedServices].apiKey = GDMapKey;
     
-    [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
 
  
     application.statusBarHidden = NO;

@@ -183,13 +183,14 @@ static NSString *const gpcID = @"gpcID";
     // Do any additional setup after loading the view.
     
     [self addyindaoyue];
+  
     [self performSelector:@selector(addsomething)];
 
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"大厅";
     self.nonetWorkView.delegate = self;
-           [self setBannar];
+    
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomegpcCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:gpcID];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
     [self.collectionView registerClass:[XYHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"heard"];
@@ -203,25 +204,32 @@ static NSString *const gpcID = @"gpcID";
     layout.sectionInset = UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
     self.collectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
            [self setBannar];
+           [self getgpcData];
     }];
     [self loadNewItems];
     
+      [self getgpcData];
+    [self setBannar];
 }
 
-//-(void)getgpcData{
-//   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
-//       if (JSON != nil){
-//           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
-//           dispatch_async(dispatch_get_main_queue(), ^{
-//                 [self.collectionView reloadData];
-//           });
-//         
-//       }
-//   } :^(NSError *error) {
-//       
-//   }];
-//
-//}
+-(void)getgpcData{
+   [HttpTools GETWithPath:@"http://news.zhuoyicp.com/h5/gp/json.json" parms:nil success:^(id JSON){
+       if (JSON != nil){
+        
+           _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
+           if (_gpcArray.count > 3){
+               [_gpcArray removeObjectsInRange:NSMakeRange(3, _gpcArray.count - 3)];
+           }
+           dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.collectionView reloadData];
+           });
+         
+       }
+   } :^(NSError *error) {
+       
+   }];
+
+}
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {

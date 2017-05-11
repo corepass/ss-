@@ -48,7 +48,7 @@
 
             make.top.mas_equalTo(self.contentView).offset(8);
             make.height.mas_offset(115);
-            make.width.mas_equalTo(84);
+            make.width.mas_equalTo(150);
             make.bottom.mas_equalTo(self.contentView).offset(-8);
         }];
     
@@ -62,6 +62,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.contentView.backgroundColor = [UIColor whiteColor];
+    self.contentView.layer.cornerRadius = 4;
     // Initialization code
 }
 

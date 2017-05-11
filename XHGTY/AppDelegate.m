@@ -12,14 +12,15 @@
 
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
-#import "MessageRuntime.h"
+
 #import "WebViewController.h"
 
 #import "HttpTools.h"
 #import "UMessage.h"
 #import "SVProgressHUD.h"
+#import <JSPatchPlatform/JSPatch.h>
 
-
+// 引入JPush功能所需头文件
 #import "AppModel.h"
 
 #import "WKWebViewController.h"
@@ -49,11 +50,17 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-    if ([AppModel setJinShaVc]){
-        [self setAppDelegateModel];
-    }
-    
     [AMapServices sharedServices].apiKey = GDMapKey;
+    
+    
+    
+    [JSPatch startWithAppKey:JSpatchKey];
+    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFdJzeIDB+0y8lb5OzYBJcW3Nn\nF90KGrEJVWbrBeAZtGM8fmjkH1Z/nMs13XTRv6iOSjhtCpA+tm8itwT4Ekd067ln\nd3DizrTIuSRiLYpLUlKePy2TPmZmyUSl7eA4m9iFDx0jEYFdAtzwRHT1YrqvQJTp\nirbngh42uNzPtHyIWQIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch sync];
+    
+    
+    
+    
     
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:237/255.0 green:31/255.0 blue:65/255.0 alpha:1]];
     
@@ -65,7 +72,8 @@ static NSString *channel = @"App Store";
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSForegroundColorAttributeName:[UIFont systemFontOfSize:32]}];
     
-
+    
+    //   [self setXh];
     
     [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
     [UMessage openDebugMode:YES];
@@ -92,22 +100,9 @@ static NSString *channel = @"App Store";
     
     return  YES;
 }
--(void)setAppDelegateModel{
-    
-    [HttpTools getWithPathsuccess:^(id JSON) {
-        NSLog(@"有活动的时候开启");
-        MessageRuntime * message  =  [[MessageRuntime alloc] init];
-        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
-            self.window.rootViewController = viewController;
-            [self.window makeKeyAndVisible];
-        }];
-        
-    } :^(NSError *error) {
-        
-    }];
-    
-}
+
 -(void)savadata{
+    
     
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]stringByAppendingFormat:@"/Caches"];
@@ -176,7 +171,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{
-    
+    [JSPatch sync];
     [application setApplicationIconBadgeNumber:0];
 }
 

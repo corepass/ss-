@@ -232,10 +232,9 @@
 		6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */; };
 		6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */; };
 		6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */; };
+		6DF6E7B71EC4433C003F2D2F /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF6E7B61EC4433C003F2D2F /* JSPatchPlatform.framework */; };
 		C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C722E3501E1658CB00A8E2E9 /* Other.storyboard */; };
 		C722E3541E165AFE00A8E2E9 /* HallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3531E165AFE00A8E2E9 /* HallViewController.m */; };
-		C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3561E165B4500A8E2E9 /* PeiViewController.m */; };
-		C722E35A1E165B6B00A8E2E9 /* ZixunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E3591E165B6B00A8E2E9 /* ZixunViewController.m */; };
 		C722E35E1E166C5200A8E2E9 /* FXHomeMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C722E35C1E166C5200A8E2E9 /* FXHomeMenuCell.m */; };
 		C722E35F1E166C5200A8E2E9 /* FXHomeMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C722E35D1E166C5200A8E2E9 /* FXHomeMenuCell.xib */; };
 		C749C9401E72BB9B00241CFD /* ArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C749C8DD1E72BB9A00241CFD /* ArticleListViewController.m */; };
@@ -323,9 +322,6 @@
 		C74C3E8F1E135DE2005874AC /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C3E791E135DE2005874AC /* UIScrollView+MJExtension.m */; };
 		C74C3E901E135DE2005874AC /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C3E7B1E135DE2005874AC /* UIScrollView+MJRefresh.m */; };
 		C74C3E911E135DE2005874AC /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C3E7D1E135DE2005874AC /* UIView+MJExtension.m */; };
-		C76212CD1E23777C00707051 /* FXNewsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C76212C91E23777C00707051 /* FXNewsViewCell.m */; };
-		C76212CE1E23777C00707051 /* FXNewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76212CA1E23777C00707051 /* FXNewsViewCell.xib */; };
-		C76212CF1E23777C00707051 /* FXNews.m in Sources */ = {isa = PBXBuildFile; fileRef = C76212CC1E23777C00707051 /* FXNews.m */; };
 		C76212D21E23801000707051 /* UIBarButtonItem+Exstion.m in Sources */ = {isa = PBXBuildFile; fileRef = C76212D11E23801000707051 /* UIBarButtonItem+Exstion.m */; };
 		C77CC1101E24787100CF6B29 /* YHWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C77CC10C1E24787100CF6B29 /* YHWebViewProgress.m */; };
 		C77CC1111E24787100CF6B29 /* YHWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77CC10E1E24787100CF6B29 /* YHWebViewProgressView.m */; };
@@ -358,12 +354,6 @@
 		C790DA261E1B4BBF00E1A7E0 /* LotteryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA251E1B4BBF00E1A7E0 /* LotteryDetailViewController.m */; };
 		C790DA2A1E1B4BE500E1A7E0 /* LotteryDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA281E1B4BE500E1A7E0 /* LotteryDetailViewCell.m */; };
 		C790DA2B1E1B4BE500E1A7E0 /* LotteryDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C790DA291E1B4BE500E1A7E0 /* LotteryDetailViewCell.xib */; };
-		C790DA341E1B5DA800E1A7E0 /* PeiLvTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA321E1B5DA800E1A7E0 /* PeiLvTableViewCell.m */; };
-		C790DA351E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C790DA331E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib */; };
-		C790DA3C1E1B7B9C00E1A7E0 /* FXPeiLv.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA3B1E1B7B9C00E1A7E0 /* FXPeiLv.m */; };
-		C790DA3F1E1B7C1800E1A7E0 /* FXPeiLvDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA3E1E1B7C1800E1A7E0 /* FXPeiLvDetail.m */; };
-		C790DA421E1B949F00E1A7E0 /* ZiXunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA411E1B949F00E1A7E0 /* ZiXunTableViewCell.m */; };
-		C790DA451E1B950A00E1A7E0 /* FXZixun.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA441E1B950A00E1A7E0 /* FXZixun.m */; };
 		C790DA641E1B96EE00E1A7E0 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA481E1B96ED00E1A7E0 /* NSData+ImageContentType.m */; };
 		C790DA651E1B96EE00E1A7E0 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA4A1E1B96ED00E1A7E0 /* SDImageCache.m */; };
 		C790DA661E1B96EE00E1A7E0 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA4C1E1B96ED00E1A7E0 /* SDWebImageCompat.m */; };
@@ -766,13 +756,10 @@
 		6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCDDTableViewController.swift; sourceTree = "<group>"; };
 		6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCddTableViewCell.swift; sourceTree = "<group>"; };
 		6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCddTableViewCell.xib; sourceTree = "<group>"; };
+		6DF6E7B61EC4433C003F2D2F /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		C722E3501E1658CB00A8E2E9 /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		C722E3521E165AFE00A8E2E9 /* HallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HallViewController.h; path = ../../HallViewController.h; sourceTree = "<group>"; };
 		C722E3531E165AFE00A8E2E9 /* HallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HallViewController.m; path = ../../HallViewController.m; sourceTree = "<group>"; };
-		C722E3551E165B4500A8E2E9 /* PeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeiViewController.h; path = ../../PeiViewController.h; sourceTree = "<group>"; };
-		C722E3561E165B4500A8E2E9 /* PeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeiViewController.m; path = ../../PeiViewController.m; sourceTree = "<group>"; };
-		C722E3581E165B6B00A8E2E9 /* ZixunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZixunViewController.h; path = ../ZixunViewController.h; sourceTree = "<group>"; };
-		C722E3591E165B6B00A8E2E9 /* ZixunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZixunViewController.m; path = ../ZixunViewController.m; sourceTree = "<group>"; };
 		C722E35B1E166C5200A8E2E9 /* FXHomeMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXHomeMenuCell.h; path = ../../FXHomeMenuCell.h; sourceTree = "<group>"; };
 		C722E35C1E166C5200A8E2E9 /* FXHomeMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXHomeMenuCell.m; path = ../../FXHomeMenuCell.m; sourceTree = "<group>"; };
 		C722E35D1E166C5200A8E2E9 /* FXHomeMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FXHomeMenuCell.xib; path = ../../FXHomeMenuCell.xib; sourceTree = "<group>"; };
@@ -923,11 +910,6 @@
 		C74C3E7B1E135DE2005874AC /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		C74C3E7C1E135DE2005874AC /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		C74C3E7D1E135DE2005874AC /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		C76212C81E23777C00707051 /* FXNewsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXNewsViewCell.h; path = ../FXNewsViewCell.h; sourceTree = "<group>"; };
-		C76212C91E23777C00707051 /* FXNewsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXNewsViewCell.m; path = ../FXNewsViewCell.m; sourceTree = "<group>"; };
-		C76212CA1E23777C00707051 /* FXNewsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FXNewsViewCell.xib; path = ../FXNewsViewCell.xib; sourceTree = "<group>"; };
-		C76212CB1E23777C00707051 /* FXNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXNews.h; path = ../FXNews.h; sourceTree = "<group>"; };
-		C76212CC1E23777C00707051 /* FXNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXNews.m; path = ../FXNews.m; sourceTree = "<group>"; };
 		C76212D01E23801000707051 /* UIBarButtonItem+Exstion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Exstion.h"; sourceTree = "<group>"; };
 		C76212D11E23801000707051 /* UIBarButtonItem+Exstion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Exstion.m"; sourceTree = "<group>"; };
 		C77CC10B1E24787100CF6B29 /* YHWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWebViewProgress.h; sourceTree = "<group>"; };
@@ -987,17 +969,6 @@
 		C790DA271E1B4BE500E1A7E0 /* LotteryDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LotteryDetailViewCell.h; path = ../../LotteryDetailViewCell.h; sourceTree = "<group>"; };
 		C790DA281E1B4BE500E1A7E0 /* LotteryDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LotteryDetailViewCell.m; path = ../../LotteryDetailViewCell.m; sourceTree = "<group>"; };
 		C790DA291E1B4BE500E1A7E0 /* LotteryDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LotteryDetailViewCell.xib; path = ../../LotteryDetailViewCell.xib; sourceTree = "<group>"; };
-		C790DA311E1B5DA800E1A7E0 /* PeiLvTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeiLvTableViewCell.h; path = ../../PeiLvTableViewCell.h; sourceTree = "<group>"; };
-		C790DA321E1B5DA800E1A7E0 /* PeiLvTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeiLvTableViewCell.m; path = ../../PeiLvTableViewCell.m; sourceTree = "<group>"; };
-		C790DA331E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PeiLvTableViewCell.xib; path = ../../PeiLvTableViewCell.xib; sourceTree = "<group>"; };
-		C790DA3A1E1B7B9C00E1A7E0 /* FXPeiLv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXPeiLv.h; path = ../../FXPeiLv.h; sourceTree = "<group>"; };
-		C790DA3B1E1B7B9C00E1A7E0 /* FXPeiLv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXPeiLv.m; path = ../../FXPeiLv.m; sourceTree = "<group>"; };
-		C790DA3D1E1B7C1800E1A7E0 /* FXPeiLvDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXPeiLvDetail.h; path = ../../FXPeiLvDetail.h; sourceTree = "<group>"; };
-		C790DA3E1E1B7C1800E1A7E0 /* FXPeiLvDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXPeiLvDetail.m; path = ../../FXPeiLvDetail.m; sourceTree = "<group>"; };
-		C790DA401E1B949F00E1A7E0 /* ZiXunTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZiXunTableViewCell.h; path = ../ZiXunTableViewCell.h; sourceTree = "<group>"; };
-		C790DA411E1B949F00E1A7E0 /* ZiXunTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZiXunTableViewCell.m; path = ../ZiXunTableViewCell.m; sourceTree = "<group>"; };
-		C790DA431E1B950A00E1A7E0 /* FXZixun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXZixun.h; path = ../FXZixun.h; sourceTree = "<group>"; };
-		C790DA441E1B950A00E1A7E0 /* FXZixun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXZixun.m; path = ../FXZixun.m; sourceTree = "<group>"; };
 		C790DA471E1B96ED00E1A7E0 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		C790DA481E1B96ED00E1A7E0 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		C790DA491E1B96ED00E1A7E0 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -1060,6 +1031,7 @@
 				C7ABDC1C1E0136CC0040873A /* CFNetwork.framework in Frameworks */,
 				6D082F261EA612D30076F6D3 /* MAMapKit.framework in Frameworks */,
 				C78D26021DDB033600EE34E0 /* libsqlite3.tbd in Frameworks */,
+				6DF6E7B71EC4433C003F2D2F /* JSPatchPlatform.framework in Frameworks */,
 				C78D25FE1DDB032200EE34E0 /* libstdc++.tbd in Frameworks */,
 				C78D25FA1DDB030D00EE34E0 /* libicucore.tbd in Frameworks */,
 				C7ABDC191E01369A0040873A /* jcore-ios-1.0.0.a in Frameworks */,
@@ -1105,41 +1077,6 @@
 				C790D9F01E1B477A00E1A7E0 /* LotteryKind.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		6D082EBE1EA5B39C0076F6D3 /* ZX */ = {
-			isa = PBXGroup;
-			children = (
-				C76212C81E23777C00707051 /* FXNewsViewCell.h */,
-				C76212C91E23777C00707051 /* FXNewsViewCell.m */,
-				C76212CA1E23777C00707051 /* FXNewsViewCell.xib */,
-				C76212CB1E23777C00707051 /* FXNews.h */,
-				C76212CC1E23777C00707051 /* FXNews.m */,
-				C790DA401E1B949F00E1A7E0 /* ZiXunTableViewCell.h */,
-				C790DA411E1B949F00E1A7E0 /* ZiXunTableViewCell.m */,
-				C790DA431E1B950A00E1A7E0 /* FXZixun.h */,
-				C790DA441E1B950A00E1A7E0 /* FXZixun.m */,
-				C722E3581E165B6B00A8E2E9 /* ZixunViewController.h */,
-				C722E3591E165B6B00A8E2E9 /* ZixunViewController.m */,
-			);
-			path = ZX;
-			sourceTree = "<group>";
-		};
-		6D082EBF1EA5B3EF0076F6D3 /* PL */ = {
-			isa = PBXGroup;
-			children = (
-				C722E3561E165B4500A8E2E9 /* PeiViewController.m */,
-				C790DA311E1B5DA800E1A7E0 /* PeiLvTableViewCell.h */,
-				C790DA321E1B5DA800E1A7E0 /* PeiLvTableViewCell.m */,
-				C790DA331E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib */,
-				C790DA3A1E1B7B9C00E1A7E0 /* FXPeiLv.h */,
-				C790DA3B1E1B7B9C00E1A7E0 /* FXPeiLv.m */,
-				C790DA3D1E1B7C1800E1A7E0 /* FXPeiLvDetail.h */,
-				C790DA3E1E1B7C1800E1A7E0 /* FXPeiLvDetail.m */,
-				C722E3551E165B4500A8E2E9 /* PeiViewController.h */,
-			);
-			name = PL;
-			path = ZX/PL;
 			sourceTree = "<group>";
 		};
 		6D082ECF1EA5C4A50076F6D3 /* Map */ = {
@@ -1736,6 +1673,7 @@
 		6DE973251E8DEDE2003D5DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6DF6E7B61EC4433C003F2D2F /* JSPatchPlatform.framework */,
 				6D5535EC1EBC56C800B0E8E8 /* LMReport */,
 				6DA81D181EAC4CB40031F862 /* MessageRuntime.h */,
 				6DA81D191EAC4CB40031F862 /* MessageRuntime.m */,
@@ -2172,8 +2110,6 @@
 				C7ABDC2B1E0137440040873A /* XHGTY.entitlements */,
 				6D0E7D7C1E8CCB5D0029E809 /* Login+Regist */,
 				6DE973261E8DEE50003D5DBD /* GouCai */,
-				6D082EBE1EA5B39C0076F6D3 /* ZX */,
-				6D082EBF1EA5B3EF0076F6D3 /* PL */,
 				6D082EBB1EA5B10D0076F6D3 /* WebView */,
 				C78BC1051E36563400D56631 /* LaunchScreen.storyboard */,
 				C722E3501E1658CB00A8E2E9 /* Other.storyboard */,
@@ -2416,7 +2352,6 @@
 				6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */,
 				6D09E0AB1E9F271E00D9B51F /* FXReplyViewCell.xib in Resources */,
 				C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */,
-				C76212CE1E23777C00707051 /* FXNewsViewCell.xib in Resources */,
 				6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */,
 				C749C96E1E72BB9B00241CFD /* RecordOneViewCell.xib in Resources */,
 				6D1292FB1EA855B8006824C6 /* KJTableViewCell.xib in Resources */,
@@ -2459,7 +2394,6 @@
 				6D09E0A71E9F271E00D9B51F /* FXforumViewCell.xib in Resources */,
 				6D09E0B01E9F272A00D9B51F /* FTZViewController.xib in Resources */,
 				6D09E0021E9B305500D9B51F /* MBProgressHUD.bundle in Resources */,
-				C790DA351E1B5DA800E1A7E0 /* PeiLvTableViewCell.xib in Resources */,
 				C749C9681E72BB9B00241CFD /* FXLotteryDistrInfoCell.xib in Resources */,
 				6D09E0A31E9F271E00D9B51F /* FXReplyViewController.xib in Resources */,
 				C78BC1061E36563400D56631 /* LaunchScreen.storyboard in Resources */,
@@ -2526,7 +2460,6 @@
 				C790DA691E1B96EE00E1A7E0 /* SDWebImageDownloaderOperation.m in Sources */,
 				6D0E7CF91E8A48340029E809 /* MASCompositeConstraint.m in Sources */,
 				C749C9531E72BB9B00241CFD /* VideoDrawViewController.m in Sources */,
-				C790DA3C1E1B7B9C00E1A7E0 /* FXPeiLv.m in Sources */,
 				6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */,
 				6D5535F91EBC56C800B0E8E8 /* LMRGrid.m in Sources */,
 				C749C9631E72BB9B00241CFD /* LHDQViewCell.m in Sources */,
@@ -2546,7 +2479,6 @@
 				6D0E7D7A1E8CC92C0029E809 /* UILayoutGuide+Easy.swift in Sources */,
 				6DA81D241EADBA9A0031F862 /* KJLSTableViewCell.swift in Sources */,
 				C749C97E1E72BCF100241CFD /* BaseViewController.m in Sources */,
-				C790DA341E1B5DA800E1A7E0 /* PeiLvTableViewCell.m in Sources */,
 				C749C94D1E72BB9B00241CFD /* ThreeViewController.m in Sources */,
 				6D082F0D1EA5C6010076F6D3 /* UIProgressView+AFNetworking.m in Sources */,
 				C749C95A1E72BB9B00241CFD /* FXRecord.m in Sources */,
@@ -2601,7 +2533,6 @@
 				6D0E7D011E8A48340029E809 /* View+MASAdditions.m in Sources */,
 				6D0E7D751E8CC92C0029E809 /* PositionAttribute+AppKit.swift in Sources */,
 				6D09DFCB1E9B203900D9B51F /* TitleButton.m in Sources */,
-				C790DA3F1E1B7C1800E1A7E0 /* FXPeiLvDetail.m in Sources */,
 				6D09DFA11E9B1FFA00D9B51F /* FXNLViewController.m in Sources */,
 				C749C95C1E72BB9B00241CFD /* LHDQMenu.m in Sources */,
 				6D09DFAB1E9B1FFA00D9B51F /* FXWeather.m in Sources */,
@@ -2648,7 +2579,6 @@
 				6D082EB11EA4B6EA0076F6D3 /* LotteryDetailCollectionViewCell.m in Sources */,
 				6D09E0A41E9F271E00D9B51F /* FXforum.m in Sources */,
 				C74C3E881E135DE2005874AC /* MJRefreshBackStateFooter.m in Sources */,
-				C76212CF1E23777C00707051 /* FXNews.m in Sources */,
 				C790DA711E1B96EE00E1A7E0 /* UIView+WebCacheOperation.m in Sources */,
 				6DE9733A1E8E0040003D5DBD /* GouMaiView.m in Sources */,
 				C74C3E7E1E135DE2005874AC /* MJRefreshAutoFooter.m in Sources */,
@@ -2691,11 +2621,9 @@
 				6D1293071EA86D3A006824C6 /* gpcModel.m in Sources */,
 				6D09DFB21E9B1FFA00D9B51F /* FDCalendarItem.m in Sources */,
 				C749C9841E72BD4600241CFD /* BaseObject.m in Sources */,
-				C790DA421E1B949F00E1A7E0 /* ZiXunTableViewCell.m in Sources */,
 				C790DA701E1B96EE00E1A7E0 /* UIImageView+WebCache.m in Sources */,
 				6D1292F71EA8559A006824C6 /* KJTableViewController.swift in Sources */,
 				6D0E7D8F1E8CCB7D0029E809 /* NSString+isEmpty.m in Sources */,
-				C76212CD1E23777C00707051 /* FXNewsViewCell.m in Sources */,
 				6D082F031EA5C6010076F6D3 /* AFURLResponseSerialization.m in Sources */,
 				6D09E09F1E9F271E00D9B51F /* ForumInfoViewController.m in Sources */,
 				C749C9491E72BB9B00241CFD /* RecordInfoViewController.m in Sources */,
@@ -2736,7 +2664,6 @@
 				C749C94F1E72BB9B00241CFD /* TieBieViewController.m in Sources */,
 				6D1293161EA8C1A6006824C6 /* MNheadCollectionReusableView.m in Sources */,
 				6D0E7CFA1E8A48340029E809 /* MASConstraint.m in Sources */,
-				C722E3571E165B4500A8E2E9 /* PeiViewController.m in Sources */,
 				6D09DFBD1E9B1FFA00D9B51F /* XZTableViewCell.m in Sources */,
 				6D0E7D731E8CC92C0029E809 /* NSLayoutGuide+Easy.swift in Sources */,
 				6D9A18C51E948A13004D4E07 /* CustonTableViewController.swift in Sources */,
@@ -2759,14 +2686,12 @@
 				6D082F061EA5C6010076F6D3 /* README.md in Sources */,
 				6D082ECE1EA5BAD80076F6D3 /* FXZSTViewController.m in Sources */,
 				C749C9561E72BB9B00241CFD /* FXBoard.m in Sources */,
-				C722E35A1E165B6B00A8E2E9 /* ZixunViewController.m in Sources */,
 				C749C94B1E72BB9B00241CFD /* RecordViewController.m in Sources */,
 				6D09DFF71E9B23BD00D9B51F /* LPLevelView.m in Sources */,
 				C790DA201E1B496700E1A7E0 /* SVRadialGradientLayer.m in Sources */,
 				6D0E7D821E8CCB6E0029E809 /* RegisterViewController.m in Sources */,
 				C74C3E8B1E135DE2005874AC /* MJRefreshStateHeader.m in Sources */,
 				6D082F191EA5E8D40076F6D3 /* CpTableViewCell.m in Sources */,
-				C790DA451E1B950A00E1A7E0 /* FXZixun.m in Sources */,
 				C749C9671E72BB9B00241CFD /* FXLotteryDistrInfoCell.m in Sources */,
 				C749C9F41E72BDD700241CFD /* HttpTools.m in Sources */,
 				C749C9711E72BB9B00241CFD /* TieBieViewCell.m in Sources */,

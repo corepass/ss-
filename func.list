@@ -11,3 +11,5 @@ getData
 getqishudata
 getdata
 setAppDelegateModel
+setUpMoney
+getgpcData

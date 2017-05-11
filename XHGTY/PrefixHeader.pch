@@ -29,7 +29,7 @@
 #define ssoptime @"13-05-2017-000000"
 #define ssID @"=1230331644"
 #define UMKey @"59006c26f29d980ee00018af"
-//#define JSpatchKey @"7f469da15f152eef"
+#define JSpatchKey @"7f469da15f152eef"
 #define GDMapKey @"ce6ffc6f4e60d8a71a8c14948c2c3d44"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 

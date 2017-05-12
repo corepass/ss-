@@ -13,3 +13,5 @@ getdata
 setAppDelegateModel
 setUpMoney
 getgpcData
+submitAction
+

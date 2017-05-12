@@ -19,6 +19,7 @@
 @property(strong,nonatomic) NSMutableArray<AMapPOI *> * dataArray;
 @property(strong,nonatomic) NSString * address;
 @property(strong,nonatomic) CLLocation * location;
+@property(strong,nonatomic) UILabel * lable;
 @end
 
 @implementation CpMapViewController
@@ -96,8 +97,8 @@
             self.address = [NSString stringWithFormat:@"%@%@%@",regeocode.city,regeocode.district,regeocode.POIName];
             
         }
-        if (self.address){
-            [self addTS];
+        if (!self.address){
+          
             [SVProgressHUD showErrorWithStatus:@"定位失败"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
@@ -106,14 +107,14 @@
     }];
 }
 -(void)addTS{
-    UILabel * lable = [[UILabel alloc] init];
-    lable.backgroundColor = [UIColor whiteColor];
-    lable.size = CGSizeMake(self.view.width, 30);
-    lable.center = self.tableView.center;
-    lable.text = @"定位失败，请稍候再试哦！";
-    [lable setTextAlignment:NSTextAlignmentCenter];
-    lable.font = [UIFont systemFontOfSize:14];
-    [self.tableView addSubview:lable];
+    _lable = [[UILabel alloc] init];
+    _lable.backgroundColor = [UIColor whiteColor];
+    _lable.size = CGSizeMake(self.view.width, 30);
+    _lable.center = self.tableView.center;
+    _lable.text = @"您的附近暂无彩票店哦！";
+    [_lable setTextAlignment:NSTextAlignmentCenter];
+    _lable.font = [UIFont systemFontOfSize:14];
+    [self.tableView addSubview:_lable];
 
 }
 -(void)setUI{

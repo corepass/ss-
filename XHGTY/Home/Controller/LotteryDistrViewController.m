@@ -9,7 +9,7 @@
 #import "LotteryDistrViewController.h"
 #import "LotteryDistrViewCell.h"
 #import "FXLotteryDistr.h"
-#import "LotteryDistrInfoViewController.h"
+
 #import "HttpTools.h"
 #import "AppURLdefine.h"
 #import "MJExtension.h"
@@ -74,10 +74,10 @@ static NSString *const LotteryDistrViewCellID = @"LotteryDistrViewCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     FXLotteryDistr *lotteryStr = self.totalLotterys[indexPath.item];
-    LotteryDistrInfoViewController *infoVC = [[LotteryDistrInfoViewController alloc]init];
-    infoVC.navigationItem.title = lotteryStr.alias;
-    infoVC.requestURL = lotteryStr.api_url;
-    [self.navigationController pushViewController:infoVC animated:YES];
+//    LotteryDistrInfoViewController *infoVC = [[LotteryDistrInfoViewController alloc]init];
+//    infoVC.navigationItem.title = lotteryStr.alias;
+//    infoVC.requestURL = lotteryStr.api_url;
+//    [self.navigationController pushViewController:infoVC animated:YES];
 }
 
 

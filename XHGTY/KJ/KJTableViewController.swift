@@ -20,7 +20,17 @@ class KJTableViewController: UITableViewController {
 		self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
 			self.getData()
 		})
+        let right = UIBarButtonItem(title: "开奖推送", style: .done, target: self, action: #selector(kjpush))
+        right.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = right
 	}
+    
+    func kjpush(){
+    let vc = KJpushTableViewController()
+    vc.hidesBottomBarWhenPushed = true
+    self.navigationController?.pushViewController(vc, animated: true)
+    
+    }
 	func getData() {
 		HttpTools.get(withPath: "http://m.zhuoyicp.com/kaijang/kjhall?getData=1", parms: nil, success: { [weak self](data) in
 			self?.tableView.mj_header.endRefreshing()

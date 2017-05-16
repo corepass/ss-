@@ -11,14 +11,14 @@
 #import "HttpTools.h"
 #import "MJExtension.h"
 #import "LotteryKind.h"
-#import "LotteryDetailViewController.h"
+
 #import "MJRefresh.h"
 #import "GoucaiViewController.h"
 #import "XHGTY-swift.h"
 #import "LoginViewController.h"
 #import "AppDefine.h"
 #import "HallCollectionViewCell.h"
-#import "MNXHViewController.h"
+#import "SSXHViewController.h"
 #define kItemMargin 2
 
 typedef NS_ENUM(NSInteger, HallType){
@@ -145,7 +145,7 @@ static NSString *const cellID = @"cellID";
                     break;
             }
             
-            MNXHViewController * vc = [[MNXHViewController alloc] init];
+            SSXHViewController * vc = [[SSXHViewController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             vc.title = kind.name;
             vc.dataDic = dic;

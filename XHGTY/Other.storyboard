@@ -913,8 +913,8 @@
     </scenes>
     <resources>
         <image name="1481264806" width="16" height="16"/>
-        <image name="Mine_Highlight" width="21" height="21"/>
-        <image name="Mine_Normal" width="21" height="21"/>
+        <image name="Mine_Highlight" width="24" height="24"/>
+        <image name="Mine_Normal" width="24" height="24"/>
         <image name="account" width="17" height="21"/>
         <image name="hall_normal" width="24" height="24"/>
         <image name="hall_selected" width="24" height="24"/>

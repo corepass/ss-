@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="彩票" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1r-tK-BAq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="大乐透" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1r-tK-BAq">
                                 <rect key="frame" x="0.0" y="588" width="375" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="CYG-Fm-hRt"/>
@@ -39,13 +39,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="oj8-J4-32m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oj8-J4-32m" secondAttribute="trailing" id="5i5-i2-stF"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="oj8-J4-32m" secondAttribute="bottom" id="CXJ-lZ-T39"/>
                             <constraint firstItem="lVs-qI-0Yd" firstAttribute="top" secondItem="g1r-tK-BAq" secondAttribute="bottom" constant="8" id="Uwl-ii-luK"/>
+                            <constraint firstItem="oj8-J4-32m" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZAo-sl-OLl"/>
                             <constraint firstItem="g1r-tK-BAq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="l4U-Hk-yyO"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lVs-qI-0Yd" secondAttribute="bottom" constant="2" id="sE8-LN-cJM"/>
                             <constraint firstItem="lVs-qI-0Yd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uyb-Up-Icv"/>
+                            <constraint firstItem="oj8-J4-32m" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xPy-2z-NIt"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,4 +61,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch" width="320" height="568"/>
+    </resources>
 </document>

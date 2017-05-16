@@ -26,10 +26,10 @@
 
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
-#define ssoptime @"13-05-2017-000000"
+#define ssoptime @"20-05-2017-000000"
 #define ssID @"=1235457580"
 #define UMKey @"59141b4007fe65764d00107d"
-#define JSpatchKey @"f1ac3fb5678aff7f"
+//#define JSpatchKey @"5d89332f2b79563a"
 #define GDMapKey @"63cf14cb77abcda01c91df17617c16f5"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 

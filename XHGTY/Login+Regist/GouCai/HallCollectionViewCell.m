@@ -15,6 +15,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.layer.cornerRadius = 4;
     self.buton = self.lotteryBtn;
     // Initialization code
 }

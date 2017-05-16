@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "launch.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "LaunchImage-700-568h@2x.png",
       "scale" : "2x"
     },
     {

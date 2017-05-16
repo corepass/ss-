@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.delegate = self;
+    UIView *bgView = [[UIView alloc] initWithFrame:self.tabBar.bounds];
+    bgView.backgroundColor = [UIColor blackColor];
+    [self.tabBar insertSubview:bgView atIndex:0];
+    self.tabBar.opaque = YES;
+    
     // Do any additional setup after loading the view.
 }
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{

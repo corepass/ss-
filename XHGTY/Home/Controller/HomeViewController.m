@@ -12,7 +12,6 @@
 #import "FXLottery.h"
 #import "FXWebViewController.h"
 #import "VideoDrawViewController.h"
-#import "RecordViewController.h"
 #import "LotteryDistrViewController.h"
 #import "LHDQViewController.h"
 #import "ThreeViewController.h"
@@ -32,7 +31,7 @@
 #import "HallCollectionViewCell.h"
 #import "XYHeardView.h"
 #import "ForumViewController.h"
-#define kItemMargin 2
+#define kItemMargin 5
 #import "CpMapViewController.h"
 #import "HallCollectionViewCell.h"
 #import "LoginViewController.h"
@@ -44,7 +43,7 @@
 #import "FXViewController.h"
 #import "HomegpcCollectionViewCell.h"
 #import "gpcModel.h"
-#import "MNXHViewController.h"
+#import "SSXHViewController.h"
 #import "MessageRuntime.h"
 #import "StylesViewController.h"
 /*
@@ -141,8 +140,8 @@ static NSString *const gpcID = @"gpcID";
     if(self.totalLotters.count){
         kSendNotify(@"首页出现", nil);
     }
-    _gpcArray = [[NSMutableArray alloc] init];
-//    [self getgpcData];
+   
+
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
     left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
@@ -182,13 +181,20 @@ static NSString *const gpcID = @"gpcID";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+   
+    // app名称
+    NSString *app_Name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    
+   
+    
     [self addyindaoyue];
   
     [self performSelector:@selector(addsomething)];
 
-    
+     _gpcArray = [[NSMutableArray alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationItem.title = @"大厅";
+    self.navigationItem.title = app_Name;
     self.nonetWorkView.delegate = self;
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomegpcCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:gpcID];
@@ -208,7 +214,7 @@ static NSString *const gpcID = @"gpcID";
     }];
     [self loadNewItems];
     
-      [self getgpcData];
+    [self getgpcData];
     [self setBannar];
 }
 
@@ -217,9 +223,7 @@ static NSString *const gpcID = @"gpcID";
        if (JSON != nil){
         
            _gpcArray = [gpcModel mj_objectArrayWithKeyValuesArray:JSON];
-           if (_gpcArray.count > 3){
-               [_gpcArray removeObjectsInRange:NSMakeRange(3, _gpcArray.count - 3)];
-           }
+           NSLog(@"******************%lu*************************",(unsigned long)_gpcArray.count);
            dispatch_async(dispatch_get_main_queue(), ^{
                  [self.collectionView reloadData];
            });
@@ -252,7 +256,7 @@ static NSString *const gpcID = @"gpcID";
 {
     switch (section) {
         case 0:
-            return CGSizeMake(self.view.frame.size.width, 80);
+            return CGSizeMake(self.view.frame.size.width , 80);
             break;
             
         default:
@@ -275,7 +279,7 @@ static NSString *const gpcID = @"gpcID";
             break;
             
         default:
-            return _gpcArray.count;
+            return _gpcArray.count > 3 ? 3 : 0;
             break;
     }
 
@@ -294,10 +298,9 @@ static NSString *const gpcID = @"gpcID";
         default:
         {
             HomegpcCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:gpcID forIndexPath:indexPath];
-            if(_gpcArray.count > indexPath.row){
+
                 cell.model = _gpcArray[indexPath.row];
-            }
-      //      cell = self.totalLotters[indexPath.row].label;
+  
             return cell;
         }
             break;

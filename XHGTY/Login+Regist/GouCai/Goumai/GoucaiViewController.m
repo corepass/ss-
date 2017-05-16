@@ -29,19 +29,7 @@ static NSString * cellindetifi = @"cell";
     [super viewDidLoad];
     self.title = @"PC蛋蛋";
     [self getqishudata];
-    
-//    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"这只是一种模拟购彩的一种行为，我们不会收取您的任何费用，并不是真是的购买彩票！请各位用户注意！！！" preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction * defa  = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        
-//    }];
-//    UIAlertAction * cancel  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//        [self.navigationController popViewControllerAnimated:YES];
-//    }];
-//    [alert addAction:defa];
-//    [alert addAction:cancel];
-//    [self presentViewController:alert animated:YES completion:nil];
-    
-  //  self.title = self.titlename;
+
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 10;
     layout.minimumLineSpacing = 10;

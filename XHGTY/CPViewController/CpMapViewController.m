@@ -51,7 +51,7 @@
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
     if (response.pois.count == 0)
-    {
+    {   [self addTS];
         return;
     }
     for (AMapPOI * model  in response.pois) {

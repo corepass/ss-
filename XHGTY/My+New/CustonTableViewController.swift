@@ -31,7 +31,7 @@ class CustonTableViewController: UITableViewController {
     }
 	func btnClick() {
 		var dic = Dictionary<String, Any>()
-		let vc = MNXHViewController()
+		let vc = SSXHViewController()
 
 		if self.title == "重庆时时彩" {
 			dic = ["dataArray": [["number": "9", "count": "1"], ["number": "9", "count": "1"], ["number": "9", "count": "1"]], "nBlue": "0", "type": "pc"]

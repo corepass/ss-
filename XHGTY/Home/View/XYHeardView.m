@@ -111,7 +111,7 @@ static JXModel * jx = nil;
       jx = [[JXModel alloc] init];
         jx.cpCount = 6;
         jx.isblue = YES;
-      self.backgroundColor = kGlobalColor;
+ 
         UIView * view = [[UIView alloc] init];
         view.backgroundColor = [UIColor whiteColor];
         [self addSubview:view];

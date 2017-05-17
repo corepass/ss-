@@ -2263,7 +2263,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 63P8KTRZ94;
+						DevelopmentTeam = 3P2D38MX5P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2274,7 +2274,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -2769,10 +2769,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 63P8KTRZ94;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2797,10 +2797,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.caipiao.wwcp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a72235f-b6df-4fed-9f41-bcb36385abc6";
-				PROVISIONING_PROFILE_SPECIFIER = wenqiangwangcp;
+				PROVISIONING_PROFILE = "966d3167-9193-4dad-ab8e-32a1f2c08dba";
+				PROVISIONING_PROFILE_SPECIFIER = "神速测试描述文件";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2814,10 +2814,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wenqiang Wang (63P8KTRZ94)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 63P8KTRZ94;
+				DEVELOPMENT_TEAM = 3P2D38MX5P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2842,10 +2842,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.caipiao.wwcp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a72235f-b6df-4fed-9f41-bcb36385abc6";
-				PROVISIONING_PROFILE_SPECIFIER = wenqiangwangcp;
+				PROVISIONING_PROFILE = "966d3167-9193-4dad-ab8e-32a1f2c08dba";
+				PROVISIONING_PROFILE_SPECIFIER = "神速测试描述文件";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -181,6 +181,16 @@
 		6D1293191EA8C630006824C6 /* MNXHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1293181EA8C630006824C6 /* MNXHModel.m */; };
 		6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */; };
 		6D12931F1EA9F088006824C6 /* MNXHHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D12931E1EA9F088006824C6 /* MNXHHeardView.m */; };
+		6D4D02B01ECD672700DBAAE5 /* ZhuanjiaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02AF1ECD672700DBAAE5 /* ZhuanjiaTableViewController.m */; };
+		6D4D02B41ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02B21ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.m */; };
+		6D4D02B51ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D4D02B31ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.xib */; };
+		6D4D02B81ECD6B0400DBAAE5 /* ZhuanjiaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02B71ECD6B0400DBAAE5 /* ZhuanjiaModel.m */; };
+		6D4D02BD1ECD752D00DBAAE5 /* FXHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02BC1ECD752D00DBAAE5 /* FXHomeTableViewController.m */; };
+		6D4D02C11ECD754800DBAAE5 /* FXHoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02BF1ECD754800DBAAE5 /* FXHoneTableViewCell.m */; };
+		6D4D02C21ECD754800DBAAE5 /* FXHoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D4D02C01ECD754800DBAAE5 /* FXHoneTableViewCell.xib */; };
+		6D4D02C51ECD76DE00DBAAE5 /* FXHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4D02C41ECD76DE00DBAAE5 /* FXHomeModel.m */; };
+		6D4D02C91ECD85C600DBAAE5 /* jcore-ios-1.1.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4D02C61ECD85C600DBAAE5 /* jcore-ios-1.1.3.a */; };
+		6D4D02CA1ECD85C600DBAAE5 /* jpush-ios-3.0.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4D02C71ECD85C600DBAAE5 /* jpush-ios-3.0.5.a */; };
 		6D5535E01EBADCD900B0E8E8 /* uerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535DF1EBADCD900B0E8E8 /* uerModel.m */; };
 		6D5535E31EBAF5A300B0E8E8 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535E21EBAF5A300B0E8E8 /* WKWebViewController.m */; };
 		6D5535EB1EBC195300B0E8E8 /* JubaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5535EA1EBC195300B0E8E8 /* JubaoTableViewController.m */; };
@@ -360,7 +370,6 @@
 		C790DA6F1E1B96EE00E1A7E0 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA5F1E1B96EE00E1A7E0 /* UIImageView+HighlightedWebCache.m */; };
 		C790DA701E1B96EE00E1A7E0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA611E1B96EE00E1A7E0 /* UIImageView+WebCache.m */; };
 		C790DA711E1B96EE00E1A7E0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C790DA631E1B96EE00E1A7E0 /* UIView+WebCacheOperation.m */; };
-		C7ABDC191E01369A0040873A /* jcore-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ABDC161E01369A0040873A /* jcore-ios-1.0.0.a */; };
 		C7ABDC1C1E0136CC0040873A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ABDC1B1E0136CC0040873A /* CFNetwork.framework */; };
 		C7ABDC1E1E0136D40040873A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ABDC1D1E0136D40040873A /* CoreFoundation.framework */; };
 		C7ABDC201E0136DB0040873A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ABDC1F1E0136DB0040873A /* CoreTelephony.framework */; };
@@ -663,6 +672,23 @@
 		6D12931B1EA9A7CC006824C6 /* MNXHFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHFootView.m; sourceTree = "<group>"; };
 		6D12931D1EA9F088006824C6 /* MNXHHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNXHHeardView.h; sourceTree = "<group>"; };
 		6D12931E1EA9F088006824C6 /* MNXHHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNXHHeardView.m; sourceTree = "<group>"; };
+		6D4D02AE1ECD672700DBAAE5 /* ZhuanjiaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuanjiaTableViewController.h; sourceTree = "<group>"; };
+		6D4D02AF1ECD672700DBAAE5 /* ZhuanjiaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuanjiaTableViewController.m; sourceTree = "<group>"; };
+		6D4D02B11ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuanjiaTableViewCell.h; sourceTree = "<group>"; };
+		6D4D02B21ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuanjiaTableViewCell.m; sourceTree = "<group>"; };
+		6D4D02B31ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhuanjiaTableViewCell.xib; sourceTree = "<group>"; };
+		6D4D02B61ECD6B0400DBAAE5 /* ZhuanjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuanjiaModel.h; sourceTree = "<group>"; };
+		6D4D02B71ECD6B0400DBAAE5 /* ZhuanjiaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuanjiaModel.m; sourceTree = "<group>"; };
+		6D4D02BB1ECD752D00DBAAE5 /* FXHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXHomeTableViewController.h; sourceTree = "<group>"; };
+		6D4D02BC1ECD752D00DBAAE5 /* FXHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXHomeTableViewController.m; sourceTree = "<group>"; };
+		6D4D02BE1ECD754800DBAAE5 /* FXHoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXHoneTableViewCell.h; sourceTree = "<group>"; };
+		6D4D02BF1ECD754800DBAAE5 /* FXHoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXHoneTableViewCell.m; sourceTree = "<group>"; };
+		6D4D02C01ECD754800DBAAE5 /* FXHoneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXHoneTableViewCell.xib; sourceTree = "<group>"; };
+		6D4D02C31ECD76DE00DBAAE5 /* FXHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXHomeModel.h; sourceTree = "<group>"; };
+		6D4D02C41ECD76DE00DBAAE5 /* FXHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXHomeModel.m; sourceTree = "<group>"; };
+		6D4D02C61ECD85C600DBAAE5 /* jcore-ios-1.1.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.3.a"; sourceTree = "<group>"; };
+		6D4D02C71ECD85C600DBAAE5 /* jpush-ios-3.0.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.5.a"; sourceTree = "<group>"; };
+		6D4D02C81ECD85C600DBAAE5 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		6D5535DE1EBADCD900B0E8E8 /* uerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uerModel.h; sourceTree = "<group>"; };
 		6D5535DF1EBADCD900B0E8E8 /* uerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uerModel.m; sourceTree = "<group>"; };
 		6D5535E11EBAF5A300B0E8E8 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKWebViewController.h; path = XHGTY/Forum/Model/WKWebViewController.h; sourceTree = SOURCE_ROOT; };
@@ -996,6 +1022,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1293091EA8878E006824C6 /* Social.framework in Frameworks */,
+				6D4D02C91ECD85C600DBAAE5 /* jcore-ios-1.1.3.a in Frameworks */,
 				6D082F241EA6129E0076F6D3 /* MapKit.framework in Frameworks */,
 				C78D25FC1DDB031800EE34E0 /* libz.tbd in Frameworks */,
 				C78D26001DDB032700EE34E0 /* JavaScriptCore.framework in Frameworks */,
@@ -1007,12 +1034,12 @@
 				C7ABDC221E0136E40040873A /* SystemConfiguration.framework in Frameworks */,
 				C7ABDC201E0136DB0040873A /* CoreTelephony.framework in Frameworks */,
 				C7ABDC1E1E0136D40040873A /* CoreFoundation.framework in Frameworks */,
+				6D4D02CA1ECD85C600DBAAE5 /* jpush-ios-3.0.5.a in Frameworks */,
 				C7ABDC1C1E0136CC0040873A /* CFNetwork.framework in Frameworks */,
 				6D082F261EA612D30076F6D3 /* MAMapKit.framework in Frameworks */,
 				C78D26021DDB033600EE34E0 /* libsqlite3.tbd in Frameworks */,
 				C78D25FE1DDB032200EE34E0 /* libstdc++.tbd in Frameworks */,
 				C78D25FA1DDB030D00EE34E0 /* libicucore.tbd in Frameworks */,
-				C7ABDC191E01369A0040873A /* jcore-ios-1.0.0.a in Frameworks */,
 				6D082F151EA5CA380076F6D3 /* AMapLocationKit.framework in Frameworks */,
 				6D0E7D0B1E8A6E2B0029E809 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				6D082ED11EA5C4AD0076F6D3 /* AMapFoundationKit.framework in Frameworks */,
@@ -1644,6 +1671,9 @@
 		6DE973251E8DEDE2003D5DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6D4D02C61ECD85C600DBAAE5 /* jcore-ios-1.1.3.a */,
+				6D4D02C71ECD85C600DBAAE5 /* jpush-ios-3.0.5.a */,
+				6D4D02C81ECD85C600DBAAE5 /* JPUSHService.h */,
 				6D5535EC1EBC56C800B0E8E8 /* LMReport */,
 				6DA81D181EAC4CB40031F862 /* MessageRuntime.h */,
 				6DA81D191EAC4CB40031F862 /* MessageRuntime.m */,
@@ -1769,6 +1799,16 @@
 				6D082ECD1EA5BAD80076F6D3 /* FXZSTViewController.m */,
 				6D082F271EA7449B0076F6D3 /* BallTableViewController.h */,
 				6D082F281EA7449B0076F6D3 /* BallTableViewController.m */,
+				6D4D02AE1ECD672700DBAAE5 /* ZhuanjiaTableViewController.h */,
+				6D4D02AF1ECD672700DBAAE5 /* ZhuanjiaTableViewController.m */,
+				6D4D02B11ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.h */,
+				6D4D02B21ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.m */,
+				6D4D02B31ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.xib */,
+				6D4D02BB1ECD752D00DBAAE5 /* FXHomeTableViewController.h */,
+				6D4D02BC1ECD752D00DBAAE5 /* FXHomeTableViewController.m */,
+				6D4D02BE1ECD754800DBAAE5 /* FXHoneTableViewCell.h */,
+				6D4D02BF1ECD754800DBAAE5 /* FXHoneTableViewCell.m */,
+				6D4D02C01ECD754800DBAAE5 /* FXHoneTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1798,6 +1838,10 @@
 				6D082F301EA747B90076F6D3 /* BallModel.m */,
 				6D1293051EA86D3A006824C6 /* gpcModel.h */,
 				6D1293061EA86D3A006824C6 /* gpcModel.m */,
+				6D4D02B61ECD6B0400DBAAE5 /* ZhuanjiaModel.h */,
+				6D4D02B71ECD6B0400DBAAE5 /* ZhuanjiaModel.m */,
+				6D4D02C31ECD76DE00DBAAE5 /* FXHomeModel.h */,
+				6D4D02C41ECD76DE00DBAAE5 /* FXHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2263,7 +2307,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3P2D38MX5P;
+						DevelopmentTeam = 2UT3KX2CHJ;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2274,7 +2318,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -2309,6 +2353,7 @@
 				C749C9751E72BB9B00241CFD /* SingleViewCell.xib in Resources */,
 				6D09DFB01E9B1FFA00D9B51F /* DayTableViewCell.xib in Resources */,
 				C749CA0C1E72BFAC00241CFD /* FXNoNetWorkView.xib in Resources */,
+				6D4D02C21ECD754800DBAAE5 /* FXHoneTableViewCell.xib in Resources */,
 				C749C9721E72BB9B00241CFD /* TieBieViewCell.xib in Resources */,
 				6D082EB71EA4B9FE0076F6D3 /* HallCollectionViewCell.xib in Resources */,
 				6DA81D251EADBA9A0031F862 /* KJLSTableViewCell.xib in Resources */,
@@ -2342,6 +2387,7 @@
 				6D09DFBA1E9B1FFA00D9B51F /* FDWeatherCollectionCell.xib in Resources */,
 				6DE973441E8E2CEC003D5DBD /* GoucaiTableViewCell.xib in Resources */,
 				C749C96C1E72BB9B00241CFD /* RecordAddViewCell.xib in Resources */,
+				6D4D02B51ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.xib in Resources */,
 				C749C9521E72BB9B00241CFD /* TYBFViewController.xib in Resources */,
 				C749C9771E72BB9B00241CFD /* WebViewCell.xib in Resources */,
 				6D01755F1EAF2343001B4F99 /* confuse.sh in Resources */,
@@ -2421,6 +2467,7 @@
 				C790DA691E1B96EE00E1A7E0 /* SDWebImageDownloaderOperation.m in Sources */,
 				6D0E7CF91E8A48340029E809 /* MASCompositeConstraint.m in Sources */,
 				C749C9531E72BB9B00241CFD /* VideoDrawViewController.m in Sources */,
+				6D4D02BD1ECD752D00DBAAE5 /* FXHomeTableViewController.m in Sources */,
 				6D12931C1EA9A7CC006824C6 /* MNXHFootView.m in Sources */,
 				6D5535F91EBC56C800B0E8E8 /* LMRGrid.m in Sources */,
 				C749C9631E72BB9B00241CFD /* LHDQViewCell.m in Sources */,
@@ -2429,8 +2476,10 @@
 				6D0E7CFB1E8A48340029E809 /* MASConstraintMaker.m in Sources */,
 				6D09E0AF1E9F272A00D9B51F /* FTZViewController.m in Sources */,
 				6D0E7D781E8CC92C0029E809 /* Priority.swift in Sources */,
+				6D4D02B41ECD673E00DBAAE5 /* ZhuanjiaTableViewCell.m in Sources */,
 				6D9C82A91E95DC740043FAD8 /* MyProfileModel.m in Sources */,
 				6DE973431E8E2CEC003D5DBD /* GoucaiTableViewCell.m in Sources */,
+				6D4D02C51ECD76DE00DBAAE5 /* FXHomeModel.m in Sources */,
 				6D017A911EB1E8A5001B4F99 /* FXWebViewController.m in Sources */,
 				6D082F011EA5C6010076F6D3 /* AFSecurityPolicy.m in Sources */,
 				6D0E7CFC1E8A48340029E809 /* MASLayoutConstraint.m in Sources */,
@@ -2567,6 +2616,7 @@
 				C790DA6A1E1B96EE00E1A7E0 /* SDWebImageManager.m in Sources */,
 				6D09DFCC1E9B203900D9B51F /* NetWorkTools.m in Sources */,
 				6D0E7D721E8CC92C0029E809 /* Node.swift in Sources */,
+				6D4D02B01ECD672700DBAAE5 /* ZhuanjiaTableViewController.m in Sources */,
 				6D1292FA1EA855B8006824C6 /* KJTableViewCell.swift in Sources */,
 				C749C9431E72BB9B00241CFD /* HomeViewController.m in Sources */,
 				6D09DFC91E9B203900D9B51F /* NALLabelsMatrix.m in Sources */,
@@ -2579,6 +2629,7 @@
 				C749C9581E72BB9B00241CFD /* FXLotteryDistr.m in Sources */,
 				6D5535EB1EBC195300B0E8E8 /* JubaoTableViewController.m in Sources */,
 				6D082F0B1EA5C6010076F6D3 /* UIButton+AFNetworking.m in Sources */,
+				6D4D02B81ECD6B0400DBAAE5 /* ZhuanjiaModel.m in Sources */,
 				6D0E7D491E8CB7280029E809 /* NewTableViewCell.swift in Sources */,
 				6D1293071EA86D3A006824C6 /* gpcModel.m in Sources */,
 				6D09DFB21E9B1FFA00D9B51F /* FDCalendarItem.m in Sources */,
@@ -2649,6 +2700,7 @@
 				6D09DFF71E9B23BD00D9B51F /* LPLevelView.m in Sources */,
 				C790DA201E1B496700E1A7E0 /* SVRadialGradientLayer.m in Sources */,
 				6D0E7D821E8CCB6E0029E809 /* RegisterViewController.m in Sources */,
+				6D4D02C11ECD754800DBAAE5 /* FXHoneTableViewCell.m in Sources */,
 				C74C3E8B1E135DE2005874AC /* MJRefreshStateHeader.m in Sources */,
 				6D082F191EA5E8D40076F6D3 /* CpTableViewCell.m in Sources */,
 				C749C9671E72BB9B00241CFD /* FXLotteryDistrInfoCell.m in Sources */,
@@ -2769,10 +2821,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Man Li (2UT3KX2CHJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Man Li (2UT3KX2CHJ)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3P2D38MX5P;
+				DEVELOPMENT_TEAM = 2UT3KX2CHJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2795,12 +2847,13 @@
 					"$(PROJECT_DIR)/XHGTY/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/XHGTY/Lib",
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
+					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cb18.cb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "966d3167-9193-4dad-ab8e-32a1f2c08dba";
-				PROVISIONING_PROFILE_SPECIFIER = "神速测试描述文件";
+				PROVISIONING_PROFILE = "672a0ffb-54d3-44ca-a722-3a58396f72bc";
+				PROVISIONING_PROFILE_SPECIFIER = caibao18hoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2814,10 +2867,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Man Li (2UT3KX2CHJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Man Li (2UT3KX2CHJ)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3P2D38MX5P;
+				DEVELOPMENT_TEAM = 2UT3KX2CHJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2840,12 +2893,13 @@
 					"$(PROJECT_DIR)/XHGTY/ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(PROJECT_DIR)/XHGTY/Lib",
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
+					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cb18.cb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "966d3167-9193-4dad-ab8e-32a1f2c08dba";
-				PROVISIONING_PROFILE_SPECIFIER = "神速测试描述文件";
+				PROVISIONING_PROFILE = "672a0ffb-54d3-44ca-a722-3a58396f72bc";
+				PROVISIONING_PROFILE_SPECIFIER = caibao18hoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -25,6 +25,19 @@
 		},
 		{
 			cid = 2;
+			href = "http://www.wm007.com/plugin.php?id=nba_score";
+			icon = "";
+			id = 6;
+			img = "\U5f69\U7968\U8d44\U8baf";
+			label = "\U5f69\U7968\U8d44\U8baf";
+			listorder = 0;
+			parentid = 0;
+			path = "0-6";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
 			href = "http://m.pc80888.com";
 			icon = "";
 			id = 7;
@@ -74,19 +87,6 @@
 			path = "0-11\n\n                   \n";
 			status = 1;
 			target = "<null>";
-		},
-		{
-			cid = 2;
-			href = "http://www.wm007.com/plugin.php?id=nba_score";
-			icon = "";
-			id = 6;
-			img = "\U5f69\U7968\U8d44\U8baf";
-			label = "\U5f69\U7968\U8d44\U8baf";
-			listorder = 0;
-			parentid = 0;
-			path = "0-6";
-			status = 1;
-			target = "";
 		},
 	);
 	info = "\U64cd\U4f5c\U6210\U529f!";

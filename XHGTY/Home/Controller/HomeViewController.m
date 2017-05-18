@@ -46,6 +46,8 @@
 #import "SSXHViewController.h"
 #import "MessageRuntime.h"
 #import "StylesViewController.h"
+#import "ZhuanjiaTableViewController.h"
+#import "FXHomeTableViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -58,6 +60,8 @@
 @property (nonatomic,strong)FXHomeMenuCycleView *cycleView;
 
 @property (nonatomic,strong)NSArray<FXLottery*> *totalLotters;
+
+@property(nonatomic,strong) NSMutableArray<FXLottery*> * section0Array;
 
 @property (nonatomic,strong)NSMutableArray *Ads;
 /**网络链接失败*/
@@ -139,11 +143,7 @@ static NSString *const gpcID = @"gpcID";
     // app名称
     NSString *app_Name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
     
-   
-    
-  
-  
-
+    _section0Array = [[NSMutableArray alloc] init];
      _gpcArray = [[NSMutableArray alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = app_Name;
@@ -156,17 +156,14 @@ static NSString *const gpcID = @"gpcID";
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
   
-    layout.minimumLineSpacing = kItemMargin;
- //   layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 80);
-    layout.minimumInteritemSpacing = kItemMargin;
-    layout.sectionInset = UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
+
     self.collectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
            [self setBannar];
-           [self getgpcData];
+   //        [self getgpcData];
     }];
     [self loadNewItems];
     
-    [self getgpcData];
+ //   [self getgpcData];
     [self setBannar];
 }
 
@@ -190,6 +187,9 @@ static NSString *const gpcID = @"gpcID";
 {
     switch (indexPath.section) {
         case 0:
+            return CGSizeMake( self.collectionView.frame.size.width/3, 80);
+            break;
+        case 1:
         {
             CGFloat itemW = (kScreenW - 4 * kItemMargin) / 3;
             CGFloat itemH = itemW+5;
@@ -204,6 +204,15 @@ static NSString *const gpcID = @"gpcID";
     }
 
 }
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+if (section == 0)
+{
+    return  UIEdgeInsetsMake(kItemMargin, 0, 0, 0);
+}
+    return UIEdgeInsetsMake(kItemMargin, kItemMargin, kItemMargin, kItemMargin);
+
+}
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     switch (section) {
@@ -216,17 +225,34 @@ static NSString *const gpcID = @"gpcID";
             break;
     }
 }
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    if (section == 0){
+        return 0;
+    }
+    return kItemMargin;
+}
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    if (section == 0){
+        return 0;
+    }
+    return kItemMargin;
+}
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     if (_gpcArray.count == 0){
-        return 1;
+        return 2;
     }
-    return  2;
+    return  3;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     switch (section) {
         case 0:
+            return 3;
+            break;
+        case 1:
             return self.totalLotters.count;
             break;
             
@@ -238,7 +264,16 @@ static NSString *const gpcID = @"gpcID";
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
+            
         case 0:
+        {
+            HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+            
+            cell.lotteryName = self.section0Array[indexPath.row].label;
+            return cell;
+        }
+            break;
+        case 1:
         {
             HallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
             
@@ -267,7 +302,7 @@ static NSString *const gpcID = @"gpcID";
 }
 -(void)setBannar{
 
-    [HttpTools POSTWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
+    [HttpTools POSTCPWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
         [self.collectionView.mj_header endRefreshing];
                 if ([JSON isKindOfClass:[NSArray class]]){
                  NSArray * array = JSON;
@@ -300,6 +335,8 @@ static NSString *const gpcID = @"gpcID";
 }
 - (void)loadNewItems{
     
+    NSArray * array = @[@{@"label":@"专家"},@{@"label":@"分析"},@{@"label":@"走势"}];
+    self.section0Array = [FXLottery mj_objectArrayWithKeyValuesArray:array];
     NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
     NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
     
@@ -350,6 +387,39 @@ static NSString *const gpcID = @"gpcID";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
         case 0:
+        {
+            switch (indexPath.row) {
+                case 0:
+                {
+                 ZhuanjiaTableViewController * vc = [[ZhuanjiaTableViewController alloc]     init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    vc.title = @"专家";
+                    [self.navigationController pushViewController:vc animated:true];
+                }
+                    break;
+               case 1:
+                {
+                    FXHomeTableViewController * vc = [[FXHomeTableViewController alloc]     init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    vc.title = @"分析";
+                    [self.navigationController pushViewController:vc animated:true];
+                }
+
+                    break;
+                default:
+                {
+                    FXWebViewController * vc = [[FXWebViewController alloc]     init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    vc.titleName = @"走势";
+                    vc.accessUrl = @"http://client.310win.com/aspx/ChartList.aspx?_t=1495090318.014192";
+                    [self.navigationController pushViewController:vc animated:true];
+                }
+                    break;
+            }
+        
+        }
+            break;
+        case 1:
         {
             FXLottery *lottery = self.totalLotters[indexPath.item];
             

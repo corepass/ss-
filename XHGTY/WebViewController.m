@@ -29,9 +29,17 @@
 
     
 }
--(void)viewDidLayoutSubviews{
-    self.webView.frame = CGRectMake(0, 20, self.view.width, self.view.height -20);
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+{
+    NSURL *requestURL = [ request URL ];
+    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])
+        && ( navigationType == UIWebViewNavigationTypeLinkClicked ) ) {
+        return ![ [ UIApplication sharedApplication ] openURL:  requestURL];
+    }
+    
+    return YES;
 }
+
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
     [SVProgressHUD show];
@@ -61,7 +69,7 @@
     [self useProgressView];
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 49, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 0));
     }];
 
 

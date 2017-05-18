@@ -31,15 +31,15 @@
 
 - (void)loadNewItems{
     
-    [HttpTools postWithPath:kLHDQThree parms:nil success:^(id JSON) {
-        
-        NSString *htmlData = JSON[@"data"];
-        
-        [self.webView loadHTMLString:htmlData baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle]  bundlePath]]];
-        
-    } :^(NSError *error) {
-        //
-    }];
+//    [HttpTools postWithPath:kLHDQThree parms:nil success:^(id JSON) {
+//        
+//        NSString *htmlData = JSON[@"data"];
+//        
+//        [self.webView loadHTMLString:htmlData baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle]  bundlePath]]];
+//        
+//    } :^(NSError *error) {
+//        //
+//    }];
 }
 
 

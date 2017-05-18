@@ -14,11 +14,13 @@ typedef void(^HttpFailureBlock)(NSError *error);
 
 @interface HttpTools : NSObject
 + (void)loadData:(void(^)(NSString *))finishedCallBack;
-+ (void)POSTWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
++ (void)POSTCPWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 + (void)GETWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 + (void)getWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 + (void)getCustonWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 + (void)getCustonCAIPIAOWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
+
+
 + (void)postWithPath:(NSString*)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 +(void)postCustonCAIPIAOWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure;
 

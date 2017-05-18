@@ -10,7 +10,7 @@ import UIKit
 
 class PCDDTableViewController: UITableViewController {
 	var segumented: UISegmentedControl!
-	var url = "http://api.dabai28.com/api28.php?name=pc28&type=json"
+	var url = "http://api.jisuapi.com/caipiao/history?caipiaoid=77&&num=20&&appkey=3afdff18fac4efeb"
 	var modelArray = Array<Dictionary<String, String>>()
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -33,10 +33,13 @@ class PCDDTableViewController: UITableViewController {
 		_ = self.navigationController?.pushViewController(vc, animated: true)
 	}
 	func loaddata() {
-		HttpTools.getCustonWithPath(self.url, parms: nil, success: { (resport) in
+
+		HttpTools.postcp(withPath: self.url, parms: nil, success: { (resport) in
 			if (resport != nil) {
+				let json = resport as? Dictionary<String, Any>
+				let data = json?["result"] as? Dictionary<String, Any>
 				self.modelArray.removeAll()
-				self.modelArray = resport as! Array<Dictionary<String, String>>
+				self.modelArray = data?["list"] as! Array<Dictionary<String, String>>
 				DispatchQueue.main.async {
 					self.tableView.reloadData()
 					self.tableView.mj_header.endRefreshing()
@@ -52,9 +55,9 @@ class PCDDTableViewController: UITableViewController {
 
 	}
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section > 0 {
-        	btnClick()
-        }
+		if indexPath.section > 0 {
+			btnClick()
+		}
 	}
 	func segumentedClick(sender: UISegmentedControl) {
 		self.modelArray.removeAll()
@@ -105,15 +108,15 @@ class PCDDTableViewController: UITableViewController {
 		} else {
 			if modelArray.count > indexPath.section - 1 {
 				let model = modelArray[indexPath.section - 1]
-				cell?.qishu.text = "第\(model["issue"]!)期"
-				let str = "\(model["time"]!)"
+				cell?.qishu.text = "第\(model["issueno"]!)期"
+				let str = "\(model["opendate"]!)"
 				let index = str.index(str.startIndex, offsetBy: 5)
 				let suffix = str.substring(from: index)
 				cell?.time.text = suffix
-				let one = Int(model["one"]!)
-				let two = Int(model["two"]!)
-				let three = Int(model["three"]!)
-				cell?.jieguo.text = "\(one!)+\(two!)+\(three!)=\(one! + two! + three!)"
+//				let one = Int(model["one"]!)
+//				let two = Int(model["two"]!)
+//				let three = Int(model["three"]!)
+				cell?.jieguo.text = "\(model["number"]!)"
 				cell?.qishu.backgroundColor = UIColor.init(red: 245.0 / 255.0, green: 225.0 / 255.0, blue: 210.0 / 255.0, alpha: 1)
 				cell?.time.backgroundColor = UIColor.init(red: 245.0 / 255.0, green: 225.0 / 255.0, blue: 210.0 / 255.0, alpha: 1)
 				cell?.jieguo.backgroundColor = UIColor.init(red: 245.0 / 255.0, green: 225.0 / 255.0, blue: 210.0 / 255.0, alpha: 1)

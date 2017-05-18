@@ -56,7 +56,7 @@
 
     //http://api.datacenter.woying.com/soccer/score?lType=1&statType=1&issue=&sv2=1
     //http://api.datacenter.woying.com/soccer/score?lType=1&statType=2&issue=2017-04-19&sv2=1
-  [HttpTools POSTWithPath:url parms:nil success:^(id JSON) {
+  [HttpTools POSTCPWithPath:url parms:nil success:^(id JSON) {
       [self.tableView.mj_header endRefreshing];
       if (JSON){
           if ([JSON[@"status"] integerValue] == 1){

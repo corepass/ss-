@@ -28,7 +28,7 @@
     self.wkwebView.navigationDelegate = self;
     [self.view addSubview:self.wkwebView];
     [self.wkwebView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 49, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 0));
     }];
  //   [self addFoot];
 }
@@ -67,6 +67,15 @@
     };
 
 }
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    NSURL *requestURL = navigationAction.request.URL;
+    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ]) && navigationAction.navigationType == UIWebViewNavigationTypeLinkClicked) {
+         [ [ UIApplication sharedApplication ] openURL:  requestURL];
+         decisionHandler(WKNavigationActionPolicyCancel);
+    }
+     decisionHandler(WKNavigationActionPolicyAllow);
+}
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
     [SVProgressHUD show];
@@ -84,6 +93,13 @@
     if (![frameInfo isMainFrame]) {
         [webView loadRequest:navigationAction.request];
     }
+    
+    NSURL *requestURL = navigationAction.request.URL;
+    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])) {
+        [ [ UIApplication sharedApplication ] openURL:  requestURL];
+    
+    }
+    
     return nil;
 }
 
@@ -144,16 +160,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
-{
-    NSURL *requestURL = [ request URL ];
-    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])
-        && ( navigationType == UIWebViewNavigationTypeLinkClicked ) ) {
-        return ![ [ UIApplication sharedApplication ] openURL:  requestURL];
-    }
-   
-    return YES;
 }
 
 

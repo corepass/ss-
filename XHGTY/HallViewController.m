@@ -39,17 +39,24 @@ typedef NS_ENUM(NSInteger, HallType){
 
 static NSString *const cellID = @"cellID";
 -(void)setsegument{
-//    NSArray * titleArray = @[@"选号",@"开奖"];
-//    self.segumented = [[UISegmentedControl alloc]initWithItems:titleArray];
-//    self.segumented.frame = CGRectMake(0, 0, 250, 40);
-//    self.segumented.tintColor = [UIColor whiteColor];
-//    self.segumented.selectedSegmentIndex = 0;
-//    [self.segumented addTarget:self action:@selector(segumentedClick:) forControlEvents:UIControlEventValueChanged];
-//    self.navigationItem.titleView = self.segumented;
-//    
+    NSArray * titleArray = @[@"选号",@"开奖"];
+    self.segumented = [[UISegmentedControl alloc]initWithItems:titleArray];
+    self.segumented.frame = CGRectMake(0, 0, 250, 40);
+    self.segumented.tintColor = [UIColor whiteColor];
+    self.segumented.selectedSegmentIndex = 0;
+    [self.segumented addTarget:self action:@selector(segumentedClick:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = self.segumented;
     
     
+    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithTitle:@"开奖推送" style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    right.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = right;
     
+}
+-(void)rightClick{
+    KJpushTableViewController * kj = [[KJpushTableViewController alloc] init];
+    kj.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:kj animated:YES];
 }
 -(void)segumentedClick:(UISegmentedControl *)segemert{
     switch (segemert.selectedSegmentIndex) {

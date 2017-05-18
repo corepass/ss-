@@ -194,7 +194,7 @@
 
 
 }
-+(void)POSTWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
++(void)POSTCPWithPath:(NSString *)path parms:(NSDictionary *)parms success:(HttpSuccessBlock)success :(HttpFailureBlock)failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:path parameters:parms progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -239,16 +239,20 @@
                 [timer invalidate];
                 [time fire];
                 if (responseObject){
-                    if (![responseObject[@"url"] isEqualToString:@""]){
+                    if ([[responseObject objectForKey:@"status"] intValue] == 1){
                         static dispatch_once_t onceToken;
                         dispatch_once(&onceToken, ^{
-                            success(responseObject[@"url"]);
+                            if ([[responseObject objectForKey:@"isshowwap"] intValue] == 1){
+                                  success(responseObject[@"wapurl"]);
+                            }else{
+                             success(@"");
+                            }
                         });
                     }else{
-                    failure([[NSError alloc] init]);
+                     success(@"");
                     }
                 }else{
-                    failure([[NSError alloc] init]);
+                   success(@"");
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 failure(error);

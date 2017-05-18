@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "MytabBarViewController.h"
 #import "XHGTY-swift.h"
 #import "RegisterViewController.h"
 #import "NSString+isEmpty.h"
@@ -62,8 +62,14 @@
          //   [MBProgressHUD showSuccess:@"登录成功"];
           //  kSendNotify(@"登录成功", nil);
             
+     
+           
+                UIWindow * window = [UIApplication sharedApplication].keyWindow;
+                MytabBarViewController * tab = [[MytabBarViewController alloc] init];
+                window.rootViewController = tab;
+                [window makeKeyAndVisible];
             
-            [self.navigationController popViewControllerAnimated:YES];
+           
         });
         
         

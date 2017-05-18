@@ -74,44 +74,29 @@ static NSString * cellindetifi = @"cell";
     // Do any additional setup after loading the view.
 }
 -(void)getqishudata{
-//    func loaddata(){
-//        HttpTools.getCustonWithPath(self.url, parms: nil, success: { (resport) in
-//            if (resport != nil) {
-//                self.modelArray.removeAll()
-//                self.modelArray = resport as! Array<Dictionary<String, String>>
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                    self.tableView.mj_header.endRefreshing()
-//                }
-//                
-//            }
-//        }) { (error) in
-//            SVProgressHUD.showError(withStatus: "数据加载出错，请稍候再试")
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-//                SVProgressHUD.dismiss()
-//            })
-//        }
-//        
-//    }
-   [HttpTools getCustonWithPath:@"http://api.dabai28.com/api28.php?name=pc28&type=json" parms:nil success:^(id JSON) {
-       if ([JSON isKindOfClass:[NSArray class]]){
-           self.qishu = JSON[0][@"issue"];
-           [self getdata];
-       }else{
-           
-               [SVProgressHUD showErrorWithStatus:@"正在获取期数失败,稍后再试！"];
-               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                   [SVProgressHUD dismiss];
-               });
-         
-       }
-       
-   } :^(NSError *error) {
-       [SVProgressHUD showErrorWithStatus:@"获取期数失败"];
-       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-           [SVProgressHUD dismiss];
-       });
-   }];
+
+    
+    self.qishu = @"20170518-15";
+    [self getdata];
+//   [HttpTools getCustonWithPath:@"http://api.dabai28.com/api28.php?name=pc28&type=json" parms:nil success:^(id JSON) {
+//       if ([JSON isKindOfClass:[NSArray class]]){
+//           self.qishu = JSON[0][@"issue"];
+//           [self getdata];
+//       }else{
+//           
+//               [SVProgressHUD showErrorWithStatus:@"正在获取期数失败,稍后再试！"];
+//               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                   [SVProgressHUD dismiss];
+//               });
+//         
+//       }
+//       
+//   } :^(NSError *error) {
+//       [SVProgressHUD showErrorWithStatus:@"获取期数失败"];
+//       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//           [SVProgressHUD dismiss];
+//       });
+//   }];
     
     
 

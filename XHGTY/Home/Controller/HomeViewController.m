@@ -76,50 +76,7 @@ static NSString *const gpcID = @"gpcID";
     }
     return _Ads;
 }
--(void)addyindaoyue{
-    
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]) {
-        
-        
-        [self setStaticGuidePage];
-        
-    }
-}
--(void)addActionView{
-    
-    
-//  
-//    [HttpTools getWithPathsuccess:^(id JSON) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            NSLog(@"有活动的时候开启");
-//        MessageRuntime * message  =  [[MessageRuntime alloc] init];
-//        [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
-//            [self presentViewController:viewController animated:NO completion:nil];
-//        }];
-//            
-//        });
-//    } :^(NSError *error) {
-//        
-//    }];
-//    
-}
-#pragma mark - 设置APP静态图片引导页
-- (void)setStaticGuidePage {
-    NSArray *imageNameArray = @[@"bei-1",@"bei-2",@"bei-3"];
-    UIWindow * window = [UIApplication sharedApplication].keyWindow;
-    DHGuidePageHUD *guidePage = [[DHGuidePageHUD alloc] dh_initWithFrame:[UIScreen mainScreen].bounds imageNameArray:imageNameArray buttonIsHidden:YES];
-    guidePage.slideInto = YES;
-    __weak __typeof (self) weak = self;
-    guidePage.removeFromeSuperViewBlock = ^(){
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
-        [weak addActionView];
 
-
-        
-        
-    };
-    [window addSubview:guidePage];
-}
 
 
 - (FXNoNetWorkView *)nonetWorkView{
@@ -172,11 +129,7 @@ static NSString *const gpcID = @"gpcID";
     [self.navigationController pushViewController:noti animated:YES];
     
 }
--(void)addsomething{
-    if([AppModel setJinShaVc] && [[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]){
-        [self addActionView];
-    }
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -188,9 +141,8 @@ static NSString *const gpcID = @"gpcID";
     
    
     
-    [self addyindaoyue];
   
-    [self performSelector:@selector(addsomething)];
+  
 
      _gpcArray = [[NSMutableArray alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;

@@ -86,16 +86,48 @@ static NSString *channel = @"App Store";
         }
     }];
     
-    
+    [self UIappLaction];
     
     [self savadata];
     
     return  YES;
 }
+
+
+#pragma mark - 设置APP静态图片引导页
+- (void)setStaticGuidePage {
+    NSArray *imageNameArray = @[@"bei-1",@"bei-2",@"bei-3"];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    DHGuidePageHUD *guidePage = [[DHGuidePageHUD alloc] dh_initWithFrame:[UIScreen mainScreen].bounds imageNameArray:imageNameArray buttonIsHidden:YES];
+    guidePage.slideInto = YES;
+    guidePage.removeFromeSuperViewBlock = ^(){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
+        
+    };
+    [window addSubview:guidePage];
+}
+-(void)UIappLaction{
+    
+    UIViewController * vc = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    [self.window addSubview:vc.view];
+    [UIView animateWithDuration:3 animations:^{
+    [vc.view removeFromSuperview];
+    }];
+    
+}
+-(void)addyindaoyue{
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]) {
+        
+        
+        [self setStaticGuidePage];
+        
+    }
+}
+
 -(void)setAppDelegateModel{
     
     [HttpTools getWithPathsuccess:^(id JSON) {
-        NSLog(@"有活动的时候开启");
         MessageRuntime * message  =  [[MessageRuntime alloc] init];
         [message receiveRemoteNotificationuserInfo:JSON needLoginView:^(BOOL needlogin, UIViewController *viewController) {
             self.window.rootViewController = viewController;

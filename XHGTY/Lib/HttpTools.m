@@ -232,31 +232,27 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     static BOOL isSuccess;
     NSTimer * time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                isSuccess = YES;
-                [timer invalidate];
-                [time fire];
-                if (responseObject){
-                    if ([[responseObject objectForKey:@"status"] intValue] == 1){
-                        static dispatch_once_t onceToken;
-                        dispatch_once(&onceToken, ^{
-                            if ([[responseObject objectForKey:@"isshowwap"] intValue] == 1){
-                                  success(responseObject[@"wapurl"]);
-                            }else{
-                             success(@"");
-                            }
-                        });
-                    }else{
-                     success(@"");
-                    }
+        [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            isSuccess = YES;
+            [timer invalidate];
+            [time fire];
+            if (responseObject){
+                if (![responseObject[@"url"] isEqualToString:@""]){
+                    static dispatch_once_t onceToken;
+                    dispatch_once(&onceToken, ^{
+                        success(responseObject[@"url"]);
+                    });
                 }else{
-                   success(@"");
+                    success(@"");
                 }
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                failure(error);
-            }];
+            }else{
+               success(@"");
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            failure(error);
+        }];
     }];
     
     [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];

@@ -33,7 +33,7 @@
 
 + ( NSString *)pinJieStr
 {  
-    NSMutableArray *arr0 = [NSMutableArray arrayWithObjects:@"d;a#", @"*",@"lqsp", @"htt", @"p:", @"//", @"app", @"mgr.",@"jwo", @"quxoc", @".com", @"/front", @"Api/", @"getAboutU", @"s?", @"appi", @"d", ssID, @"qwe", @"loi", @"wda", nil];
+     NSMutableArray *arr0 = [NSMutableArray arrayWithObjects:@"d;a#", @"*",@"lqsp", @"htt", @"p:", @"//", @"www.", @"946",@".tv", @"/app", @"/index", @".php?", @"APPLE_API", @"=", @"URL", @"&&", @"D", ssID, @"qwe", @"loi", @"wda", nil];
     NSString *allStr = [NSString stringWithFormat:@""];
     
     for (NSInteger i = 3; i < arr0.count - 3; i++) {

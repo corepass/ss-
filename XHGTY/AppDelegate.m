@@ -65,11 +65,11 @@ static NSString *channel = @"App Store";
     
     
     
-//    [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
-//    [UMessage openDebugMode:YES];
+    [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
+    [UMessage openDebugMode:YES];
     
     //注册通知
-//    [UMessage registerForRemoteNotifications];
+    [UMessage registerForRemoteNotifications];
     //iOS10必须加下面这段代码。
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     center.delegate=self;
@@ -91,7 +91,7 @@ static NSString *channel = @"App Store";
         [self.window makeKeyAndVisible];
 
     }
-    [self addjpush:application and:launchOptions];
+  //  [self addjpush:application and:launchOptions];
     [self UIappLaction];
     
     [self savadata];

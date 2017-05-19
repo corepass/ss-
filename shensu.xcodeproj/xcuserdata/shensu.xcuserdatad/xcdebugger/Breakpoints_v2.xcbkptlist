@@ -43,13 +43,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XHGTY/WebViewController.m"
-            timestampString = "516793204.88537"
+            filePath = "XHGTY/Lib/HttpTools.m"
+            timestampString = "516862977.83342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "+getWithPathsuccess::"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

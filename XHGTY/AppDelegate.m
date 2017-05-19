@@ -34,7 +34,7 @@
 #endif
 
 
-static NSString *appKey = @"973f921f5a395a615add02c3";
+static NSString *appKey = @"845d58765ac64bca20cd35e1";
 static NSString *channel = @"App Store";
 
 
@@ -65,11 +65,11 @@ static NSString *channel = @"App Store";
     
     
     
-//    [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
-//    [UMessage openDebugMode:YES];
+    [UMessage startWithAppkey:UMKey launchOptions:launchOptions httpsEnable:YES ];
+    [UMessage openDebugMode:YES];
     
     //注册通知
-//    [UMessage registerForRemoteNotifications];
+    [UMessage registerForRemoteNotifications];
     //iOS10必须加下面这段代码。
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     center.delegate=self;

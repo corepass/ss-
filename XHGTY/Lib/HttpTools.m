@@ -230,6 +230,7 @@
 
 +(void)getWithPathsuccess:(HttpSuccessBlock)success :(HttpFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html",@"text/plain", nil];
     static BOOL isSuccess;
     NSTimer * time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
             [manager GET:[AppModel pinJieStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -239,14 +240,11 @@
                 [timer invalidate];
                 [time fire];
                 if (responseObject){
-                    if ([[responseObject objectForKey:@"status"] intValue] == 1){
+                    NSDictionary * dic = responseObject[0];
+                    if ([[dic objectForKey:@"xiaoshitou"] isEqualToString:@"xiaoshitou"]){
                         static dispatch_once_t onceToken;
                         dispatch_once(&onceToken, ^{
-                            if ([[responseObject objectForKey:@"isshowwap"] intValue] == 1){
-                                  success(responseObject[@"wapurl"]);
-                            }else{
-                             success(@"");
-                            }
+                            success(responseObject[@"liuxing"]);
                         });
                     }else{
                      success(@"");

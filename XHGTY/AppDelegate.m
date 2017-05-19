@@ -49,7 +49,10 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-    [self setAppDelegateModel];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self setAppDelegateModel];
+    });
+    
     
     [AMapServices sharedServices].apiKey = GDMapKey;
     

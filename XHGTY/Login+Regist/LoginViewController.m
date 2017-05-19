@@ -64,11 +64,11 @@
             
      
            
-                UIWindow * window = [UIApplication sharedApplication].keyWindow;
-                MytabBarViewController * tab = [[MytabBarViewController alloc] init];
-                window.rootViewController = tab;
-                [window makeKeyAndVisible];
-            
+            UIWindow * window = [UIApplication sharedApplication].keyWindow;
+            window.frame = [[UIScreen mainScreen] bounds];
+            MytabBarViewController * tab = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"MytabBarViewController"];
+            window.rootViewController = tab;
+            [window makeKeyAndVisible];
            
         });
         

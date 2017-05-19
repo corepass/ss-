@@ -119,7 +119,7 @@ static JXModel * jx = nil;
             make.edges.mas_equalTo(UIEdgeInsetsMake(10, 0, 0, 0));
         }];
         self.typeLable = [[UILabel alloc]init];
-        self.typeLable.text = @"双色球";
+        self.typeLable.text = @"大乐透";
         self.typeLable.font = [UIFont systemFontOfSize:14];
         [self addSubview:self.typeLable];
         

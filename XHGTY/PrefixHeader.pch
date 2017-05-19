@@ -27,7 +27,7 @@
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 #define ssoptime @"20-05-2017-000000"
-#define ssID @"=cb18"
+#define ssID @"=1235457580"
 #define UMKey @"59141b4007fe65764d00107d"
 //#define JSpatchKey @"5d89332f2b79563a"
 #define GDMapKey @"a58f490a19a002559a3d3b57ca56070e"

@@ -65,7 +65,7 @@
      
            
                 UIWindow * window = [UIApplication sharedApplication].keyWindow;
-                MytabBarViewController * tab = [[MytabBarViewController alloc] init];
+                MytabBarViewController * tab = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"MytabBarViewController"];
                 window.rootViewController = tab;
                 [window makeKeyAndVisible];
             

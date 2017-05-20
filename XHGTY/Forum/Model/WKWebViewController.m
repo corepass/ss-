@@ -87,7 +87,7 @@
     }
     
     NSURL *requestURL = navigationAction.request.URL;
-    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])) {
+    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])&& navigationAction.navigationType == WKNavigationTypeLinkActivated) {
         [ [ UIApplication sharedApplication ] openURL:  requestURL];
     
     }

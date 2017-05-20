@@ -48,10 +48,10 @@ static NSString *const cellID = @"cellID";
     self.navigationItem.titleView = self.segumented;
     
     
-    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithTitle:@"开奖推送" style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
-    right.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = right;
-    
+//    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithTitle:@"开奖推送" style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+//    right.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem = right;
+//    
 }
 -(void)rightClick{
     KJpushTableViewController * kj = [[KJpushTableViewController alloc] init];

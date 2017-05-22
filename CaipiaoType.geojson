@@ -1,16 +1,18 @@
 {
 	data = (
-		{
-			blueNumArray = ();
-			name = "\U5317\U4eac\U8d5b\U8f66";
-			qiShu = "\U7b2c2017074\U671f";
-			redNumArray = (
-				5,
-				7,
-				6,
-			);
-			url = "http://f.apiplus.cn/bjpk10-20.json";
-			time = "2017-03-27 20:31";
-		},
+            {
+            blueNumArray = ();
+            name = "\U91cd\U5e86\U65f6\U65f6\U5f69";
+            qiShu = "\U7b2c20170330-019\U671f";
+            redNumArray = (
+                           3,
+                           6,
+                           4,
+                           9,
+                           1,
+                           );
+            url = "http://f.apiplus.cn/cqssc-20.json";
+            time = "2017-03-30 01:56";
+            },
 	);
 }

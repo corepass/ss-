@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lz-DQ-pYn">
-                        <rect key="frame" x="0.0" y="0.0" width="91" height="43"/>
+                        <rect key="frame" x="0.0" y="0.0" width="102" height="43"/>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.44705882352941179" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="91" id="E9d-jF-Yg0"/>
+                            <constraint firstAttribute="width" constant="102" id="E9d-jF-Yg0"/>
                             <constraint firstAttribute="height" constant="43" id="Qev-uh-8K3"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-nJ-bor">
-                        <rect key="frame" x="211" y="0.0" width="109" height="43"/>
+                        <rect key="frame" x="222" y="0.0" width="98" height="43"/>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.44705882352941179" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="43" id="AXp-hs-TOu"/>
@@ -40,7 +40,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swy-k1-ezp">
-                        <rect key="frame" x="99" y="0.0" width="104" height="43"/>
+                        <rect key="frame" x="110" y="0.0" width="104" height="43"/>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.44705882352941179" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="104" id="Hd9-AV-RPj"/>

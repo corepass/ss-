@@ -13,23 +13,24 @@
 {
     if (!_modelArray){
         _modelArray = [[NSMutableArray alloc] init];
+        [_modelArray addObjectsFromArray:@[@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@""]];
         NSArray * numberArray = [self.opencode componentsSeparatedByString:@","];
         if(self.expect){
-            [_modelArray addObject:self.expect];
+            [_modelArray setObject:self.expect atIndexedSubscript:0];
         }else{
         [_modelArray addObject:@""];
         }
-        if(numberArray){
-            [_modelArray addObjectsFromArray:numberArray];
-        }else{
-           [_modelArray addObjectsFromArray:@[@"",@"",@"",@"",@"",@"",@"",@"",@"",@""]];
-        }
+        [numberArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [_modelArray setObject:obj atIndexedSubscript:[obj integerValue]+1];
+        }];
+       
         if(self.opentimestamp){
         NSString * openTime = [NSString tranfromTimeyyyyMMddHHmm:[self.opentimestamp longLongValue] andType:@"HH:MM"];
             if(openTime){
-            [_modelArray addObject:openTime];
+            [_modelArray setObject:openTime atIndexedSubscript:_modelArray.count -1];
+          
             }else{
-                [_modelArray addObject:@""];
+            [_modelArray setObject:@"" atIndexedSubscript:_modelArray.count -1];
             }
         
         }

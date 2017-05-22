@@ -28,9 +28,9 @@
     self.wkwebView.navigationDelegate = self;
     [self.view addSubview:self.wkwebView];
     [self.wkwebView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 49, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 0));
     }];
-    [self addFoot];
+   // [self addFoot];
 }
 -(void)addFoot{
     self.lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];

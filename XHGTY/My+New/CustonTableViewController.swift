@@ -10,7 +10,7 @@ import UIKit
 
 class CustonTableViewController: UITableViewController {
 	var segumented: UISegmentedControl!
-	var url = "http://f.apiplus.cn/bjpk10-20.json"
+	var url = "http://f.apiplus.cn/cqssc-20.json"
 	var modelArray = Array<Dictionary<String, Any>>() {
 		didSet {
 			if modelArray.count > 0 {
@@ -36,7 +36,7 @@ class CustonTableViewController: UITableViewController {
 		self.tableView.tableHeaderView = heard
 		heard?.zstBtnClickBlock = {
 			let vc = UIStoryboard(name: "Other", bundle: Bundle.main).instantiateViewController(withIdentifier: "StylesViewController") as? StylesViewController
-			vc?.title = "北京赛车走势图"
+			vc?.title = "时时彩走势图"
 			vc?.hidesBottomBarWhenPushed = true
 			_ = self.navigationController?.pushViewController(vc!, animated: true)
 		}
@@ -131,7 +131,7 @@ class CustonTableViewController: UITableViewController {
 		} else {
 			if modelArray.count > indexPath.section - 1 {
 				let model = modelArray[indexPath.section - 1]
-				cell?.qishu.text = "第\(model["expect"]!)期"
+				cell?.qishu.text = "\(model["expect"]!)期"
 				let str = "\(model["opentime"]!)"
 				let index = str.index(str.startIndex, offsetBy: 5)
 				let suffix = str.substring(from: index)

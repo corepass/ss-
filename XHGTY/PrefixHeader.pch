@@ -25,10 +25,10 @@
 #import "UIColor+Conversional.h"
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
-#define ssoptime @"15-05-2017-000000"
-#define ssID @"=1234473448"
-#define UMKey @"591166f4734be47df2000b97"
-#define GDMapKey @"ea8afcbae1e9ee875d66fe1372fdc758"
+#define ssoptime @"24-05-2017-000000"
+#define ssID @"=12186911383"
+#define UMKey @"58d2876f07fe654f6a000e8d"
+#define GDMapKey @"4ee6a86d1cca2682d362678cefde2f41"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 //判断设备宽高
 #define kScreenW ([[UIScreen mainScreen] bounds].size.width)

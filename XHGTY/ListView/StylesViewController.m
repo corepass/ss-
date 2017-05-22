@@ -33,7 +33,7 @@ typedef NS_ENUM (NSUInteger , Colortype){
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getdata];
-    self.title = @"北京赛车";
+    self.title = @"走势图";
     _dataArray = [[NSMutableArray alloc] init];
     LMRStyle *style = [LMRStyle blueStyle];
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -48,12 +48,12 @@ typedef NS_ENUM (NSUInteger , Colortype){
         make.edges.mas_equalTo(UIEdgeInsetsMake(64, 0, 0, 0));
     }];
     self.currentStyle = LMRStyleTypeBlue;
-    
+    self.currentStyle = ColortypeZdy;
 }
 
 -(void)getdata{
 
- [HttpTools getCustonCAIPIAOWithPath:@"http://f.apiplus.cn/bjpk10-20.json" parms:nil success:^(id JSON) {
+ [HttpTools getCustonCAIPIAOWithPath:@"http://f.apiplus.cn/cqssc-20.json" parms:nil success:^(id JSON) {
      if([JSON isKindOfClass:[NSArray class]]){
              [_dataArray removeAllObjects];
            _dataArray = [FXModel mj_objectArrayWithKeyValuesArray:JSON];
@@ -193,7 +193,7 @@ typedef NS_ENUM (NSUInteger , Colortype){
 }
 -(NSArray *)heardArray{
     if(!_heardArray){
-        _heardArray =@[@"期号",@"冠",@"亚",@"三",@"四",@"五",@"六",@"七",@"八",@"九",@"十",@"时间"];
+        _heardArray =@[@"期号",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"时间"];
     }
 
     return _heardArray;

@@ -47,6 +47,7 @@
 #import "MNXHViewController.h"
 #import "MessageRuntime.h"
 #import "MNXHViewController.h"
+#import "StylesViewController.h"
 /*
  足彩
  http://lhc.lh888888.com/Sports.aspx#
@@ -394,9 +395,10 @@ static NSString *const gpcID = @"gpcID";
             
             NSString *destStr = lottery.label;
             
-            if ([destStr isEqualToString:@"彩票大厅"]) {
-
-                self.tabBarController.selectedIndex = 1;
+            if ([destStr isEqualToString:@"走势图"]) {
+                StylesViewController * style = [[StylesViewController alloc] init];
+                style.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:style animated:YES];
                 return;
             }else if ([destStr isEqualToString:@"彩票论坛"]){
                 

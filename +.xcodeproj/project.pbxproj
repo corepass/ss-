@@ -2643,7 +2643,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3P2D38MX5P;
+						DevelopmentTeam = 57856S9B8F;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -3197,10 +3197,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: qi li (57856S9B8F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: qi li (57856S9B8F)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3P2D38MX5P;
+				DEVELOPMENT_TEAM = 57856S9B8F;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3226,10 +3226,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bscqssc.bscqssc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "490f8e65-13b7-4e64-8c49-ae27a155169e";
-				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
+				PROVISIONING_PROFILE = "fe18173c-dcdc-4f9b-b5e0-53a2bdd400b3";
+				PROVISIONING_PROFILE_SPECIFIER = BZSSC;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -3243,10 +3243,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: wang zhen (UQZWYHWUW2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang zhen (UQZWYHWUW2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: qi li (57856S9B8F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: qi li (57856S9B8F)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3P2D38MX5P;
+				DEVELOPMENT_TEAM = 57856S9B8F;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3272,10 +3272,10 @@
 					"$(PROJECT_DIR)/XHGTY/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sspk10.sspk10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bscqssc.bscqssc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "490f8e65-13b7-4e64-8c49-ae27a155169e";
-				PROVISIONING_PROFILE_SPECIFIER = "测试证书带推送";
+				PROVISIONING_PROFILE = "fe18173c-dcdc-4f9b-b5e0-53a2bdd400b3";
+				PROVISIONING_PROFILE_SPECIFIER = BZSSC;
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

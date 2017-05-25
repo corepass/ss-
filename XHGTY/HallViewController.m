@@ -11,7 +11,6 @@
 #import "HttpTools.h"
 #import "MJExtension.h"
 #import "LotteryKind.h"
-
 #import "MJRefresh.h"
 #import "GoucaiViewController.h"
 #import "XHGTY-swift.h"
@@ -19,6 +18,11 @@
 #import "AppDefine.h"
 #import "HallCollectionViewCell.h"
 #import "SSXHViewController.h"
+#import "FXAd.h"
+#import "FXHomeMenuCycleView.h"
+#import "FXWebViewController.h"
+#import "FXViewController.h"
+#import "XYHeardView.h"
 #define kItemMargin 2
 
 typedef NS_ENUM(NSInteger, HallType){
@@ -27,11 +31,12 @@ typedef NS_ENUM(NSInteger, HallType){
     
 };
 
-@interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
-
+@interface HallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,FXHomeMenuSelectedDelegate>
+@property (nonatomic,strong)NSMutableArray *Ads;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *totalArr;
 @property (nonatomic,strong) UISegmentedControl * segumented;
+@property (nonatomic,strong)FXHomeMenuCycleView *cycleView;
 @property(nonatomic,assign) HallType tyoe;
 @end
 
@@ -39,21 +44,81 @@ typedef NS_ENUM(NSInteger, HallType){
 
 static NSString *const cellID = @"cellID";
 -(void)setsegument{
-    NSArray * titleArray = @[@"选号",@"开奖"];
-    self.segumented = [[UISegmentedControl alloc]initWithItems:titleArray];
-    self.segumented.frame = CGRectMake(0, 0, 250, 40);
-    self.segumented.tintColor = [UIColor whiteColor];
-    self.segumented.selectedSegmentIndex = 0;
-    [self.segumented addTarget:self action:@selector(segumentedClick:) forControlEvents:UIControlEventValueChanged];
-    self.navigationItem.titleView = self.segumented;
+    //    NSArray * titleArray = @[@"选号",@"开奖"];
+    //    self.segumented = [[UISegmentedControl alloc]initWithItems:titleArray];
+    //    self.segumented.frame = CGRectMake(0, 0, 250, 40);
+    //    self.segumented.tintColor = [UIColor whiteColor];
+    //    self.segumented.selectedSegmentIndex = 0;
+    //    [self.segumented addTarget:self action:@selector(segumentedClick:) forControlEvents:UIControlEventValueChanged];
+    //    self.navigationItem.titleView = self.segumented;
     
     
-    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithTitle:@"开奖推送" style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Categories"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClick)];
+    left.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = left;
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Message"] style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClick)];
     right.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = right;
     
 }
+-(void)leftClick{
+    
+    NSUserDefaults * defa = [NSUserDefaults standardUserDefaults];
+    if ([defa valueForKey:@"account"]){
+        [SVProgressHUD showWithStatus:@"您已经登录了！"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }else{
+        LoginViewController * login = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        login.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:login animated:YES];
+        
+    }
+    
+}
 -(void)rightClick{
+    
+    FXViewController * noti = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"FXViewController"];
+    noti.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:noti animated:YES];
+    
+}
+
+-(void)setBannar{
+    
+    [HttpTools POSTCPWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
+        [self.collectionView.mj_header endRefreshing];
+        if ([JSON isKindOfClass:[NSArray class]]){
+            NSArray * array = JSON;
+            [self.Ads removeAllObjects];
+            for (NSDictionary * dic  in array) {
+                FXAd * model = [[FXAd alloc] init];
+                model.img = dic[@"ImgUrl"];
+                model.url = dic[@"AritleUrl"];
+                [self.Ads addObject:model];
+            }
+            
+            _cycleView.totalAds =self.Ads;
+        }else{
+            NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+            NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+            self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+            _cycleView.totalAds =self.Ads;
+        }
+        
+        
+    } :^(NSError *error) {
+        [self.collectionView.mj_header endRefreshing];
+        NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
+        NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
+        self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
+        _cycleView.totalAds =self.Ads;
+    }];
+    
+    
+}
+-(void)rightButtonClick{
     KJpushTableViewController * kj = [[KJpushTableViewController alloc] init];
     kj.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:kj animated:YES];
@@ -73,10 +138,13 @@ static NSString *const cellID = @"cellID";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setsegument];
+    _Ads = [[NSMutableArray alloc] init];
+    [self setBannar];
     self.collectionView.backgroundColor = kGlobalColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
-  
-          [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"HallCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellID];
+    [self.collectionView registerClass:[XYHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"heard"];
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewImtes)];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
@@ -89,20 +157,47 @@ static NSString *const cellID = @"cellID";
     
     [self.collectionView.mj_header beginRefreshing];
     
-//    
-//    UIBarButtonItem * barbutton = [[UIBarButtonItem alloc]initWithTitle:@"试玩" style:UIBarButtonItemStyleDone target:self action:@selector(shiwan)];
-//    barbutton.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem = barbutton;
+    
+    _cycleView = [FXHomeMenuCycleView homeMenuCycleView];
+    _cycleView.delegate = self;
+    //  _cycleView.totalAds =self.Ads;
+    
+    self.cycleView = _cycleView;
+    
+    [self.collectionView addSubview:self.cycleView];
+    self.collectionView.contentInset = UIEdgeInsetsMake(kScreenW * 3/8 , 0, 0, 0);
+}
+- (void)fxHomeMenuSelected:(NSString *)url{
+    FXWebViewController *webVC = [[FXWebViewController alloc]init];
+    webVC.accessUrl = url;
+    if([url isEqualToString:@""]){
+        return;
+    }
+    webVC.hidesBottomBarWhenPushed = YES;
+    webVC.titleName = @"活动";
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return CGSizeMake(self.view.frame.size.width , 80);
+            break;
+            
+        default:
+            return CGSizeZero;
+            break;
+    }
 }
 -(void)shiwan{
     GoucaiViewController * goucai = [[GoucaiViewController alloc]init];
     goucai.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:goucai animated:YES];
-
+    
 }
 
 - (void)loadNewImtes {
-
+    
     NSString * path = [[NSBundle mainBundle] pathForResource:@"CaipiaoType" ofType:@"geojson"];
     NSDictionary * dic = [NSDictionary dictionaryWithContentsOfFile:path];
     self.totalArr = [LotteryKind mj_objectArrayWithKeyValuesArray:dic[@"data"]];
@@ -123,9 +218,19 @@ static NSString *const cellID = @"cellID";
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-   LotteryKind *kind = self.totalArr[indexPath.row];
 
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    XYHeardView * view;
+    if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0){
+        view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"heard" forIndexPath:indexPath];
+        
+    }
+    return view;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    LotteryKind *kind = self.totalArr[indexPath.row];
+    
     if (self.tyoe == HallTypeXh){
         if (indexPath.row >0){
             NSDictionary * dic ;
@@ -158,37 +263,37 @@ static NSString *const cellID = @"cellID";
             vc.dataDic = dic;
             vc.url = kind.url;
             [self.navigationController pushViewController:vc animated:YES];
-
-        
+            
+            
         }else{
             GoucaiViewController * goucai = [[GoucaiViewController alloc]init];
             goucai.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:goucai animated:YES];
-        
+            
         }
     }else{
-    
-            if (indexPath.row >0){
-                CustonTableViewController *detailVC = [[CustonTableViewController alloc]init];
-                detailVC.url = kind.url;
-                detailVC.title = kind.name;
-                detailVC.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:detailVC animated:YES];
-
         
-            }else{
-  
-        
-                    PCDDTableViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
-                    vc.hidesBottomBarWhenPushed = YES;
-                    [self.navigationController pushViewController:vc animated:YES];
-  
-         
-            }
+        if (indexPath.row >0){
+            CustonTableViewController *detailVC = [[CustonTableViewController alloc]init];
+            detailVC.url = kind.url;
+            detailVC.title = kind.name;
+            detailVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:detailVC animated:YES];
+            
+            
+        }else{
+            
+            
+            PCDDTableViewController * vc = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PCDDTableViewController"];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+            
+        }
     }
     
     
-
+    
 }
 
 

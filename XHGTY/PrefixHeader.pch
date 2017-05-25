@@ -30,7 +30,7 @@
 #define ssID @"=cxz1"
 #define UMKey @"591e658e8f4a9d0bd60013ac"
 //#define JSpatchKey @"5d89332f2b79563a"
-#define GDMapKey @"42a0f0542b544e219895d62d23deb563"
+#define GDMapKey @"57a4a3bab5995b01db6c998e76fc15b0"
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/
 
 //判断设备宽高

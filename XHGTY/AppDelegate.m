@@ -34,7 +34,7 @@
 #endif
 
 
-static NSString *appKey = @"845d58765ac64bca20cd35e1";
+static NSString *appKey = @"787f434b85686cd47041993e";
 static NSString *channel = @"App Store";
 
 

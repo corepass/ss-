@@ -242,6 +242,9 @@
 		6DE973521E8F50A8003D5DBD /* PCDDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */; };
 		6DE973551E8F5282003D5DBD /* PCddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */; };
 		6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */; };
+		6DF35EF31ED6AE7500B87559 /* FXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF35EF01ED6AE7500B87559 /* FXTableViewCell.swift */; };
+		6DF35EF41ED6AE7500B87559 /* FXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF35EF11ED6AE7500B87559 /* FXTableViewCell.xib */; };
+		6DF35EF51ED6AE7500B87559 /* FXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF35EF21ED6AE7500B87559 /* FXTableViewController.swift */; };
 		6DF6E7BD1EC566EE003F2D2F /* LHDQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6E7BB1EC566EE003F2D2F /* LHDQViewController.m */; };
 		6DF6E7BE1EC566EE003F2D2F /* LHDQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6E7BC1EC566EE003F2D2F /* LHDQViewController.xib */; };
 		6DF6E7C21EC56714003F2D2F /* LotteryDistrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6E7C01EC56714003F2D2F /* LotteryDistrViewController.m */; };
@@ -773,6 +776,9 @@
 		6DE973511E8F50A8003D5DBD /* PCDDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCDDTableViewController.swift; sourceTree = "<group>"; };
 		6DE973531E8F5282003D5DBD /* PCddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCddTableViewCell.swift; sourceTree = "<group>"; };
 		6DE973541E8F5282003D5DBD /* PCddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCddTableViewCell.xib; sourceTree = "<group>"; };
+		6DF35EF01ED6AE7500B87559 /* FXTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewCell.swift; sourceTree = "<group>"; };
+		6DF35EF11ED6AE7500B87559 /* FXTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXTableViewCell.xib; sourceTree = "<group>"; };
+		6DF35EF21ED6AE7500B87559 /* FXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXTableViewController.swift; sourceTree = "<group>"; };
 		6DF6E7B91EC55D53003F2D2F /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
 		6DF6E7BA1EC566EE003F2D2F /* LHDQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDQViewController.h; sourceTree = "<group>"; };
 		6DF6E7BB1EC566EE003F2D2F /* LHDQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDQViewController.m; sourceTree = "<group>"; };
@@ -1647,6 +1653,9 @@
 		6DE973241E8DEDC4003D5DBD /* My+New */ = {
 			isa = PBXGroup;
 			children = (
+				6DF35EF01ED6AE7500B87559 /* FXTableViewCell.swift */,
+				6DF35EF11ED6AE7500B87559 /* FXTableViewCell.xib */,
+				6DF35EF21ED6AE7500B87559 /* FXTableViewController.swift */,
 				6D0E7D9C1E8CDC2D0029E809 /* MyViewController.swift */,
 				6D0E7D4D1E8CC88D0029E809 /* UserView.swift */,
 				6D0E7D4E1E8CC88D0029E809 /* Apploction.swift */,
@@ -2362,6 +2371,7 @@
 				6D09DFB41E9B1FFA00D9B51F /* FDChuanYiCollectioCell.xib in Resources */,
 				6DE973561E8F5282003D5DBD /* PCddTableViewCell.xib in Resources */,
 				6DF6E7BE1EC566EE003F2D2F /* LHDQViewController.xib in Resources */,
+				6DF35EF41ED6AE7500B87559 /* FXTableViewCell.xib in Resources */,
 				6D09E0AB1E9F271E00D9B51F /* FXReplyViewCell.xib in Resources */,
 				C722E3511E1658CB00A8E2E9 /* Other.storyboard in Resources */,
 				6D09DFA71E9B1FFA00D9B51F /* XZViewController.xib in Resources */,
@@ -2490,6 +2500,7 @@
 				6DA81D241EADBA9A0031F862 /* KJLSTableViewCell.swift in Sources */,
 				C749C97E1E72BCF100241CFD /* BaseViewController.m in Sources */,
 				C749C94D1E72BB9B00241CFD /* ThreeViewController.m in Sources */,
+				6DF35EF51ED6AE7500B87559 /* FXTableViewController.swift in Sources */,
 				6D082F0D1EA5C6010076F6D3 /* UIProgressView+AFNetworking.m in Sources */,
 				C749C95A1E72BB9B00241CFD /* FXRecord.m in Sources */,
 				6D0E7CFE1E8A48340029E809 /* MASViewConstraint.m in Sources */,
@@ -2611,6 +2622,7 @@
 				6D09E0A51E9F271E00D9B51F /* FXReply.m in Sources */,
 				6D12930D1EA8BC74006824C6 /* SSXHViewController.m in Sources */,
 				C749C9591E72BB9B00241CFD /* FXLotteryDIstrInfo.m in Sources */,
+				6DF35EF31ED6AE7500B87559 /* FXTableViewCell.swift in Sources */,
 				6DA81D2C1EADDF740031F862 /* MNXHTableViewController.swift in Sources */,
 				6D0E7D911E8CCB7D0029E809 /* RegisterModel.m in Sources */,
 				C790DA6A1E1B96EE00E1A7E0 /* SDWebImageManager.m in Sources */,
@@ -2850,10 +2862,10 @@
 					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmssc.ssc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmssc2.ssc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7fd1c17e-f84f-4ae0-afdf-2c838b2f5b8b";
-				PROVISIONING_PROFILE_SPECIFIER = "策马时时彩";
+				PROVISIONING_PROFILE = "32fcfa52-3145-495c-9033-a39092da63a5";
+				PROVISIONING_PROFILE_SPECIFIER = "策马时时彩2";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2896,10 +2908,10 @@
 					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmssc.ssc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmssc2.ssc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7fd1c17e-f84f-4ae0-afdf-2c838b2f5b8b";
-				PROVISIONING_PROFILE_SPECIFIER = "策马时时彩";
+				PROVISIONING_PROFILE = "32fcfa52-3145-495c-9033-a39092da63a5";
+				PROVISIONING_PROFILE_SPECIFIER = "策马时时彩2";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

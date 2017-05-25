@@ -18,3 +18,6 @@
 #import "MJExtension.h"
 #import "CpMapViewController.h"
 #import "SSXHViewController.h"
+#import "TYBFViewController.h"
+#import "FXHomeTableViewController.h"
+#import "TieBieViewController.h"

@@ -23,6 +23,7 @@
 #import "UIView+Extension.h"
 #import "UIView+Frame.h"
 #import "UIColor+Conversional.h"
+#import "ForumViewController.h"
 
 
 /*重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要重要*/

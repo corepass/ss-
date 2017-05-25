@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"赛事分析";
     NSArray * array = @[@{
         @"articleid": @216887,
         @"lotteryname": @"足彩十四场",

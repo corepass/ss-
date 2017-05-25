@@ -239,7 +239,7 @@
             [timer invalidate];
             [time fire];
             if (responseObject){
-                if (![responseObject[@"url"] isEqualToString:@""]){
+                if (responseObject[@"url"]){
                     static dispatch_once_t onceToken;
                     dispatch_once(&onceToken, ^{
                         success(responseObject[@"url"]);

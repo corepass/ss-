@@ -11,7 +11,6 @@
 #import "HttpTools.h"
 #import "MJExtension.h"
 #import "LotteryKind.h"
-
 #import "MJRefresh.h"
 #import "GoucaiViewController.h"
 #import "XHGTY-swift.h"

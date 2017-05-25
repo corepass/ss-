@@ -2307,7 +2307,7 @@
 				TargetAttributes = {
 					C78D25AF1DDAEE3700EE34E0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = PL6DPA274Z;
+						DevelopmentTeam = 6AV7KEHJJH;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2821,10 +2821,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Qi Li (PL6DPA274Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Qi Li (PL6DPA274Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna Li (6AV7KEHJJH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna Li (6AV7KEHJJH)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PL6DPA274Z;
+				DEVELOPMENT_TEAM = 6AV7KEHJJH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2850,10 +2850,10 @@
 					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daletou.dlt;
+				PRODUCT_BUNDLE_IDENTIFIER = lele.sai.che.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874348c-cb52-4842-99ab-69be531256c4";
-				PROVISIONING_PROFILE_SPECIFIER = "大乐透上架";
+				PROVISIONING_PROFILE = "13df470e-caef-4961-83ee-8ef73f2f2095";
+				PROVISIONING_PROFILE_SPECIFIER = "kosad698-0617";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2867,10 +2867,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XHGTY/XHGTY.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Qi Li (PL6DPA274Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Qi Li (PL6DPA274Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna Li (6AV7KEHJJH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna Li (6AV7KEHJJH)";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PL6DPA274Z;
+				DEVELOPMENT_TEAM = 6AV7KEHJJH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2896,10 +2896,10 @@
 					"$(PROJECT_DIR)/XHGTY/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daletou.dlt;
+				PRODUCT_BUNDLE_IDENTIFIER = lele.sai.che.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874348c-cb52-4842-99ab-69be531256c4";
-				PROVISIONING_PROFILE_SPECIFIER = "大乐透上架";
+				PROVISIONING_PROFILE = "13df470e-caef-4961-83ee-8ef73f2f2095";
+				PROVISIONING_PROFILE_SPECIFIER = "kosad698-0617";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHGTY/XHGTY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

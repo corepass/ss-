@@ -33,7 +33,7 @@
     [super viewDidLoad];
     _Model  = [[ThirdLoginModel alloc]init];
     self.title = @"注册";
-    
+    self.view.layer.contents = [UIImage imageNamed:@"backviewImage"];
     
     _Array = [[NSMutableArray alloc] init];
     NSArray * TitleArray = @[@[@"account"],@[@"password",@"password"]];

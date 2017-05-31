@@ -61,13 +61,9 @@
             [[FXUserTool sharedFXUserTool]saveAccount:account];
          //   [MBProgressHUD showSuccess:@"登录成功"];
           //  kSendNotify(@"登录成功", nil);
-            
+            [self.navigationController popViewControllerAnimated:YES];
      
-           
-                UIWindow * window = [UIApplication sharedApplication].keyWindow;
-                MytabBarViewController * tab = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"MytabBarViewController"];
-                window.rootViewController = tab;
-                [window makeKeyAndVisible];
+
             
            
         });

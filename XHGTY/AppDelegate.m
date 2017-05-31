@@ -23,7 +23,7 @@
 #import "AppModel.h"
 #import "LoginViewController.h"
 #import "WKWebViewController.h"
-
+#import "MytabBarViewController.h"
 #import "DHGuidePageHUD.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "XHGTY-swift.h"
@@ -39,7 +39,7 @@ static NSString *channel = @"App Store";
 
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
-
+@property (nonatomic , strong) UIViewController * vc;
 @property (nonatomic,strong)UIStoryboard *story;
 
 @end
@@ -49,10 +49,13 @@ static NSString *channel = @"App Store";
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-         [self setAppDelegateModel];
-    });
-   
+    
+    
+    [self setAppDelegateModel];
+    MytabBarViewController * tab = [[UIStoryboard storyboardWithName:@"Other" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"MytabBarViewController"];
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
+    [self UIappLaction];
     [AMapServices sharedServices].apiKey = GDMapKey;
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
@@ -85,16 +88,9 @@ static NSString *channel = @"App Store";
             
         }
     }];
-    if (![[Apploction default] isLogin]){
-    
-        LoginViewController * login = [[UIStoryboard  storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        UINavigationController * navi = [[UINavigationController alloc]initWithRootViewController:login];
-        self.window.rootViewController = navi;
-        [self.window makeKeyAndVisible];
 
-    }
   //  [self addjpush:application and:launchOptions];
-    [self UIappLaction];
+   
     
     [self savadata];
     
@@ -128,15 +124,9 @@ static NSString *channel = @"App Store";
 }
 -(void)UIappLaction{
     
-    UIViewController * vc = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
-    [self.window addSubview:vc.view];
-    [UIView animateWithDuration:0.6 delay:3.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        vc.view.alpha = 0;
-        vc.view.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 1.0);
-    } completion:^(BOOL finished) {
-        [vc.view removeFromSuperview];
-    }];
-    
+    _vc = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    [self.window addSubview:_vc.view];
+
 }
 -(void)addyindaoyue{
     
@@ -147,7 +137,15 @@ static NSString *channel = @"App Store";
         
     }
 }
-
+-(void)removeFirstView{
+    
+    [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        _vc.view.alpha = 0;
+        _vc.view.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 1.0);
+    } completion:^(BOOL finished) {
+        [_vc.view removeFromSuperview];
+    }];
+}
 -(void)setAppDelegateModel{
     
     [HttpTools getWithPathsuccess:^(id JSON) {
@@ -158,14 +156,17 @@ static NSString *channel = @"App Store";
                 [SVProgressHUD dismiss];
                 self.window.rootViewController = wk ;
                 [self.window makeKeyAndVisible];
+               
             });
         }
+         [self removeFirstView];
     } :^(NSError *error) {
         UIViewController * vc = [[UIViewController alloc] init];
         vc.view.backgroundColor = [UIColor whiteColor];
         self.window.rootViewController = vc;
         [self.window makeKeyAndVisible];
         [SVProgressHUD show];
+        [self removeFirstView];
     }];
     
 }

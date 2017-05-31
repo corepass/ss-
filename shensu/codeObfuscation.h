@@ -1,32 +1,33 @@
 #ifndef Demo_codeObfuscation_h
 #define Demo_codeObfuscation_h
-//confuse string at Wed May 31 11:19:58 CST 2017
-#define addActionView zCaFrwjSGslcicmj
-#define pinJieStr PgVrmLGpsYETucDC
-#define setJinShaVc TcDUUzIaCefYNdza
-#define savadata huCnzAGNqbfSMlKc
-#define setStaticGuidePage VgVAnBnszInaWpBb
-#define addsomething BOIYCDqJgpQsLMwC
-#define setBannar HWOHfesAPxeKdjJo
-#define loadNewItems ITjNtOpGWXmHZNJI
-#define shiwan GeeUXafqfvsJpAND
-#define getData hQSiEJRhNSPXmvnZ
-#define getqishudata JwaFBSwXXlcNsQeH
-#define getdata YzPukUoSHHzzbNbV
-#define setAppDelegateModel gnnZMdRbNkdwMUGU
-#define setUpMoney KRmjmvBOyIgbIczH
-#define getgpcData UaHeIXDeOKTomxdM
-#define submitAction VzjmYJtOVsLDvpaK
-#define loadNewImtes wtdNpPDYCShntjUa
-#define addBtn UHhwDxNUATEnPssC
-#define setUI WWLTYwgHmNUAiyln
-#define addTS ZQZybzwwolqCQbsV
-#define popTZ iKWoOyKgkpRkPKYv
-#define btnClick rekxhHjgTTwbnBrY
-#define leftClick etnRASdZhnvoSqBv
-#define rightClick EfwXHGJlKPFiWfqD
-#define createToolBar mKZyxlkjsPZJdWuq
-#define addyindaoyue jCNKLVQfqiPQHbKL
-#define selectedAll rRKvmMvkUKlOzNoF
-#define xiazhuBtnClick qkCzHrNfnbZXspQg
+//confuse string at Wed May 31 11:41:48 CST 2017
+#define addActionView LGOBXKfdZSrggFBO
+#define pinJieStr GvUYEsiUgrqYETyQ
+#define setJinShaVc eGexcbonGfXnrvsX
+#define savadata kfcbispROrrsAKfw
+#define setStaticGuidePage pokvbhoTcwSetjwL
+#define addsomething TcTalAzuqTklXDEU
+#define setBannar NwHYZhWYqJsPShMB
+#define loadNewItems sicdplKEqONkmTaR
+#define shiwan DqwmDJzPiNszHhen
+#define getData PZObADQSNqDYxJgr
+#define getqishudata sZrCmMaUsbnTzmdj
+#define getdata tqxxRQQvKfjvQuvT
+#define setAppDelegateModel eqjrNSzhoNTGUsaa
+#define setUpMoney SCohQhGrqamgxnaU
+#define getgpcData cJuaLgescFzUqsdm
+#define submitAction NawrkzaaDjhqbAHm
+#define loadNewImtes SroCPZRrWFfWDUCN
+#define addBtn vGFmvpbdJzmcafyd
+#define setUI YQNzUqCRuHRRCPYt
+#define addTS InRGUeXKEqROvEls
+#define popTZ sLZukKJIZtCdyFCh
+#define btnClick degvFTIVfykQteQM
+#define leftClick nMTcbVbsuMzyoUyV
+#define rightClick uNvEqiZoKEOxZmmp
+#define createToolBar RYQuWhmBHqRdBJfG
+#define addyindaoyue UwcpWKdLZWTtEusN
+#define selectedAll RVAenLkrnQcTomos
+#define xiazhuBtnClick XPAttesPEoDjeGUW
+#define removeFirstView BpTewDIJUEwonykY
 #endif

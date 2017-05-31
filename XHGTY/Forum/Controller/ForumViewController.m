@@ -16,6 +16,7 @@
 #import "FXNavigationController.h"
 #import "LoginViewController.h"
 #import "NSString+isEmpty.h"
+#import "XHGTY-swift.h"
 @interface ForumViewController ()<requestNetWorDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSMutableArray *forums;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -91,7 +92,7 @@ static NSString *const FXforumViewCellID = @"FXforumViewCell";
 
 - (void)popTZ{
     
-    if (kAccount.uid) {
+    if ([[Apploction default] isLogin]) {
         FTZViewController *FTZVC = [[FTZViewController alloc]init];
         [self.navigationController pushViewController:FTZVC animated:YES];
     }else{

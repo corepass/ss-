@@ -40,8 +40,6 @@
     if (_WarnTitleBlock) {
         if (_Account==nil) {
             _WarnTitleBlock(@"请输入账户");
-        }else if (![NSString isMobile:_Account]){
-            _WarnTitleBlock(@"账号错误");
         }else if (_ConfirmPassWord ==nil){
             _WarnTitleBlock(@"请再次输入密码");
         }else if (![_SetupPassWord isEqualToString:_ConfirmPassWord]){

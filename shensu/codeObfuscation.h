@@ -1,31 +1,31 @@
 #ifndef Demo_codeObfuscation_h
 #define Demo_codeObfuscation_h
-//confuse string at Thu May 25 14:56:05 CST 2017
-#define addActionView rYlOiiFWQmvQhIOE
-#define setJinShaVc YSrUsFgdkXgUejgj
-#define savadata DIaOHvCminxVPwmX
-#define setStaticGuidePage pwVRkaLaiDCgByPt
-#define addsomething JYVgxSzMaYBlBELE
-#define setBannar gVNllUHdWxQSTSdo
-#define loadNewItems fCPXAvmuVazYKAaL
-#define shiwan uASCosUWkQQNKQWW
-#define getData ZvgwKxpnoJcxeMzw
-#define getqishudata sUjueToLTODDFgIB
-#define getdata dyIUoPPyKsMNexoA
-#define setAppDelegateModel QbmotbuJaLUqCiAi
-#define setUpMoney uGmleDwkAWDSFGPU
-#define getgpcData heqebPGJlAZkqgRx
-#define submitAction zlZzwnPgpEVBYUch
-#define loadNewImtes VPMSEuAHeRGjLivv
-#define addBtn FGJcVSYuAJeUdxLm
-#define setUI mzNCkRFTFIFuuuPP
-#define addTS qWrriDzrFvxgVReb
-#define popTZ CzitUgHoudyDQgQT
-#define btnClick ZLReXvpfveNZurHh
-#define leftClick vYxqNCFeFpOYzSRq
-#define rightClick bVqUeemAANZMbLsY
-#define createToolBar ojeSTVqGoZNdIeyQ
-#define addyindaoyue EhsynYLLnkCKaVyk
-#define selectedAll NcMwicHLrWNwIZEB
-#define xiazhuBtnClick kEEvunqKnOKDhkTY
+//confuse string at Wed May 31 14:11:17 CST 2017
+#define addActionView SRsyUcrJtIxnMtog
+#define setJinShaVc fHmFyrUGoRgRFqOZ
+#define savadata sJNNzwmzxufobMQR
+#define setStaticGuidePage saCyrGCpjgZLAXWh
+#define addsomething corXzGnZuKxSOwPZ
+#define setBannar qpAqexxBVZsjEwyH
+#define loadNewItems vwOHeMAQGtLSOxca
+#define shiwan vXppfXRAnPbQywcg
+#define getData oRXYaOrNsMmGAsEP
+#define getqishudata uEhCnTLSXrAyPDUa
+#define getdata bnYSnvuefkbdiSgb
+#define setAppDelegateModel kuMbxzOjMtpkNrAn
+#define setUpMoney uNhwNHokShomfZfV
+#define getgpcData LwisaWAzsZxOPeSf
+#define submitAction NibszjzSXYpdQOPd
+#define loadNewImtes WVCqiwxtcFUvQPlR
+#define addBtn vFQmKfoGbjdsHcVy
+#define setUI LYuWDRjvYsgHRXiM
+#define addTS sKSxjURmbdaTWRMw
+#define popTZ hnzAPnynLpmbLVtA
+#define btnClick AgplmnKBjAiEwxnC
+#define leftClick KYfHROUBNxTVuKVy
+#define rightClick cVaJgFWnYoMupktp
+#define createToolBar YbNcgaKwoLxYkUSi
+#define addyindaoyue kTIMIASlAtTcfYBC
+#define selectedAll YoZZRyCxFaZPcJCZ
+#define xiazhuBtnClick RKLcOXqQmnKMXCCN
 #endif

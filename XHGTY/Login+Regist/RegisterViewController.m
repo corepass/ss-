@@ -38,7 +38,7 @@
     _Array = [[NSMutableArray alloc] init];
     NSArray * TitleArray = @[@[@"account"],@[@"password",@"password"]];
     
-    NSArray * PlaceholderArray = @[@[@"请输入手机号"],@[@"密码为6~12位字符",@"请确认登录密码"]];
+    NSArray * PlaceholderArray = @[@[@"请输入11位帐号"],@[@"密码为6~12位字符",@"请确认登录密码"]];
     for (int i = 0 ;i<TitleArray.count ; i++) {
         _DataArray = [[NSMutableArray alloc] init];
         for ( int j = 0; j<[TitleArray[i] count]; j++) {

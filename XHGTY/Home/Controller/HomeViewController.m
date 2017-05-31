@@ -302,35 +302,14 @@ if (section == 0)
 }
 -(void)setBannar{
 
-    [HttpTools POSTCPWithPath:@"http://soa.woying.com/Common/home_img" parms:nil success:^(id JSON) {
-        [self.collectionView.mj_header endRefreshing];
-                if ([JSON isKindOfClass:[NSArray class]]){
-                 NSArray * array = JSON;
-                    [self.Ads removeAllObjects];
-                    for (NSDictionary * dic  in array) {
-                        FXAd * model = [[FXAd alloc] init];
-                        model.img = dic[@"ImgUrl"];
-                        model.url = dic[@"AritleUrl"];
-                        [self.Ads addObject:model];
-                    }
-             
-               _cycleView.totalAds =self.Ads;
-                }else{
                     NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
                     NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
                     self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
                     _cycleView.totalAds =self.Ads;
-                }
                 
                 
-    } :^(NSError *error) {
-          [self.collectionView.mj_header endRefreshing];
-        NSString * str = [[NSBundle mainBundle] pathForResource:@"HomeType" ofType:@"geojson"];
-        NSDictionary * JSON = [NSDictionary dictionaryWithContentsOfFile:str];
-        self.Ads = [FXAd mj_objectArrayWithKeyValuesArray:JSON[@"ad"]];
-        _cycleView.totalAds =self.Ads;
-    }];
- 
+                
+
 
 }
 - (void)loadNewItems{

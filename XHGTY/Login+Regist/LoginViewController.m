@@ -63,12 +63,7 @@
           //  kSendNotify(@"登录成功", nil);
             
      
-           
-            UIWindow * window = [UIApplication sharedApplication].keyWindow;
-            window.frame = [[UIScreen mainScreen] bounds];
-            MytabBarViewController * tab = [[UIStoryboard storyboardWithName:@"Other" bundle:nil] instantiateViewControllerWithIdentifier:@"MytabBarViewController"];
-            window.rootViewController = tab;
-            [window makeKeyAndVisible];
+              [self.navigationController popViewControllerAnimated:YES];
            
         });
         
